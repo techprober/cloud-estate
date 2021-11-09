@@ -22,12 +22,20 @@
     </a>
 </p>
 
+CopyRight 2021 TechProber. All rights reserved.
+
 ## Community
 
 - [Hikariai_AI Telegram Group](https://t.me/hikariai_channel)
 - [unRAID Telegram Group](https://t.me/unraid_zh)
 - [TechProber Telegram Group](https://t.me/joinchat/7AG3aEQ5I00wY2Q5)
 - [TechProber Discord Channel](https://discord.gg/se4RtrB473)
+
+## Contributors
+
+Special thanks goes to all [ contributors ](https://github.com/yqlbu/jetson-packages-family/graphs/contributors). If you would like to contribute, please see the [instructions](https://github.com/hikari-ai/jetson-packages-family/blob/master/docs/contribute.md).
+
+[ Jetson Packages Family ](https://jetson.hikariai.net) is inspired and introduced in 2020. It is now maintained by [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu) and [ Shi Kun (@kunish) ](https://github.com/kunish).
 
 ## License
 
