@@ -22,7 +22,13 @@
     </a>
 </p>
 
+## Introduction
+
 CopyRight 2021 TechProber. All rights reserved.
+
+Maintainer: [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu), [ Shi Kun (@kunish) ](https://github.com/kunish)
+
+This repo serves to provider the end-user a way to better speed up their cloud automation process. Feel free to contribute.
 
 ## Community
 
