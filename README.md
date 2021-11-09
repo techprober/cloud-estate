@@ -41,7 +41,7 @@ This repo serves to provider the end-user a way to better speed up their cloud a
 
 Special thanks goes to all [ contributors ](https://github.com/yqlbu/jetson-packages-family/graphs/contributors). If you would like to contribute, please see the [instructions](https://github.com/hikari-ai/jetson-packages-family/blob/master/docs/contribute.md).
 
-[ Jetson Packages Family ](https://jetson.hikariai.net) is inspired and introduced in 2020. It is now maintained by [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu) and [ Shi Kun (@kunish) ](https://github.com/kunish).
+[ Cloud Estate ](https://github.com/TechProber/cloud-estate) is inspired and introduced in 2021. It is now maintained by [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu) and [ Shi Kun (@kunish) ](https://github.com/kunish).
 
 ## License
 
