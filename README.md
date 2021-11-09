@@ -21,3 +21,14 @@
         <img src="https://img.shields.io/github/last-commit/TechProber/cloud-estate" alt="lastcommit"/>
     </a>
 </p>
+
+## Community
+
+- [Hikariai_AI Telegram Group](https://t.me/hikariai_channel)
+- [unRAID Telegram Group](https://t.me/unraid_zh)
+- [TechProber Telegram Group](https://t.me/joinchat/7AG3aEQ5I00wY2Q5)
+- [TechProber Discord Channel](https://discord.gg/se4RtrB473)
+
+## License
+
+[MIT (C) TechProber](https://github.com/yqlbu/TechProber/blob/master/LICENSE)
