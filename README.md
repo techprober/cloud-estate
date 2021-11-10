@@ -39,7 +39,6 @@ This repo uses the [pre-commit framework]() to set up hooks. To use it, run the 
 pip install pre-commit
 # Install with Homebrew
 brew install pre-commit
-
 # Install pre-commit under root directory
 pre-commit install
 ```
