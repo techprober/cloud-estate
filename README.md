@@ -30,6 +30,20 @@ Maintainer: [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu), [ Shi Kun (@kunish)
 
 This repo serves to provider the end-user a way to better speed up their cloud automation process. Feel free to contribute.
 
+## Pre-commit Hooks
+
+This repo uses the [pre-commit framework]() to set up hooks. To use it, run the following commands:
+
+```bash
+# Install with pip
+pip install pre-commit
+# Install with Homebrew
+brew install pre-commit
+
+# Install pre-commit under root directory
+pre-commit install
+```
+
 ## Community
 
 - [Hikariai_AI Telegram Group](https://t.me/hikariai_channel)
