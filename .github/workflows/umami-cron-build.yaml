@@ -11,7 +11,7 @@
 # This is a open-source software, liscensed under the MIT License.
 # See /License for more information.
 
-name: Container Daily Cron Build CI
+name: Umami Container Daily Cron Build CI
 
 on:
   schedule:
@@ -67,7 +67,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           builder: ${{ steps.buildx.outputs.name }}
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           context: umami
           build-args: |
             DATABASE_TYPE=mysql
