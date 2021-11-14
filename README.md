@@ -28,7 +28,7 @@ CopyRight 2021 TechProber. All rights reserved.
 
 Maintainer: [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu), [ Shi Kun (@kunish) ](https://github.com/kunish)
 
-This repo serves to provider the end-user a way to better speed up their cloud automation process. Feel free to contribute.
+This repo serves to provide the end-users a way to better speed up their cloud automation process. Feel free to contribute.
 
 ## Pre-commit Hooks
 
@@ -54,7 +54,7 @@ pre-commit install
 
 Special thanks goes to all [ contributors ](https://github.com/TechProber/cloud-estate/graphs/contributors). If you would like to contribute, please see the [instructions](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md).
 
-[ Cloud Estate ](https://github.com/TechProber/cloud-estate) is inspired and introduced in 2021. It is now maintained by [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu) and [ Shi Kun (@kunish) ](https://github.com/kunish).
+[ Cloud Estate ](https://github.com/TechProber/cloud-estate) is inspired and introduced in 2021. Currently, it is maintained by [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu) and [ Shi Kun (@kunish) ](https://github.com/kunish).
 
 ## License
 
