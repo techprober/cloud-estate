@@ -1,0 +1,6 @@
+---
+- name: Keep homebrew up-to-date
+  community.general.homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
+  changed_when: no

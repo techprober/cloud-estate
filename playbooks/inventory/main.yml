@@ -1,0 +1,14 @@
+---
+home:
+  hosts:
+    portainer:
+      ansible_host: portainer
+      ansible_user: root
+      ansible_ssh_private_key_file: ~/.ssh/id_rsa
+
+remote:
+  hosts:
+    seedbox:
+      ansible_host: seedbox
+      ansible_user: root
+      ansible_ssh_private_key_file: ~/.ssh/vps

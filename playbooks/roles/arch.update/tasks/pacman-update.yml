@@ -1,0 +1,5 @@
+---
+- name: Keep pacman up-to-date
+  community.general.pacman:
+    update_cache: yes
+    upgrade: yes

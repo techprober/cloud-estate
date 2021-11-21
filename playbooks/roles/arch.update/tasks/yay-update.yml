@@ -1,0 +1,6 @@
+---
+- name: Keep AUR up-to-date
+  kewlfft.aur.aur:
+    upgrade: yes
+    use: yay
+    aur_only: yes
