@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Reference Links](#reference-links)
+- [SSH Configuration](https://github.com/TechProber/cloud-estate/blob/ansible-integration/playbooks/docs/ssh-configuration.md)
 - [Components made up Ansible](#components-made-up-ansible)
 - [Automation and Orchestration](#automation-and-orchestration)
 - [Installation](#installation)
