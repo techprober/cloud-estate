@@ -7,6 +7,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ## Table of Contents
 
 - [Command Line Utilities](#command-line-utilities)
+- [Docker Images](#docker-image)
 - [Applications](#applications)
 - [Programming Addons](#programming-addons)
 - [Editor of Choice](#editor-of-choice)
@@ -18,9 +19,13 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/iridakos/goto) [goto](https://github.com/iridakos/goto) - A shell utility allowing users to navigate to aliased directories supporting auto-completion.
 - [![Open-Source Software][oss icon]](https://github.com/matusf/goto) [goto-fish](https://github.com/matusf/goto) - A fish shell utility to quickly navigate to aliased directories supporting tab-completion.
 
+## Docker Images
+
+comming soon.
+
 ## Applications
 
-coming soon.
+- [![Open-Source Software][oss icon]](https://github.com/mikecao/umami) [umami](https://github.com/mikecao/umami) - Umami is a simple, fast, website analytics alternative to Google Analytics.
 
 ## Programming Addons
 
