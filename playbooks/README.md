@@ -139,7 +139,7 @@ strategy: option
 reference: https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#installing-a-collection-from-galaxy
 
 ```bash
-ansible-galaxy collection install ansible-galaxy collection install community.general --upgrade
+ansible-galaxy collection install community.general --upgrade
 ```
 
 Alternatively you can include the collection in a `requirements.yml` file and then run `ansible-galaxy collection install -r requirements.yml --upgrade`. Here is an example of `requirements.yml` file:
