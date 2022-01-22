@@ -2,6 +2,15 @@
 
 The installation guide below ONLY works for Archlinux User for now. Ubuntu installation guide will be comming up soon, so stay tuned!
 
+## References
+
+- [How a Container Runtime is using CNI](https://karampok.me/posts/container-networking-with-cni/)
+- [BuildKit - Git](https://github.com/moby/buildkit)
+- [CNI-Plugins - Git](https://github.com/containernetworking/plugins)
+- [Containerd - Git](https://github.com/containerd/containerd)
+- [Nerdctl - Git](https://github.com/containerd/nerdctl)
+- [可以像 Docker 一样方便的使用 Containerd 吗？](https://www.51cto.com/article/679424.html)
+
 ## Purge Docker
 
 ```bash
