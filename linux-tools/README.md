@@ -19,6 +19,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Open-Source Software][oss icon]](https://github.com/iridakos/goto) [goto](https://github.com/iridakos/goto) - A shell utility allowing users to navigate to aliased directories supporting auto-completion.
 - [![Open-Source Software][oss icon]](https://github.com/matusf/goto) [goto-fish](https://github.com/matusf/goto) - A fish shell utility to quickly navigate to aliased directories supporting tab-completion.
+- [![Open-Source Software][oss icon]](https://github.com/sekey/sekey) [sekey](https://github.com/sekey/sekey) - A SSH Agent that allow users to authenticate to UNIX/Linux SSH servers using the Secure Enclave
 
 ## Docker Images
 
@@ -27,6 +28,10 @@ comming soon.
 ## Kubernetes Tools
 
 - [![Open-Source Software][oss icon]](https://github.com/sunny0826/kubecm) [kubecm](https://github.com/sunny0826/kubecm) - Manage your kubeconfig more easily.
+
+## CloudNative Solutions
+
+- [![Open-Source Software][oss icon]](https://github.com/openfaas/faasd) [Faasd](https://github.com/openfaas/faasd) - A lightweight & portable faas engine
 
 ## Applications
 
