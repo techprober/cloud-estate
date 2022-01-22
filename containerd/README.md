@@ -19,6 +19,9 @@ sudo pacman -Sy runc bridge-utils
 
 ```bash
 mkdir -p /opt/cni/bin
+sudo pacman -S cni-plugins
+
+# alternatives (use pre-built binary)
 curl -sSL https://github.com/containernetworking/plugins/releases/download/v1.0.1/cni-plugins-linux-amd64-v1.0.1.tgz | sudo tar -xvz -C /opt/cni/bin
 ```
 
