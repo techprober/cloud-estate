@@ -113,6 +113,6 @@ sudo systemctl status buildkit
 
 ```bash
 sudo /sbin/sysctl -w net.ipv4.conf.all.forwarding=1
-echo "net.ipv4.conf.all.forwarding=1" | $SUDO tee -a /etc/sysctl.conf
+echo "net.ipv4.conf.all.forwarding=1" | sudo tee -a /etc/sysctl.conf
 reboot
 ```
