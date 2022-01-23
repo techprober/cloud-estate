@@ -20,7 +20,6 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/iridakos/goto) [goto](https://github.com/iridakos/goto) - A shell utility allowing users to navigate to aliased directories supporting auto-completion.
 - [![Open-Source Software][oss icon]](https://github.com/matusf/goto) [goto-fish](https://github.com/matusf/goto) - A fish shell utility to quickly navigate to aliased directories supporting tab-completion.
 - [![Open-Source Software][oss icon]](https://github.com/sekey/sekey) [sekey](https://github.com/sekey/sekey) - A SSH Agent that allow users to authenticate to UNIX/Linux SSH servers using the Secure Enclave
-- [![Open-Source Software][oss icon]](https://github.com/iawia002/lux) [lux](https://github.com/iawia002/lux) -  Lux is a fast and simple video downloader built with Go
 
 ## Docker Images
 
@@ -37,6 +36,7 @@ comming soon.
 ## Applications
 
 - [![Open-Source Software][oss icon]](https://github.com/mikecao/umami) [umami](https://github.com/mikecao/umami) - Umami is a simple, fast, website analytics alternative to Google Analytics.
+- [![Open-Source Software][oss icon]](https://github.com/iawia002/lux) [lux](https://github.com/iawia002/lux) -  Lux is a fast and simple video downloader built with Go
 
 ## Programming Addons
 
