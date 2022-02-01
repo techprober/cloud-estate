@@ -23,7 +23,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 ## Docker Images
 
-comming soon.
+- [![Open-Source Software][oss icon]](https://github.com/pi-hole/docker-pi-hole) [docker-pi-hole](https://github.com/pi-hole/docker-pi-hole) - Pi-hole in a docker container
 
 ## Kubernetes Tools
 
