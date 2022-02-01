@@ -32,7 +32,7 @@ This repo serves to provide the end-users a way to better speed up their cloud a
 
 ## Pre-commit Hooks
 
-This repo uses the [pre-commit framework]() to set up hooks. To use it, run the following commands:
+This repo uses the [pre-commit framework](https://github.com/pre-commit/pre-commit-hooks) to set up hooks. To use it, run the following commands:
 
 ```bash
 # Install with pip
@@ -58,4 +58,4 @@ Special thanks goes to all [ contributors ](https://github.com/TechProber/cloud-
 
 ## License
 
-[MIT (C) TechProber](https://github.com/yqlbu/TechProber/blob/master/LICENSE)
+[MIT (C) TechProber](https://github.com/yqlbu/TechProber/cloud-estate/blob/master/LICENSE)
