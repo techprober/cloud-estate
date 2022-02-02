@@ -6,6 +6,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 ## Table of Contents
 
+- [HomeLab Related](#homelab-related)
 - [Command Line Utilities](#command-line-utilities)
 - [Docker Images](#docker-image)
 - [Kubernetes Tools](#kubernetes-tools)
@@ -47,10 +48,6 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Open-Source Software][oss icon]](https://smee.io/) [smee.io](https://smee.io/) - Webhook payload delivery service - Receives payloads then sends them to your locally running application
 
-
-## Editor of Choice
-
-coming soon.
 
 ## Contribution
 
