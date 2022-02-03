@@ -10,6 +10,6 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 ### CI
 
-- [![Learn Makefiles][oss icon]](https://makefiletutorial.com/#top) [Learn Makefiles](https://makefiletutorial.com/#top)
+- [![Learn Makefiles][docs icon]](https://makefiletutorial.com/#top) [Learn Makefiles](https://makefiletutorial.com/#top)
 
-[oss icon]: ./assets/oss.svg
+[docs icon]: ./assets/docs.svg
