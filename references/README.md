@@ -6,10 +6,10 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 ## Catagories
 
-- [CI](#ci)
+- [Continuous Integration](#continuous-integration)
 
-### CI
+### Continuous Integration
 
-- [![Learn Makefiles][docs icon]](https://makefiletutorial.com/#top) [Learn Makefiles](https://makefiletutorial.com/#top)
+- [![Learn Makefiles][docs icon]](https://makefiletutorial.com/#top) [Learn Makefiles](https://makefiletutorial.com/#top) - Learn makefiles with the tastiest examples
 
 [docs icon]: ./assets/docs.svg
