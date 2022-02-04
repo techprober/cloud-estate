@@ -7,6 +7,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ## Table of Contents
 
 - [HomeLab Related](#homelab-related)
+- [Productive Tools](#productive-tools)
 - [Command Line Utilities](#command-line-utilities)
 - [Docker Images](#docker-image)
 - [Kubernetes Tools](#kubernetes-tools)
@@ -16,6 +17,14 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [Contributors](https://github.com/TechProber/cloud-estate/graphs/contributors)
 - [How to Contribute](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md)
 
+## Productive Tools
+
+- [![Open-Source Software][oss icon]](https://github.com/marktext/marktext) [marktext](https://github.com/marktext/marktext) -  simple and elegant open-source markdown editor that focused on speed and usability
+
+## HomeLab Related
+
+- [![Open-Source Software][oss icon]](https://github.com/Weilbyte/PVEDiscordDark) [PVEDiscordDak Theme](https://github.com/Weilbyte/PVEDiscordDark) - A Discord-like dark theme for the Proxmox Web UI
+
 ## Command Line Utilities
 
 - [![Open-Source Software][oss icon]](https://github.com/iridakos/goto) [goto](https://github.com/iridakos/goto) - A shell utility allowing users to navigate to aliased directories supporting auto-completion.
@@ -24,10 +33,6 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](github-status-updater) [github-status-updater](https://github.com/cloudposse/github-status-updater) - Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 - [![Open-Source Software][oss icon]](bat) [bat](https://github.com/sharkdp/bat) - A cat(1) clone with syntax highlighting and Git integration
 - [![Open-Source Software][oss icon]](vivid) [vivid](https://github.com/sharkdp/vivid) - vivid is a generator for the LS_COLORS environment variable that controls the colorized output of ls, tree, fd, bfs, dust and many other tools
-
-## HomeLab Related
-
-- [![Open-Source Software][oss icon]](https://github.com/Weilbyte/PVEDiscordDark) [PVEDiscordDak Theme](https://github.com/Weilbyte/PVEDiscordDark) - A Discord-like dark theme for the Proxmox Web UI
 
 ## Docker Images
 
