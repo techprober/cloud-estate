@@ -17,6 +17,10 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [Contributors](https://github.com/TechProber/cloud-estate/graphs/contributors)
 - [How to Contribute](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md)
 
+## Productive Tools
+
+- [![Open-Source Software][oss icon]](https://github.com/marktext/marktext) [marktext](https://github.com/marktext/marktext) -  simple and elegant open-source markdown editor that focused on speed and usability
+
 ## HomeLab Related
 
 - [![Open-Source Software][oss icon]](https://github.com/Weilbyte/PVEDiscordDark) [PVEDiscordDak Theme](https://github.com/Weilbyte/PVEDiscordDark) - A Discord-like dark theme for the Proxmox Web UI
