@@ -37,7 +37,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 ## Docker Images
 
-- [![Open-Source Software][oss icon]](https://github.com/pi-hole/docker-pi-hole) [docker-pi-hole](https://github.com/pi-hole/docker-pi-hole) - Pi-hole in a docker container
+- [![Docker][docker icon]](https://github.com/pi-hole/docker-pi-hole) [docker-pi-hole](https://github.com/pi-hole/docker-pi-hole) - Pi-hole in a docker container
 
 ## Kubernetes Tools
 
@@ -86,3 +86,4 @@ Special thanks go to all [contributors](https://github.com/TechProber/cloud-esta
 [nvim icon]: ./assets/neovim.svg
 [k8s icon]: ./assets/kubernetes.svg
 [cncf icon]: ./assets/cncf.svg
+[docker icon]: ./assets/docker.svg
