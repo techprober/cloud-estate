@@ -13,7 +13,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [Kubernetes Tools](#kubernetes-tools)
 - [Applications](#applications)
 - [Programming Addons](#programming-addons)
-- [Editor of Choice](#editor-of-choice)
+- [Vim/Neovim Addons](#vim/neovim-addons)
 - [Contributors](https://github.com/TechProber/cloud-estate/graphs/contributors)
 - [How to Contribute](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md)
 
@@ -55,6 +55,14 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Open-Source Software][oss icon]](https://smee.io/) [smee.io](https://smee.io/) - Webhook payload delivery service - Receives payloads then sends them to your locally running application
 
+## Vim/Neovim Addons
+
+- [![Open-Source Software][oss icon]](https://github.com/rockerBOO/awesome-neovim) [awesome-neovim](https://github.com/rockerBOO/awesome-neovim) - Collections of awesome Neovim plugins. Mostly targeting Neovim specific features
+- [![Open-Source Software][oss icon]](https://github.com/neovim/nvim-lspconfig) [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - Quickstart configurations for the Neovim LSP client
+- [![Open-Source Software][oss icon]](https://github.com/folke/which-key.nvim) [which-key.nvim](https://github.com/folke/which-key.nvim) - WhichKey is a lua plugin for Neovim 0.5 that displays a popup with possible key bindings of the command you started typing
+- [![Open-Source Software][oss icon]](https://github.com/mhartington/formatter.nvim) [formatter.nvim](https://github.com/mhartington/formatter.nvim) - A format runner for neovim, written in lua
+- [![Open-Source Software][oss icon]](https://github.com/jose-elias-alvarez/null-ls.nvim) [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim) - Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+- [![Open-Source Software][oss icon]](https://github.com/nvim-telescope/telescope.nvim) [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Telescope.nvim is a highly extendable fuzzy finder over lists. Built on the latest awesome features from Neovim core. Telescope is centered around modularity, allowing for easy customization
 
 ## Contribution
 
