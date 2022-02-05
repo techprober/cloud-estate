@@ -19,7 +19,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 ## Productive Tools
 
-- [![Open-Source Software][oss icon]](https://github.com/marktext/marktext) [marktext](https://github.com/marktext/marktext) -  simple and elegant open-source markdown editor that focused on speed and usability
+- [![Open-Source Software][oss icon]](https://github.com/marktext/marktext) [marktext](https://github.com/marktext/marktext) - simple and elegant open-source markdown editor that focused on speed and usability
 
 ## HomeLab Related
 
@@ -40,16 +40,20 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 ## Kubernetes Tools
 
-- [![Open-Source Software][oss icon]](https://github.com/sunny0826/kubecm) [kubecm](https://github.com/sunny0826/kubecm) - Manage your kubeconfig more easily.
+- [![Kubernetes][k8s icon]](https://github.com/sunny0826/kubecm) [kubecm](https://github.com/sunny0826/kubecm) - Manage your kubeconfig more easily.
+- [![Kuberentes][k8s icon]](https://github.com/sunny0826/kubecm) [k9s](https://github.com/derailed/k9s) - Kubernetes CLI To Manage Your Clusters In Style!
 
 ## CloudNative Solutions
 
-- [![Open-Source Software][oss icon]](https://github.com/openfaas/faasd) [Faasd](https://github.com/openfaas/faasd) - A lightweight & portable faas engine
+- [![CloudNative][cncf icon]](https://github.com/openfaas/faasd) [faasd](https://github.com/openfaas/faasd) - A lightweight & portable faas engine
+- [![CloudNative][cncf icon]](https://github.com/volcano-sh/volcano) [volcano](https://github.com/volcano-sh/volcano) - Volcano is a batch system built on Kubernetes
+- [![CloudNative][cncf icon]](https://github.com/karmada-io/karmada) [karmada](https://github.com/karmada-io/karmada) - Karmada (Kubernetes Armada) is a Kubernetes management system that enables you to run your cloud-native applications across multiple Kubernetes clusters and clouds
+- [![CloudNative][cncf icon]](https://github.com/falcosecurity/falco) [falco](https://github.com/falcosecurity/falco) - Falco makes it easy to consume kernel events, and enrich those events with information from Kubernetes and the rest of the cloud native stack. Falco has a rich set of security rules specifically built for Kubernetes, Linux, and cloud-native
 
 ## Applications
 
-- [![Open-Source Software][oss icon]](https://github.com/mikecao/umami) [umami](https://github.com/mikecao/umami) - Umami is a simple, fast, website analytics alternative to Google Analytics.
-- [![Open-Source Software][oss icon]](https://github.com/iawia002/lux) [lux](https://github.com/iawia002/lux) -  Lux is a fast and simple video downloader built with Go
+- [![Open-Source Software][oss icon]](https://github.com/mikecao/umami) [umami](https://github.com/mikecao/umami) - Umami is a simple, fast, website analytics alternative to Google Analytics
+- [![Open-Source Software][oss icon]](https://github.com/iawia002/lux) [lux](https://github.com/iawia002/lux) - Lux is a fast and simple video downloader built with Go
 
 ## Programming Addons
 
@@ -79,3 +83,5 @@ Special thanks go to all [contributors](https://github.com/TechProber/cloud-esta
 
 [oss icon]: ./assets/oss.svg
 [nvim icon]: ./assets/neovim.svg
+[k8s icon]: ./assets/kubernetes.svg
+[cncf icon]: ./assets/cncf.svg
