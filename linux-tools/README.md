@@ -64,7 +64,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/mhartington/formatter.nvim) [formatter.nvim](https://github.com/mhartington/formatter.nvim) - A format runner for neovim, written in lua
 - [![Neovim][nvim icon]](https://github.com/jose-elias-alvarez/null-ls.nvim) [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim) - Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
 - [![Neovim][nvim icon]](https://github.com/nvim-telescope/telescope.nvim) [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Telescope.nvim is a highly extendable fuzzy finder over lists. Built on the latest awesome features from Neovim core. Telescope is centered around modularity, allowing for easy customization
-
+- [![Neovim][nvim icon]](https://github.com/folke/todo-comments.nvim) [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) - Todo-comments is a lua plugin for Neovim 0.5 to highlight and search for todo comments like TODO, HACK, BUG in your code base
 ## Contribution
 
 Special thanks go to all [contributors](https://github.com/TechProber/cloud-estate/graphs/contributors). If you would like to contribute, please see the [instructions](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md).
