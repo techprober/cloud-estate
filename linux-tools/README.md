@@ -41,8 +41,8 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 ## Kubernetes Tools
 
-- [![Kubernetes][k8s icon]](https://github.com/sunny0826/kubecm) [kubecm](https://github.com/sunny0826/kubecm) - Manage your kubeconfig more easily.
-- [![Kuberentes][k8s icon]](https://github.com/sunny0826/kubecm) [k9s](https://github.com/derailed/k9s) - Kubernetes CLI To Manage Your Clusters In Style!
+- [![Kubernetes][k8s icon]](https://github.com/sunny0826/kubecm) [kubecm](https://github.com/sunny0826/kubecm) - Manage your kubeconfig more easily
+- [![Kuberentes][k8s icon]](https://github.com/sunny0826/kubecm) [k9s](https://github.com/derailed/k9s) - Kubernetes CLI To Manage Your Clusters In Style
 
 ## CloudNative Solutions
 
