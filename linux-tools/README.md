@@ -11,6 +11,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [Command Line Utilities](#command-line-utilities)
 - [Docker Images](#docker-image)
 - [Kubernetes Tools](#kubernetes-tools)
+- [CloudNative Solutions](#cloudnative-solutions)
 - [Applications](#applications)
 - [Programming Addons](#programming-addons)
 - [Vim/Neovim Addons](#vim/neovim-addons)
