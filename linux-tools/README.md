@@ -66,6 +66,8 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/nvim-telescope/telescope.nvim) [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Telescope.nvim is a highly extendable fuzzy finder over lists. Built on the latest awesome features from Neovim core. Telescope is centered around modularity, allowing for easy customization
 - [![Neovim][nvim icon]](https://github.com/folke/todo-comments.nvim) [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) - Todo-comments is a lua plugin for Neovim 0.5 to highlight and search for todo comments like TODO, HACK, BUG in your code base
 - [![Neovim][nvim icon]](https://github.com/folke/twilight.nvim) [twilight](https://github.com/folke/twilight.nvim) - Twilight is a Lua plugin for Neovim 0.5 that dims inactive portions of the code you're editing
+- [![Neovim][nvim icon]](https://github.com/sunjon/Shade.nvim) [shade](https://github.com/sunjon/Shade.nvim) - Shade is a Neovim plugin that dims your inactive windows, making it easier to see the active window at a glance
+
 ## Contribution
 
 Special thanks go to all [contributors](https://github.com/TechProber/cloud-estate/graphs/contributors). If you would like to contribute, please see the [instructions](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md).
