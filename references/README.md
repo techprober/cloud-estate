@@ -6,9 +6,14 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 ## Catagories
 
+- [Productive Tools](#productive-tools)
 - [Continuous Integration](#continuous-integration)
 - [Git](#git)
 - [Vim](#vim)
+
+### Productive Tools
+
+- [![Docs][docs icon]](https://wakatime.com/) [Wakatime](https://wakatime.com/) - Dashboards for developers, powered by open source IDE plugins
 
 ### Continuous Integration
 
