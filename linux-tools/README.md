@@ -53,6 +53,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/argoproj-labs/argocd-image-updater) [argocd-image-updater](https://github.com/argoproj-labs/argocd-image-updater) - Argo CD Image Updater is a tool to automatically update the container images of Kubernetes workloads which are managed by Argo CD
 - [![CloudNative][cncf icon]](https://github.com/argoproj-labs/argocd-vault-plugin) [argocd-valut-plugin](https://github.com/falcosecurity/falco) - An Argo CD plugin to retrieve secrets from various Secret Management tools (HashiCorp Vault, IBM Cloud Secrets Manager, AWS Secrets Manager, etc.) and inject them into Kubernetes resources
 - [![CloudNative][cncf icon]](https://github.com/containers/buildah) [buildah](https://github.com/containers/buildah) - A tool that facilitates building Open Container Initiative (OCI) container images
+- [![CloudNative][cncf icon]](https://github.com/moby/buildkit) [buildkit](https://github.com/moby/buildkit) - BuildKit is a toolkit for converting source code to build artifacts in an efficient, expressive and repeatable manner
 
 ## Applications
 
