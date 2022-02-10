@@ -21,7 +21,8 @@ sudo pacman -Rns docker
 sudo rm -rf /var/lib/docker
 
 # ubuntu
-sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli
+sudo dpkg -l | grep -i docker
+sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli docker-ce-rootless-extras docker-scan-plugin
 sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce
 sudo umount /var/lib/docker/
 sudo rm -rf /var/lib/docker /etc/docker
