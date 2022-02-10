@@ -1,10 +1,7 @@
-#
-
 <h1 align="center">Awesome Linux Tools</h1>
 <p align="center">
     <em>A collection of AWESOME Linux Applications and Tools for any of our community members</em>
 </p>
-
 <p align="center">
     <a href="https://github.com/TechProber/cloud-estate/tree/master/linux-tools">
         <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="awesome"/>
@@ -17,9 +14,9 @@
     </a>
 </p>
 
-Feel free to contribute. Any recommendations and suggestions are welcome.
-
 ## Table of Contents
+
+Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [HomeLab Related](#homelab-related)
 - [Productive Tools](#productive-tools)
