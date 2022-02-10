@@ -1,6 +1,21 @@
-# Useful Linux Tools
+#
 
-This repo is a collection of AWESOME Linux Applications and Tools for any of our community members.
+<h1 align="center">Awesome Linux Tools</h1>
+<p align="center">
+    <em>A collection of AWESOME Linux Applications and Tools for any of our community members</em>
+</p>
+
+<p align="center">
+    <a href="https://github.com/TechProber/cloud-estate/tree/master/linux-tools">
+        <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="awesome"/>
+    </a>
+    <a href="https://t.me/joinchat/7AG3aEQ5I00wY2Q5">
+        <img src="https://img.shields.io/badge/join-us%20on%20telegram-gray.svg?longCache=true&logo=telegram&colorB=blue" alt="join-us-on-telegram"/>
+    </a>
+    <a href="https://github.com/TechProber/cloud-estate">
+        <img src="https://img.shields.io/github/last-commit/TechProber/cloud-estate" alt="lastcommit"/>
+    </a>
+</p>
 
 Feel free to contribute. Any recommendations and suggestions are welcome.
 
