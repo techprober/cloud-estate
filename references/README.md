@@ -7,6 +7,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ## Catagories
 
 - [Productive Tools](#productive-tools)
+- [Cloud Computing](#cloud-computing)
 - [Continuous Integration](#continuous-integration)
 - [Git](#git)
 - [Vim](#vim)
@@ -15,6 +16,10 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ### Productive Tools
 
 - [![Docs][docs icon]](https://wakatime.com/) [Wakatime](https://wakatime.com/) - Dashboards for developers, powered by open source IDE plugins
+
+### Cloud Computing
+
+- [![Docs][docs icon]](https://cloud-images.ubuntu.com/) [Ubuntu Cloud Images](https://cloud-images.ubuntu.com/) - Ubuntu Cloud Images are the official Ubuntu images that have been customised by Canonical to run on public clouds that provide Ubuntu Certified Images, Openstack, LXD and more
 
 ### Container
 
