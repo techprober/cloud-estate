@@ -91,6 +91,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/sunjon/Shade.nvim) [shade](https://github.com/sunjon/Shade.nvim) - Shade is a Neovim plugin that dims your inactive windows, making it easier to see the active window at a glance
 - [![Neovim][nvim icon]](https://github.com/lukas-reineke/indent-blankline.nvim) [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) - Indent-blankline plugin adds indentation guides to all lines (including empty lines)
 - [![Neovim][nvim icon]](https://github.com/phaazon/hop.nvim#word-mode-hopword) [hop](https://github.com/phaazon/hop.nvim#word-mode-hopword) - Hop is an EasyMotion-like plugin allowing you to jump anywhere in a document with as few keystrokes as possible
+- [![Neovim][nvim icon]](https://github.com/instant-markdown/vim-instant-markdown) [instant-markdown-preview](https://github.com/instant-markdown/vim-instant-markdown) - Instant Markdown previews from Vim
 
 ## Contribution
 
