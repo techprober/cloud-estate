@@ -41,6 +41,7 @@ autoinstall:
     disable_root: false
     timezone: Asia/Shanghai
   packages:
+    - sudo
     - linux-generic
     - linux-headers-generic
     - linux-image-generic
@@ -57,5 +58,5 @@ autoinstall:
     - tmux
     - cloud-init
   late-commands:
-    - echo 'ubuntu ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/ubuntu
-    - curtin in-target --target=/target -- chmod 440 /etc/sudoers.d/ubuntu
+    - echo 'packer ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/packer
+    - curtin in-target --target=/target -- chmod 440 /etc/sudoers.d/packer

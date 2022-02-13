@@ -3,13 +3,13 @@
     {
       "type": "proxmox",
 
-      "proxmox_url": "https://{{user `proxmox_host`}}/api2/json",
+      "proxmox_url": "https://{{user `proxmox_host`}}:8006/api2/json",
       "insecure_skip_tls_verify": true,
       "username": "{{user `proxmox_api_user`}}",
       "password": "{{user `proxmox_api_password`}}",
 
       "vm_name": "{{user `template_name`}}",
-      "vm_id": "{{ user `vmid` }}",
+      "vm_id": "{{ user `vm_id` }}",
       "node": "{{user `proxmox_node_name`}}",
       "cores": "{{ user `cores` }}",
       "sockets": "{{ user `sockets` }}",
@@ -81,12 +81,13 @@
     {
       "type": "shell-local",
       "inline": [
-        "ssh root@{{user `proxmox_host`}} qm set {{user `vmid`}} --scsihw virtio-scsi-pci",
-        "ssh root@{{user `proxmox_host`}} qm set {{user `vmid`}} --ide2 {{user `datastore`}}:cloudinit",
-        "ssh root@{{user `proxmox_host`}} qm set {{user `vmid`}} --boot c --bootdisk scsi0",
-        "ssh root@{{user `proxmox_host`}} qm set {{user `vmid`}} --ciuser {{ user `ssh_username` }}",
-        "ssh root@{{user `proxmox_host`}} qm set {{user `vmid`}} --cipassword {{ user `ssh_password` }}",
-        "ssh root@{{user `proxmox_host`}} qm set {{user `vmid`}} --vga std"
+        "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --scsihw virtio-scsi-pci",
+        "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --ide2 {{user `datastore`}}:cloudinit",
+        "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --boot c --bootdisk scsi0",
+        "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --ciuser {{ user `ssh_username` }}",
+        "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --cipassword {{ user `ssh_password` }}",
+        "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --vga std",
+        "ssh root@{{user `proxmox_host`}} qm template {{user `vm_id`}}"
       ]
     }
   ]
