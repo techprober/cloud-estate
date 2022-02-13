@@ -125,7 +125,10 @@ Now with your configuration complete, you will be ready to build your proxmox te
 To generate sha512 password execute the following command:
 
 ```bash
+# generate through docker-container
 docker run -it --rm --entrypoint "openssl" alpine/openssl passwd -6 --salt xyz packer
+# generate through openssl-cli
+openssl passwd -6 -salt xyz packer
 # output: JJbmTJ7EzYLxcBOnv3bwWLhpQZ.WuX8yJkNaLKgtS747n2zUNPh8LZKhQPBnLAptBG429x5r0RJ.ZFIXiIMPw/
 ```
 

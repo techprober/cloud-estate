@@ -37,8 +37,8 @@
 
       "ssh_port": 22,
       "ssh_timeout": "20m",
-      "ssh_password": "{{ user `ssh_password` }}",
       "ssh_username": "{{ user `ssh_username` }}",
+      "ssh_password": "{{ user `ssh_password` }}",
 
       "qemu_agent": true,
       "unmount_iso": true,
