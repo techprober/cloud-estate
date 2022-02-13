@@ -216,3 +216,7 @@ Build 'proxmox' finished.
 When the process is complete you should see your template ready in the proxmox interface and ready to be cloned into virtual machines.
 
 ![]()
+
+## References
+
+- [Creating proxmox templates with packer - Aaron Berry](https://dev.to/aaronktberry/creating-proxmox-templates-with-packer-1b35)
