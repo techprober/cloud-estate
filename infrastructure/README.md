@@ -117,4 +117,5 @@ terragrunt run-all destroy
 
 - [Terraform Docs - Proxmox Provider](https://registry.terraform.io/providers/Telmate/proxmox/latest/docs)
 - [Terragrunt - Quick Start](https://terragrunt.gruntwork.io/docs/getting-started/quick-start/#example)
+- [How to create a Proxmox Ubuntu cloud-init image](https://austinsnerdythings.com/2021/08/30/how-to-create-a-proxmox-ubuntu-cloud-init-image/)
 - [How to deploy VMs in Proxmox with Terraform](https://austinsnerdythings.com/2021/09/01/how-to-deploy-vms-in-proxmox-with-terraform/)
