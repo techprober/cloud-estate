@@ -36,7 +36,7 @@ Log into the Proxmox cluster or host using ssh (or mimic these in the GUI) then:
 
 ```bash
 # Create the user
-pveum user add terraform-prov@pve --password $PASSWORDG
+pveum user add terraform-prov@pve --password $PASSWORD
 
 # Assign the user the correct role
 pveum aclmod / -user terraform-prov@pve -role Administrator
@@ -48,9 +48,9 @@ pveum aclmod / -user terraform-prov@pve -role Administrator
 export PM_API_TOKEN_ID="[user]@pve![token_id]"
 export PM_API_TOKEN_SECRET="token"
 
-# alternative: use PM_PASSWORD
+# alternative: use PM_PASS
 export PM_USER="terraform-prov@pve"
-export PM_PASSWORD="password"
+export PM_PASS="password"
 ```
 
 #### Navigate to the resources sub-dir
