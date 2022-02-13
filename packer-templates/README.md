@@ -21,6 +21,7 @@ Maunally creating and managing VM Templates in Proxmox can become a challenge wi
 ## Table of Contents
 
 - [What is Packer](#what-is-packer)
+- [Create a Proxmox user for Packer](#create-proxmox-user-for-packer)
 - [Prepare your packer template](#prepare-your-packer-template)
 - [Build your Proxmox Template with Packer](#build-your-proxmox-template-with-packer)
 
@@ -58,111 +59,39 @@ To build an image with packer we need to define our image through a template fil
 
 By using packer we can define our golden VM image as code so that we can easily build identically configured images on demand so that all your machines are running the same image and can also be easily updated to a new image when needed.
 
+## Create a Proxmox user for Packer
+
+Packer requires a user account to perform actions on the Proxmox API. The following commands will create a new user account `packer@pve` with restricted permissions.
+
+```
+$ pveum useradd packer@pve
+$ pveum passwd packer@pve
+Enter new password: ****************
+Retype new password: ****************
+$ pveum roleadd Packer -privs "VM.Config.Disk VM.Config.CPU VM.Config.Memory Datastore.AllocateSpace Sys.Modify VM.Config.Options VM.Allocate VM.Audit VM.Console VM.Config.CDROM VM.Config.Network VM.PowerMgmt VM.Config.HWType VM.Monitor"
+$ pveum aclmod / -user packer@pve -role Packer
+```
+
 ## Prepare your packer template
 
 To create the template we will use the [ proxmox builder ](https://packer.io/docs/builders/proxmox.html) which connects through the proxmox `web API` to provision and configure the VM for us and then turn it into a template. To configure our template we will use a [variables file](https://github.com/TechProber/cloud-estate/blob/packer-templates/packer-templates/example.vars.json), to import this variables file we will use the `-var-file` flag to pass in our variables to packer. These variables will be used in our template file with the following syntax within a string like so `passwd/username={{ user 'ssh_username'}}`.
 
-Now the builder block below will outline the basic properties of our desired proxmox template such as its name, the allocated resources and the devices attached to the VM. To achieve this the [ boot_command ](https://packer.io/docs/builders/qemu.html#boot-configuration) option will be used to boot the OS and tell it to look for the preseed file to automate the OS installation process. Packer has an inbuilt HTTP server to serve this [ preseed.cfg ](https://github.com/Aaron-K-T-Berry/packer-ubuntu-proxmox-template/blob/master/http/preseed.cfg) file to the VM as its installing by using the [ http_directory ](https://packer.io/docs/builders/qemu.html#http_directory) option in the builder to specify the public files of the HTTP server. [ Check out the ubuntu preseed documentation ](https://help.ubuntu.com/lts/installation-guide/s390x/apbs02.html) for info on modifying the automatic installation process of the OS via a pre seed file.
+Now the builder block below will outline the basic properties of our desired proxmox template such as its name, the allocated resources and the devices attached to the VM. To achieve this the [ boot_command ](https://packer.io/docs/builders/qemu.html#boot-configuration) option will be used to boot the OS and tell it to look for the `http/user-data` file to automate the OS installation process. Packer will start a HTTP server from the content of the `http` directory (with the `http_directory` parameter). This will allow `Subiquity` to fetch the cloud-init files remotely.
+
+**Notes:** The live installer `Subiquity` uses more memory than debian-installer. The default value from Packer (512M) is not enough and will lead to weird kernel panic. Use `1G` as a minimum.
+
+The boot command tells cloud-init to start and uses the `nocloud-net` data source to be able to load the `user-data` and `meta-data` files from a remote HTTP endpoint. The additional `autoinstall` parameter will force Subiquity to perform destructive actions without asking confirmation from the user.
 
 ```json
 {
-  "builders": [
-    {
-      "type": "proxmox",
-      "proxmox_url": "https://{{user `proxmox_host`}}:8006/api2/json",
-      "insecure_skip_tls_verify": true,
-      "username": "{{user `proxmox_api_user`}}",
-      "password": "{{user `proxmox_api_password`}}",
-
-      "vm_id": "{{ user `vmid` }}",
-      "vm_name": "{{user `template_name`}}",
-      "template_description": "{{ user `template_description` }}",
-
-      "node": "{{user `proxmox_node`}}",
-      "cores": "{{ user `cores` }}",
-      "sockets": "{{ user `sockets` }}",
-      "memory": "{{ user `memory` }}",
-      "os": "l26",
-
-      "network_adapters": [
-        {
-          "model": "virtio",
-          "bridge": "vmbr0"
-        }
-      ],
-
-      "disks": [
-        {
-          "type": "scsi",
-          "disk_size": "{{ user `disk_size`}}",
-          "storage_pool": "{{user `datastore`}}",
-          "storage_pool_type": "{{user `datastore_type`}}",
-          "format": "raw",
-          "cache_mode": "writeback"
-        }
-      ],
-
-      "ssh_timeout": "90m",
-      "ssh_password": "{{ user `ssh_password` }}",
-      "ssh_username": "{{ user `ssh_username` }}",
-
-      "qemu_agent": true,
-      "unmount_iso": true,
-
-      "iso_file": "{{user `iso`}}",
-
-      "http_directory": "./http",
-
-      "boot_wait": "10s",
-
-      "boot_command": [
-        "{{ user `boot_command_prefix` }}",
-        "/install/vmlinuz ",
-        "auto ",
-        "console-setup/ask_detect=false ",
-        "debconf/frontend=noninteractive ",
-        "debian-installer={{ user `locale` }} ",
-        "hostname={{ user `hostname` }} ",
-        "fb=false ",
-        "grub-installer/bootdev=/dev/sda<wait> ",
-        "initrd=/install/initrd.gz ",
-        "kbd-chooser/method=us ",
-        "keyboard-configuration/modelcode=SKIP ",
-        "locale={{ user `locale` }} ",
-        "noapic ",
-        "passwd/username={{ user `ssh_username` }} ",
-        "passwd/user-fullname={{ user `ssh_fullname` }} ",
-        "passwd/user-password={{ user `ssh_password` }} ",
-        "passwd/user-password-again={{ user `ssh_password` }} ",
-        "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/{{ user `preseed.cfg` }} ",
-        "-- <enter>"
-      ]
-    }
-  ]
-}
-```
-
-In this template, we will also be using the [ shell ](https://packer.io/docs/provisioners/shell.html) provisioner to configure our VM os once it has been installed onto the virtual machine and is available via SSH. This can be helpful for installing the minimum required packages on your VM's such as the [ QEMU quest agent ](https://pve.proxmox.com/wiki/Qemu-guest-agent) and [ cloud init ](https://pve.proxmox.com/wiki/Cloud-Init_Support) or any other software required. You can also switch this provisioner auto for any of the other provisioners such as ansible, chef or puppet for example.
-
-```json
-{
-  "provisioners": [
-    {
-      "pause_before": "20s",
-      "type": "shell",
-      "environment_vars": ["DEBIAN_FRONTEND=noninteractive"],
-      "inline": [
-        "date > provision.txt",
-        "sudo apt-get update",
-        "sudo apt-get -y upgrade",
-        "sudo apt-get -y dist-upgrade",
-        "sudo apt-get -y install linux-generic linux-headers-generic linux-image-generic",
-        "sudo apt-get -y install qemu-guest-agent cloud-init",
-        "sudo apt-get -y install wget curl",
-        "exit 0"
-      ]
-    }
-  ]
+  ...
+  "boot_command": [
+    "<esc><wait><esc><wait><f6><wait><esc><wait>",
+    "<bs><bs><bs><bs><bs>",
+    "autoinstall ds=nocloud-net;s=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ ",
+    "--- <enter>"
+  ],
+  ...
 }
 ```
 
@@ -190,14 +119,23 @@ And finally, we will use the post processors to run some commands locally. This 
 
 Now with your configuration complete, you will be ready to build your proxmox template with packer. Run the following command
 
+To generate sha512 password execute the following command:
+
 ```bash
-packer build -var-file="./config.json" ./ubuntu-18.04.json
+docker run -it --rm --entrypoint "openssl" alpine/openssl passwd -6 --salt xyz ubuntu
+# output: lrzkz89JCrvzOPr56aXfFFqGZpBReOx5ndDu9m5CwVFWjZsEIhvVm.I5B4zMxJdcdTyAvncwjKT.dWcD/ZHIo.
+```
+
+To create the template execute the following command:
+
+```bash
+packer build -var-file vars.json -force ubuntu-2004.json
 ```
 
 You should see some output for each of the `builders`, `provisioners` and `post-processors`.
 
 ```bash
-$ packer build -var-file="./config.json" ./ubuntu-18.04.json
+$ packer build -var-file vars.json -force ubuntu-2004.json
 proxmox: output will be in this color.
 
 ==> proxmox: Creating VM
@@ -222,3 +160,4 @@ When the process is complete you should see your template ready in the proxmox i
 - [Creating proxmox templates with packer - Aaron Berry](https://dev.to/aaronktberry/creating-proxmox-templates-with-packer-1b35)
 - [Getting started with Packer](https://packer.io/intro/getting-started/install.html)
 - [Ubuntu docs for the pre-seed file](https://help.ubuntu.com/16.04/installation-guide/i386/apbs04.html)
+- [Proxmox Forum - Using Packer to deploy Ubuntu 20.04 to Proxmox](https://forum.proxmox.com/threads/using-packer-to-deploy-ubuntu-20-04-to-proxmox.104275/)
