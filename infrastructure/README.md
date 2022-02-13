@@ -1,6 +1,37 @@
-# Infrastructure
+<h1 align="center">Infrastructure as Code</h1>
+<p align="center">
+    <em>Use terragrunt to explictly manage the state of Infrastructure</em>
+</p>
+<p align="center">
+    <a href="https://t.me/pve_zh">
+        <img src="https://img.shields.io/badge/join-us%20on%20proxmox%20group-gray.svg?longCache=true&logo=proxmox&colorB=orange" alt="join-us-on-proxmox-group"/>
+    </a>
+    <a href="https://registry.terraform.io/providers/Telmate/proxmox/latest/docs">
+        <img src="https://img.shields.io/badge/provider-telmate/proxmox-gray.svg?longCache=true&logo=terraform&colorB=purple" alt="terraform-proxmox-provider"/>
+    </a>
+    <a href="https://t.me/joinchat/7AG3aEQ5I00wY2Q5">
+        <img src="https://img.shields.io/badge/join-us%20on%20telegram-gray.svg?longCache=true&logo=telegram&colorB=blue" alt="join-us-on-telegram"/>
+    </a>
+    <a href="https://github.com/TechProber/cloud-estate">
+        <img src="https://img.shields.io/github/last-commit/TechProber/cloud-estate" alt="lastcommit"/>
+    </a>
+</p>
 
-Use terragrunt to explictly manage the state of Infrastructure
+## Table of Contents
+
+- [Pre-requisites](#pre-requisites)
+  - [Install Terragrunt](#install-terragrunt)
+  - [Before Deployment](#before-deployment)
+- [Deployment](#deployment)
+  - [Create the Proxmox User and Role for Terraform](#create-the-proxmox-user-and-role-for-terraform)
+  - [Create the connection via Username and API token | PASSWORD](#create-the-connection-via-username-and-api-token-password)
+  - [Navigate to the resources sub-dir](#navigate-to-the-resources-sub-dir)
+  - [Version Control](#version-control)
+  - [Init (Install Plugins)](#init-install-plugins)
+  - [Plan (Dry Run)](#plan-dry-run)
+  - [Apply](#apply)
+  - [Destroy](#destroy)
+- [References](#references)
 
 ## Pre-requisites
 
@@ -18,7 +49,7 @@ brew install terragrunt
 
 More installation options can be found in https://terragrunt.gruntwork.io/docs/getting-started/install/#install-terragrunt
 
-#### Before-Deployment
+#### Before Deployment
 
 - Please ensure you have the basic undestanding of how Terraform works in terms of managing the state of Infrastructure. Terragrunt is just an extension of Terraform to allow the end-user to manage multiple `stage` against the same resource module.
 
@@ -42,7 +73,7 @@ pveum user add terraform-prov@pve --password $PASSWORD
 pveum aclmod / -user terraform-prov@pve -role Administrator
 ```
 
-#### Creating the connection via Username and API token | PASSWORD
+#### Create the connection via Username and API token | PASSWORD
 
 ```bash
 export PM_API_TOKEN_ID="[user]@pve![token_id]"
