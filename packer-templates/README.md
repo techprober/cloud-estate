@@ -6,6 +6,9 @@
     <a href="https://t.me/pve_zh">
         <img src="https://img.shields.io/badge/join-us%20on%20proxmox%20group-gray.svg?longCache=true&logo=proxmox&colorB=orange" alt="join-us-on-proxmox-group"/>
     </a>
+    <a href="https://t.me/pve_zh">
+        <img src="https://img.shields.io/badge/provider-proxmox%20builder-gray.svg?longCache=true&logo=packer&colorB=blueviolet" alt="join-us-on-proxmox-group"/>
+    </a>
     <a href="https://t.me/joinchat/7AG3aEQ5I00wY2Q5">
         <img src="https://img.shields.io/badge/join-us%20on%20telegram-gray.svg?longCache=true&logo=telegram&colorB=blue" alt="join-us-on-telegram"/>
     </a>
