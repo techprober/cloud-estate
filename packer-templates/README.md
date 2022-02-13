@@ -6,8 +6,8 @@
     <a href="https://t.me/pve_zh">
         <img src="https://img.shields.io/badge/join-us%20on%20proxmox%20group-gray.svg?longCache=true&logo=proxmox&colorB=orange" alt="join-us-on-proxmox-group"/>
     </a>
-    <a href="https://t.me/pve_zh">
-        <img src="https://img.shields.io/badge/provider-proxmox%20builder-gray.svg?longCache=true&logo=packer&colorB=blueviolet" alt="join-us-on-proxmox-group"/>
+    <a href="https://www.packer.io/plugins/builders/proxmox/">
+        <img src="https://img.shields.io/badge/provider-proxmox%20builder-gray.svg?longCache=true&logo=packer&colorB=blueviolet" alt="proxmox-builder-packer"/>
     </a>
     <a href="https://t.me/joinchat/7AG3aEQ5I00wY2Q5">
         <img src="https://img.shields.io/badge/join-us%20on%20telegram-gray.svg?longCache=true&logo=telegram&colorB=blue" alt="join-us-on-telegram"/>
@@ -125,8 +125,8 @@ Now with your configuration complete, you will be ready to build your proxmox te
 To generate sha512 password execute the following command:
 
 ```bash
-docker run -it --rm --entrypoint "openssl" alpine/openssl passwd -6 --salt xyz ubuntu
-# output: lrzkz89JCrvzOPr56aXfFFqGZpBReOx5ndDu9m5CwVFWjZsEIhvVm.I5B4zMxJdcdTyAvncwjKT.dWcD/ZHIo.
+docker run -it --rm --entrypoint "openssl" alpine/openssl passwd -6 --salt xyz packer
+# output: JJbmTJ7EzYLxcBOnv3bwWLhpQZ.WuX8yJkNaLKgtS747n2zUNPh8LZKhQPBnLAptBG429x5r0RJ.ZFIXiIMPw/
 ```
 
 To create the template execute the following command:
@@ -164,3 +164,4 @@ When the process is complete you should see your template ready in the proxmox i
 - [Getting started with Packer](https://packer.io/intro/getting-started/install.html)
 - [Ubuntu docs for the pre-seed file](https://help.ubuntu.com/16.04/installation-guide/i386/apbs04.html)
 - [Proxmox Forum - Using Packer to deploy Ubuntu 20.04 to Proxmox](https://forum.proxmox.com/threads/using-packer-to-deploy-ubuntu-20-04-to-proxmox.104275/)
+- [Cloud-init - Documentation](https://cloudinit.readthedocs.io/en/0.7.7/index.html)
