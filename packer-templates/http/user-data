@@ -50,9 +50,9 @@ autoinstall:
     - iputils-ping
     - telnet
     - dnsutils
-    - vim
     - neofetch
     - openssh-server
+    - vim
     - curl
     - wget
     - tmux
