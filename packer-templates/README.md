@@ -220,3 +220,5 @@ When the process is complete you should see your template ready in the proxmox i
 ## References
 
 - [Creating proxmox templates with packer - Aaron Berry](https://dev.to/aaronktberry/creating-proxmox-templates-with-packer-1b35)
+- [Getting started with Packer](https://packer.io/intro/getting-started/install.html)
+- [Ubuntu docs for the pre-seed file](https://help.ubuntu.com/16.04/installation-guide/i386/apbs04.html)
