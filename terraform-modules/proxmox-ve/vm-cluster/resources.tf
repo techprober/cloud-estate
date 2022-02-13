@@ -11,12 +11,6 @@ provider "proxmox" {
   pm_api_url      = "https://${var.proxmox_host}:8006/api2/json"
   pm_user         = "${var.pm_user}@pve"
   pm_tls_insecure = true
-
-  # api token id is in the form of: <username>@pam!<tokenId>
-  #pm_api_token_id = "terraform@pam!terraform-token"
-
-  # this is the full secret wrapped in quotes. don't worry, I've already deleted this from my proxmox cluster by the time you read this post
-  #pm_api_token_secret = "4e1e00f2-c353-4b46-a8a6-3cee38c3241e"
 }
 
 resource "proxmox_vm_qemu" "vm" {
