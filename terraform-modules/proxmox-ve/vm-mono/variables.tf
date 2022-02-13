@@ -7,7 +7,7 @@ variable "proxmox_host" {
 }
 
 variable "pm_user" {
-  defualt     = "terraform-prov"
+  default     = "terraform-prov"
   description = "pm user that proxmox uses to interact with the remote server"
   type        = string
 }
