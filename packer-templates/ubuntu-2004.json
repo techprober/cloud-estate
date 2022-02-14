@@ -41,9 +41,10 @@
       "ssh_password": "{{ user `ssh_password` }}",
 
       "qemu_agent": true,
-      "unmount_iso": true,
 
       "iso_file": "{{ user `iso` }}",
+      "unmount_iso": true,
+
       "template_name": "{{ user `template_name` }}",
       "template_description": "{{ user `template_description` }}",
 
@@ -81,12 +82,10 @@
     {
       "type": "shell-local",
       "inline": [
-        "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --scsihw virtio-scsi-pci",
-        "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --ide2 {{user `datastore`}}:cloudinit",
         "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --boot c --bootdisk scsi0",
         "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --ciuser {{ user `ssh_username` }}",
         "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --cipassword {{ user `ssh_password` }}",
-        "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --vga std"
+        "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --serial0 socket --vga serial0"
       ]
     }
   ]
