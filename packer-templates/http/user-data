@@ -5,41 +5,15 @@ autoinstall:
   keyboard:
     layout: en
     variant: us
-  network:
-    version: 2
-    renderer: networkd
-    ethernets:
-      ens18:
-        dhcp4: false
-        addresses:
-          - 10.10.10.240/16
-        gateway4: 10.10.10.7
-        nameservers:
-          addresses:
-            - 8.8.8.8
   write_files:
   - path: /etc/sysctl.d/10-disable-ipv6.conf
     permissions: 0644
     owner: root
     content: |
       net.ipv6.conf.eth0.disable_ipv6 = 1
-  storage:
-    layout:
-      name: direct
-  package_update: true
-  package_upgrade: true
-  identity:
-    hostname: ubuntu-server
-    username: packer
-    password: $6$xyz$JJbmTJ7EzYLxcBOnv3bwWLhpQZ.WuX8yJkNaLKgtS747n2zUNPh8LZKhQPBnLAptBG429x5r0RJ.ZFIXiIMPw/ #packer
   ssh:
-    install-server: yes
+    install-server: true
     allow-pw: false
-    authorized-keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDYfbG8ekG7LdIDkUM6WGAwJ8MtZYiaN4Jq4FEkp6F5Zek+1gy6MU9lA5WE2knzGDl3Upy09XyJ9LLO65q4q6pDeDussm2R4sOQXK3x9AoUZnd6m+PNaxeclKNEAqQed74qGVmI0CefTtMjIyPAYVVL/EfWuY3O+8M+I5wF5mQfVQNF9q18MRgtzhqFvrvGv2KCm23Id5UitHc8AMew6KhSdVVW0yTQignNbMDfaV0bbVmzNkwGeU2EC/Bll/V8AsfZXgsl0cNXo8wL5I01cCpHcgx33CjKRgb/N8JIEn1wCkSaucpY4ZOZFR7jD+JWy3NIfL1jH5TnjYo4+sWbqRz2CtiGPxv9TyDA6hJSPIKjKhiheXrOTrq9f5uThd1I9bRsSLS8Feg9/ANKkuf0XBl/NzXvmlo1M6mbpfVUzmIU8/tP0mzu2zZgO5xHQgIODUYax6IeH5YPPRB8YGYLp2yUCS6AuuYgMZRruuhbs64FSTH4t0NlZXkwGdhp3qIQyos= kev@archlinux
-  user-data:
-    disable_root: false
-    timezone: Asia/Shanghai
   packages:
     - sudo
     - linux-generic
@@ -55,6 +29,19 @@ autoinstall:
     - curl
     - wget
     - tmux
-  late-commands:
-    - echo 'packer ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/packer
-    - curtin in-target --target=/target -- chmod 440 /etc/sudoers.d/packer
+    - screen
+  storage:
+    layout:
+      name: direct
+  user-data:
+    package_upgrade: true
+    timezone: Asia/Shanghai
+    users:
+      - name: packer
+        passwd: $6$xyz$JJbmTJ7EzYLxcBOnv3bwWLhpQZ.WuX8yJkNaLKgtS747n2zUNPh8LZKhQPBnLAptBG429x5r0RJ.ZFIXiIMPw/ #packer
+        groups: [sudo]
+        lock-passwd: false
+        sudo: ALL=(ALL) NOPASSWD:ALL
+        shell: /bin/bash
+        ssh_authorized_keys:
+          - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDYfbG8ekG7LdIDkUM6WGAwJ8MtZYiaN4Jq4FEkp6F5Zek+1gy6MU9lA5WE2knzGDl3Upy09XyJ9LLO65q4q6pDeDussm2R4sOQXK3x9AoUZnd6m+PNaxeclKNEAqQed74qGVmI0CefTtMjIyPAYVVL/EfWuY3O+8M+I5wF5mQfVQNF9q18MRgtzhqFvrvGv2KCm23Id5UitHc8AMew6KhSdVVW0yTQignNbMDfaV0bbVmzNkwGeU2EC/Bll/V8AsfZXgsl0cNXo8wL5I01cCpHcgx33CjKRgb/N8JIEn1wCkSaucpY4ZOZFR7jD+JWy3NIfL1jH5TnjYo4+sWbqRz2CtiGPxv9TyDA6hJSPIKjKhiheXrOTrq9f5uThd1I9bRsSLS8Feg9/ANKkuf0XBl/NzXvmlo1M6mbpfVUzmIU8/tP0mzu2zZgO5xHQgIODUYax6IeH5YPPRB8YGYLp2yUCS6AuuYgMZRruuhbs64FSTH4t0NlZXkwGdhp3qIQyos= kev@archlinux
