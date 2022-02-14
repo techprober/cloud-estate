@@ -13,20 +13,23 @@ echo 'Cleaning all audit logs ...'
 [[ -f /var/log/wtmp ]] && sudo cat /dev/null | sudo tee /var/log/wtmp
 [[ -f /var/log/lastlog ]] && sudo cat /dev/null | sudo tee /var/log/lastlog
 
-# Clean apt-get.
+# Clean apt-get
 echo 'Cleaning apt cache ...'
 sudo apt-get autoclean
 
-# Modifying ssh configuration
-echo '==> Modifying ssh configuration ...'
-sudo sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config
-sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config
-sudo service sshd restart
+# Sets hostname to localhost
+echo 'Setting hostname to localhost ...'
+sudo cat /dev/null | sudo tee /etc/hostname
+sudo hostnamectl set-hostname localhost
 
-# Cleans the machine-id.
+# Cleans the machine-id
 echo 'Cleaning the machine-id ...'
 sudo truncate -s 0 /etc/machine-id
 sudo rm /var/lib/dbus/machine-id
 sudo ln -s /etc/machine-id /var/lib/dbus/machine-id
+
+# Write down the birthdate
+sudo 'Writing birthdate information'
+sudo date >/etc/birthdate_certificate
 
 echo 'Provisioning finished, enjoyed!'
