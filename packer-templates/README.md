@@ -58,8 +58,6 @@ To build an image with packer we need to define our image through a template fil
 
 </details>
 
-</br>
-
 By using packer we can define our golden VM image as code so that we can easily build identically configured images on demand so that all your machines are running the same image and can also be easily updated to a new image when needed.
 
 ## Create a Proxmox user for Packer
