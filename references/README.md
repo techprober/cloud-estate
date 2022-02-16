@@ -8,6 +8,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [Productive Tools](#productive-tools)
 - [Cloud Computing](#cloud-computing)
+- [Homelab](#homelab)
 - [Continuous Integration](#continuous-integration)
 - [Git](#git)
 - [Vim](#vim)
@@ -21,6 +22,9 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Docs][docs icon]](https://cloud-images.ubuntu.com/) [Ubuntu Cloud Images](https://cloud-images.ubuntu.com/) - Ubuntu Cloud Images are the official Ubuntu images that have been customised by Canonical to run on public clouds that provide Ubuntu Certified Images, Openstack, LXD and more
 
+### Homelab
+
+- [![Docs][docs icon]](https://dev.to/aaronktberry/top-10-software-for-your-homelab-in-2021-28e1) [Top 10 software for your Homelab in 2021](https://dev.to/aaronktberry/top-10-software-for-your-homelab-in-2021-28e1) - Check out this quick list of 10 apps that you can try out and see if you can get some new functionality for free through self-hosting
 ### Container
 
 - [![Docs][docs icon]](https://mkdev.me/en/posts/dockerless-part-1-which-tools-to-replace-docker-with-and-why) [Dockerless, part 1: Which tools to replace Docker with and why](https://mkdev.me/en/posts/dockerless-part-1-which-tools-to-replace-docker-with-and-why) - Why Dockerless?
