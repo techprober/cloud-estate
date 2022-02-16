@@ -25,11 +25,11 @@
       "disks": [
         {
           "type": "{{ user `disk_type` }}",
-          "disk_size": "{{ user `disk_size`}}",
-          "storage_pool": "{{user `datastore`}}",
-          "storage_pool_type": "{{user `datastore_type`}}",
-          "format": "{{user `disk_format`}}",
-          "cache_mode": "writeback"
+          "format": "{{ user `disk_format` }}",
+          "disk_size": "{{ user `disk_size` }}",
+          "storage_pool": "{{ user `datastore` }}",
+          "storage_pool_type": "{{ user `datastore_type` }}",
+          "cache_mode": "{{ user `disk_cache_mode`}}"
         }
       ],
       "cloud_init": true,
