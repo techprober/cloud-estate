@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Run pre provisioning tasks
+      block:
+        - import_tasks: tasks/generate_user_keys_and_pass.yml
+        - import_tasks: tasks/generate_cloud-init_user-data.yml
