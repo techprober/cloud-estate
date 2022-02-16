@@ -168,3 +168,4 @@ When the process is complete you should see your template ready in the proxmox i
 - [Cloud-init - Documentation](https://cloudinit.readthedocs.io/en/0.7.7/index.html)
 - [Cloud images in Proxmox](https://gist.github.com/chriswayg/b6421dcc69cb3b7e41f2998f1150e1df)
 - [Packer - Ansible Local Provisioner](https://www.packer.io/plugins/provisioners/ansible/ansible-local)
+- [justin-p/packer-proxmox-ubuntu2004](https://github.com/justin-p/packer-proxmox-ubuntu2004/blob/main/playbooks/tasks/enable_cloud-init.yml)
