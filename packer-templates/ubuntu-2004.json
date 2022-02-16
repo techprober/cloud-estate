@@ -68,7 +68,14 @@
     {
       "pause_before": "5s",
       "type": "shell",
-      "script": "scripts/bootstrap.sh"
+      "execute_command": "echo 'packer' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
+      "script": "./scripts/bootstrap.sh"
+    },
+    {
+      "pause_before": "5s",
+      "type": "ansible-local",
+      "playbook_file": "./playbooks/post-provisioning.yml",
+      "playbook_dir": "./playbooks"
     },
     {
       "pause_before": "5s",
