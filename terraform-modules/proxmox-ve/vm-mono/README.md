@@ -25,10 +25,11 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_node_name"></a> [node\_name](#input\_node\_name) | name of the proxmox server node | `string` | `"pve"` | no |
-| <a name="input_pm_user"></a> [pm\_user](#input\_pm\_user) | pm user that proxmox uses to interact with the remote server | `string` | n/a | yes |
+| <a name="input_pm_user"></a> [pm\_user](#input\_pm\_user) | pm user that proxmox uses to interact with the remote server | `string` | `"terraform-prov"` | no |
 | <a name="input_proxmox_host"></a> [proxmox\_host](#input\_proxmox\_host) | host ip of the proxmox server | `string` | `"10.10.10.10"` | no |
 | <a name="input_template_name"></a> [template\_name](#input\_template\_name) | template name used to deploy the vm | `string` | `"ubuntu-2204-cloudinit-template"` | no |
 | <a name="input_vm_boot_disk"></a> [vm\_boot\_disk](#input\_vm\_boot\_disk) | default vm boot disk | `string` | `"scsi0"` | no |
+| <a name="input_vm_boot_disk_format"></a> [vm\_boot\_disk\_format](#input\_vm\_boot\_disk\_format) | default vm boot disk format | `string` | `"raw"` | no |
 | <a name="input_vm_boot_disk_size"></a> [vm\_boot\_disk\_size](#input\_vm\_boot\_disk\_size) | default vm boot disk capacity | `string` | `"10G"` | no |
 | <a name="input_vm_boot_disk_slot"></a> [vm\_boot\_disk\_slot](#input\_vm\_boot\_disk\_slot) | default vm boot disk id | `number` | `0` | no |
 | <a name="input_vm_boot_disk_storage_pool"></a> [vm\_boot\_disk\_storage\_pool](#input\_vm\_boot\_disk\_storage\_pool) | default vm boot disk storage pool | `string` | `"local-lvm"` | no |
