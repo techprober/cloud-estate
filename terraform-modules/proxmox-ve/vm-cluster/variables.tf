@@ -93,6 +93,12 @@ variable "vm_boot_disk_type" {
   type        = string
 }
 
+variable "vm_boot_disk_format" {
+  default     = "raw"
+  description = "default vm boot disk format"
+  type        = string
+}
+
 variable "vm_boot_disk_storage_pool" {
   default     = "local-lvm"
   description = "default vm boot disk storage pool"

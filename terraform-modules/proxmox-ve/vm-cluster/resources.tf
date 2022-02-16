@@ -34,6 +34,7 @@ resource "proxmox_vm_qemu" "vm" {
     slot     = var.vm_boot_disk_slot
     size     = var.vm_boot_disk_size
     type     = var.vm_boot_disk_type
+    format   = var.vm_boot_disk_format
     storage  = var.vm_boot_disk_storage_pool
     iothread = 1
   }
