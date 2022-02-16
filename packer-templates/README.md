@@ -159,7 +159,7 @@ Build 'proxmox' finished.
 
 When the process is complete you should see your template ready in the proxmox interface and ready to be cloned into virtual machines.
 
-![](https://raw.githubusercontent.com/TechProber/cloud-estate/packer-templates/packer-templates/assets/screenshot.png)
+![](https://github.com/TechProber/cloud-estate/blob/master/packer-templates/assets/screenshot.png?raw=true)
 
 ## References
 
