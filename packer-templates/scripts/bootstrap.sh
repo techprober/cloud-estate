@@ -13,20 +13,21 @@ echo 'Cleaning all audit logs ...'
 [[ -f /var/log/wtmp ]] && sudo cat /dev/null | sudo tee /var/log/wtmp
 [[ -f /var/log/lastlog ]] && sudo cat /dev/null | sudo tee /var/log/lastlog
 
-# Clean apt-get
-echo 'Cleaning apt cache ...'
-sudo apt-get autoclean
-
-# Sets hostname to localhost
+# Set hostname to localhost
 echo 'Setting hostname to localhost ...'
 sudo cat /dev/null | sudo tee /etc/hostname
 sudo hostnamectl set-hostname localhost
 
-# Cleans the machine-id
+# Clean the machine-id
 echo 'Cleaning the machine-id ...'
 sudo truncate -s 0 /etc/machine-id
 sudo rm /var/lib/dbus/machine-id
 sudo ln -s /etc/machine-id /var/lib/dbus/machine-id
+
+
+# Clean apt-get
+echo 'Cleaning apt cache ...'
+sudo apt-get clean
 
 # Write down the birthdate
 sudo 'Writing birthdate information'
