@@ -153,13 +153,13 @@ proxmox: output will be in this color.
 Build 'proxmox' finished.
 
 ==> Builds finished. The artifacts of successful builds are:
---> proxmox: A template was created: 4444
+--> proxmox: A template was created: 9001
 --> proxmox:
 ```
 
 When the process is complete you should see your template ready in the proxmox interface and ready to be cloned into virtual machines.
 
-![]()
+![](https://raw.githubusercontent.com/TechProber/cloud-estate/packer-templates/packer-templates/assets/screenshot.png)
 
 ## References
 
@@ -168,3 +168,5 @@ When the process is complete you should see your template ready in the proxmox i
 - [Ubuntu docs for the pre-seed file](https://help.ubuntu.com/16.04/installation-guide/i386/apbs04.html)
 - [Proxmox Forum - Using Packer to deploy Ubuntu 20.04 to Proxmox](https://forum.proxmox.com/threads/using-packer-to-deploy-ubuntu-20-04-to-proxmox.104275/)
 - [Cloud-init - Documentation](https://cloudinit.readthedocs.io/en/0.7.7/index.html)
+- [Cloud images in Proxmox](https://gist.github.com/chriswayg/b6421dcc69cb3b7e41f2998f1150e1df)
+- [Packer - Ansible Local Provisioner](https://www.packer.io/plugins/provisioners/ansible/ansible-local)
