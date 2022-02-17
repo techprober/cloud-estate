@@ -44,8 +44,9 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/matusf/goto) [goto-fish](https://github.com/matusf/goto) - A fish shell utility to quickly navigate to aliased directories supporting tab-completion.
 - [![Open-Source Software][oss icon]](https://github.com/sekey/sekey) [sekey](https://github.com/sekey/sekey) - A SSH Agent that allow users to authenticate to UNIX/Linux SSH servers using the Secure Enclave
 - [![Open-Source Software][oss icon]](github-status-updater) [github-status-updater](https://github.com/cloudposse/github-status-updater) - Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
-- [![Open-Source Software][oss icon]](bat) [bat](https://github.com/sharkdp/bat) - A cat(1) clone with syntax highlighting and Git integration
-- [![Open-Source Software][oss icon]](vivid) [vivid](https://github.com/sharkdp/vivid) - vivid is a generator for the LS_COLORS environment variable that controls the colorized output of ls, tree, fd, bfs, dust and many other tools
+- [![Open-Source Software][oss icon]](https://github.com/sharkdp/bat) [bat](https://github.com/sharkdp/bat) - A cat(1) clone with syntax highlighting and Git integration
+- [![Open-Source Software][oss icon]](https://github.com/sharkdp/vivid) [vivid](https://github.com/sharkdp/vivid) - vivid is a generator for the LS_COLORS environment variable that controls the colorized output of ls, tree, fd, bfs, dust and many other tools
+- [![Open-Source Software][oss icon]](https://github.com/oleiade/trousseau) [trousseau](https://github.com/oleiade/trousseau) - File based encrypted key-value store
 
 ## Docker Images
 
