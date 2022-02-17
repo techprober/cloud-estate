@@ -27,6 +27,7 @@ resource "proxmox_vm_qemu" "vm" {
   sockets  = 1
   cpu      = var.vm_cpu_type
   memory   = var.vm_mem
+  balloon  = var.vm_mem_balloon
   scsihw   = "virtio-scsi-pci"
   bootdisk = var.vm_boot_disk
 

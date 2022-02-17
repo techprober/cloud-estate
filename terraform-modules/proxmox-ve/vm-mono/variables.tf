@@ -62,6 +62,12 @@ variable "vm_mem" {
   type        = number
 }
 
+variable "vm_mem_balloon" {
+  default     = 0
+  description = "whether to enable balloon service on memory allocation, default set to disable"
+  type        = number
+}
+
 variable "vm_boot_disk" {
   default     = "scsi0"
   description = "default vm boot disk"

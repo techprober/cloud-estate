@@ -38,6 +38,7 @@ No modules.
 | <a name="input_vm_cpu_type"></a> [vm\_cpu\_type](#input\_vm\_cpu\_type) | cpu type | `string` | `"host"` | no |
 | <a name="input_vm_id"></a> [vm\_id](#input\_vm\_id) | vm id | `number` | n/a | yes |
 | <a name="input_vm_mem"></a> [vm\_mem](#input\_vm\_mem) | total memory | `number` | `2048` | no |
+| <a name="input_vm_mem_balloon"></a> [vm\_mem\_balloon](#input\_vm\_mem\_balloon) | whether to enable balloon service on memory allocation, default set to disable | `number` | `0` | no |
 | <a name="input_vm_name"></a> [vm\_name](#input\_vm\_name) | vm name | `string` | `"ubuntu-server"` | no |
 | <a name="input_vm_network_bridge"></a> [vm\_network\_bridge](#input\_vm\_network\_bridge) | default vm network nic bridge | `string` | `"vmbr0"` | no |
 | <a name="input_vm_network_gateway"></a> [vm\_network\_gateway](#input\_vm\_network\_gateway) | default vm network gateway | `string` | `"192.168.1.1"` | no |
