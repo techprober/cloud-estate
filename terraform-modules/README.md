@@ -11,5 +11,5 @@ brew install terraform-docs
 Generate Docs
 
 ```bash
-terraform-docs markdown [PATH]
+terraform-docs markdown [PATH] > README.md
 ```
