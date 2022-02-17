@@ -13,9 +13,10 @@ inputs = {
 
   template_name = "ubuntu-2204-cloudinit-template"
 
-  vm_cpu_core = 2
-  vm_cpu_type = "host"
-  vm_mem      = 1024
+  vm_cpu_core    = 2
+  vm_cpu_type    = "host"
+  vm_mem         = 1024
+  vm_mem_balloon = 1
 
   vm_boot_disk              = "scsi0"
   vm_boot_disk_slot         = 0
