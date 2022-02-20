@@ -94,7 +94,7 @@ version=v0.9.3 # <- find the version that first your need in the project release
 curl -sSL https://github.com/moby/buildkit/releases/download/${version}/buildkit-${version}.linux-amd64.tar.gz | sudo tar -C -xzvf /usr/bin
 
 # create daemon service
-sudo cat /etc/systemd/system/buildkit.service > <Enter>
+sudo cat > /etc/systemd/system/buildkit.service <Enter>
 [Unit]
 Description=BuildKit
 Documentation=https://github.com/moby/buildkit
