@@ -28,6 +28,7 @@ inputs = {
   vm_network_model    = "virtio"
   vm_network_bridge   = "vmbr0"
   vm_network_ip_range = "10.10.10.21"
+  vm_network_dns      = "8.8.8.8"
   vm_network_gateway  = "10.10.10.7"
 
   vm_ssh_key = ""

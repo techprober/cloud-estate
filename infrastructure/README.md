@@ -92,7 +92,10 @@ export PM_PASS="password"
 # sub-dir tree
 .
 ├── kubernetes-cluster
-│   └── terragrunt.hcl
+│   ├── master
+│   │   └── terragrunt.hcl
+│   └── worker
+│       └── terragrunt.hcl
 ├── proxmox-lxc
 │   └── empty
 ├── proxmox-vm
