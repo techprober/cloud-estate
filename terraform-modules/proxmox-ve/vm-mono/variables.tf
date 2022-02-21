@@ -121,6 +121,12 @@ variable "vm_network_ip" {
   type        = string
 }
 
+variable "vm_network_dns" {
+  default     = "8.8.8.8"
+  description = "default vm domain name server (DNS) ip e.g 8.8.8.8"
+  type        = string
+}
+
 variable "vm_network_gateway" {
   default     = "192.168.1.1"
   description = "default vm network gateway"
