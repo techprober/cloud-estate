@@ -48,6 +48,12 @@ variable "container_unprivileged" {
   type        = bool
 }
 
+variable "container_start" {
+  default     = false
+  description = "a boolean that determines if the container is started after creation. Default is false"
+  type        = bool
+}
+
 variable "container_cpu_cores" {
   default     = 4
   description = "the number of cores assigned to the container. A container can use all available cores by default"
