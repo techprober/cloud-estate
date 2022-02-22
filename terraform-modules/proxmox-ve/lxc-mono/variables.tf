@@ -97,9 +97,9 @@ variable "container_network_bridge" {
 }
 
 variable "container_network_mtu" {
-  default     = "1500"
-  description = "a string to set the MTU on the network interface."
-  type        = string
+  default     = 1500
+  description = "a number to set the MTU on the network interface."
+  type        = number
 }
 
 variable "container_network_gateway" {
