@@ -42,12 +42,6 @@ variable "container_password" {
   type        = string
 }
 
-variable "container_unprivileged" {
-  default     = false
-  description = "a boolean that makes the container run as an unprivileged user. Default is false"
-  type        = bool
-}
-
 variable "container_cpu_cores" {
   default     = 4
   description = "the number of cores assigned to the container. A container can use all available cores by default"
