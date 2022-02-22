@@ -32,7 +32,6 @@ variable "container_id" {
 }
 
 variable "container_os_template" {
-  default     = "ubuntu-20.04-standard_20.04-1_amd64.tar.gz"
   description = "the volume identifier that points to the OS template or backup file"
   type        = string
 }
