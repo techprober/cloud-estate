@@ -16,16 +16,16 @@ provider "proxmox" {
 resource "proxmox_lxc" "container" {
   target_node = var.node_name
 
-  hostname    = var.container_hostname
-  vmid        = var.container_id
+  hostname = var.container_hostname
+  vmid     = var.container_id
 
   ostemplate    = var.container_os_template
   password      = var.container_password
   unpriviledged = var.container_unpriviledged
 
-  cores    = var.container_cpu_cores
-  memory   = var.container_memory
-  swap     = var.container_swap
+  cores  = var.container_cpu_cores
+  memory = var.container_memory
+  swap   = var.container_swap
 
   features {
     fuse    = true
@@ -43,8 +43,7 @@ resource "proxmox_lxc" "container" {
     name     = var.container_network_interface
     bridge   = var.container_network_bridge
     firewall = true
-    ip       = "dhcp"
-    # ip     = "10.10.10.2/24"
+    ip       = var.container_network_ip
     mtu      = var.container_network_mtu
     gw       = var.container_network_gateway
   }

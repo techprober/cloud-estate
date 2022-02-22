@@ -18,118 +18,98 @@ variable "node_name" {
   type        = string
 }
 
-### VM Configurations ###
+### LXC Container Configurations ###
 
-variable "vm_name" {
-  default     = "ubuntu-server"
-  description = "vm name"
+variable "container_hostname" {
+  description = "the host name of the container."
   type        = string
 }
 
-variable "vm_id" {
-  description = "vm id"
-  type        = number
-}
-
-variable "vm_os_type" {
-  default     = "cloud-init"
-  description = "vm os type"
-  type        = string
-}
-
-variable "template_name" {
-  default     = "ubuntu-2204-cloudinit-template"
-  description = "template name used to deploy the vm"
-  type        = string
-}
-
-
-variable "vm_cpu_core" {
-  default     = 2
-  description = "total cpu cores"
-  type        = number
-}
-
-variable "vm_cpu_type" {
-  default     = "host"
-  description = "cpu type"
-  type        = string
-}
-
-variable "vm_mem" {
-  default     = 2048
-  description = "total memory"
-  type        = number
-}
-
-variable "vm_mem_balloon" {
+variable "container_id" {
   default     = 0
-  description = "whether to enable balloon service on memory allocation, default set to disable"
+  description = "a number that sets the VMID of the container. If set to 0, the next available VMID is used. Default is 0"
   type        = number
 }
 
-variable "vm_boot_disk" {
-  default     = "scsi0"
-  description = "default vm boot disk"
+variable "container_os_template" {
+  default     = "ubuntu-20.04-standard_20.04-1_amd64.tar.gz"
+  description = "the volume identifier that points to the OS template or backup file"
   type        = string
 }
 
-variable "vm_boot_disk_slot" {
-  default     = 0
-  description = "default vm boot disk id"
+variable "container_password" {
+  description = "the root password inside the container"
+  type        = string
+}
+
+variable "container_unpriviledged" {
+  default     = false
+  description = "a boolean that makes the container run as an unprivileged user. Default is false"
+  type        = bool
+}
+
+variable "container_cpu_cores" {
+  default     = 4
+  description = "the number of cores assigned to the container. A container can use all available cores by default"
   type        = number
 }
 
-variable "vm_boot_disk_size" {
+variable "container_memory" {
+  default     = 1024
+  description = "a number containing the amount of RAM to assign to the container (in MB)"
+  type        = number
+}
+
+variable "container_swap" {
+  default     = 512
+  description = "A number that sets the amount of swap memory available to the container. Default is 512"
+  type        = number
+}
+
+variable "container_boot_disk_size" {
   default     = "10G"
-  description = "default vm boot disk capacity"
+  description = "size of the underlying volume. Must end in G, M, or K (e.g. "1G", "1024M" , "1048576K"). Note that this is a read only value."
   type        = string
 }
 
-variable "vm_boot_disk_type" {
-  default     = "scsi"
-  description = "default vm boot disk type"
-  type        = string
-}
-
-variable "vm_boot_disk_format" {
-  default     = "raw"
-  description = "default vm boot disk format"
-  type        = string
-}
-
-variable "vm_boot_disk_storage_pool" {
+variable "container_boot_disk_storage_pool" {
   default     = "local-lvm"
-  description = "default vm boot disk storage pool"
+  description = "a string containing the volume , directory, or device to be mounted into the container (at the path specified by mp). E.g. local-lvm, local-zfs, local etc"
   type        = string
 }
 
-variable "vm_network_model" {
-  default     = "virtio"
-  description = "default vm network nic model"
+variable "container_network_interface" {
+  default     = "eth0"
+  description = "the name of the network interface as seen from inside the container (e.g. 'eth0')."
   type        = string
 }
 
-variable "vm_network_bridge" {
+variable "container_network_ip" {
+  default     = "dhcp"
+  description = "the IPv4 address of the network interface. Can be a static IPv4 address (in CIDR notation), 'dhcp', or 'static: 10.10.10.1/24'"
+  type        = string
+}
+
+variable "container_network_bridge" {
   default     = "vmbr0"
-  description = "default vm network nic bridge"
+  description = "the bridge to attach the network interface to (e.g. 'vmbr0')."
   type        = string
 }
 
-variable "vm_network_ip" {
-  description = "default vm network ip e.g 192.168.100"
+variable "container_network_mtu" {
+  default     = "1500"
+  description = "a string to set the MTU on the network interface."
   type        = string
 }
 
-variable "vm_network_dns" {
+variable "container_network_gateway" {
+  description = "the IPv4 address belonging to the network interface's default gateway."
+  type        = string
+}
+
+variable "container_network_dns" {
   default     = "8.8.8.8"
-  description = "default vm domain name server (DNS) ip e.g 8.8.8.8"
-  type        = string
-}
-
-variable "vm_network_gateway" {
-  default     = "192.168.1.1"
-  description = "default vm network gateway"
+  description = "The DNS server IP address used by the container."
   type        = string
 }
 
