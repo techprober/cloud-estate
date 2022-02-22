@@ -9,7 +9,7 @@ terraform {
 
 provider "proxmox" {
   pm_api_url      = "https://${var.proxmox_host}:8006/api2/json"
-  pm_user         = ${var.pm_user}
+  pm_user         = var.pm_user
   pm_tls_insecure = true
 }
 
@@ -19,8 +19,9 @@ resource "proxmox_lxc" "container" {
   hostname = var.container_hostname
   vmid     = var.container_id
 
-  ostemplate    = var.container_os_template
-  password      = var.container_password
+  ostemplate   = var.container_os_template
+  password     = var.container_password
+  unprivileged = var.container_unprivileged
 
   cores  = var.container_cpu_cores
   memory = var.container_memory
