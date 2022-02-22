@@ -68,7 +68,7 @@ variable "container_swap" {
 
 variable "container_boot_disk_size" {
   default     = "10G"
-  description = "size of the underlying volume. Must end in G, M, or K (e.g. "1G", "1024M" , "1048576K"). Note that this is a read only value."
+  description = "size of the underlying volume. Must end in G, M, or K (e.g. '1G', '1024M' , '1048576K'). Note that this is a read only value."
   type        = string
 }
 
