@@ -19,8 +19,8 @@ inputs = {
   container_memory    = 1024
   container_swap      = 512
 
-  container_boot_disk_size    = "10G"
-  container_boot_storate_pool = "local-lvm"
+  container_boot_disk_size         = "10G"
+  container_boot_disk_storage_pool = "local-lvm"
 
   container_network_interface = "eth0"
   container_network_bridge    = "vmbr0"
