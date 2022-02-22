@@ -42,10 +42,9 @@ resource "proxmox_lxc" "container" {
   network {
     name     = var.container_network_interface
     bridge   = var.container_network_bridge
-    firewall = true
     ip       = var.container_network_ip
-    mtu      = var.container_network_mtu
     gw       = var.container_network_gateway
+    firewall = true
   }
 
   nameserver = var.container_network_dns

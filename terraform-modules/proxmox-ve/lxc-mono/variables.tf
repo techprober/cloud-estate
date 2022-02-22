@@ -96,12 +96,6 @@ variable "container_network_bridge" {
   type        = string
 }
 
-variable "container_network_mtu" {
-  default     = 1500
-  description = "a number to set the MTU on the network interface."
-  type        = number
-}
-
 variable "container_network_gateway" {
   description = "the IPv4 address belonging to the network interface's default gateway."
   type        = string
