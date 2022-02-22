@@ -48,7 +48,7 @@ variable "container_unprivileged" {
   type        = bool
 }
 
-variable "container_start" {
+variable "container_start_after_creation" {
   default     = false
   description = "a boolean that determines if the container is started after creation. Default is false"
   type        = bool
