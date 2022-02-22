@@ -21,7 +21,7 @@ resource "proxmox_lxc" "container" {
 
   ostemplate    = var.container_os_template
   password      = var.container_password
-  unpriviledged = var.container_unpriviledged
+  unprivileged = var.container_unprivileged
 
   cores  = var.container_cpu_cores
   memory = var.container_memory
@@ -50,7 +50,7 @@ resource "proxmox_lxc" "container" {
 
   nameserver = var.container_network_dns
 
-  sshkeys = <<EOF
-  ${var.container_ssh_key}
+  ssh_public_keys = <<EOF
+  ${var.ssh_public_keys}
   EOF
 }

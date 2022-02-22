@@ -42,7 +42,7 @@ variable "container_password" {
   type        = string
 }
 
-variable "container_unpriviledged" {
+variable "container_unprivileged" {
   default     = false
   description = "a boolean that makes the container run as an unprivileged user. Default is false"
   type        = bool
@@ -113,8 +113,7 @@ variable "container_network_dns" {
   type        = string
 }
 
-variable "vm_ssh_key" {
-  default     = ""
-  description = "default ssh_key to authenticate"
+variable "ssh_public_keys" {
+  description = "multi-line string of SSH public keys that will be added to the container. Can be defined using heredoc syntax."
   type        = string
 }
