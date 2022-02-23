@@ -97,7 +97,7 @@ export PM_PASS="password"
 │   └── worker
 │       └── terragrunt.hcl
 ├── proxmox-lxc
-│   └── empty
+│   └── terragrunt.hcl
 ├── proxmox-vm
 │   └── ubuntu-server-test
 │       └── terragrunt.hcl
