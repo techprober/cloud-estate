@@ -19,6 +19,10 @@
   when: installation_result.rc == 0
   no_log: true
 
+- name: Reset ssh connection to allow user changes to affect ansible user
+  ansible.builtin.meta:
+    reset_connection
+
 - name: "Post installation message"
   debug:
     msg: Use "newgrp docker" to use the group immediately
