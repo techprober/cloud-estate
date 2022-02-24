@@ -30,6 +30,7 @@ autoinstall:
     - wget
     - tmux
     - screen
+    - tree
     - ansible
   storage:
     layout:
