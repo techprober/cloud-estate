@@ -33,7 +33,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ## Productive Tools
 
 - [![Open-Source Software][oss icon]](https://github.com/marktext/marktext) [marktext](https://github.com/marktext/marktext) - simple and elegant open-source markdown editor that focused on speed and usability
-- [![Open-Source Software][oss icon]](https://github.com/hedgedoc/hedgedoc) [hedgedoc](https://github.com/hedgedoc/hedgedoc) - The best platform to write and share markdown
+- [![Open-Source Software][oss icon]](https://github.com/joemccann/dillinger/) [dillinger](https://github.com/joemccann/dillinger/) - The last Markdown editor, ever
 
 ## HomeLab Related
 
