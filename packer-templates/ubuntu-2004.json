@@ -60,13 +60,7 @@
   ],
   "provisioners": [
     {
-      "pause_before": "5s",
-      "type": "shell",
-      "environment_vars": ["DEBIAN_FRONTEND=noninteractive"],
-      "inline": ["date > provision.txt", "exit 0"]
-    },
-    {
-      "pause_before": "5s",
+      "pause_before": "60s",
       "type": "shell",
       "execute_command": "echo 'packer' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
       "script": "./scripts/bootstrap.sh"
@@ -80,9 +74,8 @@
     {
       "pause_before": "5s",
       "type": "shell",
-      "inline": [
-        "while [ ! -f /var/lib/cloud/instance/boot-finished ]; do echo 'Waiting for cloud-init...'; sleep 1; done"
-      ]
+      "environment_vars": ["DEBIAN_FRONTEND=noninteractive"],
+      "inline": ["date > provision_date.txt", "exit 0"]
     }
   ],
   "post-processors": [
