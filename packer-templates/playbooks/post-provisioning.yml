@@ -8,7 +8,7 @@
   tasks:
     - name: Running post provisioning tasks
       block:
-        - import_tasks: tasks/openssh.yml
-        - import_tasks: tasks/reset_cloud-init.yml
         - import_tasks: tasks/docker-install.yml
         - import_tasks: tasks/docker-compose-install.yml
+        - import_tasks: tasks/openssh.yml
+        - import_tasks: tasks/reset_cloud-init.yml
