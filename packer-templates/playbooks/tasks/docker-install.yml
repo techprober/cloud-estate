@@ -1,6 +1,6 @@
 ---
 - name: Install Docker with script
-  shell: "sudo wget -qO- https://get.docker.com/ | sh"
+  shell: "wget -qO- https://get.docker.com/ | sh"
   register: installation_result
 
 - name: Enable docker to start at boot
