@@ -68,7 +68,7 @@
     {
       "pause_before": "5s",
       "type": "ansible-local",
-      "playbook_file": "./playbooks/docker-post-provisioning.yml",
+      "playbook_file": "./playbooks/docker-post-provision.yml",
       "playbook_dir": "./playbooks"
     },
     {
