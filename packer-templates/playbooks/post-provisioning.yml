@@ -10,5 +10,6 @@
       block:
         - import_tasks: tasks/docker-install.yml
         - import_tasks: tasks/docker-compose-install.yml
+        # comment out the following lines if you do not want docker pre-installed
         - import_tasks: tasks/openssh.yml
         - import_tasks: tasks/reset_cloud-init.yml
