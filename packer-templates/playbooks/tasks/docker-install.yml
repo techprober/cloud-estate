@@ -2,14 +2,12 @@
 - name: Install Docker with script
   shell: "sudo wget -qO- https://get.docker.com/ | sh"
   register: installation_result
-  no_log: true
 
 - name: Enable docker to start at boot
   ansible.builtin.service:
     name: docker
     enabled: yes
   when: installation_result.rc == 0
-  no_log: true
 
 - name: Add user to docker group
   ansible.builtin.user:
@@ -17,7 +15,6 @@
     groups: docker
     append: yes
   when: installation_result.rc == 0
-  no_log: true
 
 - name: "Post installation message"
   debug:
