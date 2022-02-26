@@ -12,6 +12,20 @@
 - [可以像 Docker 一样方便的使用 Containerd 吗？](https://www.51cto.com/article/679424.html)
 - [nerdctl: Docker-compatible CLI for contaiNERD](https://medium.com/nttlabs/nerdctl-359311b32d0e)
 
+## Quick Install (Archlinux ONLY)
+
+```bash
+sudo pacman -Sy runc bridge-utils
+sudo pacman -S contained
+sudo systemctl enable containerd --now
+yay -S nerdctl-full-bin
+
+sudo /sbin/sysctl -w net.ipv4.conf.all.forwarding=1
+echo "net.ipv4.conf.all.forwarding=1" | sudo tee -a /etc/sysctl.conf
+
+reboot
+```
+
 ## Purge Docker
 
 ```bash
@@ -33,6 +47,7 @@ sudo rm -rf /usr/bin/docker-compose
 sudo rm -rf /etc/docker
 sudo rm -rf ~/.docker
 ```
+
 ## Install Dependencies
 
 ```bash
@@ -110,7 +125,6 @@ sudo systemctl daemon-reload
 sudo systemctl enable buildkit --now
 sudo systemctl status buildkit
 ```
-
 
 ## Enable port-fowarding
 
