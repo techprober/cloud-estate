@@ -15,11 +15,19 @@
 ## Quick Install (Archlinux ONLY)
 
 ```bash
+# Install dependencies
 sudo pacman -Sy runc bridge-utils
 sudo pacman -S contained
-sudo systemctl enable containerd --now
 yay -S nerdctl-full-bin
+sudo pacman -S buildkit
 
+# Enable rootless-contained
+$ touch /etc/subuid /etc/subgid
+$ usermod --add-subuids 100000-165535 --add-subgids 100000-165535 <username>
+$ containerd-rootless-setuptool.sh install
+$ sudo systemctl enable containerd --now
+
+# Enable port-fowarding
 sudo /sbin/sysctl -w net.ipv4.conf.all.forwarding=1
 echo "net.ipv4.conf.all.forwarding=1" | sudo tee -a /etc/sysctl.conf
 
