@@ -96,6 +96,14 @@ How to pass the password as a parameter. ansible-playbook gives you to two optio
 ansible-playbook -K [playbook path]
 ```
 
+Alternative way to run playbook with `--ask-become-pass` but without the need to explicitly type `become` password
+
+```bash
+ansible-playbook \
+  -e ansible_become_pass=$ANSIBLE_PASSWORD \
+  [playbook path]
+```
+
 #### Enable verbose mode while running the playbook
 
 To understand what is happening when you run the playbook, you can run it with the verbose `-v` option. Every extra v will provide the end user with more debug output.
