@@ -29,6 +29,7 @@ resource "proxmox_lxc" "container" {
 
   clone         = var.container_clone_id
   clone_storage = var.container_clone_storage
+  full          = true
 
   features {
     fuse    = true
