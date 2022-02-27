@@ -27,9 +27,8 @@ resource "proxmox_lxc" "container" {
   memory = var.container_memory
   swap   = var.container_swap
 
-  clone         = var.container_clone_id
-  clone_storage = var.container_clone_storage
-  full          = true
+  clone = var.container_clone_id
+  full  = true
 
   features {
     fuse    = true
