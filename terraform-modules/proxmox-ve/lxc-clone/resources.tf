@@ -37,11 +37,6 @@ resource "proxmox_lxc" "container" {
     mount   = "cifs;nfs"
   }
 
-  rootfs {
-    size    = var.container_boot_disk_size
-    storage = var.container_boot_disk_storage_pool
-  }
-
   # if you want two NICs, just copy this whole network section and duplicate it
   network {
     name     = var.container_network_interface
