@@ -36,6 +36,12 @@ variable "container_clone_id" {
   type        = string
 }
 
+variable "container_clone_storage" {
+  default     = "local-lvm"
+  description = "target storage for full clone"
+  type        = string
+}
+
 variable "container_password" {
   description = "the root password inside the container"
   type        = string
@@ -77,9 +83,9 @@ variable "container_boot_disk_size" {
   type        = string
 }
 
-variable "container_clone_storage" {
+variable "container_boot_disk_storage_pool" {
   default     = "local-lvm"
-  description = "target storage for full clone"
+  description = "a string containing the volume , directory, or device to be mounted into the container (at the path specified by mp). E.g. local-lvm, local-zfs, local etc"
   type        = string
 }
 
