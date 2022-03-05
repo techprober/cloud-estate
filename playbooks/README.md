@@ -163,8 +163,12 @@ collections:
 ### Ansible Lint
 
 ```bash
-# install
+# install with brew
 brew install ansible-lint
+# install with pip
+pip install ansible-lint
+# install with pacman
+sudo pacman -S ansible-lint
 # verify installation
 ansible-lint --version
 # linting
