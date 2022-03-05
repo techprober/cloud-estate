@@ -20,6 +20,8 @@ resource "proxmox_lxc" "container" {
   clone    = var.container_clone_id
   hostname = var.container_hostname
 
+  clone_storage = var.container_clone_storage
+
   start = var.container_start_after_creation
   full  = true
 }
