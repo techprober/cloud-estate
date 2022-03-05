@@ -36,6 +36,11 @@ variable "container_clone_id" {
   type        = string
 }
 
+variable "container_clone_storage" {
+  description = "target storage for full clone."
+  type        = string
+}
+
 variable "container_start_after_creation" {
   default     = false
   description = "a boolean that determines if the container is started after creation. Default is false"
