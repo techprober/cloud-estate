@@ -53,7 +53,7 @@ resource "proxmox_vm_qemu" "vm" {
     ]
   }
 
-  ipconfig0 = "ip=${var.vm_network_ip_range}${count.index + 1}/24,gw=${var.vm_network_gateway}"
+  ipconfig0  = "ip=${var.vm_network_ip_range}${count.index + 1}/${var.vm_network_netmask},gw=${var.vm_network_gateway}"
   nameserver = var.vm_network_dns
 
   sshkeys = <<EOF

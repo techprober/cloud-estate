@@ -121,6 +121,12 @@ variable "vm_network_ip" {
   type        = string
 }
 
+variable "vm_network_netmask" {
+  default     = 24
+  description = "default vm network mask e.g 24(255.255.255.0)"
+  type        = string
+}
+
 variable "vm_network_dns" {
   default     = "8.8.8.8"
   description = "default vm domain name server (DNS) ip e.g 8.8.8.8"
