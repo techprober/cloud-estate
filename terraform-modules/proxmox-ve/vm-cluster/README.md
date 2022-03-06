@@ -46,6 +46,7 @@ No modules.
 | <a name="input_vm_network_gateway"></a> [vm\_network\_gateway](#input\_vm\_network\_gateway) | default vm network gateway | `string` | `"192.168.1.1"` | no |
 | <a name="input_vm_network_ip_range"></a> [vm\_network\_ip\_range](#input\_vm\_network\_ip\_range) | default vm network ip range e.g 192.168.10x | `string` | `"192.168.10"` | no |
 | <a name="input_vm_network_model"></a> [vm\_network\_model](#input\_vm\_network\_model) | default vm network nic model | `string` | `"virtio"` | no |
+| <a name="input_vm_network_netmask"></a> [vm\_network\_netmask](#input\_vm\_network\_netmask) | default vm network mask e.g 24(255.255.255.0) | `string` | `24` | no |
 | <a name="input_vm_os_type"></a> [vm\_os\_type](#input\_vm\_os\_type) | vm os type | `string` | `"cloud-init"` | no |
 | <a name="input_vm_ssh_key"></a> [vm\_ssh\_key](#input\_vm\_ssh\_key) | default ssh\_key to authenticate | `string` | `""` | no |
 
