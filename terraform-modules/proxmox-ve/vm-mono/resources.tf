@@ -43,6 +43,7 @@ resource "proxmox_vm_qemu" "vm" {
   network {
     model  = var.vm_network_model
     bridge = var.vm_network_bridge
+    tag    = var.vm_network_tag
   }
 
   # ignore network changes during the life of the VM

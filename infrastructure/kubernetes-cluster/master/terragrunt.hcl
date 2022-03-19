@@ -24,11 +24,12 @@ inputs = {
   vm_boot_disk_type         = "scsi"
   vm_boot_disk_storage_pool = "pool-cache"
 
-  vm_network_model    = "virtio"
-  vm_network_bridge   = "vmbr0"
-  vm_network_ip       = "10.10.10.121"
-  vm_network_dns      = "8.8.8.8"
-  vm_network_gateway  = "10.10.10.7"
+  vm_network_model   = "virtio"
+  vm_network_bridge  = "vmbr0"
+  vm_network_tag     = -1 # novlan tag by default
+  vm_network_ip      = "10.10.10.121"
+  vm_network_dns     = "8.8.8.8"
+  vm_network_gateway = "10.10.10.7"
 
   vm_ssh_key = ""
 
