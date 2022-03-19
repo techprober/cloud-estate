@@ -123,7 +123,7 @@ variable "vm_network_bridge" {
   type        = string
 }
 
-variable "vm_network_bridge" {
+variable "vm_network_tag" {
   default     = -1
   description = "the VLAN tag to apply to packets on this device. By default -1 disables VLAN tagging."
   type        = number
