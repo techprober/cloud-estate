@@ -68,7 +68,15 @@ E.g. Run the ping module
 ansible [hostfile path] -m ping
 ```
 
-#### Run a Task with sudo – Ansible become
+#### Run a task in dry-run mode - Ansible check
+
+Check mode is just a simulation. It will not generate output for tasks that use conditionals based on registered variables (results of prior tasks). However, it is great for validating configuration management playbooks that run on one node at a time. To run a playbook in check mode:
+
+```bash
+ansible-playbook foo.yml --check
+```
+
+#### Run a task with sudo – Ansible become
 
 sudo is to execute a task as a root user, in other words, we call it as privileged execution. If you want to execute a certain task as the root user using ansible just `become` is sufficient
 
@@ -163,8 +171,12 @@ collections:
 ### Ansible Lint
 
 ```bash
-# install
+# install with brew
 brew install ansible-lint
+# install with pip
+pip install ansible-lint
+# install with pacman
+sudo pacman -S ansible-lint
 # verify installation
 ansible-lint --version
 # linting
