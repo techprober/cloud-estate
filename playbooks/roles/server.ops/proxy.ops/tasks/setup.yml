@@ -1,0 +1,18 @@
+---
+- name: Create global proxy setup for all users
+  ansible.builtin.copy:
+    dest: "/etc/environment"
+    content: |
+      PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
+      export http_proxy="http://10.189.17.7:8118"
+      export https_proxy="http://10.189.17.7:8118"
+      export no_proxy="localhost"
+  register: global_proxy_result
+
+- name: Setup apt source proxy
+  ansible.builtin.copy:
+    dest: "/etc/apt/apt.conf.d/proxy.conf"
+    content: |
+      Acquire::http::Proxy "http://10.189.17.7:8118";
+      Acquire::https::Proxy "http://10.189.17.7:8118";
+  register: apt_source_proxy

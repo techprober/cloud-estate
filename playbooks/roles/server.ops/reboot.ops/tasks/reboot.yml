@@ -1,0 +1,5 @@
+---
+- name: Reboot machine
+  reboot:
+    msg: "Reboot initiated by Ansible"
+    reboot_timeout: 120
