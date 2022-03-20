@@ -1,7 +1,7 @@
 ---
 - name: Upgrade remote server
-  hosts: home
+  hosts: all
   become: yes
 
   roles:
-    - role: apt.ops
+    - role: ./roles/apt.ops
