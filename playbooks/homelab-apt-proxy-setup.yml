@@ -3,6 +3,8 @@
   hosts: all
   become: yes
 
+  vars_files:
+    - ./roles/server.ops/proxy.ops/variables/main.yml
   roles:
     - role: ./roles/server.ops/proxy.ops
     - role: ./roles/server.ops/reboot.ops
