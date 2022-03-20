@@ -1,6 +1,0 @@
----
-- name: Install public keys
-  ansible.posix.authorized_key:
-    user: {{ ansible_user }}
-    state: present
-    key: "{{ lookup('file', '~/.ssh/{{ public_key }}') }}"
