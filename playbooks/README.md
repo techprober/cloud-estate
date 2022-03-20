@@ -1,4 +1,21 @@
-# Ansible Playbook
+<h1 align="center">Ansible Playbooks</h1>
+<p align="center">
+    <em>Declare Configuration as Code</em>
+</p>
+<p align="center">
+    <a href="https://t.me/pve_zh">
+        <img src="https://img.shields.io/badge/join-us%20on%20proxmox%20group-gray.svg?longCache=true&logo=proxmox&colorB=orange" alt="join-us-on-proxmox-group"/>
+    </a>
+    <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html">
+        <img src="https://img.shields.io/badge/ansible-playbooks-gray.svg?longCache=true&logo=ansible&colorB=red" alt="ansible-playbooks"/>
+    </a>
+    <a href="https://t.me/joinchat/7AG3aEQ5I00wY2Q5">
+        <img src="https://img.shields.io/badge/join-us%20on%20telegram-gray.svg?longCache=true&logo=telegram&colorB=blue" alt="join-us-on-telegram"/>
+    </a>
+    <a href="https://github.com/TechProber/cloud-estate">
+        <img src="https://img.shields.io/github/last-commit/TechProber/cloud-estate" alt="lastcommit"/>
+    </a>
+</p>
 
 ## Table of Contents
 
@@ -182,5 +199,3 @@ ansible-lint --version
 # linting
 ansible-lint .
 ```
-
-## Variables
