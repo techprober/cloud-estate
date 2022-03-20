@@ -6,7 +6,7 @@
       PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
       export http_proxy="{{ proxy_server }}"
       export https_proxy="{{ proxy_server }}"
-      export no_proxy="localhost"
+      export no_proxy={{ no_proxy }}
   register: global_proxy_result
 
 - name: Setup apt source proxy
