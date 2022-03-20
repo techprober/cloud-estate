@@ -4,8 +4,8 @@
     dest: "/etc/environment"
     content: |
       PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
-      export http_proxy="http://10.189.17.7:8118"
-      export https_proxy="http://10.189.17.7:8118"
+      export http_proxy="{{ proxy_server }}"
+      export https_proxy="{{ proxy_server }}"
       export no_proxy="localhost"
   register: global_proxy_result
 
@@ -13,6 +13,6 @@
   ansible.builtin.copy:
     dest: "/etc/apt/apt.conf.d/proxy.conf"
     content: |
-      Acquire::http::Proxy "http://10.189.17.7:8118";
-      Acquire::https::Proxy "http://10.189.17.7:8118";
+      Acquire::http::Proxy "{{ proxy_server }}";
+      Acquire::https::Proxy "{{ proxy_server }}";
   register: apt_source_proxy
