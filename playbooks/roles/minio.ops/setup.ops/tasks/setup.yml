@@ -4,16 +4,16 @@
     - name: Check if minio client cli is installed
       command: "mc --version"
       register: result
-      check_mode: false
       changed_when: false
       failed_when: result.rc != 0
+      check_mode: false
 
   rescue:
     - name: Get the latest release
       get_url:
         url: https://dl.min.io/client/mc/release/linux-amd64/mc
         dest: /usr/bin/mc
-      when: "'command not found' in result.stdout"
+      when: result.rc != 0
       check_mode: false
 
     - name: Grant executable permission to mc
@@ -21,8 +21,9 @@
         path: /usr/bin/mc
         state: file
         mode: a+x
+      check_mode: false
 
     - name: Report result
       ansible.builtin.debug:
-        msg: "{{ result.stdout_lines }}"
+        msg: "Installation finished!"
       check_mode: false

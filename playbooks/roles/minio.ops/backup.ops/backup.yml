@@ -7,4 +7,3 @@
   ansible.builtin.debug:
     msg: "Backup ran successfully!"
   when: result.rc == 0
-

@@ -1,0 +1,3 @@
+---
+minio-server-address: "http://10.10.10.9"
+minio-server-port: "9002"
