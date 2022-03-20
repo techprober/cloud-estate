@@ -4,4 +4,4 @@
   become: yes
 
   roles:
-    - role: keys.ops
+    - role: server.ops/key.ops
