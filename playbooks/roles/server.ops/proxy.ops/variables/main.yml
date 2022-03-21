@@ -1,3 +1,3 @@
 ---
 proxy_server: http://10.189.17.7:8118
-no_proxy: "localhost,127.0.0.1,10.140.40.0/24"
+no_proxy: "localhost,127.0.0.1,k8s-loadbalancer.homelab.sh"
