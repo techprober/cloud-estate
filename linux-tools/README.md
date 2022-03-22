@@ -60,6 +60,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Kuberentes][k8s icon]](https://github.com/derailed/k9s) [k9s](https://github.com/derailed/k9s) - Kubernetes CLI To Manage Your Clusters In Style
 - [![Kuberentes][k8s icon]](https://github.com/k0sproject/k0sctl) [k0sctl](https://github.com/k0sproject/k0sctl) - A bootstrapping and management tool for k0s clusters
 - [![Kuberentes][k8s icon]](https://github.com/datreeio/datree) [datree](https://github.com/datreeio/datree) - Prevent Kubernetes Misconfigurations
+- [![Kuberentes][k8s icon]](https://github.com/ahmetb/kubectx) [kubectx+kubens](https://github.com/ahmetb/kubectx) - Faster way to switch between clusters and namespaces in kubectl
 
 ## CloudNative Solutions
 
