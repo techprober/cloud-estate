@@ -3,6 +3,7 @@
   command: "/usr/bin/curl --connect-timeout 10 --silent --show-error {{ remote_server }}"
   register: result
   changed_when: false
+  warn: false
   failed_when: result.rc != 0
 
 - name: Check if configuration already exists
