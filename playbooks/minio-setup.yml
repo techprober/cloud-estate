@@ -1,0 +1,9 @@
+---
+- name: Setup Minio Connection
+  hosts: all
+  become: yes
+
+  vars_files:
+    - ./roles/minio.ops/setup.ops/variables/main.yml
+  roles:
+    - role: ./roles/minio.ops/setup.ops/
