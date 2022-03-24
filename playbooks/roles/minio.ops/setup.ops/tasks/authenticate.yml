@@ -1,0 +1,28 @@
+---
+- name: Check if remote minio server is reachable
+  command: "/usr/bin/curl --connect-timeout 10 --silent --show-error {{ remote_server }}"
+  register: result
+  changed_when: false
+  failed_when: result.rc != 0
+
+- name: Check if configuration already exists
+  command: "mc ls minio"
+  register: config_exist
+
+- name: Connect to remote minio server with credentials
+  command: "mc config host add minio {{ remote_server }} {{ lookup('env','MINIO_ACCESS_KEY') }} {{ lookup('env','MINIO_SECRET_KEY') }}"
+  register: authentication_result
+  when: config_exist.stdout | length == 0
+  failed_when: authentication_result.rc != 0
+
+- name: Report result
+  ansible.builtin.debug:
+    msg: "Config already exists, authenticated successfully!"
+  when: config_exist.stdout | length > 0
+
+- name: Report result
+  ansible.builtin.debug:
+    msg: "Authenticated successfully!"
+  when: 
+    - config_exist.stdout | length == 0
+    - authentication_result.rc == 0
