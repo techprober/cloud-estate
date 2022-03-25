@@ -73,6 +73,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/containers/buildah) [buildah](https://github.com/containers/buildah) - A tool that facilitates building Open Container Initiative (OCI) container images
 - [![CloudNative][cncf icon]](https://github.com/moby/buildkit) [buildkit](https://github.com/moby/buildkit) - BuildKit is a toolkit for converting source code to build artifacts in an efficient, expressive and repeatable manner
 - [![CloudNative][cncf icon]](https://github.com/terrytangyuan/awesome-argo) [awesome-argo](https://github.com/terrytangyuan/awesome-argo) - A curated list of awesome projects and resources related to Argo, a Cloud Native Computing Foundation (CNCF) hosted project
+- [![CloudNative][cncf icon]](https://github.com/pivotal/kpack) [kpack](https://github.com/pivotal/kpack) - Kubernetes Native Container Build Service
 
 ## Applications
 
