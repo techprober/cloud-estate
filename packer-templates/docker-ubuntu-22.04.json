@@ -75,7 +75,13 @@
   ],
   "provisioners": [
     {
-      "pause_before": "120s",
+      "pause_before": "5s",
+      "type": "shell",
+      "environment_vars": ["DEBIAN_FRONTEND=noninteractive"],
+      "inline": ["echo 'Wait until apt upgrade finishes'", "exit 0"]
+    },
+    {
+      "pause_before": "300s",
       "type": "shell",
       "execute_command": "echo 'packer' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
       "script": "./scripts/bootstrap.sh"
