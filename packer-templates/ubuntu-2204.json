@@ -36,7 +36,7 @@
       "cloud_init_storage_pool": "{{ user `cloud_init_storage_pool`}}",
 
       "ssh_port": 22,
-      "ssh_timeout": "20m",
+      "ssh_timeout": "30m",
       "ssh_username": "{{ user `ssh_username` }}",
       "ssh_password": "{{ user `ssh_password` }}",
 
@@ -75,7 +75,7 @@
   ],
   "provisioners": [
     {
-      "pause_before": "60s",
+      "pause_before": "120s",
       "type": "shell",
       "execute_command": "echo 'packer' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
       "script": "./scripts/bootstrap.sh"
