@@ -134,10 +134,10 @@ To create the template execute the following command:
 
 ```bash
 # standard production-ready image
-packer build -var-file vars.json -force ubuntu-2004.json
+packer build -var-file vars.json -force ubuntu-2204.json
 
 # with docker and docker-compose pre-installed
-packer build -var-file vars.json -force docker-ubuntu-2004.json
+packer build -var-file vars.json -force docker-ubuntu-2204.json
 ```
 
 You should see some output for each of the `builders`, `provisioners` and `post-processors`.
