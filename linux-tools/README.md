@@ -50,6 +50,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/oleiade/trousseau) [trousseau](https://github.com/oleiade/trousseau) - File based encrypted key-value store
 - [![Open-Source Software][oss icon]](https://github.com/minio/mc) [mc](https://github.com/minio/mc) - MinIO Client is a replacement for ls, cp, mkdir, diff and rsync commands for filesystems and object storage
 - [![Open-Source Software][oss icon]](https://v2raya.org/en/docs/prologue/introduction/) [v2rayA](https://v2raya.org/en/docs/prologue/introduction/) - v2rayA is an easy-to-use and powerful V2Ray client focused on Linux
+- [![Open-Source Software][oss icon]](https://github.com/mr-karan/doggo) [doggo](https://github.com/mr-karan/doggo) - 🐶 Command-line DNS Client for Humans. Written in Golang
 
 ## Docker Images
 
