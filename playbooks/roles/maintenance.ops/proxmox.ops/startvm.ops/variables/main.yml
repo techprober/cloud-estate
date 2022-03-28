@@ -1,0 +1,4 @@
+---
+pm_user: "root@pam"
+pm_host: "10.10.10.10"
+pm_node: "pve-01"
