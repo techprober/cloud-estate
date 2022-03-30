@@ -49,6 +49,9 @@
       "template_description": "{{ user `template_description` }}",
 
       "http_directory": "http",
+      "http_bind_address": "{{ user `http_host_address` }}",
+      "http_port_min": 8802,
+      "http_port_max": 8802,
       "boot_wait": "5s",
       "boot_command": [
         "<esc><esc><esc><esc>e<wait>",
