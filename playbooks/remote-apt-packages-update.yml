@@ -1,6 +1,6 @@
 ---
 - name: Upgrade remote server
-  hosts: remote
+  hosts: all
   become: yes
 
   roles:
