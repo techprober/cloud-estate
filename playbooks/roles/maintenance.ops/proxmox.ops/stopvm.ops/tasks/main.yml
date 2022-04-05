@@ -1,0 +1,5 @@
+---
+- include_tasks: host-info.yml
+- include_tasks: msg.yml
+- include_tasks: stopvm.yml
+- include_tasks: state.yml

@@ -1,0 +1,4 @@
+---
+- name: (Pre-ops) Print target VM group infromation
+  ansible.builtin.debug:
+    msg: "Perform actions on target VM group - {{ target_vm_group }}"

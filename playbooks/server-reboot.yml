@@ -4,4 +4,4 @@
   become: yes
 
   roles:
-    - role: ./roles/server.ops/reboot.ops
+    - role: ./roles/maintenance.ops/reboot.ops
