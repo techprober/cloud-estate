@@ -1,5 +1,5 @@
 ---
-- name: Setup Minio Connection
+- name: Stop Proxmox VMs
   hosts: all
   become: yes
 
