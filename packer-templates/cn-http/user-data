@@ -22,9 +22,7 @@ autoinstall:
     security:
       - arches: [amd64]
     sources_list: |
-        deb $MIRROR $RELEASE main restricted
-        deb-src $MIRROR $RELEASE main restricted
-        deb $PRIMARY $RELEASE universe restricted
+        deb $PRIMARY $RELEASE main universe restricted
         deb $SECURITY $RELEASE-security multiverse
   packages:
     - sudo
