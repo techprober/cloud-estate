@@ -13,6 +13,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [Git](#git)
 - [Vim](#vim)
 - [Container](#container)
+- [Software Development](#software-development)
 
 ### Productive Tools
 
@@ -25,6 +26,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ### Homelab
 
 - [![Docs][docs icon]](https://dev.to/aaronktberry/top-10-software-for-your-homelab-in-2021-28e1) [Top 10 software for your Homelab in 2021](https://dev.to/aaronktberry/top-10-software-for-your-homelab-in-2021-28e1) - Check out this quick list of 10 apps that you can try out and see if you can get some new functionality for free through self-hosting
+
 ### Container
 
 - [![Docs][docs icon]](https://mkdev.me/en/posts/dockerless-part-1-which-tools-to-replace-docker-with-and-why) [Dockerless, part 1: Which tools to replace Docker with and why](https://mkdev.me/en/posts/dockerless-part-1-which-tools-to-replace-docker-with-and-why) - Why Dockerless?
@@ -45,5 +47,9 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Docs][docs icon]](https://github.com/nanotee/nvim-lua-guide) [Nvim Lua Guide](https://github.com/nanotee/nvim-lua-guide) - Getting started using Lua in Neovim
 - [![Docs][docs icon]](https://github.com/rockerBOO/awesome-neovim) [awesome-neovim](https://github.com/rockerBOO/awesome-neovim) - Collections of awesome Neovim plugins. Mostly targeting Neovim specific features
+
+### Software Development
+
+- [![Docs][docs icon]](https://12factor.net/) [The Twelve-Factor App](https://12factor.net/) - A methodology for building software-as-a-service apps
 
 [docs icon]: ./assets/docs.svg
