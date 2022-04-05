@@ -48,7 +48,7 @@
       "template_name": "{{ user `template_name` }}",
       "template_description": "{{ user `template_description` }}",
 
-      "http_directory": "http",
+      "http_directory": "cn-http",
       "http_bind_address": "{{ user `http_bind_address` }}",
       "http_port_min": 8802,
       "http_port_max": 8802,
