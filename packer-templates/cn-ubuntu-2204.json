@@ -1,0 +1,116 @@
+{
+  "builders": [
+    {
+      "type": "proxmox",
+
+      "proxmox_url": "https://{{user `proxmox_host`}}:8006/api2/json",
+      "insecure_skip_tls_verify": true,
+      "username": "{{user `proxmox_api_user`}}",
+      "password": "{{user `proxmox_api_password`}}",
+
+      "vm_name": "{{user `template_name`}}",
+      "vm_id": "{{ user `vm_id` }}",
+      "node": "{{user `proxmox_node_name`}}",
+      "cores": "{{ user `cores` }}",
+      "sockets": "{{ user `sockets` }}",
+      "memory": "{{ user `memory` }}",
+      "os": "l26",
+      "network_adapters": [
+        {
+          "model": "virtio",
+          "bridge": "{{ user `bridge` }}",
+          "firewall": true
+        }
+      ],
+      "disks": [
+        {
+          "type": "{{ user `disk_type` }}",
+          "format": "{{ user `disk_format` }}",
+          "disk_size": "{{ user `disk_size` }}",
+          "storage_pool": "{{ user `datastore` }}",
+          "storage_pool_type": "{{ user `datastore_type` }}",
+          "cache_mode": "{{ user `disk_cache_mode`}}"
+        }
+      ],
+      "cloud_init": true,
+      "cloud_init_storage_pool": "{{ user `cloud_init_storage_pool`}}",
+
+      "ssh_port": 22,
+      "ssh_timeout": "40m",
+      "ssh_username": "{{ user `ssh_username` }}",
+      "ssh_password": "{{ user `ssh_password` }}",
+
+      "qemu_agent": true,
+
+      "iso_file": "{{ user `iso` }}",
+      "unmount_iso": true,
+
+      "template_name": "{{ user `template_name` }}",
+      "template_description": "{{ user `template_description` }}",
+
+      "http_directory": "cn-http",
+      "http_bind_address": "{{ user `http_bind_address` }}",
+      "http_port_min": 8802,
+      "http_port_max": 8802,
+      "boot_wait": "5s",
+      "boot_command": [
+        "<esc><esc><esc><esc>e<wait>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "linux /casper/vmlinuz --- autoinstall ds=\"nocloud-net;seedfrom=http://{{.HTTPIP}}:{{.HTTPPort}}/\"<enter><wait>",
+        "initrd /casper/initrd<enter><wait>",
+        "boot<enter>",
+        "<enter><f10><wait>"
+      ]
+    }
+  ],
+  "provisioners": [
+    {
+      "pause_before": "5s",
+      "type": "shell",
+      "environment_vars": ["DEBIAN_FRONTEND=noninteractive"],
+      "inline": ["echo 'Wait until apt upgrade finishes'", "exit 0"]
+    },
+    {
+      "pause_before": "300s",
+      "type": "shell",
+      "execute_command": "echo 'packer' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
+      "script": "./scripts/bootstrap.sh"
+    },
+    {
+      "pause_before": "5s",
+      "type": "ansible-local",
+      "playbook_file": "./playbooks/post-provision.yml",
+      "playbook_dir": "./playbooks"
+    },
+    {
+      "pause_before": "5s",
+      "type": "shell",
+      "environment_vars": ["DEBIAN_FRONTEND=noninteractive"],
+      "inline": ["date > provision_date.txt", "exit 0"]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "shell-local",
+      "inline": [
+        "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --boot c --bootdisk scsi0",
+        "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --ciuser {{ user `ssh_username` }}",
+        "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --cipassword {{ user `ssh_password` }}",
+        "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --serial0 socket --vga serial0"
+      ]
+    }
+  ]
+}
