@@ -23,6 +23,7 @@
 
   "ssh_password": "packer",
   "ssh_username": "packer",
+  "ssh_timeout": "60m",
 
   "http_bind_address": "10.10.10.50"
 }

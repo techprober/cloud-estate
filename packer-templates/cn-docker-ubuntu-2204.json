@@ -36,7 +36,7 @@
       "cloud_init_storage_pool": "{{ user `cloud_init_storage_pool`}}",
 
       "ssh_port": 22,
-      "ssh_timeout": "40m",
+      "ssh_timeout": "{{ user `ssh_timeout` }}",
       "ssh_username": "{{ user `ssh_username` }}",
       "ssh_password": "{{ user `ssh_password` }}",
 
