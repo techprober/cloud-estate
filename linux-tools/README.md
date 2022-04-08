@@ -34,6 +34,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Open-Source Software][oss icon]](https://github.com/marktext/marktext) [marktext](https://github.com/marktext/marktext) - simple and elegant open-source markdown editor that focused on speed and usability
 - [![Open-Source Software][oss icon]](https://github.com/benweet/stackedit) [stackedit](https://github.com/benweet/stackedit) - In-browser Markdown editor
+- [![actions-gh-pages][oss icon]](https://github.com/peaceiris/actions-gh-pages) [actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) - GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site easily. Static-Site-Generators-friendly
 
 ## HomeLab Related
 
