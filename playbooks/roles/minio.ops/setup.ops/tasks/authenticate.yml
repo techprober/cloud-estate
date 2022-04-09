@@ -5,24 +5,45 @@
   changed_when: false
   failed_when: result.rc != 0
 
-- name: Check if configuration already exists
+- name: Fetch current minio server ip address
+  shell: |
+    cat ~/.mc/config.json | jq '.aliases.minio.url' | tr -d '""'
+  register: server
+
+- name: Set current server ip address as fact
+  ansible.builtin.set_fact:
+    current_server={{ server.stdout }}
+
+- name: Update minio server ip
+  shell: |
+    mv ~/.mc/config.json ~/.mc/config.json.backup
+    jq '.aliases.minio.url |= "{{ remote_server }}"' ~/.mc/config.json.backup | tee -a ~/.mc/config.json > /dev/null
+  register: is_server_changed
+  when: remote_server != current_server
+
+- name: Report result
+  ansible.builtin.debug:
+    msg: "Successfully updated minio server connection! Current minio server: {{ remote_server }}"
+  when: is_server_changed is changed
+
+- name: Verify configurations
   command: "mc ls minio"
-  register: config_exist
+  register: config_verified
 
 - name: Connect to remote minio server with credentials
   command: "mc config host add minio {{ remote_server }} {{ lookup('env','MINIO_ACCESS_KEY') }} {{ lookup('env','MINIO_SECRET_KEY') }}"
   register: authentication_result
-  when: config_exist.stdout | length == 0
+  when: config_verified.stdout | length == 0
   failed_when: authentication_result.rc != 0
 
 - name: Report result
   ansible.builtin.debug:
     msg: "Config already exists, authenticated successfully!"
-  when: config_exist.stdout | length > 0
+  when: config_verified.stdout | length > 0
 
 - name: Report result
   ansible.builtin.debug:
     msg: "Authenticated successfully!"
   when: 
-    - config_exist.stdout | length == 0
+    - config_verified.stdout | length == 0
     - authentication_result.rc == 0
