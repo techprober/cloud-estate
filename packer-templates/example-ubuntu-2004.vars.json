@@ -13,9 +13,9 @@
   "disk_size": "10G",
   "disk_format": "raw",
   "disk_cache_mode": "writeback",
-  "datastore": "local",
+  "datastore": "local-lvm",
   "datastore_type": "directory",
-  "cloud_init_storage_pool": "local",
+  "cloud_init_storage_pool": "local-lvm",
 
   "iso": "local:iso/ubuntu-20.04.3-live-server-amd64.iso",
   "template_name": "ubuntu-server-20-04-packer-template",
