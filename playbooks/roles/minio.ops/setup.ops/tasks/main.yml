@@ -1,3 +1,4 @@
 ---
 - include_tasks: setup.yml
+- include_tasks: install_jq.yml
 - include_tasks: authenticate.yml
