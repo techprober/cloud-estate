@@ -1,10 +1,7 @@
 ---
-- name: Setup Minio Connection
+- name: Backup Data to Minio
   hosts: all
   become: yes
 
-  vars_files:
-    - ./roles/minio.ops/setup.ops/variables/main.yml
   roles:
-    - role: ./roles/minio.ops/setup.ops/
     - role: ./roles/minio.ops/backup.ops/
