@@ -3,11 +3,16 @@
   ansible.builtin.copy:
     dest: "/etc/apt/sources.list"
     content: |
+      # Primary
       deb {{ primary_source_uri }} {{ release }} main restricted universe multiverse
+
+      # Primary Updates
       deb {{ primary_source_uri }} {{ release }}-updates main restricted universe multiverse
-      deb {{ security_source_uri }} {{ release }}-security main restricted universe multivers
+
+      # Security Patches
+      deb {{ security_source_uri }} {{ release }}-security main restricted universe multiverse
 
 - name: Keep apt up-to-date with custom source
   ansible.builtin.apt:
-    update_cache: no
+    update_cache: yes
     upgrade: yes
