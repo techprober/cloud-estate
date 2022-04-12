@@ -4,6 +4,7 @@
     dest: "/etc/apt/sources.list"
     content: |
       deb {{ primary_source_uri }} {{ release }} main restricted universe multiverse
+      deb {{ primary_source_uri }} {{ release }}-updates main restricted universe multiverse
       deb {{ security_source_uri }} {{ release }}-security main restricted universe multivers
 
 - name: Keep apt up-to-date with custom source
