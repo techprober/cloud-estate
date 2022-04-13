@@ -1,0 +1,17 @@
+---
+- name: Gather package facts
+  package_facts:
+    manager: apt
+
+- name: Check if the package is installed
+  apt:
+    name: "{{ item }}"
+    state: present
+  when: item not in ansible_facts.packages
+  loop: "{{ packages }}"
+
+- name: (Post-ops) Print software versions
+  debug:
+    msg: |
+      version: {{ ansible_facts.packages[item|split('=')|first][0].version }}
+  loop: "{{ packages }}"
