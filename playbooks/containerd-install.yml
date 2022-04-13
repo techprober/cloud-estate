@@ -19,4 +19,5 @@
       # uncomment the following lines if you wish to configure rootless containerd
       vars:
         - rootless_containerd: true
-        - rootless_user: packer # target rootless user to run containerd with rootless previledge
+        - rootless_user: "packer" # target rootless user to run containerd with rootless previledge
+
