@@ -1,6 +1,8 @@
 ---
 - name: Enable ipv4 port forwarding
-  shell: |
-    "sudo /sbin/sysctl -w net.ipv4.conf.all.forwarding=1"
-    "echo "net.ipv4.conf.all.forwarding=1" | sudo tee -a /etc/sysctl.conf"
+  ansible.posix.sysctl:
+    name: net.ipv4.ip_forward
+    value: 1
+    state: present
+    reload: yes
 

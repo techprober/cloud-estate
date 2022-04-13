@@ -6,6 +6,7 @@
       register: is_nerdctl_installed
       changed_when: false
       failed_when: is_nerdctl_installed.stdout | length == 0
+      ignore_errors: true
   rescue:
     - name: Install Nerdctl with official script
       shell: "curl -sSL https://github.com/containerd/nerdctl/releases/download/v{{ nerdctl_version }}/nerdctl-{{ nerdctl_version }}-linux-amd64.tar.gz | sudo tar -xvz -C /usr/local/bin"
