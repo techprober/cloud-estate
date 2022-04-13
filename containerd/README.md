@@ -35,7 +35,9 @@ echo "net.ipv4.conf.all.forwarding=1" | sudo tee -a /etc/sysctl.conf
 reboot
 ```
 
-## Purge Docker
+## Normal Install
+
+### Purge Docker
 
 ```bash
 # archlinux
@@ -57,7 +59,7 @@ sudo rm -rf /etc/docker
 sudo rm -rf ~/.docker
 ```
 
-## Install Dependencies
+### Install Dependencies
 
 ```bash
 # archlinux
@@ -69,7 +71,9 @@ sudo apt-get update -y
 sudo apt-get install -y curl runc bridge-utils
 ```
 
-## Install CNI-Plugin
+### Install CNI-Plugin
+
+source: https://github.com/containernetworking/plugins
 
 ```bash
 # archlinux
@@ -77,11 +81,13 @@ mkdir -p /opt/cni/bin
 sudo pacman -S cni-plugins
 
 # ubuntu
-version=v1.0.1 # <- find the version that fits your need in the project release page
-curl -sSL https://github.com/containernetworking/plugins/releases/download/${version}/cni-plugins-linux-amd64-${version}.tgz | sudo tar -xvz -C /opt/cni/bin
+cni_version=1.1.1 # <- find the version that fits your need in the project release page
+curl -sSL https://github.com/containernetworking/plugins/releases/download/v{{ cni_version }}/cni-plugins-linux-amd64-v{{ cni_version }}.tgz | sudo tar -xvz -C /opt/cni/bin
 ```
 
-## Install Containerd
+### Install Containerd
+
+source: https://github.com/containerd/containerd
 
 ```bash
 # archlinux
@@ -96,46 +102,51 @@ sudo containerd config default > /etc/containerd/config.toml
 sudo systemctl enable containerd --now
 ```
 
-## Install Nerdctl
+### Install Nerdctl
+
+source: https://github.com/containerd/nerdctl
 
 ```bash
 # archlinux
 sudo pacman -Sy install nerdctl
 
 # ubuntu
-version=0.16.0 # <- find the version that first your need in the project release page
-curl -sSL https://github.com/containerd/nerdctl/releases/download/v${version}/nerdctl-${version}-linux-amd64.tar.gz | sudo tar -C -xzvvf /usr/local/bin
+nerdctl_version=0.18.0 # <- find the version that first your need in the project release page
+curl -sSL https://github.com/containerd/nerdctl/releases/download/v{{ nerdctl_version }}/nerdctl-{{ nerdctl_version }}-linux-amd64.tar.gz | sudo tar -xvz -C /usr/local/bin
 ```
 
-## Install Buildkit
+### Install Buildkit Daemon
+
+source: https://github.com/moby/buildkit
 
 ```bash
 # archlinux
 sudo pacman -S buildkit
 
 # ubuntu
-version=v0.9.3 # <- find the version that first your need in the project release page
-curl -sSL https://github.com/moby/buildkit/releases/download/${version}/buildkit-${version}.linux-amd64.tar.gz | sudo tar -C -xzvf /usr/bin
+buildkit_version=0.10.1 # <- find the version that first your need in the project release page
+curl -sSL https://github.com/moby/buildkit/releases/download/v{{ buildkit_version }}/buildkit-v{{ buildkit_version }}.linux-amd64.tar.gz | sudo tar -xvz -C /usr/local/bin
+
 
 # create daemon service
-sudo cat > /etc/systemd/system/buildkit.service <Enter>
+sudo cat > /etc/systemd/system/buildkitd.service <Enter>
 [Unit]
 Description=BuildKit
 Documentation=https://github.com/moby/buildkit
 
 [Service]
-ExecStart=/usr/bin/buildkitd --oci-worker=false --containerd-worker=true
+ExecStart=/usr/local/bin/buildkitd --oci-worker=false --containerd-worker=true
 
 [Install]
 WantedBy=multi-user.target
 <Ctrl-D>
 
 sudo systemctl daemon-reload
-sudo systemctl enable buildkit --now
-sudo systemctl status buildkit
+sudo systemctl enable buildkitd --now
+sudo systemctl status buildkitd
 ```
 
-## Enable port-fowarding
+### Enable port-forward
 
 ```bash
 sudo /sbin/sysctl -w net.ipv4.conf.all.forwarding=1
