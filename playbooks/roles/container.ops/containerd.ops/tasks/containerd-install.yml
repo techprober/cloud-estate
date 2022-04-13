@@ -23,7 +23,6 @@
       register: is_containerd_installed
       changed_when: false
       failed_when: is_containerd_installed.rc != 0
-      ignore_errors: yes
   rescue:
     - name: Install CNI plugin with official script
       shell: "curl -sSL https://github.com/containernetworking/plugins/releases/download/v{{ cni_version }}/cni-plugins-linux-amd64-v{{ cni_version }}.tgz | sudo tar -xvz -C /opt/cni/bin"
