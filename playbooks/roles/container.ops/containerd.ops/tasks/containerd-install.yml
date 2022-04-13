@@ -27,7 +27,6 @@
   rescue:
     - name: Install CNI plugin with official script
       shell: "curl -sSL https://github.com/containernetworking/plugins/releases/download/v{{ cni_version }}/cni-plugins-linux-amd64-v{{ cni_version }}.tgz | sudo tar -xvz -C /opt/cni/bin"
-      when: is_nerdctl_installed.rc == 0
 
     - name: Create a directory to store the Containerd configuration
       ansible.builtin.file:
