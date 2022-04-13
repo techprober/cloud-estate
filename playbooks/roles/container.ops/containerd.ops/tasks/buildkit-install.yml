@@ -1,4 +1,33 @@
 ---
-- name: Install buildkit with official script
-  shell: "curl -sSL https://github.com/moby/buildkit/releases/download/v{{ buildkit_version }}/buildkit-v{{ buildkit_version }}.linux-amd64.tar.gz | sudo tar -C -xzvf /usr/bin"
+- name: Install Buildkit, if not present
+  block: 
+    - name: Check if Buildkit daemon is installed
+      shell: "command -v buildkitd"
+      register: is_buildkitd_installed
+      changed_when: false
+      failed_when: is_buildkitd_installed.stdout | length == 0
+  rescue:
+    - name: Install Buildkitd with official script
+      shell: "curl -sSL https://github.com/moby/buildkit/releases/download/v{{ buildkit_version }}/buildkit-v{{ buildkit_version }}.linux-amd64.tar.gz | sudo tar -xvz -C /usr/local/bin"
+
+- name: Create daemon service for Buildkitd
+  ansible.builtin.copy:
+    dest: "/etc/systemd/system/buildkit.service"
+    content: |
+      [Unit]
+      Description=BuildKit
+      Documentation=https://github.com/moby/buildkit
+
+      [Service]
+      ExecStart=/usr/local/bin/buildkitd --oci-worker=false --containerd-worker=true
+
+      [Install]
+      WantedBy=multi-user.target
+
+- name: Enable Buildkitd as a daemon service
+  ansible.builtin.service:
+    name: buildkit
+    enabled: yes
+    state: started
+    daemon_reload: yes
 
