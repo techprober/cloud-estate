@@ -7,5 +7,10 @@
   apt:
     name: "{{ item }}"
     state: present
-  when: '"{{ item }}" not in ansible_facts.packages'
+  when: item not in ansible_facts.packages
+  loop: "{{ packages }}"
+
+- name: (Post-ops) Print software versions
+  debug:
+    msg: "version: {{ ansible_facts.packages[item][0].version }}"
   loop: "{{ packages }}"
