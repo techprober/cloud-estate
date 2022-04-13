@@ -7,9 +7,9 @@
     - ./roles/container.ops/containerd.ops/vars/main.yml
   roles:
     # change apt source (optional)
-    # - role: ./roles/apt.ops/update.ops/
-    #   vars:
-    #   - primary_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
-    #   - security_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
-    #   - release: "jammy"
+    - role: ./roles/apt.ops/set-sources.ops/
+      vars:
+      - primary_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
+      - security_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
+      - release: "jammy"
     - role: ./roles/container.ops/containerd.ops
