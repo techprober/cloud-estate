@@ -42,7 +42,7 @@
       command: |
         sudo containerd config default > /etc/containerd/config.toml
 
-    - name: Enable contained as a daemon service
+    - name: Enable Contained as a daemon service
       ansible.builtin.service:
         name: containerd
         enabled: yes
