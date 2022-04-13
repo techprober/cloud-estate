@@ -4,7 +4,7 @@
   become: yes
 
   vars:
-    - packages:
+    - packages: # Packages to be installed
       - vim
       - neofetch
   roles:
