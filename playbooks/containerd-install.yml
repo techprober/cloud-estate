@@ -13,3 +13,10 @@
       - security_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
       - release: "jammy"
     - role: ./roles/container.ops/containerd.ops
+      # default installation (rootful mode)
+      vars:
+        - rootless_containerd: false
+      # uncomment the following lines if you wish to configure rootless containerd
+      vars:
+        - rootless_containerd: true
+        - rootless_user: packer # target rootless user to run containerd with rootless previledge
