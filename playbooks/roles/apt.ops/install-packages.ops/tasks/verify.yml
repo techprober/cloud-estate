@@ -12,5 +12,6 @@
 
 - name: (Post-ops) Print software versions
   debug:
-    msg: "version: {{ ansible_facts.packages[item][0].version }}"
+    msg: |
+      version: {{ ansible_facts.packages[item|split('=')|first][0].version }}
   loop: "{{ packages }}"
