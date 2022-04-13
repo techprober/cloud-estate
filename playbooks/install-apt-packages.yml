@@ -1,0 +1,11 @@
+---
+- name: Install packages with apt
+  hosts: all
+  become: yes
+
+  vars:
+    - packages:
+      - vim
+      - neofetch
+  roles:
+    - role: ./roles/apt.ops/install-packages.ops/
