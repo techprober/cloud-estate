@@ -3,3 +3,5 @@
 - include_tasks: nerdctl-install.yml
 - include_tasks: buildkit-install.yml
 - include_tasks: ipv4_forward.yml
+- include_tasks: reboot.yml
+
