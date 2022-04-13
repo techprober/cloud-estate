@@ -1,0 +1,4 @@
+---
+- include_tasks: info.yml
+- include_tasks: install.yml
+- include_tasks: verify.yml
