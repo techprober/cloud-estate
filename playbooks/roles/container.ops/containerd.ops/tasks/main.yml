@@ -1,6 +1,9 @@
 ---
 # rootless containerd
+- include_tasks: rootless-user.yml
+  when: rootless_containerd
 - include_tasks: rootless-install.yml 
+  when: rootless_containerd
 
 # rootful containerd
 - include_tasks: containerd-install.yml
