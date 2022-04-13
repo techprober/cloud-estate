@@ -14,8 +14,8 @@
       - release: "jammy"
     - role: ./roles/container.ops/containerd.ops
       # default installation (rootful mode)
-      vars:
-        - rootless_containerd: false
+      # vars:
+      #   - rootless_containerd: false
       # uncomment the following lines if you wish to configure rootless containerd
       vars:
         - rootless_containerd: true
