@@ -9,7 +9,7 @@ For LXC Container, it is recommended to install Containerd in `rootful mode`; fo
 #### rootful mode
 
 ```yaml
-# containerd-install.yml
+# rootful-containerd-install.yml
 ---
 - name: Perform Containerd Installation
   hosts: all
@@ -26,7 +26,7 @@ For LXC Container, it is recommended to install Containerd in `rootful mode`; fo
 #### rootless mode
 
 ```yaml
-# containerd-install.yml
+# rootless-containerd-install.yml
 ---
 - name: Perform Containerd Installation
   hosts: all
