@@ -5,19 +5,17 @@
       apt:
         update_cache: yes
 
-    - name: Check if /etc/subuid already exist
-      stat:
-        path: "/etc/subuid"
+    - name: Check if rootless user is in /etc/subuid
+      shell: "cat /etc/subuid | grep {{ rootless_user }}"
       register: is_subuid_exists
       changed_when: false
-      failed_when: not is_subuid_exists.stat.exists
+      failed_when: is_subuid_exists.stdout | length == 0
 
-    - name: Check if /etc/subgid already exist
-      stat:
-        path: "/etc/subgid"
+    - name: Check if rootless user is in /etc/subgid
+      shell: "cat /etc/subgid | grep {{ rootless_user }}"
       register: is_subgid_exists
       changed_when: false
-      failed_when: not is_subgid_exists.stat.exists
+      failed_when: is_subgid_exists.stdout | length == 0
 
     - name: Check if Containerd is installed
       shell: "command -v containerd"
@@ -32,28 +30,22 @@
         - curl
         - runc
         - bridge-utils
+        - uidmap
         - apt-transport-https
-
-    - name: Create /etc/subuid
-      ansible.builtin.file:
-        path: /etc/subuid
-        state: touch
-        mode: u+rw,g-wx,o-rwx
-
-    - name: Create /etc/subgid
-      ansible.builtin.file:
-        path: /etc/subgid
-        state: touch
-        mode: u+rw,g-wx,o-rwx
 
     - name: Assign subuids and subgids to the target user
       shell: "usermod --add-subuids 100000-165535 --add-subgids 100000-165535 {{ rootless_user }}"
 
-    - name: Install Nerdctl, CNI, Buildkitd, and Containerd (Full) with official script
+    - name: Install Nerdctl, CNI, and Containerd (Full) with official script
       shell: "curl -sSL https://github.com/containerd/nerdctl/releases/download/v{{ nerdctl_version }}/nerdctl-full-{{ nerdctl_version }}-linux-amd64.tar.gz | sudo tar -xvz -C /usr/local"
 
     - name: Setup rootless Containerd for the target user
       shell: "containerd-rootless-setuptool.sh install"
+      become: true
+      become_user: "{{ rootless_user }}"
+
+    - name: Install Buildkitd with setuptool
+      shell: "containerd-rootless-setuptool.sh install-buildkit"
       become: true
       become_user: "{{ rootless_user }}"
 
