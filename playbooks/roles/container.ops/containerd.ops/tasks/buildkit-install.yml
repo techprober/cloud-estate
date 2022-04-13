@@ -2,10 +2,11 @@
 - name: Install Buildkit, if not present
   block: 
     - name: Check if Buildkit daemon is installed
-      shell: "command -v buildkitd"
+      stat:
+        path: "/etc/systemd/system/buildkitd.service"
       register: is_buildkitd_installed
       changed_when: false
-      failed_when: is_buildkitd_installed.stdout | length == 0
+      failed_when: not is_buildkitd_installed.stat.exists
       ignore_errors: yes
   rescue:
     - name: Install Buildkitd with official script
