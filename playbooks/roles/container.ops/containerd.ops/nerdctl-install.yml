@@ -1,0 +1,5 @@
+---
+- name: Install Nerdctl with official script
+  shell: |
+    "curl -sSL https://github.com/containerd/nerdctl/releases/download/v{{ nerdctl_version }}/nerdctl-{{ nerdctl_version }}-linux-amd64.tar.gz | sudo tar -C -xzvvf /usr/local/bin"
+

@@ -1,0 +1,11 @@
+---
+- name: Enable ipv4 port forwarding
+  shell: |
+    "sudo /sbin/sysctl -w net.ipv4.conf.all.forwarding=1"
+    "echo "net.ipv4.conf.all.forwarding=1" | sudo tee -a /etc/sysctl.conf"
+
+- name: Remote machine to take effect
+  ansible.builtin.reboot:
+    msg: "Reboot initiated by Ansible"
+    reboot_timeout: 120
+
