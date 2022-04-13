@@ -1,0 +1,4 @@
+---
+- name: Install buildkit with official script
+  shell: "curl -sSL https://github.com/moby/buildkit/releases/download/v{{ buildkit_version }}/buildkit-v{{ buildkit_version }}.linux-amd64.tar.gz | sudo tar -C -xzvf /usr/bin"
+

@@ -17,8 +17,7 @@
     state: directory
 
 - name: Install CNI plugin with official script
-  shell: |
-    "curl -sSL https://github.com/containernetworking/plugins/releases/download/{{ cni_version }}/cni-plugins-linux-amd64-{{ cni_version }}.tgz | sudo tar -xvz -C /opt/cni/bin"
+  shell: "curl -sSL https://github.com/containernetworking/plugins/releases/download/v{{ cni_version }}/cni-plugins-linux-amd64-v{{ cni_version }}.tgz | sudo tar -xvz -C /opt/cni/bin"
 
 - name: Create a directory to store the Containerd configuration
   ansible.builtin.file:
