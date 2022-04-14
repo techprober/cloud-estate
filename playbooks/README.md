@@ -46,7 +46,8 @@
 
 ## Project File Structure
 
-```bash
+```
+# tree -d -L ./
 .
 ├── bin
 ├── docs
