@@ -1,8 +1,0 @@
----
-- name: Install new ssh key
-  hosts: all
-
-  vars_files:
-    - ./roles/server.ops/key.ops/variables/main.yml
-  roles:
-    - role: ./roles/server.ops/key.ops
