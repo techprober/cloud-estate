@@ -73,7 +73,7 @@
 
 - All the playbooks are stored under `./playbooks/`
 - All the playable roles are stored under `./roles/`
-- Sample inverntory definition can be found under `./inventory/
+- Sample inverntory definition can be found under `./inventory/`
 
 ## Automation and Orchestration
 
