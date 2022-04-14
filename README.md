@@ -37,8 +37,6 @@ This repo uses the [pre-commit framework](https://github.com/pre-commit/pre-comm
 ```bash
 # Install with pip
 pip install pre-commit
-# Install with Homebrew
-brew install pre-commit
 # Install pre-commit under root directory
 pre-commit install
 ```
