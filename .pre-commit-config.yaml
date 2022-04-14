@@ -14,9 +14,3 @@ repos:
     hooks:
       - id: terragrunt_fmt
       - id: terraform_docs
-  # - repo: https://github.com/ansible-community/ansible-lint.git
-    # put latest release tag from https://github.com/ansible-community/ansible-lint/releases/
-    # rev: v6.0.2
-    # hooks:
-    #   - id: ansible-lint
-    #     files: ^playbook\/\.(yaml|yml)$
