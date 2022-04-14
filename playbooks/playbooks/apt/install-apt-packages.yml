@@ -4,8 +4,9 @@
   become: yes
 
   vars:
-    - packages: # Packages to be installed
-      - curl=7.74.0-1.3ubuntu2 # install pkg with a specific version
+    # Packages to be installed
+    - packages:
+      - curl
       - wget
       - vim
       - neofetch
@@ -14,4 +15,4 @@
       - tree
       - iputils-ping
   roles:
-    - role: ./roles/apt.ops/install-packages.ops/
+    - role: ../../roles/apt.ops/install-packages.ops/

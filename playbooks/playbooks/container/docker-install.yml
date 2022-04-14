@@ -1,0 +1,9 @@
+---
+- name: Docker installation
+  hosts: all
+  become: yes
+
+  vars:
+    - compose_version: "1.29.2"
+  roles:
+    - role: ../../roles/container.ops/docker.ops/

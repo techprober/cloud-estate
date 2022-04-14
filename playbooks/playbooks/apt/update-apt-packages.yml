@@ -4,4 +4,4 @@
   become: yes
 
   roles:
-    - role: ./roles/maintenance.ops/reboot.ops
+    - role: ../../roles/apt.ops/update.ops/

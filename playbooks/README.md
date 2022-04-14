@@ -27,7 +27,6 @@
 - [Playbook](#playbook)
 - [Task](#task)
 - [Tools](#tools)
-- [Variables](#variables)
 
 ## Reference Links
 
@@ -44,6 +43,37 @@
 - `module` (pre-defined task template that can be called upon automation)
 - `variable` (user-defined custom variables that can be injected to Ansible automation)
 - `ansible.cfg` (modify default behavior and settings that Ansible uses)
+
+## Project File Structure
+
+```
+# tree -d -L ./
+.
+├── bin
+├── docs
+├── inventory
+├── playbooks
+│   ├── apt
+│   ├── container
+│   ├── local-maintenance
+│   ├── maintenance
+│   ├── minio
+│   └── proxmox
+└── roles
+    ├── apt.ops
+    ├── arch.update
+    ├── container.ops
+    ├── homebrew.ops
+    ├── maintenance.ops
+    ├── minio.ops
+    └── server.ops
+```
+
+##### Notes:
+
+- All the playbooks are stored under `./playbooks/`
+- All the playable roles are stored under `./roles/`
+- Sample inverntory definition can be found under `./inventory/
 
 ## Automation and Orchestration
 
@@ -121,9 +151,10 @@ How to pass the password as a parameter. ansible-playbook gives you to two optio
 ansible-playbook -K [playbook path]
 ```
 
-Alternative way to run playbook with `--ask-become-pass` but without the need to explicitly type `become` password
+Alternative way to run playbook with `-e ansible_become_pass=$ANSIBLE_PASSWORD` but without the need to explicitly type `become` password
 
 ```bash
+export $ANSIBLE_PASSOWRD=<become password goes here>
 ansible-playbook \
   -e ansible_become_pass=$ANSIBLE_PASSWORD \
   [playbook path]

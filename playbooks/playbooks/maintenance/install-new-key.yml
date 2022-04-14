@@ -1,0 +1,8 @@
+---
+- name: Install new ssh key
+  hosts: all
+
+  vars:
+    - public_key: /home/kev/.ssh/ansible_id_rsa.pub
+  roles:
+    - role: ../../roles/server.ops/key.ops

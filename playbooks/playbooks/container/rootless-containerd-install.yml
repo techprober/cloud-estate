@@ -4,17 +4,16 @@
   become: yes
 
   vars_files:
-    - ./roles/container.ops/containerd.ops/vars/main.yml
+    - ../../roles/container.ops/containerd.ops/vars/main.yml
   roles:
     # change apt source (optional)
-    - role: ./roles/apt.ops/set-sources.ops/
+    - role: ../../roles/apt.ops/set-sources.ops/
       vars:
       - primary_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
       - security_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
       - release: "jammy"
     # rootless installation
-    - role: ./roles/container.ops/containerd.ops
+    - role: ../../roles/container.ops/containerd.ops
       vars:
         - rootless_containerd: true
         - rootless_user: "packer" # target rootless user to run containerd with rootless previledge
-

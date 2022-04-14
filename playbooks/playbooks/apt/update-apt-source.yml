@@ -6,6 +6,6 @@
   vars:
     - primary_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
     - security_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
-    - release: "jammy"
+    - release: "jammy" # change the release to fit your need
   roles:
-    - role: ./roles/apt.ops/set-sources.ops/
+    - role: ../../roles/apt.ops/set-sources.ops/
