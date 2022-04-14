@@ -45,6 +45,12 @@
 - `variable` (user-defined custom variables that can be injected to Ansible automation)
 - `ansible.cfg` (modify default behavior and settings that Ansible uses)
 
+## Project File Structure
+
+```bash
+
+```
+
 ## Automation and Orchestration
 
 - Automation refers to a single task
@@ -121,9 +127,10 @@ How to pass the password as a parameter. ansible-playbook gives you to two optio
 ansible-playbook -K [playbook path]
 ```
 
-Alternative way to run playbook with `--ask-become-pass` but without the need to explicitly type `become` password
+Alternative way to run playbook with `-e ansible_become_pass=$ANSIBLE_PASSWORD` but without the need to explicitly type `become` password
 
 ```bash
+export $ANSIBLE_PASSOWRD=<become password goes here>
 ansible-playbook \
   -e ansible_become_pass=$ANSIBLE_PASSWORD \
   [playbook path]
