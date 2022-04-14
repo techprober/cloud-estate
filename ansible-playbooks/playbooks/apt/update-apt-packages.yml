@@ -5,3 +5,5 @@
 
   roles:
     - role: ../../roles/apt.ops/update.ops/
+      vars:
+        - dist_upgrade: false # set this var to true will perform dist upgrade
