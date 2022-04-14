@@ -27,7 +27,6 @@
 - [Playbook](#playbook)
 - [Task](#task)
 - [Tools](#tools)
-- [Variables](#variables)
 
 ## Reference Links
 
@@ -48,8 +47,32 @@
 ## Project File Structure
 
 ```bash
-
+.
+├── bin
+├── docs
+├── inventory
+├── playbooks
+│   ├── apt
+│   ├── container
+│   ├── local-maintenance
+│   ├── maintenance
+│   ├── minio
+│   └── proxmox
+└── roles
+    ├── apt.ops
+    ├── arch.update
+    ├── container.ops
+    ├── homebrew.ops
+    ├── maintenance.ops
+    ├── minio.ops
+    └── server.ops
 ```
+
+##### Notes:
+
+- All the playbooks are stored under `./playbooks/`
+- All the playable roles are stored under `./roles/`
+- Sample inverntory definition can be found under `./inventory/
 
 ## Automation and Orchestration
 
