@@ -5,4 +5,4 @@
   connection: local
 
   roles:
-    - role: arch.update
+    - role: ../../roles/arch.update/

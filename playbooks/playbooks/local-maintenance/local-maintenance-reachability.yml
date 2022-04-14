@@ -4,4 +4,4 @@
   connection: local
 
   roles:
-    - role: maintenance.reachability
+    - role: ../../roles/maintenance.ops/reachability.ops/
