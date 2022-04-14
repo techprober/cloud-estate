@@ -40,6 +40,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ## HomeLab Related
 
 - [![Open-Source Software][oss icon]](https://github.com/Weilbyte/PVEDiscordDark) [PVEDiscordDak Theme](https://github.com/Weilbyte/PVEDiscordDark) - A Discord-like dark theme for the Proxmox Web UI
+- [![Open-Source Software][oss icon]](https://github.com/drduh/YubiKey-Guide) [YubiKey-Guide](https://github.com/drduh/YubiKey-Guide) - Guide to using YubiKey for GPG and SSH
 
 ## Command Line Utilities
 
