@@ -1,0 +1,8 @@
+---
+- name: Enable ipv4 port forwarding
+  ansible.posix.sysctl:
+    name: net.ipv4.ip_forward
+    value: 1
+    state: present
+    reload: yes
+
