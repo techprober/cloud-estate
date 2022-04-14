@@ -33,7 +33,7 @@
 - name: Report result
   ansible.builtin.debug:
     msg: "Authenticated successfully!"
-  when: 
+  when:
     - config_verified.stdout | length == 0
     - authentication_result.rc == 0
 
@@ -48,4 +48,3 @@
   ansible.builtin.debug:
     msg: "Successfully updated minio server connection! Current minio server: {{ remote_server }}"
   when: is_server_changed is changed
-

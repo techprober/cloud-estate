@@ -8,4 +8,3 @@
     name: jq
     state: present
   when: '"jq" not in ansible_facts.packages'
-
