@@ -3,6 +3,8 @@
   hosts: all
 
   vars:
-    - public_key: $HOME/.ssh/id_rsa_yubikey.pub
+    - public_keys:
+      - ~/.ssh/id_rsa_yubikey.pub
+    - operation: add
   roles:
-    - role: ../../roles/server.ops/key.ops
+  - role: ../../roles/maintenance.ops/key.ops/
