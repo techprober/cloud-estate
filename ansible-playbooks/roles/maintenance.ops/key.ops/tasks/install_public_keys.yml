@@ -3,4 +3,5 @@
   ansible.posix.authorized_key:
     user: "{{ ansible_user }}"
     state: present
-    key: "{{ lookup('file', '{{ public_key }}') }}"
+    key: "{{ lookup('file', '{{ item }}') }}"
+  loop: "{{ public_keys }}"
