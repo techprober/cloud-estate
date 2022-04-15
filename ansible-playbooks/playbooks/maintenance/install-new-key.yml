@@ -3,6 +3,6 @@
   hosts: all
 
   vars:
-    - public_key: /home/kev/.ssh/ansible_id_rsa.pub
+    - public_key: $HOME/.ssh/id_rsa_yubikey.pub
   roles:
     - role: ../../roles/server.ops/key.ops
