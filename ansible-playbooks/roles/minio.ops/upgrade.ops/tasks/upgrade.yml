@@ -1,0 +1,11 @@
+---
+- name: Keep Minio Client (mc) up to date
+  shell: "mc update"
+  register: result
+  no_log: true
+  changed_when: result.rc == 0
+
+- name: Notify result
+  ansible.builtin.debug:
+    msg: "Upgraded successfully, Minio Client is now up-to-date!"
+  when: result is changed

@@ -1,0 +1,7 @@
+---
+- name: Keep minio client up-to-date
+  hosts: all
+  become: yes
+
+  roles:
+    - role: ../../roles/minio.ops/upgrade.ops/
