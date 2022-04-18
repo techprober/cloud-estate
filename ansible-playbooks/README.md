@@ -107,6 +107,12 @@ ansible-playbook [playbook path]
 ansible-playbook -i [inventory path] [role path]
 ```
 
+#### Run a playbook against an inventory list but with limited host
+
+```bash
+ansible-playbook -i [inventory path] -l [limited hosts] [role path]
+```
+
 #### Run a pre-defined module against hosts
 
 E.g. Run the ping module
