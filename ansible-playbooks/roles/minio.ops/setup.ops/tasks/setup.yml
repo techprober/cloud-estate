@@ -23,6 +23,10 @@
         mode: a+x
       check_mode: false
 
+    - name: Connect to remote minio server with credentials
+      command: "mc config host add minio {{ remote_server }} {{ lookup('env','MINIO_ACCESS_KEY') }} {{ lookup('env','MINIO_SECRET_KEY') }}"
+      register: authentication_result
+
     - name: Report result
       ansible.builtin.debug:
         msg: "Installation finished!"
