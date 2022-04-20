@@ -252,6 +252,12 @@ ansible-vault encrypt --vault-password-file ~/.vault_key <target file>
 
 # decrypt a file with vault_key
 ansible-vault decrypt --vault-password-file ~/.vault_key <target file>
+
+# edit an encrypted file without decryting it
+ansible-vault edit --vault-password-file ~/.vault_key <target file>
+
+# view an encrypted file without decryting it
+ansible-vault view --vault-password-file ~/.vault_key <target file>
 ```
 
 Notes: you may omit the `--vault-password-file` flag if you specify the location of the `vault_key` in `ansible.cfg`
