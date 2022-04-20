@@ -278,7 +278,7 @@ To start off, you will probably want to generate a new Vault passphrase and re-k
 ##### Generate a complicated passphrase with `pwgen`
 
 ```bash
-pwgen -n -s -y -c 32 -C | head -n1 | gpg --armor --recipient kevinyu211@yahoo.com --encrypt --output ~/.vault_key.gpg
+pwgen -n -s -y -c 32 -C | head -n1 | gpg --armor --recipient <your email identity> --encrypt --output ~/.vault_key.gpg
 ```
 
 The above command will generate a `32` length of passphrase including numerical numbers, characters, and symbols. It will feed the `stdout` to gpg and output the encrypted passphrase to `~/.vault_key.gpg` using your `GPG private key` (stored in Yubikey)
