@@ -73,7 +73,7 @@
 
 - All the playbooks are stored under `./playbooks/`
 - All the playable roles are stored under `./roles/`
-- Sample inverntory definition can be found under `./inventory/`
+- Sample inventory definition can be found under `./inventory/`
 
 ## Automation and Orchestration
 
@@ -157,7 +157,7 @@ How to pass the password as a parameter. ansible-playbook gives you to two optio
 ansible-playbook -K [playbook path]
 ```
 
-Alternative way to run playbook with `-e ansible_become_pass=$ANSIBLE_PASSWORD` but without the need to explicitly type `become` password
+An alternative way to run playbook with `-e ansible_become_pass=$ANSIBLE_PASSWORD` but without the need to explicitly type `become` password
 
 ```bash
 export $ANSIBLE_PASSOWRD=<become password goes here>
@@ -168,7 +168,7 @@ ansible-playbook \
 
 #### Enable verbose mode while running the playbook
 
-To understand what is happening when you run the playbook, you can run it with the verbose `-v` option. Every extra v will provide the end user with more debug output.
+To understand what is happening when you run the playbook, you can run it with the verbose `-v` option. Every extra v will provide the end-user with more debug output.
 
 `-v` or `--verbose`
 
@@ -188,7 +188,7 @@ changed_when: yes
 
 #### Ensure all tasks must complete one one server before proceeding to the next server
 
-Set the `serial` paramter to `1` as the following:
+Set the `serial` parameter to `1` as the following:
 
 ```yaml
 serial: 1
@@ -235,4 +235,88 @@ sudo pacman -S ansible-lint
 ansible-lint --version
 # linting
 ansible-lint .
+```
+
+---
+
+### Ansible Vault
+
+#### Encryption/Decryption utility for Ansible data files
+
+```bash
+# prepare a secret key and write it to ~/.vault_key
+echo "<your secret string>" > ~/.vault_key
+
+# ecrypt a file with vault_key
+ansible-vault encrypt --vault-password-file ~/.vault_key <target file>
+
+# decrypt a file with vault_key
+ansible-vault decrypt --vault-password-file ~/.vault_key <target file>
+```
+
+Notes: you may omit the `--vault-password-file` flag if you specify the location of the `vault_key` in `ansible.cfg`
+
+```yaml
+[defaults]
+vault_password_file=~/.vault_key
+```
+
+#### Advanced encryption option with `GPG`
+
+Reference: https://disjoint.ca/til/2016/12/14/encrypting-the-ansible-vault-passphrase-using-gpg/
+
+One of the neat things you can do with `GPG` is encrypt your ansible-vault passphrase file. This works very nicely with hardware security keys such as `Yubikey`.
+
+To start off, you will probably want to generate a new Vault passphrase and re-key all your already-encrypted Vault files.
+
+##### Generate a complicated passphrase with `pwgen`
+
+```bash
+pwgen -n -s -y -c 32 -C | head -n1 | gpg --armor --recipient kevinyu211@yahoo.com --encrypt --output ~/.vault_key.gpg
+```
+
+The above command will generate a `32` length of passphrase including numerical numbers, characters, and symbols. It will feed the `stdout` to gpg and output the encrypted passphrase to `~/.vault_key.gpg` using your `GPG private key` (stored in Yubikey)
+
+To view that actual vault passphrase:
+
+```bash
+gpg --batch --use-agent --decrypt ~/.vault_key.gpg
+```
+
+Now that you have the new passphrase ready to go, re-key all your already-encrypted Vault files.
+
+```bash
+grep -rl '^$ANSIBLE_VAULT.*' . | xargs -t ansible-vault rekey
+```
+
+This command will ask you for the `old` and `new` vault passphrases and then attempt to re-key all the files that begin with the string `$ANSIBLE_VAULT` (usually indicative of an Ansible Vault encrypted file).
+
+##### Create an executable file to make use of gpg decryption with your gpg private key
+
+gpg_vault_pass.sh
+
+```bash
+#!/bin/sh
+gpg --batch --use-agent --decrypt ~/.vault_key.gpg
+```
+
+Grant executable permission
+
+```bash
+chmod +x gpg_vault_pass.sh
+```
+
+##### Invoke ansible-vault manually and make sure that the re-keying worked as expected
+
+```bash
+ansible-vault --vault-password-file=gpg_vault_pass.sh view <target file>
+```
+
+Alternatively (recommended):
+
+You could also make your life slightly easier by adding this to your `ansible.cfg`, in which case you could omit the `--vault-password-file` argument
+
+```yaml
+[defaults]
+vault_password_file=gpg_vault_pass.sh
 ```
