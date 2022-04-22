@@ -1,10 +1,12 @@
 ---
 # ../roles/apt.ops/set-sources.ops/
-primary_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
-security_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
+set-sources:
+  primary_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
+  security_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
 
 # ../roles/apt.ops/install-packages.ops/
-packages:
+install-packages:
+  packages:
   - tmux
   - screen
   - tree
