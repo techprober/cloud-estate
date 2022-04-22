@@ -1,3 +1,0 @@
----
-- import_tasks: ./openssh.yml
-- import_tasks: ./reset_cloud-init.yml

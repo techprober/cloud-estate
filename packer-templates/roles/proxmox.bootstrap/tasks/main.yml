@@ -1,0 +1,5 @@
+---
+- import_tasks: ./openssh.yml
+- import_tasks: ./clean-audit-logs.yml
+- import_tasks: ./post-actions.yml
+- import_tasks: ./reset-cloud-init.yml
