@@ -176,7 +176,7 @@ build {
   }
 
   # Convert to proxmox vm template
-  post-processors "shell" {
+  post-processor "shell-local" {
     inline = [
       "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --boot c --bootdisk scsi0",
       "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --ciuser {{ user `ssh_username` }}",
