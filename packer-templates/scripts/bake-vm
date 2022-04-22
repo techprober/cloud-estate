@@ -60,6 +60,6 @@ packer build -force \
   -var proxmox_api_user="packer@pve" \
   -var proxmox_api_password=$PM_PASS \
   -var http_bind_address="10.178.0.50" \
-  proxmox-packer-template.json
+  proxmox-packer-template.pkr.hcl
 
 echoW "\nBaked ${vm_type} successfully!\n"
