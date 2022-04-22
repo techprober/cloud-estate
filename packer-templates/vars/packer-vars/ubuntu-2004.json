@@ -1,11 +1,4 @@
 {
-  "proxmox_host": "10.10.10.10",
-  "proxmox_node_name": "pve",
-  "proxmox_api_user": "packer@pve",
-  "proxmox_api_password": "",
-
-  "playbook_file": "../playbooks/ubuntu-2204-server.yml",
-
   "vm_id": "9000",
   "cores": "2",
   "sockets": "1",
@@ -28,7 +21,6 @@
   "ssh_timeout": "60m",
 
   "http_directory": "http",
-  "http_bind_address": "10.178.0.50",
 
   "boot_command": [
     "<esc><wait><esc><wait><f6><wait><esc><wait>",
