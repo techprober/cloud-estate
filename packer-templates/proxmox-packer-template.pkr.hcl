@@ -35,6 +35,11 @@ variable "memory" {
   type = string
 }
 
+variable "os" {
+  default = 126
+  type    = number
+}
+
 variable "bridge" {
   type = string
 }
@@ -118,7 +123,7 @@ source "proxmox" "bakery-template" {
   cores      = var.cores
   sockets    = var.sockets
   memory     = var.memory
-  os         = l26
+  os         = var.os
   qemu_agent = true
 
   network_adapters {
@@ -174,10 +179,10 @@ build {
   # Convert to proxmox vm template
   post-processor "shell-local" {
     inline = [
-      "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --boot c --bootdisk scsi0",
-      "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --ciuser {{ user `ssh_username` }}",
-      "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --cipassword {{ user `ssh_password` }}",
-      "ssh root@{{user `proxmox_host`}} qm set {{user `vm_id`}} --serial0 socket --vga serial0"
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --boot c --bootdisk scsi0",
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}",
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --serial0 socket --vga serial0"
     ]
   }
 }
