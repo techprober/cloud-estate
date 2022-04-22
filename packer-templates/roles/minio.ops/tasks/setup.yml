@@ -3,14 +3,15 @@
   ansible.builtin.get_url:
     url: https://dl.min.io/client/mc/release/linux-amd64/mc
     dest: /usr/bin/mc
-  become: true
 
 - name: Grant executable permission to mc
   ansible.builtin.file:
     path: /usr/bin/mc
     state: file
     mode: a+x
-  become: true
 
 - name: Enable autocompletion
   shell: "mc --autocompletion >/dev/null 2>&1"
+
+- name: Connect to remote minio server with credentials
+  command: "mc config host add minio {{ remote_server }} {{ lookup('env','MINIO_ACCESS_KEY') }} {{ lookup('env','MINIO_SECRET_KEY') }}"

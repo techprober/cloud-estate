@@ -8,7 +8,6 @@
   vars_files:
     - ../vars/ansible-vars/apt.yml
     - ../vars/ansible-vars/maintenance.yml
-    - ../vars/ansible-vars/minio.yml
     - ../vars/ansible-vars/containerd.yml
 
   roles:
@@ -18,6 +17,10 @@
   - role: ../roles/maintenance.ops/key.ops/
 
   - role: ../roles/minio.ops/
+    vars:
+      remote_server: "http://10.178.0.9:9000"
+      minio_access_key: "{{ lookup('env','MINIO_ACCESS_KEY')}}"
+      minio_secret_key: "{{ lookup('env','MINIO_SECRET_KEY')}}"
 
   - role: ../roles/containerd.ops/
 
