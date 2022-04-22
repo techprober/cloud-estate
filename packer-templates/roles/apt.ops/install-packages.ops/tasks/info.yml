@@ -5,7 +5,7 @@
      ----------------------------------------------
      The following packages will be installed:
 
-     {% for pkg in packages %}
+     {% for pkg in install-packages.packages %}
      {{ pkg }}
      {% endfor %}
      ----------------------------------------------
