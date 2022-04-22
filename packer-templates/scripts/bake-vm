@@ -11,8 +11,9 @@ Usage: packer-build.sh [options] [image-to-be-baked]
 
 Available Flags:
 
--t, --type  Type of VM to be baked
 -h, --help  Print help message
+-i, --iso   [string] ISO path (e.g "local:iso/ubuntu-22.04-live-server-amd64.iso")
+-t, --type  [string] Type of VM to be baked
 
 Notes: options must be passed before perfoming the actual action
 EOF
