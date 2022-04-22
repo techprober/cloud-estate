@@ -8,10 +8,15 @@
   vars_files:
     - ../vars/ansible-vars/apt.yml
     - ../vars/ansible-vars/maintenance.yml
+    # comment out the following line if you dont use minio
+    - ../vars/ansible-vars/minio.yml
 
   roles:
-  - role: ./../roles/apt.ops/install-packages.ops/
+  - role: ../roles/apt.ops/update.ops/
+  - role: ../roles/apt.ops/install-packages.ops/
 
-  - role: ./../roles/maintenance.ops/key.ops/
+  - role: ../roles/maintenance.ops/key.ops/
 
-  - role: ./../roles/proxmox.bootstrap/
+  - role: ../roles/minio.ops/
+
+  - role: ../roles/proxmox.bootstrap/

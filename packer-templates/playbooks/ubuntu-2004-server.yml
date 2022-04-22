@@ -10,9 +10,9 @@
     - ../vars/ansible-vars/maintenance.yml
 
   roles:
-  - role: ./../roles/apt.ops/set-sources.ops/
-  - role: ./../roles/apt.ops/install-packages.ops/
+  - role: ../roles/apt.ops/update.ops/
+  - role: ../roles/apt.ops/install-packages.ops/
 
-  - role: ./../roles/maintenance.ops/key.ops/
+  - role: ../roles/maintenance.ops/key.ops/
 
-  - role: ./../roles/proxmox.bootstrap/
+  - role: ../roles/proxmox.bootstrap/
