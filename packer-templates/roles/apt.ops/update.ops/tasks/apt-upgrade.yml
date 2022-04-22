@@ -1,0 +1,5 @@
+---
+- name: Keep apt up-to-date
+  ansible.builtin.apt:
+    update_cache: yes
+    upgrade: yes
