@@ -121,24 +121,20 @@ source "proxmox" "bakery-template" {
   os         = l26
   qemu_agent = true
 
-  network_adapters = [
-    {
-      "model" : "virtio",
-      "bridge" : "${var.bridge}",
-      "firewall" : true
-    }
-  ]
+  network_adapters {
+    model    = "virtio"
+    bridge   = var.bridge
+    firewall = true
+  }
 
-  disks = [
-    {
-      type              = "${var.disk_type}",
-      format            = "${var.disk_format}",
-      disk_size         = "${var.disk_size}",
-      storage_pool      = "${var.datastore}",
-      storage_pool_type = "${var.datastore_type}",
-      cache_mode        = "${var.disk_cache_mode}"
-    }
-  ]
+  disks {
+    type              = var.disk_type
+    format            = var.disk_format
+    disk_size         = var.disk_size
+    storage_pool      = var.datastore
+    storage_pool_type = var.datastore_type
+    cache_mode        = var.disk_cache_mode
+  }
 
   # Cloud-init Configurations
   cloud_init              = true
