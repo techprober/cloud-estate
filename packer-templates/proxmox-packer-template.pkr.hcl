@@ -103,7 +103,7 @@ variable "playbook_file" {
   type = string
 }
 
-source "proxmox" "backey-template" {
+source "proxmox" "bakery-template" {
 
   # Proxmox Connection Settings
   proxmox_url              = "https://${var.proxmox_host}:8006/api2/json"
@@ -166,7 +166,7 @@ source "proxmox" "backey-template" {
 }
 
 build {
-  sources = ["source.proxmox.backery-template"]
+  sources = ["source.proxmox.bakery-template"]
 
   # Provisioner Configurations - Use ansible-playbooks to handle all the automation
   provisioner "ansible-local" {
