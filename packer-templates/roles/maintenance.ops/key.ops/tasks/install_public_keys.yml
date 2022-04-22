@@ -4,4 +4,4 @@
     user: "{{ ansible_user }}"
     state: present
     key: "{{ lookup('file', '{{ item }}') }}"
-  loop: "{{ public_keys }}"
+  loop: "{{ key.public_keys }}"
