@@ -1,0 +1,18 @@
+---
+# Bake ubuntu-2204-server
+
+- name: "Proxmox Ubuntu 2204 Server"
+  hosts: localhost
+  become: yes
+
+  vars_files:
+    - ../vars/ansible-vars/apt.yml
+    - ../vars/ansible-vars/maintenance.yml
+
+  roles:
+  - role: ./../roles/apt.ops/set-sources.ops/
+  - role: ./../roles/apt.ops/install-packages.ops/
+
+  - role: ./../roles/maintenance.ops/key.ops/
+
+  - role: ./../roles/proxmox.bootstrap/
