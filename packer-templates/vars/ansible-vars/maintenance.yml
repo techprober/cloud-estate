@@ -1,0 +1,4 @@
+---
+# ../roles/maintenance.ops/key.ops/
+public_keys:
+  - ~/.ssh/id_rsa_yubikey.pub
