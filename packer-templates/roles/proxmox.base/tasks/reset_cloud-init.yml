@@ -35,6 +35,6 @@
   ansible.builtin.file:
     path: "{{ item }}"
     state: absent
-  with_items: 
+  with_items:
     - "/etc/cloud/cloud.cfg.d/subiquity-disable-cloudinit-networking.cfg"
     - "/etc/netplan/00-installer-config.yaml"

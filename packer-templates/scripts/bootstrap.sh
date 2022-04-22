@@ -31,5 +31,3 @@ sudo apt-get clean
 # Write down the birthdate
 echo 'Writing birthdate information'
 sudo date >/etc/birthdate_certificate
-
-echo 'Provisioning finished, enjoyed!'

@@ -1,11 +1,11 @@
 ---
 - name: Disable password login
-  ansible.builtin.lineinfile: 
-    dest: "/etc/ssh/sshd_config" 
+  ansible.builtin.lineinfile:
+    dest: "/etc/ssh/sshd_config"
     regexp: '^(#\s*)?PasswordAuthentication '
     line: 'PasswordAuthentication no'
 
 - name: Restart openssh server
-  ansible.builtin.service: 
+  ansible.builtin.service:
     name: ssh
     state: restarted
