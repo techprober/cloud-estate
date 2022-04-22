@@ -1,4 +1,0 @@
----
-cni_version: "1.1.1"
-buildkit_version: "0.10.1"
-nerdctl_version: "0.18.0"
