@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Proxmox Builder
+
+print_help() {
+  [[ -n ${1:-} ]] && echo "$1"
+  cat << EOF
+Usage: packer-build.sh [options] [image-to-be-baked]
+
+Available Flags:
+
+-t, --type  Type of VM to be baked
+-h, --help  Print help message
+
+Notes: options must be passed before perfoming the actual action
+EOF
+  exit 1
+}
+
+for arg in "$@"; do
+  shift
+  case "$arg" in
+    "--iso")  set -- "$@" "-i" ;;
+    "--help") set -- "$@" "-h" ;;
+    "--"*)    print_help "Unknow option: $arg" ;;
+    *)        set -- "$@" "$arg"
+  esac
+done
+
+OPTIND=1
+while getopts ":th" opt; do
+  case $opt in
+    h)  print_help ;;
+    :)  print_help "Missing argument for -$OPTARG option" ;;
+    \?) print_help "Unknown option: -$OPTARG" ;;
+  esac
+done
+shift $(( OPTIND -1 ))
+
+vm_type=$1
+
+echoW "Building ${vm_type} with packer"
+packer build -force \
+  -var-file ../vars/packer-vars/kevin-ubuntu-2204.json \
+  -var playbook_file="../playbooks/${vm_type}.yml" \
+  -var proxmox_host="10.10.10.10" \
+  -var proxmox_node_name="pve" \
+  -var proxmox_api_user="packer@pve" \
+  -var proxmox_api_password=$PM_PASS \
+  -var http_bind_address="10.178.0.50" \
+  ../proxmox-packer-template.json
