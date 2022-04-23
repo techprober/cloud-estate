@@ -51,11 +51,12 @@ shift $(( OPTIND -1 ))
 
 vm_type=$1
 
-echoW "Building ${vm_type} with packer\n"
+echoW "Baking ${vm_type} template with packer\n"
 
 packer build -force \
   -var-file vars/kevin-ubuntu-2204.json \
   -var playbook_file="playbooks/${vm_type}.yml" \
+  -var template_name=$vm_type \
   -var proxmox_host="10.178.0.10" \
   -var proxmox_node_name="pve-01" \
   -var proxmox_api_user="packer@pve" \
@@ -63,5 +64,3 @@ packer build -force \
   -var http_bind_address="10.178.0.50" \
   -var vm_id="9000" \
   proxmox-packer-template.pkr.hcl
-
-echoW "\nBaked ${vm_type} successfully!\n"
