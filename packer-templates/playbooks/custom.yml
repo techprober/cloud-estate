@@ -23,7 +23,7 @@
 
   - role: ./roles/maintenance.ops/key.ops/
 
-  # - role: ./roles/containerd.ops/
+  - role: ./roles/containerd.ops/
 
   # - role: ./roles/docker.ops/
 

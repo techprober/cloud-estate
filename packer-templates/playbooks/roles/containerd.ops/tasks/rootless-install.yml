@@ -5,25 +5,6 @@
       apt:
         update_cache: yes
 
-    - name: Check if rootless user is in /etc/subuid
-      shell: "cat /etc/subuid | grep {{ rootless_user }}"
-      register: is_subuid_exists
-      changed_when: false
-      failed_when: is_subuid_exists.stdout | length == 0
-
-    - name: Check if rootless user is in /etc/subgid
-      shell: "cat /etc/subgid | grep {{ rootless_user }}"
-      register: is_subgid_exists
-      changed_when: false
-      failed_when: is_subgid_exists.stdout | length == 0
-
-    - name: Check if Containerd is installed
-      shell: "command -v containerd"
-      register: is_containerd_installed
-      changed_when: false
-      failed_when: is_containerd_installed.rc != 0
-
-  rescue:
     - name: Install pre-requisite apk packages
       ansible.builtin.apt:
         pkg:
@@ -34,20 +15,22 @@
         - apt-transport-https
 
     - name: Assign subuids and subgids to the target user
-      shell: "usermod --add-subuids 100000-165535 --add-subgids 100000-165535 {{ rootless_user }}"
+      shell: "usermod --add-subuids 100000-165535 --add-subgids 100000-165535 {{ ansible_user }}"
 
     - name: Install Nerdctl, CNI, and Containerd (Full) with official script
       shell: "curl -sSL https://github.com/containerd/nerdctl/releases/download/v{{ nerdctl_version }}/nerdctl-full-{{ nerdctl_version }}-linux-amd64.tar.gz | sudo tar -xvz -C /usr/local"
+      args:
+        warn: false
 
     - name: Setup rootless Containerd for the target user
       shell: "containerd-rootless-setuptool.sh install"
       become: true
-      become_user: "{{ rootless_user }}"
+      become_user: "{{ ansible_user }}"
 
     - name: Install Buildkitd with setuptool
       shell: "containerd-rootless-setuptool.sh install-buildkit"
       become: true
-      become_user: "{{ rootless_user }}"
+      become_user: "{{ ansible_user }}"
 
     - name: Enable Contained as a daemon service
       ansible.builtin.service:
