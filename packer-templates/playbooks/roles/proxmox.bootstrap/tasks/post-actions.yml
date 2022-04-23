@@ -11,9 +11,14 @@
     ln -s /etc/machine-id /var/lib/dbus/machine-id
 
 - name: Clean apt cache
-  shell: "apt-get clean -y"
+  shell: "apt -y autoremove --purge && apt-get -y clean"
   args:
     warn: false
+
+- name: Remove /tmp
+  ansible.builtin.file:
+    path: /tmp
+    state: absent
 
 - name: Write down birthdate information
   shell: "date >/etc/birthdate_certificate"
