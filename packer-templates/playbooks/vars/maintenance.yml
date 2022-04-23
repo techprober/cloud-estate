@@ -2,4 +2,4 @@
 # ../roles/maintenance.ops/key.ops/
 key:
   public_keys:
-  - ~/.ssh/id_rsa_yubikey.pub
+  - /tmp/id_rsa.pub

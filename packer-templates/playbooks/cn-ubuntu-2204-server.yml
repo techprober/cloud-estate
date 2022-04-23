@@ -7,6 +7,7 @@
 
   vars_files:
     - ./vars/apt.yml
+    - ./vars/maintenance.yml
 
   roles:
   - role: ./roles/apt.ops/set-sources.ops/
@@ -15,10 +16,6 @@
   - role: ./roles/apt.ops/install-packages.ops/
 
   - role: ./roles/maintenance.ops/key.ops/
-    vars:
-      key:
-        public_keys:
-        - ~/.ssh/id_rsa_yubikey.pub
 
   - role: ./roles/minio.ops/
     vars:
