@@ -3,6 +3,7 @@
   ansible.builtin.get_url:
     url: https://dl.min.io/client/mc/release/linux-amd64/mc
     dest: /usr/bin/mc
+    timeout: 60
 
 - name: Grant executable permission to mc
   ansible.builtin.file:
