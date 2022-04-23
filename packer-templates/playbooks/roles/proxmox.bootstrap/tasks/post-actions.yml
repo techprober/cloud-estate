@@ -15,10 +15,17 @@
   args:
     warn: false
 
-- name: Remove /tmp
-  ansible.builtin.file:
-    path: /tmp
-    state: absent
+- name: Remove cache files under /tmp
+  block:
+    - name: Remove id_rsa.pub
+      file:
+        state: absent
+        path: /tmp/id_rsa.pub
+
+    - name: Remove .vault_pass
+      file:
+        state: absent
+        path: /tmp/.vault_pass
 
 - name: Write down birthdate information
   shell: "date >/etc/birthdate_certificate"
