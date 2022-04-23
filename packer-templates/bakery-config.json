@@ -2,36 +2,31 @@
   "ubuntu-2004-server": {
     "image_name": "ubuntu-2004-server",
     "iso": "ubuntu-20.04.3-live-server-amd64.iso",
-    "playbook": "proxmox-ubuntu-server-2004.yml"
+    "playbook": "ubuntu-2004-server.yml"
   },
   "ubuntu-2204-server": {
     "image_name": "ubuntu-2204-server",
     "iso": "ubuntu-22.04-live-server-amd64.iso",
-    "playbook": "proxmox-ubuntu-server-2204.yml"
+    "playbook": "ubuntu-2204-server.yml"
   },
   "docker-ubuntu-2204-server": {
     "image_name": "docker-ubuntu-2204-server",
     "iso": "ubuntu-22.04-live-server-amd64.iso",
-    "playbook": "proxmox-docker-ubuntu-server-2204.yml"
+    "playbook": "docker-2204-ubuntu-server.yml"
   },
   "containerd-ubuntu-2204-server": {
     "image_name": "containerd-ubuntu-2204-server",
     "iso": "ubuntu-22.04-live-server-amd64.iso",
-    "playbook": "proxmox-containerd-ubuntu-server-2204.yml"
+    "playbook": "containerd-ubuntu-2204-server.yml"
   },
   "cn-ubuntu-2204-server": {
     "image_name": "cn-ubuntu-2204-server",
     "iso": "ubuntu-22.04-live-server-amd64.iso",
-    "playbook": "proxmox-cn-ubuntu-server-2204.yml"
+    "playbook": "cn-ubuntu-2204-server.yml"
   },
-  "cn-docker-ubuntu-2204-server": {
-    "image_name": "docker-cn-ubuntu-2204-server",
+  "custom": {
+    "image_name": "cn-ubuntu-2204-server",
     "iso": "ubuntu-22.04-live-server-amd64.iso",
-    "playbook": "proxmox-docker--cn-ubuntu-server-2204.yml"
-  },
-  "cn-containerd-ubuntu-2204-server": {
-    "image_name": "containerd-cn-ubuntu-2204-server",
-    "iso": "ubuntu-22.04-live-server-amd64.iso",
-    "playbook": "proxmox-containerd-cn-ubuntu-server-2204.yml"
+    "playbook": "custom.yml"
   }
 }

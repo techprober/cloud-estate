@@ -1,5 +1,5 @@
 ---
-# Bake ubuntu-2204-server
+# Bake custom-server
 
 - name: "Proxmox Ubuntu 2204 Server"
   hosts: localhost
@@ -7,7 +7,6 @@
 
   vars_files:
     - ./vars/apt.yml
-    - ./vars/containerd.yml
     - ./vars/maintenance.yml
 
   roles:
@@ -16,8 +15,12 @@
       release: "jammy"
   - role: ./roles/apt.ops/install-packages.ops/
 
-  - role: ./roles/maintenance.ops/key.ops/
+  - role: ./roles/minio.ops/
+    vars:
+      remote_server: "http://10.178.0.9:9000"
+      minio_access_key: "{{ lookup('env','MINIO_ACCESS_KEY') }}"
+      minio_secret_key: "{{ lookup('env','MINIO_SECRET_KEY') }}"
 
-  - role: ./roles/containerd.ops/
+  - role: ./roles/maintenance.ops/key.ops/
 
   - role: ./roles/proxmox.bootstrap/
