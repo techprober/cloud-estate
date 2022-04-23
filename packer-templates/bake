@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+vm_name=
+
 # Proxmox Builder
 
 # --- Arguments Parsing --- #
@@ -18,9 +20,9 @@ Available VM:
 - ubuntu-2204-server
 - docker-ubuntu-2204-server
 - containerd-ubuntu-2204-server
+- minio-ubuntu-2204-server
 - cn-ubuntu-2204-server
-- cn-docker-ubuntu-2204-server
-- cn-containerd-ubuntu-2204-server
+- custom
 
 [Warning]: options must be passed before perfoming the actual action
 
@@ -37,14 +39,15 @@ Usage: bake-vm [options] [arguments]
 Available Options:
 
 -h, --help         Print help message
+-a, --all          Print available VM type
 
 -i, --vmid         [required|number]  VM ID
+-n, --name         [optional|string]  VM name
 -t, --vm_type      [required|string]  Type of VM to be baked, use -a to see all the available VM type
 
-    --enable-minio [optional|boolean] Include minio role (default: false)
     --isodata      [optional|string]  ISO data path (e.g "local:iso/ubuntu-22.04-live-server-amd64.iso")
 
-Basic Usage: ./script/bake-vm -i 9001 -t cn-ubuntu-2204-server
+Basic Usage: ./bake -i 9001 -t cn-ubuntu-2204-server -n ubuntu-server-template
 
 [Warning]: options must be passed before perfoming the actual action
 
@@ -65,8 +68,8 @@ while [[ "$#" -gt 0 ]]; do
     -a|--all)       available_vm; shift;;
     -h|--help)      print_help; shift ;;
     -i|--vmid)      vm_id="$2"; shift ;;
-    -t|--vmtype)    vm_type="$2"; shift ;;
-    --enable-minio) enable-minio="$2"; shift ;;
+    -t|--type)      vm_type="$2"; shift ;;
+    -n|--name)      vm_name="$2"; shift ;;
     --iso-data)     isodata="$2"; shift ;;
     *)              print_help "[Error]: Unknown option: $1"; shift ;;
   esac
@@ -78,21 +81,21 @@ proxmox_host=$(jq -r '.proxmox_host' ./config.json)
 proxmox_node_name=$(jq -r '.proxmox_node_name' ./config.json)
 proxmox_api_user=$(jq -r '.proxmox_api_user' ./config.json)
 http_bind_address=$(jq -r '.http_bind_address' ./config.json)
+[[ ! -z "$vm_name" ]] && vm_name=$vm_name || vm_name=$vm_type
+echo "${vm_name}"
 
 # --- Main Operation --- #
 
 echoW "Baking ${vm_type} template with packer\n"
 
-echo ""
-
-# packer build -force \
-#   -var-file vars/kevin-ubuntu-2204.json \
-#   -var playbook_file="playbooks/${vm_type}.yml" \
-#   -var template_name=$vm_type \
-#   -var proxmox_host="$proxmox_host" \
-#   -var proxmox_node_name="$proxmox_node_name" \
-#   -var proxmox_api_user="$proxmox_api_user" \
-#   -var proxmox_api_password=$PM_PASS \
-#   -var http_bind_address="$http_bind_address" \
-#   -var vm_id=$vm_id \
-#   proxmox-minio-packer-template.pkr.hcl
+packer build -force \
+  -var-file vars/kevin-ubuntu-2204.json \
+  -var playbook_file="playbooks/${vm_type}.yml" \
+  -var template_name=$vm_name \
+  -var proxmox_host="$proxmox_host" \
+  -var proxmox_node_name="$proxmox_node_name" \
+  -var proxmox_api_user="$proxmox_api_user" \
+  -var proxmox_api_password=$PM_PASS \
+  -var http_bind_address="$http_bind_address" \
+  -var vm_id=$vm_id \
+  proxmox-packer-template.pkr.hcl
