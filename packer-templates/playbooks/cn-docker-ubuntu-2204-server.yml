@@ -7,7 +7,6 @@
 
   vars_files:
     - ./vars/ansible-vars/apt.yml
-    - ./vars/ansible-vars/maintenance.yml
     - ./vars/ansible-vars/docker.yml
 
   roles:
@@ -17,6 +16,10 @@
   - role: ./roles/apt.ops/install-packages.ops/
 
   - role: ./roles/maintenance.ops/key.ops/
+    vars:
+      key:
+        public_keys:
+        - ~/.ssh/id_rsa_yubikey.pub
 
   - role: ./roles/minio.ops/
     vars:
