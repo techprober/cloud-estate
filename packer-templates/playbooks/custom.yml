@@ -1,7 +1,7 @@
 ---
 # Bake custom-server
 
-- name: "Proxmox Ubuntu 2204 Server"
+- name: "Bake proxmox custom vm template"
   hosts: localhost
   become: yes
 
@@ -22,5 +22,9 @@
       minio_secret_key: "{{ lookup('env','MINIO_SECRET_KEY') }}"
 
   - role: ./roles/maintenance.ops/key.ops/
+
+  # - role: ./roles/containerd.ops/
+
+  # - role: ./roles/docker.ops/
 
   - role: ./roles/proxmox.bootstrap/

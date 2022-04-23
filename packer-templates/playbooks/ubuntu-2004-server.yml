@@ -1,7 +1,7 @@
 ---
 # Bake ubuntu-2004-server
 
-- name: "Proxmox Ubuntu 2004 Server"
+- name: "Bake proxmox ubuntu 2004 server"
   hosts: localhost
   become: yes
 

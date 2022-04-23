@@ -1,7 +1,7 @@
 ---
 # Bake containerd-ubuntu-2204-server
 
-- name: "Proxmox Ubuntu 2204 Server (with Containerd)"
+- name: "Bake proxmox ubuntu 2204 server (with containerd)"
   hosts: localhost
   become: yes
 
