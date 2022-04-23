@@ -11,9 +11,10 @@ Usage: packer-build.sh [options] [image-to-be-baked]
 
 Available Flags:
 
--h, --help  Print help message
--i, --iso   [string] ISO path (e.g "local:iso/ubuntu-22.04-live-server-amd64.iso")
--t, --type  [string] Type of VM to be baked
+-h, --help      Print help message
+-i, --vmid      VM ID
+
+    --isodata   [string] ISO path (e.g "local:iso/ubuntu-22.04-live-server-amd64.iso")
 
 Notes: options must be passed before perfoming the actual action
 EOF
@@ -53,13 +54,14 @@ vm_type=$1
 echoW "Building ${vm_type} with packer\n"
 
 packer build -force \
-  -var-file vars/packer-vars/kevin-ubuntu-2204.json \
+  -var-file vars/kevin-ubuntu-2204.json \
   -var playbook_file="playbooks/${vm_type}.yml" \
   -var proxmox_host="10.178.0.10" \
   -var proxmox_node_name="pve-01" \
   -var proxmox_api_user="packer@pve" \
   -var proxmox_api_password=$PM_PASS \
   -var http_bind_address="10.178.0.50" \
+  -var vm_id="9000" \
   proxmox-packer-template.pkr.hcl
 
 echoW "\nBaked ${vm_type} successfully!\n"
