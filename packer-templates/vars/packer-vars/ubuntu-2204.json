@@ -1,5 +1,6 @@
 {
   "vm_id": "9000",
+  "os": "l26",
   "cores": "2",
   "sockets": "1",
   "memory": "1024",

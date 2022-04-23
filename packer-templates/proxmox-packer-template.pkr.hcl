@@ -36,8 +36,7 @@ variable "memory" {
 }
 
 variable "os" {
-  default = 126
-  type    = number
+  type = string
 }
 
 variable "bridge" {
