@@ -168,7 +168,7 @@ build {
   # Provisioner Configurations
   provisioner "file" {
     source      = "./id_rsa.pub"
-    destination = "/tmp"
+    destination = "/tmp/id_rsa.pub"
   }
 
   provisioner "ansible-local" {
