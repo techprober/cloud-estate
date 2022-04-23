@@ -6,7 +6,7 @@
   become: yes
 
   vars_files:
-    - ./vars/ansible-vars/apt.yml
+    - ./vars/apt.yml
 
   roles:
   - role: ./roles/apt.ops/update.ops/

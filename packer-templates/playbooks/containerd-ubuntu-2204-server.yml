@@ -6,8 +6,8 @@
   become: yes
 
   vars_files:
-    - ./vars/ansible-vars/apt.yml
-    - ./vars/ansible-vars/containerd.yml
+    - ./vars/apt.yml
+    - ./vars/containerd.yml
 
   roles:
   - role: ./roles/apt.ops/update.ops/
