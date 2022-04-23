@@ -21,12 +21,6 @@
         public_keys:
         - ~/.ssh/id_rsa_yubikey.pub
 
-  - role: ./roles/minio.ops/
-    vars:
-      remote_server: "http://10.178.0.9:9000"
-      minio_access_key: "{{ lookup('env','MINIO_ACCESS_KEY')}}"
-      minio_secret_key: "{{ lookup('env','MINIO_SECRET_KEY')}}"
-
   - role: ./roles/docker.ops/
 
   - role: ./roles/proxmox.bootstrap/

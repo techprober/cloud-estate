@@ -14,4 +14,6 @@
   shell: "mc --autocompletion >/dev/null 2>&1"
 
 - name: Connect to remote minio server with credentials
-  command: "mc config host add minio {{ remote_server }} {{ lookup('env','MINIO_ACCESS_KEY') }} {{ lookup('env','MINIO_SECRET_KEY') }}"
+  command: "mc config host add minio {{ remote_server }} {{ minio_access_key }} {{ minio_secret_key }}"
+  become: yes
+  become_user: "{{ ansible_user }}"
