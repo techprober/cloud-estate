@@ -56,7 +56,7 @@ packer build -force \
   -var-file vars/packer-vars/kevin-ubuntu-2204.json \
   -var playbook_file="playbooks/${vm_type}.yml" \
   -var proxmox_host="10.178.0.10" \
-  -var proxmox_node_name="pve" \
+  -var proxmox_node_name="pve-01" \
   -var proxmox_api_user="packer@pve" \
   -var proxmox_api_password=$PM_PASS \
   -var http_bind_address="10.178.0.50" \
