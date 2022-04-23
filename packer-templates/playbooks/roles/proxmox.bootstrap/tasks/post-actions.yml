@@ -3,21 +3,17 @@
   shell: |
     cat /dev/null | sudo tee /etc/hostname
     hostnamectl set-hostname localhost
-  become: true
 
 - name: Clean machine-id
   shell: |
     truncate -s 0 /etc/machine-id
     rm /var/lib/dbus/machine-id
     ln -s /etc/machine-id /var/lib/dbus/machine-id
-  become: true
 
 - name: Clean apt cache
   shell: "apt-get clean -y"
   args:
     warn: false
-  become: true
 
-- name: Write down the birthdate information
+- name: Write down birthdate information
   shell: "date >/etc/birthdate_certificate"
-  become: true
