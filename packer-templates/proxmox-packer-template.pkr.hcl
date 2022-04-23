@@ -188,7 +188,7 @@ build {
       "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",
       "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}",
       "ssh root@${var.proxmox_host} qm set ${var.vm_id} --serial0 socket --vga serial0",
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ide2 media-cdrom,file=none"
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --delete ide2"
     ]
   }
 }
