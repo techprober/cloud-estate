@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+vm_id=
 vm_name=
 
 # Proxmox Builder
@@ -47,7 +48,9 @@ Available Options:
 
     --isodata      [optional|string]  ISO data path (e.g "local:iso/ubuntu-22.04-live-server-amd64.iso")
 
-Basic Usage: ./bake -i 9001 -t cn-ubuntu-2204-server -n ubuntu-server-template
+Basic Usage:   ./bake -t cn-ubuntu-2204-server
+
+Advance Usage: ./bake -i 9001 -t custom -n ubuntu-server-template
 
 [Warning]: options must be passed before perfoming the actual action
 
@@ -82,7 +85,7 @@ proxmox_node_name=$(jq -r '.proxmox_node_name' ./config.json)
 proxmox_api_user=$(jq -r '.proxmox_api_user' ./config.json)
 http_bind_address=$(jq -r '.http_bind_address' ./config.json)
 [[ ! -z "$vm_name" ]] && vm_name=$vm_name || vm_name=$vm_type
-echo "${vm_name}"
+[[ ! -z "$vm_id" ]] && vm_id=$vm_id || vm_id=9000
 
 # --- Main Operation --- #
 
