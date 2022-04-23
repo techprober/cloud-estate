@@ -1,2 +1,8 @@
 ---
-- name: Clean audit logs
+- name: Clean all audit logs
+  shell: |
+    [[ -f /var/log/audit/audit.log ]] && sudo cat /dev/null | sudo tee /var/log/audit/audit.log
+    [[ -f /var/log/wtmp ]] && sudo cat /dev/null | sudo tee /var/log/wtmp
+    [[ -f /var/log/lastlog ]] && sudo cat /dev/null | sudo tee /var/log/lastlog
+  args:
+    warn: false
