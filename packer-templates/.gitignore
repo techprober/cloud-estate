@@ -1,2 +1,2 @@
 packer_cache
-./playbooks/.vault_pass
+playbooks/.vault_pass
