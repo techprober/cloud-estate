@@ -4,19 +4,27 @@ set -euo pipefail
 
 # Proxmox Builder
 
+# --- Arguments Parsing --- #
+
 print_help() {
   [[ -n ${1:-} ]] && echo "$1"
   cat << EOF
-Usage: packer-build.sh [options] [image-to-be-baked]
 
-Available Flags:
+Usage: bake-vm [options] [image-to-be-baked]
 
--h, --help      Print help message
--i, --vmid      VM ID
+Available Options:
 
-    --isodata   [string] ISO path (e.g "local:iso/ubuntu-22.04-live-server-amd64.iso")
+-h, --help         Print help message
 
-Notes: options must be passed before perfoming the actual action
+-i, --vmid         [required|number]  VM ID
+
+    --enable-minio [optional|boolean] Include minio role (default: false)
+    --isodata      [optional|string]  ISO path (e.g "local:iso/ubuntu-22.04-live-server-amd64.iso")
+
+Basic Usage: ./script/bake-vm -i 9001 -t cn-ubuntu-2204-server
+
+[Warning]: options must be passed before perfoming the actual action
+
 EOF
   exit 1
 }
@@ -29,27 +37,27 @@ function echoW {
   echo -e "\033[1;37m########## $@\033[0m";
 }
 
-for arg in "$@"; do
+while [[ "$#" -gt 0 ]]; do
+  case $1 in
+    -h|--help)      print_help; shift ;;
+    -i|--vmid)      vm_id="$2"; shift ;;
+    --enable-minio) enable-minio="$2"; shift ;;
+    --iso-data)     isodata="$2"; shift ;;
+    *)              print_help "[Error]: Unknown option: $1"; shift ;;
+  esac
   shift
-  case "$arg" in
-    "--iso")  set -- "$@" "-i" ;;
-    "--help") set -- "$@" "-h" ;;
-    "--"*)    print_help "Unknow option: $arg" ;;
-    *)        set -- "$@" "$arg"
-  esac
 done
 
-OPTIND=1
-while getopts ":th" opt; do
-  case $opt in
-    h)  print_help ;;
-    :)  print_help "Missing argument for -$OPTARG option" ;;
-    \?) print_help "Unknown option: -$OPTARG" ;;
-  esac
-done
-shift $(( OPTIND -1 ))
+echo ${vm_id}
+vm_type=nihao
 
-vm_type=$1
+[[ ! $(jq -c 'keys' bakery-config.json | cat) =~ .*\"${vm_type}\".* ]] && { echo "[Error]: ${vm_type} not found in bakery-config.json"; exit 1; }
+proxmox_host=$(jq -r '.proxmox_host' ./config.json)
+proxmox_node_name=$(jq -r '.proxmox_node_name' ./config.json)
+proxmox_api_user=$(jq -r '.proxmox_api_user' ./config.json)
+http_bind_address=$(jq -r '.http_bind_address' ./config.json)
+
+# --- Main Operation --- #
 
 echoW "Baking ${vm_type} template with packer\n"
 
@@ -57,10 +65,10 @@ packer build -force \
   -var-file vars/kevin-ubuntu-2204.json \
   -var playbook_file="playbooks/${vm_type}.yml" \
   -var template_name=$vm_type \
-  -var proxmox_host="10.178.0.10" \
-  -var proxmox_node_name="pve-01" \
-  -var proxmox_api_user="packer@pve" \
+  -var proxmox_host="$proxmox_host" \
+  -var proxmox_node_name="$proxmox_node_name" \
+  -var proxmox_api_user="$proxmox_api_user" \
   -var proxmox_api_password=$PM_PASS \
-  -var http_bind_address="10.178.0.50" \
-  -var vm_id="9000" \
-  proxmox-packer-template.pkr.hcl
+  -var http_bind_address="$http_bind_address" \
+  -var vm_id=$vm_id \
+  proxmox-minio-packer-template.pkr.hcl
