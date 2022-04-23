@@ -173,6 +173,22 @@ build {
     destination = "/tmp/id_rsa.pub"
   }
 
+  # Minio plabyook
+  provisioner "file" {
+    pause_before = "5s"
+    source       = "./playbooks/.vault_pass"
+    destination  = "/tmp/.vault_pass"
+  }
+  provisioner "ansible-local" {
+    playbook_dir            = "./playbooks"
+    playbook_file           = "./playbooks/minio.yml"
+    clean_staging_directory = true
+    extra_arguments = [
+      "--vault-password-file=/tmp/.vault_pass",
+      "--extra-vars \"ansible_user=packer\""
+    ]
+  }
+
   # Main playbook depends of vm_type
   provisioner "ansible-local" {
     pause_before            = "5s"
