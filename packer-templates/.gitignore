@@ -1,4 +1,2 @@
 packer_cache
-isos
-vars.json
-config.json
+./playbooks/.vault_pass
