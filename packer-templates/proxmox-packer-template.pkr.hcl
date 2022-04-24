@@ -1,107 +1,33 @@
 # Variable Definitions
-variable "proxmox_host" {
-  type = string
-}
+variable "proxmox_host" { type = string }
+variable "proxmox_api_user" { type = string }
+variable "proxmox_api_password" { type = string }
 
-variable "proxmox_api_user" {
-  type = string
-}
+variable "template_name" { type = string }
+variable "vm_id" { type = string }
+variable "proxmox_node_name" { type = string }
+variable "cores" { type = string }
+variable "sockets" { type = string }
+variable "memory" { type = string }
+variable "os" { type = string }
+variable "bridge" { type = string }
+variable "disk_type" { type = string }
+variable "disk_format" { type = string }
+variable "disk_size" { type = string }
+variable "datastore" { type = string }
+variable "datastore_type" { type = string }
+variable "disk_cache_mode" { type = string }
+variable "cloud_init_storage_pool" { type = string }
+variable "iso" { type = string }
 
-variable "proxmox_api_password" {
-  type = string
-}
+variable "ssh_timeout" { type = string }
+variable "ssh_username" { type = string }
+variable "ssh_password" { type = string }
+variable "http_directory" { type = string }
+variable "http_bind_address" { type = string }
 
-variable "template_name" {
-  type = string
-}
-
-variable "vm_id" {
-  type = string
-}
-
-variable "proxmox_node_name" {
-  type = string
-}
-
-variable "cores" {
-  type = string
-}
-
-variable "sockets" {
-  type = string
-}
-
-variable "memory" {
-  type = string
-}
-
-variable "os" {
-  type = string
-}
-
-variable "bridge" {
-  type = string
-}
-
-variable "disk_type" {
-  type = string
-}
-
-variable "disk_format" {
-  type = string
-}
-
-variable "disk_size" {
-  type = string
-}
-
-variable "datastore" {
-  type = string
-}
-
-variable "datastore_type" {
-  type = string
-}
-
-variable "disk_cache_mode" {
-  type = string
-}
-
-variable "cloud_init_storage_pool" {
-  type = string
-}
-
-variable "ssh_timeout" {
-  type = string
-}
-
-variable "ssh_username" {
-  type = string
-}
-
-variable "ssh_password" {
-  type = string
-}
-
-variable "iso" {
-  type = string
-}
-
-variable "http_directory" {
-  type = string
-}
-
-variable "http_bind_address" {
-  type = string
-}
-
-variable "boot_command" {
-  type = list(string)
-}
-
-variable "playbook_file" {
-  type = string
-}
+variable "boot_command" { type = list(string) }
+variable "playbook_file" { type = string }
 
 source "proxmox" "bakery-template" {
 
@@ -162,7 +88,12 @@ source "proxmox" "bakery-template" {
   boot_command = var.boot_command
 }
 
+### Base Template ###
+
 build {
+
+  name = "base"
+
   sources = ["source.proxmox.bakery-template"]
 
   # Provisioner Configurations
@@ -171,6 +102,61 @@ build {
   provisioner "file" {
     source      = "./id_rsa.pub"
     destination = "/tmp/id_rsa.pub"
+  }
+
+  # Main playbook depends of vm_type
+  provisioner "ansible-local" {
+    pause_before            = "5s"
+    playbook_dir            = "./playbooks"
+    playbook_file           = var.playbook_file
+    clean_staging_directory = true
+    extra_arguments = [
+      "--extra-vars \"ansible_user=packer\""
+    ]
+  }
+
+  # Convert to proxmox vm template
+  post-processor "shell-local" {
+    inline = [
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --boot c --bootdisk scsi0",
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}",
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --serial0 socket --vga serial0",
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --delete ide2"
+    ]
+  }
+}
+
+### Custom Template ###
+
+build {
+
+  name = "custom"
+
+  sources = ["source.proxmox.bakery-template"]
+
+  # Provisioner Configurations
+
+  # SSH public key
+  provisioner "file" {
+    source      = "./id_rsa.pub"
+    destination = "/tmp/id_rsa.pub"
+  }
+
+  # Minio plabyook
+  provisioner "file" {
+    pause_before = "5s"
+    source       = "./playbooks/.vault_pass"
+    destination  = "/tmp/.vault_pass"
+  }
+  provisioner "ansible-local" {
+    playbook_dir            = "./playbooks"
+    playbook_file           = "./playbooks/minio.yml"
+    clean_staging_directory = true
+    extra_arguments = [
+      "--vault-password-file=/tmp/.vault_pass",
+      "--extra-vars \"ansible_user=packer\""
+    ]
   }
 
   # Main playbook depends of vm_type
