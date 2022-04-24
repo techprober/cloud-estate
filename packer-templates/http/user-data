@@ -37,6 +37,3 @@ autoinstall:
         lock-passwd: false
         sudo: ALL=(ALL) NOPASSWD:ALL
         shell: /bin/bash
-        # ssh_authorized_keys:
-          # change to your ssh public key
-          # - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDYfbG8ekG7LdIDkUM6WGAwJ8MtZYiaN4Jq4FEkp6F5Zek+1gy6MU9lA5WE2knzGDl3Upy09XyJ9LLO65q4q6pDeDussm2R4sOQXK3x9AoUZnd6m+PNaxeclKNEAqQed74qGVmI0CefTtMjIyPAYVVL/EfWuY3O+8M+I5wF5mQfVQNF9q18MRgtzhqFvrvGv2KCm23Id5UitHc8AMew6KhSdVVW0yTQignNbMDfaV0bbVmzNkwGeU2EC/Bll/V8AsfZXgsl0cNXo8wL5I01cCpHcgx33CjKRgb/N8JIEn1wCkSaucpY4ZOZFR7jD+JWy3NIfL1jH5TnjYo4+sWbqRz2CtiGPxv9TyDA6hJSPIKjKhiheXrOTrq9f5uThd1I9bRsSLS8Feg9/ANKkuf0XBl/NzXvmlo1M6mbpfVUzmIU8/tP0mzu2zZgO5xHQgIODUYax6IeH5YPPRB8YGYLp2yUCS6AuuYgMZRruuhbs64FSTH4t0NlZXkwGdhp3qIQyos= kev@archlinux
