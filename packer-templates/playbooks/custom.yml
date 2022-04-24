@@ -9,6 +9,9 @@
     - ./vars/apt.yml
     - ./vars/maintenance.yml
 
+  vars:
+    - vault_enable: true
+
   roles:
   - role: ./roles/apt.ops/set-sources.ops/
     vars:

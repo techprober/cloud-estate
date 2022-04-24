@@ -8,7 +8,6 @@
   roles:
   - role: ./roles/minio.ops/
     vars:
-      vault_enable: true
       remote_server: "http://10.178.0.9:9000"
       minio_access_key: !vault |
           $ANSIBLE_VAULT;1.1;AES256
