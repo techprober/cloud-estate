@@ -14,6 +14,9 @@
     vars:
       release: "jammy"
   - role: ./roles/apt.ops/install-packages.ops/
+    vars:
+      extra_packages:
+      - neofetch
 
   - role: ./roles/maintenance.ops/key.ops/
 

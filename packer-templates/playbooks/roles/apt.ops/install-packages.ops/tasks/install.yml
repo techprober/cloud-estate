@@ -3,9 +3,13 @@
   apt:
     update_cache: yes
 
-- name: Install packages defined in the list
+- name: Install base packages defined in the list
   ansible.builtin.apt:
     pkg: "{{ install_packages.packages }}"
+
+- name: Install user-defined extra packages
+  ansible.builtin.apt:
+    pkg: "{{ extra_packages }}"
 
 - name: Remove useless packages from the cache
   apt:
