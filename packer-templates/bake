@@ -55,12 +55,12 @@ Available Options:
 -t, --type           [required|string]  Type of VM to be baked, use -a to see all the available VM type
 
 -n, --name           [optional|string]  VM name
--b, --custom-build   [optional|string]  Use custom type of build defined in packer template
+-b, --build          [optional|string]  Use custom type of build defined in packer template
 -d, --isodata        [optional|string]  ISO data path (e.g "local:iso/ubuntu-22.04-live-server-amd64.iso")
 
 Basic Usage:   ./bake -t ubuntu-2204-server
 
-Advance Usage: ./bake -i 9001 -t custom -n ubuntu-server-template --custom-build minio
+Advance Usage: ./bake -i 9001 -t custom -n ubuntu-server-template --build minio
 
 [Warning]: options must be passed before perfoming the actual action
 
