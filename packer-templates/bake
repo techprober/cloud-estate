@@ -60,7 +60,7 @@ Available Options:
 
 Basic Usage:   ./bake -t ubuntu-2204-server
 
-Advance Usage: ./bake -i 9001 -t custom -n ubuntu-server-template --build minio
+Advance Usage: ./bake -i 9001 -t custom -n ubuntu-server-template -b minio
 
 [Warning]: options must be passed before perfoming the actual action
 
