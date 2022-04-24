@@ -1,0 +1,30 @@
+---
+# Bake custom-server
+
+- name: "Bake proxmox custom vm template"
+  hosts: localhost
+  become: yes
+
+  vars_files:
+    - ./vars/apt.yml
+    - ./vars/maintenance.yml
+
+  vars:
+    - vault_enable: true
+
+  roles:
+  - role: ./roles/apt.ops/set-sources.ops/
+    vars:
+      release: "jammy"
+  - role: ./roles/apt.ops/install-packages.ops/
+    vars:
+      extra_packages:
+      - neofetch
+
+  - role: ./roles/maintenance.ops/key.ops/
+
+  # - role: ./roles/containerd.ops/
+
+  - role: ./roles/docker.ops/
+
+  - role: ./roles/proxmox.bootstrap/
