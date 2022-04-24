@@ -8,4 +8,8 @@
      {% for pkg in install_packages.packages %}
      {{ pkg }}
      {% endfor %}
+
+     {% for pkg in extra_packages %}
+     {{ pkg }}
+     {% endfor %}
      ----------------------------------------------
