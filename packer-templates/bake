@@ -51,7 +51,7 @@ Available Options:
 -h, --help           Print help message
 -a, --all            Print available VM type
 
--i, --vmid           [required|number]  VM ID
+-i, --vmid           [required|number]  VM ID (default: 9000)
 -t, --type           [required|string]  Type of VM to be baked, use -a to see all the available VM type
 
 -n, --name           [optional|string]  VM name
