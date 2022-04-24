@@ -122,12 +122,6 @@ done
 [[ ! -z "$build_type" ]] && template="custom-${template}" || template=$template
 [[ ! -z "$build_type" ]] && build_type=$build_type || build_type="base"
 
-# echo "${vm_id}"
-# echo "${vm_type}"
-# echo "${vm_name}"
-# echo "${template}"
-# echo "${build_type}"
-
 # --- Main Operation --- #
 
 echoW "Baking ${vm_name} template with packer\n"
