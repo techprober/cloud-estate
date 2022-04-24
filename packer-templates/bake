@@ -6,7 +6,9 @@ template="proxmox-packer-template.pkr.hcl"
 vm_id=
 vm_type=
 vm_name=
-custom_template=
+build_type=
+only=false
+only_opt=
 
 # Proxmox Builder
 
@@ -53,12 +55,12 @@ Available Options:
 -t, --type           [required|string]  Type of VM to be baked, use -a to see all the available VM type
 
 -n, --name           [optional|string]  VM name
--c, --custom-build   [optional|string]  Use custom pkr.hcl file
+-b, --custom-build   [optional|string]  Use custom type of build defined in packer template
 -d, --isodata        [optional|string]  ISO data path (e.g "local:iso/ubuntu-22.04-live-server-amd64.iso")
 
 Basic Usage:   ./bake -t ubuntu-2204-server
 
-Advance Usage: ./bake -i 9001 -t custom -n ubuntu-server-template --custom-build custom-proxmox-packer-template.pkr.hcl
+Advance Usage: ./bake -i 9001 -t custom -n ubuntu-server-template --custom-build minio
 
 [Warning]: options must be passed before perfoming the actual action
 
@@ -74,21 +76,7 @@ function echoW {
   echo -e "\033[1;37m########## $@\033[0m";
 }
 
-# while [[ "$#" -gt 0 ]]; do
-#   case $1 in
-#     -a|--all)             available_vm; shift;;
-#     -h|--help)            print_help; shift ;;
-#     -i|--vmid)            vm_id="$2"; shift ;;
-#     -t|--type)            vm_type="$2"; shift ;;
-#     -n|--name)            vm_name="$2"; shift ;;
-#     -c|--custom-template) custom_template="$2" shift;;
-#     -d|--iso-data)        iso-data="$2"; shift ;;
-#     *)                    print_help "[Error]: Unknown option: $1"; shift ;;
-#   esac
-#   shift
-# done
-
-while getopts ":hai:t:n:c:d:" opt; do
+while getopts ":hai:t:n:b:d:" opt; do
   case $opt in
     # print help message
     h|--help) print_help; exit;;
@@ -100,8 +88,8 @@ while getopts ":hai:t:n:c:d:" opt; do
     t|--type) vm_type=$OPTARG;;
     # pass vm name
     n|--name) vm_name=$OPTARG;;
-    # specify custom-build template path
-    c|--custom-template) custom_template=$OPTARG;;
+    # specify custom-build build type
+    b|--custom-build) build_type=$OPTARG;;
     # specify custom iso-data path
     d|--iso-data) iso_data=$OPTARG;;
     # unknown option
@@ -112,18 +100,16 @@ while getopts ":hai:t:n:c:d:" opt; do
 done
 
 [[ ! $(jq -c 'keys' bakery-config.json | cat) =~ .*\"${vm_type}\".* ]] && { echo "[Error]: VM template: '${vm_type}' not found in bakery-config.json"; exit 1; }
-proxmox_host=$(jq -r '.proxmox_host' ./config.json)
-proxmox_node_name=$(jq -r '.proxmox_node_name' ./config.json)
-proxmox_api_user=$(jq -r '.proxmox_api_user' ./config.json)
-http_bind_address=$(jq -r '.http_bind_address' ./config.json)
 [[ ! -z "$vm_id" ]] && vm_id=$vm_id || vm_id=9000
 [[ ! -z "$vm_name" ]] && vm_name=$vm_name || vm_name=$vm_type
-[[ ! -z "$custom_template" ]] && template=$custom_template || template=$template
+[[ ! -z "$build_type" ]] && template="custom-${template}" || template=$template
+[[ ! -z "$build_type" ]] && build_type=$build_type || build_type="base"
 
-echo "${vm_id}"
-echo "${vm_type}"
-echo "${vm_name}"
-echo "${template}"
+# echo "${vm_id}"
+# echo "${vm_type}"
+# echo "${vm_name}"
+# echo "${template}"
+# echo "${build_type}"
 
 # --- Main Operation --- #
 
@@ -131,12 +117,11 @@ echoW "Baking ${vm_name} template with packer\n"
 
 # packer build -force \
 #   -var-file vars/kevin-ubuntu-2204.json \
+#   -var-file config.json \
 #   -var playbook_file="playbooks/${vm_type}.yml" \
 #   -var template_name=$vm_name \
-#   -var proxmox_host="$proxmox_host" \
-#   -var proxmox_node_name="$proxmox_node_name" \
-#   -var proxmox_api_user="$proxmox_api_user" \
 #   -var proxmox_api_password=$PM_PASS \
-#   -var http_bind_address="$http_bind_address" \
 #   -var vm_id=$vm_id \
+#   ${only_opt} \
+#   -only=${bulid_type}.proxmox.bakery-template
 #   $template
