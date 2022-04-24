@@ -76,6 +76,23 @@ function echoW {
   echo -e "\033[1;37m########## $@\033[0m";
 }
 
+# transform long options (--) to short ones (-) as only such are supported by bash built-in argparse
+for arg in "$@"; do
+  shift
+  case "$arg" in
+    "--help")     set -- "$@" "-h" ;;
+    "--all")      set -- "$@" "-a" ;;
+    "--vmid")     set -- "$@" "-v" ;;
+    "--type")     set -- "$@" "-t" ;;
+    "--name")     set -- "$@" "-n" ;;
+    "--build")    set -- "$@" "-b" ;;
+    "--iso-data") set -- "$@" "-d" ;;
+    "--"*)        print_help "[Error]: Unknown option: "$arg"" >&2; exit;;
+    *)            set -- "$@" "$arg"
+  esac
+done
+
+# handle argument parsing
 while getopts ":hai:t:n:b:d:" opt; do
   case $opt in
     # print help message
@@ -89,7 +106,7 @@ while getopts ":hai:t:n:b:d:" opt; do
     # pass vm name
     n|--name) vm_name=$OPTARG;;
     # specify custom-build build type
-    b|--custom-build) build_type=$OPTARG;;
+    b|--build) build_type=$OPTARG;;
     # specify custom iso-data path
     d|--iso-data) iso_data=$OPTARG;;
     # unknown option
@@ -115,13 +132,12 @@ done
 
 echoW "Baking ${vm_name} template with packer\n"
 
-# packer build -force \
-#   -var-file vars/kevin-ubuntu-2204.json \
-#   -var-file config.json \
-#   -var playbook_file="playbooks/${vm_type}.yml" \
-#   -var template_name=$vm_name \
-#   -var proxmox_api_password=$PM_PASS \
-#   -var vm_id=$vm_id \
-#   ${only_opt} \
-#   -only=${bulid_type}.proxmox.bakery-template
-#   $template
+packer build -force \
+  -var-file vars/kevin-ubuntu-2204.json \
+  -var-file config.json \
+  -var playbook_file="playbooks/${vm_type}.yml" \
+  -var template_name=$vm_name \
+  -var proxmox_api_password=$PM_PASS \
+  -var vm_id=$vm_id \
+  -only="${build_type}.proxmox.bakery-template" \
+  $template
