@@ -57,7 +57,7 @@ resource "proxmox_vm_qemu" "master-node" {
     ]
   }
 
-  ipconfig0  = "ip=${var.master_vm_network_ip_range + count.index}/${var.master_vm_network_netmask},gw=${var.master_vm_network_gateway}"
+  ipconfig0  = "ip=${split(".", var.master_vm_network_ip_range)[3] + count.index}/${var.master_vm_network_netmask},gw=${var.master_vm_network_gateway}"
   nameserver = var.master_vm_network_dns
 
   sshkeys = <<EOF
@@ -112,7 +112,7 @@ resource "proxmox_vm_qemu" "worker-node" {
     ]
   }
 
-  ipconfig0  = "ip=${var.master_vm_network_ip_range + count.index}/${var.worker_vm_network_netmask},gw=${var.worker_vm_network_gateway}"
+  ipconfig0  = "ip=${split(".", var.worker_vm_network_ip_range)[3] + count.index}/${var.worker_vm_network_netmask},gw=${var.worker_vm_network_gateway}"
   nameserver = var.worker_vm_network_dns
 
   sshkeys = <<EOF
