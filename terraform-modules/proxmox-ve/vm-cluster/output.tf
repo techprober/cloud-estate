@@ -2,11 +2,9 @@ output "master_nodes" {
   value = {
     for vm in proxmox_vm_qemu.master_node :
     vm.name => {
-      vm_id     = vm.vmid
-      template  = vm.clone
-      cpu_cores = vm.cores
-      memory    = vm.memory
-      bootdisk  = vm.bootdisk
+      vm_id    = vm.vmid
+      template = vm.clone
+      bootdisk = vm.bootdisk
       network = { for k in vm.network : k.bridge => {
         vlan_tag       = k.tag
         model          = k.model
@@ -21,11 +19,9 @@ output "worker_nodes" {
   value = {
     for vm in proxmox_vm_qemu.worker_node :
     vm.name => {
-      vm_id     = vm.vmid
-      template  = vm.clone
-      cpu_cores = vm.cores
-      memory    = vm.memory
-      bootdisk  = vm.bootdisk
+      vm_id    = vm.vmid
+      template = vm.clone
+      bootdisk = vm.bootdisk
       network = { for k in vm.network : k.bridge => {
         vlan_tag       = k.tag
         model          = k.model
