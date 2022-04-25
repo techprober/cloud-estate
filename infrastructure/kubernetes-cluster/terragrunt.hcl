@@ -1,23 +1,23 @@
 terraform {
-  source = "git::https://github.com/TechProber/cloud-estate.git//terraform-modules/proxmox-ve/vm-cluster?ref=6cf123f"
+  source = "git::https://github.com/TechProber/cloud-estate.git//terraform-modules/proxmox-ve/vm-cluster?ref=HEAD"
 }
 
 inputs = {
   proxmox_host = "10.178.0.10"
   pm_user      = "terraform-prov"
-  node_name    = "pve-01"
+  node_name    = "pve"
 
-  template_name = "prod-ubuntu-2204-server-template"
+  template_name = "ubuntu-2204-server"
 
   ### Master Node ###
 
   master_vm_count   = 1
-  master_vm_name    = "master" # vm node will be named worker-x, where x is the count.index
-  master_vm_id      = 60       # vm id will be provisioned as 61x, where x is the count.index
+  master_vm_name    = "master" # vm node will be named master-x, where x is the count.index
+  master_vm_id      = 600      # vm id will be assigned as 600 + count.index
   master_vm_os_type = "cloud-init"
 
 
-  master_vm_cpu_core    = 20
+  master_vm_cpu_core    = 4
   master_vm_cpu_type    = "host"
   master_vm_mem         = 2048
   master_vm_mem_balloon = 0
@@ -42,10 +42,10 @@ inputs = {
 
   worker_vm_count   = 3
   worker_vm_name    = "worker" # vm node will be named worker-x, where x is the count.index
-  worker_vm_id      = 61       # vm id will be provisioned as 61x, where x is the count.index
+  worker_vm_id      = 610      # vm id will be assigned as 610 + count.index
   worker_vm_os_type = "cloud-init"
 
-  worker_vm_cpu_core    = 20
+  worker_vm_cpu_core    = 4
   worker_vm_cpu_type    = "host"
   worker_vm_mem         = 4096
   worker_vm_mem_balloon = 0
