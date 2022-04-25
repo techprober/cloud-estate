@@ -80,7 +80,7 @@ resource "proxmox_vm_qemu" "worker_node" {
 
   count = var.worker_vm_count
   name  = "${var.worker_vm_name}-0${count.index + 1}"
-  vmid  = var.master_vm_id + count.index + 1
+  vmid  = var.worker_vm_id + count.index + 1
 
   clone = var.template_name
 
