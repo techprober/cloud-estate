@@ -24,7 +24,7 @@ resource "proxmox_vm_qemu" "master_node" {
 
   count = var.master_vm_count
 
-  name = "${var.master_vm_name}-0${count.index + 1}"
+  name = "${var.master_vm_name}-${count.index + 1}"
   vmid = var.master_vm_id + count.index + 1
 
   clone = var.template_name
@@ -79,7 +79,7 @@ resource "proxmox_vm_qemu" "worker_node" {
   target_node = var.node_name
 
   count = var.worker_vm_count
-  name  = "${var.worker_vm_name}-0${count.index + 1}"
+  name  = "${var.worker_vm_name}-${count.index + 1}"
   vmid  = var.worker_vm_id + count.index + 1
 
   clone = var.template_name
