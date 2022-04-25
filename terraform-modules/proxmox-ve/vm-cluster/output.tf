@@ -7,13 +7,13 @@ output "master_nodes" {
       cpu_cores = vm.cores
       memory    = vm.memory
       bootdisk  = vm.bootdisk
-      network = { for k in vm.network : k => {
+      network = { for k in vm.network : k.bridge => {
         vlan_tag       = k.tag
         model          = k.model
         bridge         = k.bridge
         ipv4_static_ip = vm.default_ipv4_address
       } }
-      disk = { for k in vm.disk : k => {
+      disk = { for k in vm.disk : vm.bootdisk => {
         slot    = k.slot
         size    = k.size
         type    = k.type
@@ -33,13 +33,13 @@ output "worker_nodes" {
       cpu_cores = vm.cores
       memory    = vm.memory
       bootdisk  = vm.bootdisk
-      network = { for k in vm.network : k => {
+      network = { for k in vm.network : k.bridge => {
         vlan_tag       = k.tag
         model          = k.model
         bridge         = k.bridge
         ipv4_static_ip = vm.default_ipv4_address
       } }
-      disk = { for k in vm.disk : k => {
+      disk = { for k in vm.disk : vm.bootdisk => {
         slot    = k.slot
         size    = k.size
         type    = k.type
