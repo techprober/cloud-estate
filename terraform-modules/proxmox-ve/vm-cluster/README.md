@@ -18,8 +18,8 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [proxmox_vm_qemu.master-node](https://registry.terraform.io/providers/telmate/proxmox/2.9.5/docs/resources/vm_qemu) | resource |
-| [proxmox_vm_qemu.worker-node](https://registry.terraform.io/providers/telmate/proxmox/2.9.5/docs/resources/vm_qemu) | resource |
+| [proxmox_vm_qemu.master_node](https://registry.terraform.io/providers/telmate/proxmox/2.9.5/docs/resources/vm_qemu) | resource |
+| [proxmox_vm_qemu.worker_node](https://registry.terraform.io/providers/telmate/proxmox/2.9.5/docs/resources/vm_qemu) | resource |
 
 ## Inputs
 
@@ -76,4 +76,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_master_ipv4_static_ip"></a> [master\_ipv4\_static\_ip](#output\_master\_ipv4\_static\_ip) | n/a |
+| <a name="output_worker_ipv4_static_ip"></a> [worker\_ipv4\_static\_ip](#output\_worker\_ipv4\_static\_ip) | n/a |
