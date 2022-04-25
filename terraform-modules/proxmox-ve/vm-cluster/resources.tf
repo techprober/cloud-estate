@@ -8,8 +8,8 @@ terraform {
 }
 
 locals {
-  master_last_ipv4_octet = element(var.master_vm_network_ip_range, 3)
-  worker_last_ipv4_octet = element(var.master_vm_network_ip_range, 3)
+  master_last_ipv4_octet = element(split(var.master_vm_network_ip_range), 3)
+  worker_last_ipv4_octet = element(split(var.worker_vm_network_ip_range), 3)
 }
 
 provider "proxmox" {
