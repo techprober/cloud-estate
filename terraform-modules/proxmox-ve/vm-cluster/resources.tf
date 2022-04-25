@@ -18,7 +18,7 @@ provider "proxmox" {
   pm_tls_insecure = true
 }
 
-resource "proxmox_vm_qemu" "master-node" {
+resource "proxmox_vm_qemu" "master_node" {
 
   target_node = var.node_name
 
@@ -70,7 +70,7 @@ resource "proxmox_vm_qemu" "master-node" {
   EOF
 }
 
-resource "proxmox_vm_qemu" "worker-node" {
+resource "proxmox_vm_qemu" "worker_node" {
 
   depends_on = [
     proxmox_vm_qemu.master-node
