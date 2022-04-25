@@ -57,7 +57,10 @@ resource "proxmox_vm_qemu" "master-node" {
     ]
   }
 
-  ipconfig0  = "ip=${split(".", var.master_vm_network_ip_range)[3] + count.index}/${var.master_vm_network_netmask},gw=${var.master_vm_network_gateway}"
+  last_cidr_octet = element(var.master_vm_network_netmask, 3)
+  static_ipv4_ip  = replace(var.master_vm_network_ip_range, last_cidr_octet, tostring(last_cidr_octet + count.index))
+
+  ipconfig0  = "ip=${static_ipv4_ip}/${var.master_vm_network_netmask},gw=${var.master_vm_network_gateway}"
   nameserver = var.master_vm_network_dns
 
   sshkeys = <<EOF
@@ -112,7 +115,11 @@ resource "proxmox_vm_qemu" "worker-node" {
     ]
   }
 
-  ipconfig0  = "ip=${split(".", var.worker_vm_network_ip_range)[3] + count.index}/${var.worker_vm_network_netmask},gw=${var.worker_vm_network_gateway}"
+
+  last_cidr_octet = element(var.worker_vm_network_netmask, 3)
+  static_ipv4_ip  = replace(var.worker_vm_network_ip_range, last_cidr_octet, tostring(last_cidr_octet + count.index))
+
+  ipconfig0  = "ip=${static_ipv4_ip}/${var.worker_vm_network_netmask},gw=${var.worker_vm_network_gateway}"
   nameserver = var.worker_vm_network_dns
 
   sshkeys = <<EOF
