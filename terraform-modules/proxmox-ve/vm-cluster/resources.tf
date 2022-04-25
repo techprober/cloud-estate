@@ -7,6 +7,11 @@ terraform {
   }
 }
 
+locals {
+  master_last_ipv4_octet = element(var.master_vm_network_ip_range, 3)
+  worker_last_ipv4_octet = element(var.master_vm_network_ip_range, 3)
+}
+
 provider "proxmox" {
   pm_api_url      = "https://${var.proxmox_host}:8006/api2/json"
   pm_user         = "${var.pm_user}@pve"
@@ -57,7 +62,7 @@ resource "proxmox_vm_qemu" "master-node" {
     ]
   }
 
-  ipconfig0  = "ip=${replace(var.master_vm_network_ip_range, element(var.master_vm_network_ip_range, 3), tostring(element(var.master_vm_network_ip_range, 3) + count.index))}/${var.worker_vm_network_netmask},gw=${var.worker_vm_network_gateway}"
+  ipconfig0  = "ip=${slice(var.master_vm_network_ip_range, 0, 2)}/${var.worker_vm_network_netmask},gw=${var.worker_vm_network_gateway}"
   nameserver = var.master_vm_network_dns
 
   sshkeys = <<EOF
@@ -112,7 +117,7 @@ resource "proxmox_vm_qemu" "worker-node" {
     ]
   }
 
-  ipconfig0  = "ip=${replace(var.worker_vm_network_ip_range, element(var.worker_vm_network_ip_range, 3), tostring(element(var.worker_vm_network_ip_range, 3) + count.index))}/${var.worker_vm_network_netmask},gw=${var.worker_vm_network_gateway}"
+  ipconfig0  = "ip=${slice(var.worker_vm_network_ip_range, 0, 2)}/${var.worker_vm_network_netmask},gw=${var.worker_vm_network_gateway}"
   nameserver = var.worker_vm_network_dns
 
   sshkeys = <<EOF
