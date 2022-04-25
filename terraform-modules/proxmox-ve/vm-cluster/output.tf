@@ -1,3 +1,13 @@
-output "ipv4_static_ip" {
-  value = "${join(".", concat(slice(split(".", var.master_vm_network_ip_range), 0, 3), formatlist(local.master_last_ipv4_octet + count.index + 1)))}/${var.master_vm_network_netmask}"
+output "master_node(s)_ipv4_static_ip" {
+  value = {
+    for vm in prxmox_vm_qemu.master-node :
+    vm.name => vm.default_ip_address
+  }
+}
+
+output "worker_node(s)_ipv4_static_ip" {
+  value = {
+    for vm in prxmox_vm_qemu.worker-node :
+    vm.name => vm.default_ip_address
+  }
 }
