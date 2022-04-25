@@ -11,14 +11,7 @@ output "master_nodes" {
         vlan_tag       = k.tag
         model          = k.model
         bridge         = k.bridge
-        ipv4_static_ip = vm.default_ipv4_address
-      } }
-      disk = { for k in vm.disk : vm.bootdisk => {
-        slot    = k.slot
-        size    = k.size
-        type    = k.type
-        format  = k.format
-        storage = k.storage
+        static_ipv4_ip = vm.default_ipv4_address
       } }
     }
   }
@@ -37,14 +30,7 @@ output "worker_nodes" {
         vlan_tag       = k.tag
         model          = k.model
         bridge         = k.bridge
-        ipv4_static_ip = vm.default_ipv4_address
-      } }
-      disk = { for k in vm.disk : vm.bootdisk => {
-        slot    = k.slot
-        size    = k.size
-        type    = k.type
-        format  = k.format
-        storage = k.storage
+        static_ipv4_ip = vm.default_ipv4_address
       } }
     }
   }
