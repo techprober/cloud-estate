@@ -18,8 +18,9 @@ resource "proxmox_vm_qemu" "master-node" {
   target_node = var.node_name
 
   count = var.master_vm_count
-  name  = "${var.master_vm_name}-0${count.index + 1}"
-  vmid  = "${var.master_vm_id}${count.index + 1}"
+
+  name = "${var.master_vm_name}-0${count.index + 1}"
+  vmid = "${var.master_vm_id}${count.index + 1}"
 
   clone = var.template_name
 
@@ -56,7 +57,7 @@ resource "proxmox_vm_qemu" "master-node" {
     ]
   }
 
-  ipconfig0  = "ip=${var.master_vm_network_ip_range}${count.index + 1}/${var.master_vm_network_netmask},gw=${var.master_vm_network_gateway}"
+  ipconfig0  = "ip=${var.master_vm_network_ip_range + count.index}/${var.master_vm_network_netmask},gw=${var.master_vm_network_gateway}"
   nameserver = var.master_vm_network_dns
 
   sshkeys = <<EOF
@@ -111,7 +112,7 @@ resource "proxmox_vm_qemu" "worker-node" {
     ]
   }
 
-  ipconfig0  = "ip=${var.worker_vm_network_ip_range}${count.index + 1}/${var.worker_vm_network_netmask},gw=${var.worker_vm_network_gateway}"
+  ipconfig0  = "ip=${var.master_vm_network_ip_range + count.index}/${var.worker_vm_network_netmask},gw=${var.worker_vm_network_gateway}"
   nameserver = var.worker_vm_network_dns
 
   sshkeys = <<EOF
