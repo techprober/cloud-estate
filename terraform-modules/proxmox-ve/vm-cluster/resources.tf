@@ -14,6 +14,7 @@ provider "proxmox" {
 }
 
 resource "proxmox_vm_qemu" "master-node" {
+
   target_node = var.node_name
 
   count = var.master_vm_count
@@ -64,6 +65,9 @@ resource "proxmox_vm_qemu" "master-node" {
 }
 
 resource "proxmox_vm_qemu" "worker-node" {
+
+  depends_on = ["proxmox_vm_qemu.worker-node"]
+
   target_node = var.node_name
 
   count = var.worker_vm_count
