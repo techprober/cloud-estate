@@ -66,7 +66,9 @@ resource "proxmox_vm_qemu" "master-node" {
 
 resource "proxmox_vm_qemu" "worker-node" {
 
-  depends_on = ["proxmox_vm_qemu.worker-node"]
+  depends_on = [
+    proxmox_vm_qemu.worker-node
+  ]
 
   target_node = var.node_name
 
