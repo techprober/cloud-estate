@@ -2,6 +2,8 @@
 - name: Install Docker with script
   shell: "sudo wget -qO- https://get.docker.com/ | sh"
   register: installation_result
+  args:
+    warn: false
 
 - name: Enable docker to start at boot
   ansible.builtin.service:
