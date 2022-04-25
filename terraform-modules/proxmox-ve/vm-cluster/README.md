@@ -78,5 +78,5 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_master_ipv4_static_ip"></a> [master\_ipv4\_static\_ip](#output\_master\_ipv4\_static\_ip) | n/a |
-| <a name="output_worker_ipv4_static_ip"></a> [worker\_ipv4\_static\_ip](#output\_worker\_ipv4\_static\_ip) | n/a |
+| <a name="output_master_nodes"></a> [master\_nodes](#output\_master\_nodes) | n/a |
+| <a name="output_worker_nodes"></a> [worker\_nodes](#output\_worker\_nodes) | n/a |
