@@ -1,7 +1,6 @@
 ### Server Configurations ###
 
 variable "proxmox_host" {
-  default     = "10.10.10.10"
   description = "host ip of the proxmox server"
   type        = string
 }
@@ -48,8 +47,8 @@ variable "container_unprivileged" {
 }
 
 variable "container_start_after_creation" {
-  default     = false
-  description = "a boolean that determines if the container is started after creation. Default is false"
+  default     = true
+  description = "a boolean that determines if the container is started after creation. Default is true"
   type        = bool
 }
 
