@@ -45,6 +45,7 @@ resource "proxmox_lxc" "container" {
     bridge   = var.container_network_bridge
     ip       = var.container_network_ip
     gw       = var.container_network_gateway
+    tag      = var.container_network_tag
     firewall = true
   }
 

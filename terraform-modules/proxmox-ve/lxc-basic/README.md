@@ -35,6 +35,7 @@ No modules.
 | <a name="input_container_network_gateway"></a> [container\_network\_gateway](#input\_container\_network\_gateway) | the IPv4 address belonging to the network interface's default gateway. | `string` | n/a | yes |
 | <a name="input_container_network_interface"></a> [container\_network\_interface](#input\_container\_network\_interface) | the name of the network interface as seen from inside the container (e.g. 'eth0'). | `string` | `"eth0"` | no |
 | <a name="input_container_network_ip"></a> [container\_network\_ip](#input\_container\_network\_ip) | the IPv4 address of the network interface. Can be a static IPv4 address (in CIDR notation), 'dhcp', or 'static: 10.10.10.1/24' | `string` | `"dhcp"` | no |
+| <a name="input_container_network_tag"></a> [container\_network\_tag](#input\_container\_network\_tag) | a number that specifies the VLAN tag of the network interface. Automatically determined if not set | `number` | `""` | no |
 | <a name="input_container_os_template"></a> [container\_os\_template](#input\_container\_os\_template) | the volume identifier that points to the OS template or backup file | `string` | n/a | yes |
 | <a name="input_container_password"></a> [container\_password](#input\_container\_password) | the root password inside the container | `string` | n/a | yes |
 | <a name="input_container_start_after_creation"></a> [container\_start\_after\_creation](#input\_container\_start\_after\_creation) | a boolean that determines if the container is started after creation. Default is false | `bool` | `false` | no |

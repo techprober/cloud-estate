@@ -106,6 +106,12 @@ variable "container_network_gateway" {
   type        = string
 }
 
+variable "container_network_tag" {
+  default     = ""
+  description = "a number that specifies the VLAN tag of the network interface. Automatically determined if not set"
+  type        = number
+}
+
 variable "container_network_dns" {
   default     = "8.8.8.8"
   description = "The DNS server IP address used by the container."
