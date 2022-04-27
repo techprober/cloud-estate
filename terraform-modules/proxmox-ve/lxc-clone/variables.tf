@@ -41,7 +41,7 @@ variable "container_clone_storage" {
 }
 
 variable "container_start_after_creation" {
-  default     = true
-  description = "a boolean that determines if the container is started after creation. Default is true"
+  default     = false
+  description = "a boolean that determines if the container is started after creation. Default is false"
   type        = bool
 }
