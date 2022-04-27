@@ -1,0 +1,143 @@
+#!/bin/bash
+
+set -euo pipefail
+
+template="proxmox-packer-template.pkr.hcl"
+vm_id=
+vm_type=
+vm_name=
+build_type=
+only=false
+only_opt=
+var_file=
+
+# Proxmox Builder
+
+# --- Arguments Parsing --- #
+
+available_vm() {
+  [[ -n ${1:-} ]] && echo "$1"
+  cat << EOF
+
+Desciption: A powerful script that bakes custom vm template with packer
+
+Usage: bake-vm [options] [arguments]
+
+Available VM:
+
+- ubuntu-2004-server
+- ubuntu-2204-server
+- docker-ubuntu-2204-server
+- containerd-ubuntu-2204-server
+- minio-ubuntu-2204-server
+- cn-ubuntu-2204-server
+- custom
+
+[Warning]: options must be passed before perfoming the actual action
+
+EOF
+  exit 1
+}
+
+print_help() {
+  [[ -n ${1:-} ]] && echo "$1"
+  cat << EOF
+
+Desciption: A powerful script that bakes custom vm template with packer
+
+Usage: bake-vm [options] [arguments]
+
+Available Options:
+
+-h, --help           Print help message
+-a, --all            Print available VM type
+
+-i, --vmid           [required|number]  VM ID (default: 9000)
+-t, --type           [required|string]  Type of VM to be baked, use -a to see all the available VM type
+
+-n, --name           [optional|string]  VM name
+-b, --build          [optional|string]  Use custom type of build defined in packer template
+-d, --var-file       [optional|string]  Custom packer var-file path (default: ./vars/ubuntu-2204.json)
+-d, --isodata        [optional|string]  ISO data path (e.g "local:iso/ubuntu-22.04-live-server-amd64.iso")
+
+Basic Usage:   ./bake -t ubuntu-2204-server
+
+Advance Usage: ./bake -i 9001 -t custom -n ubuntu-server-template -b minio -f ./vars/kevin-ubuntu-2204.json
+
+[Warning]: options must be passed before perfoming the actual action
+
+EOF
+  exit 1
+}
+
+ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+cd "${ROOT}"
+
+function echoW {
+  echo;
+  echo -e "\033[1;37m########## $@\033[0m";
+}
+
+# transform long options (--) to short ones (-) as only such are supported by bash built-in argparse
+for arg in "$@"; do
+  shift
+  case "$arg" in
+    "--help")     set -- "$@" "-h" ;;
+    "--all")      set -- "$@" "-a" ;;
+    "--vmid")     set -- "$@" "-v" ;;
+    "--type")     set -- "$@" "-t" ;;
+    "--name")     set -- "$@" "-n" ;;
+    "--build")    set -- "$@" "-b" ;;
+    "--var-file") set -- "$@" "-f" ;;
+    "--iso-data") set -- "$@" "-d" ;;
+    "--"*)        print_help "[Error]: Unknown option: "$arg"" >&2; exit;;
+    *)            set -- "$@" "$arg"
+  esac
+done
+
+# handle argument parsing
+while getopts ":hai:t:n:b:f:d:" opt; do
+  case $opt in
+    # print help message
+    h|--help) print_help; exit;;
+    # print available vm templates
+    a|--all) available_vm; exit;;
+    # pass vm id
+    i|--vmid) vm_id=$OPTARG;;
+    # pass vm type
+    t|--type) vm_type=$OPTARG;;
+    # pass vm name
+    n|--name) vm_name=$OPTARG;;
+    # specify custom-build build type
+    b|--build) build_type=$OPTARG;;
+    # specify packer var-file path
+    f|--var-file) var_file=$OPTARG;;
+    # specify custom iso-data path
+    d|--iso-data) iso_data=$OPTARG;;
+    # unknown option
+   \?) print_help "[Error]: Unknown option: -"$OPTARG"" >&2; exit;;
+    # invalid option
+    :) print_help "[Error]: Option -"$OPTARG" requires an argument" >&2; exit;;
+  esac
+done
+
+[[ ! $(jq -c 'keys' bakery-config.json | cat) =~ .*\"${vm_type}\".* ]] && { echo "[Error]: VM template: '${vm_type}' not found in bakery-config.json"; exit 1; }
+[[ ! -z "$vm_id" ]] && vm_id=$vm_id || vm_id=9000
+[[ ! -z "$vm_name" ]] && vm_name=$vm_name || vm_name=$vm_type
+[[ ! -z "$build_type" ]] && template="custom-${template}" || template=$template
+[[ ! -z "$build_type" ]] && build_type=$build_type || build_type="base"
+[[ ! -z "$var_file" ]] && var_file=$var_file || var_file="./vars/ubuntu-2204.json"
+
+# --- Main Operation --- #
+
+echoW "Baking ${vm_name} template with packer\n"
+
+packer build -force \
+  -var-file ${var_file} \
+  -var-file config.json \
+  -var playbook_file="playbooks/${vm_type}.yml" \
+  -var template_name=$vm_name \
+  -var proxmox_api_password=$PM_PASS \
+  -var vm_id=$vm_id \
+  -only="${build_type}.proxmox.bakery-template" \
+  $template

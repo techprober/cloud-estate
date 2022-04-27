@@ -1,0 +1,20 @@
+---
+- name: Backup data to minio bucket
+  command: "/home/{{ ansible_user }}/backup.sh"
+  register: nonroot_result
+  when: ansible_user != "root"
+
+- name: Backup data to minio bucket (root)
+  command: "/root/backup.sh"
+  register: root_result
+  when: ansible_user == "root"
+
+- name: Check if backup job has completed successfully
+  ansible.builtin.debug:
+    msg: "Backup ran successfully!"
+  when: nonroot_result is changed
+
+- name: Check if backup job (root) has completed successfully
+  ansible.builtin.debug:
+    msg: "Backup ran successfully!"
+  when: root_result is changed

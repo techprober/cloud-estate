@@ -1,7 +1,0 @@
----
-- name: Test server reachability
-  hosts: local
-  connection: local
-
-  roles:
-    - role: maintenance.reachability

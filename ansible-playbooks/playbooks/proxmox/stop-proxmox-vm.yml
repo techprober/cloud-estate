@@ -1,0 +1,13 @@
+---
+- name: Stop Proxmox VMs
+  hosts: all
+  become: yes
+
+  roles:
+    - role: ../../roles/maintenance.ops/proxmox.ops/stopvm.ops/
+      vars:
+        - pm_user: "root@pam"
+        - pm_host: "10.10.10.10"
+        - pm_node: "pve-01"
+        - target_vm_group: "Test"
+        - target_vms: [303,800] # vm operations will be executed in the index order

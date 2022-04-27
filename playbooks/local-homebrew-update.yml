@@ -1,7 +1,0 @@
----
-- name: Homebrew package update
-  hosts: local
-  connection: local
-
-  roles:
-    - role: homebrew.ops

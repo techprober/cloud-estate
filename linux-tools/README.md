@@ -34,10 +34,14 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Open-Source Software][oss icon]](https://github.com/marktext/marktext) [marktext](https://github.com/marktext/marktext) - simple and elegant open-source markdown editor that focused on speed and usability
 - [![Open-Source Software][oss icon]](https://github.com/benweet/stackedit) [stackedit](https://github.com/benweet/stackedit) - In-browser Markdown editor
+- [![Open-Source Software][oss icon]](https://github.com/peaceiris/actions-gh-pages) [actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) - GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site easily. Static-Site-Generators-friendly
+- [![Open-Source Software][oss icon]](https://github.com/jesseduffield/lazygit) [lazygit](https://github.com/jesseduffield/lazygit) - simple terminal UI for git commands
 
 ## HomeLab Related
 
 - [![Open-Source Software][oss icon]](https://github.com/Weilbyte/PVEDiscordDark) [PVEDiscordDak Theme](https://github.com/Weilbyte/PVEDiscordDark) - A Discord-like dark theme for the Proxmox Web UI
+- [![Open-Source Software][oss icon]](https://github.com/drduh/YubiKey-Guide) [YubiKey-Guide](https://github.com/drduh/YubiKey-Guide) - Guide to using YubiKey for GPG and SSH
+- [![Open-Source Software][oss icon]](https://github.com/jamesog/yubikey-ssh) [yubikey-ssh](https://github.com/jamesog/yubikey-ssh) - https://github.com/jamesog/yubikey-ssh
 
 ## Command Line Utilities
 
@@ -49,6 +53,8 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/sharkdp/vivid) [vivid](https://github.com/sharkdp/vivid) - vivid is a generator for the LS_COLORS environment variable that controls the colorized output of ls, tree, fd, bfs, dust and many other tools
 - [![Open-Source Software][oss icon]](https://github.com/oleiade/trousseau) [trousseau](https://github.com/oleiade/trousseau) - File based encrypted key-value store
 - [![Open-Source Software][oss icon]](https://github.com/minio/mc) [mc](https://github.com/minio/mc) - MinIO Client is a replacement for ls, cp, mkdir, diff and rsync commands for filesystems and object storage
+- [![Open-Source Software][oss icon]](https://v2raya.org/en/docs/prologue/introduction/) [v2rayA](https://v2raya.org/en/docs/prologue/introduction/) - v2rayA is an easy-to-use and powerful V2Ray client focused on Linux
+- [![Open-Source Software][oss icon]](https://github.com/mr-karan/doggo) [doggo](https://github.com/mr-karan/doggo) - 🐶 Command-line DNS Client for Humans. Written in Golang
 
 ## Docker Images
 
@@ -60,6 +66,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Kuberentes][k8s icon]](https://github.com/derailed/k9s) [k9s](https://github.com/derailed/k9s) - Kubernetes CLI To Manage Your Clusters In Style
 - [![Kuberentes][k8s icon]](https://github.com/k0sproject/k0sctl) [k0sctl](https://github.com/k0sproject/k0sctl) - A bootstrapping and management tool for k0s clusters
 - [![Kuberentes][k8s icon]](https://github.com/datreeio/datree) [datree](https://github.com/datreeio/datree) - Prevent Kubernetes Misconfigurations
+- [![Kuberentes][k8s icon]](https://github.com/ahmetb/kubectx) [kubectx+kubens](https://github.com/ahmetb/kubectx) - Faster way to switch between clusters and namespaces in kubectl
 
 ## CloudNative Solutions
 
@@ -72,6 +79,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/containers/buildah) [buildah](https://github.com/containers/buildah) - A tool that facilitates building Open Container Initiative (OCI) container images
 - [![CloudNative][cncf icon]](https://github.com/moby/buildkit) [buildkit](https://github.com/moby/buildkit) - BuildKit is a toolkit for converting source code to build artifacts in an efficient, expressive and repeatable manner
 - [![CloudNative][cncf icon]](https://github.com/terrytangyuan/awesome-argo) [awesome-argo](https://github.com/terrytangyuan/awesome-argo) - A curated list of awesome projects and resources related to Argo, a Cloud Native Computing Foundation (CNCF) hosted project
+- [![CloudNative][cncf icon]](https://github.com/pivotal/kpack) [kpack](https://github.com/pivotal/kpack) - Kubernetes Native Container Build Service
 
 ## Applications
 

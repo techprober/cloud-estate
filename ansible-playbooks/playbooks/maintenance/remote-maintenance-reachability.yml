@@ -1,0 +1,6 @@
+---
+- name: Test remote server reachability
+  hosts: remote
+
+  roles:
+    - role: ../../roles/maintenance.ops/reachability.ops/

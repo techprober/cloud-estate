@@ -1,0 +1,10 @@
+---
+# Run the equivalent of "pacman -Sy" as a separate step
+- name: Update package source list
+  pacman:
+    update_cache: yes
+
+- name: Install packages defined in the list
+  pacman:
+    name: "{{ packages }}"
+    state: latest

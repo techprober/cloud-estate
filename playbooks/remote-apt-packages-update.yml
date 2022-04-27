@@ -1,7 +1,0 @@
----
-- name: Upgrade remote server
-  hosts: remote
-  become: yes
-
-  roles:
-    - role: apt.ops

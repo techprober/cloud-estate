@@ -1,0 +1,10 @@
+---
+- name: Install new ssh key
+  hosts: all
+
+  vars:
+    - public_keys:
+      - ~/.ssh/id_rsa_yubikey.pub
+    - operation: add
+  roles:
+  - role: ../../roles/maintenance.ops/key.ops/

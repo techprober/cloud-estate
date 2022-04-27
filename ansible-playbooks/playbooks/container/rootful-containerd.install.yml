@@ -1,0 +1,18 @@
+---
+- name: Perform Containerd Installation
+  hosts: all
+  become: yes
+
+  vars_files:
+    - ../../roles/container.ops/containerd.ops/vars/main.yml
+  roles:
+    # change apt source (optional)
+    - role: ../../roles/apt.ops/set-sources.ops/
+      vars:
+      - primary_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
+      - security_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
+      - release: "jammy"
+    # default installation (rootful mode)
+    - role: ../../roles/container.ops/containerd.ops
+      vars:
+        - rootless_containerd: false

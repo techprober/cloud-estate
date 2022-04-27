@@ -1,0 +1,10 @@
+---
+- name: (Pre-ops) Print host information
+  ansible.builtin.debug:
+    msg: |
+     ------------------------------------------------------
+     Host            | {{ pm_host }}
+     Node            | {{ pm_node }}
+     Target VM Group | {{ target_vm_group }}
+     Target VMs      | {{ target_vms }}
+     ------------------------------------------------------

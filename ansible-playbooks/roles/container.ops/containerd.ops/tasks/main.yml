@@ -1,0 +1,17 @@
+---
+# rootless containerd
+- include_tasks: rootless-user.yml
+  when: rootless_containerd
+- include_tasks: rootless-install.yml
+  when: rootless_containerd
+
+# rootful containerd
+- include_tasks: containerd-install.yml
+  when: not rootless_containerd
+- include_tasks: nerdctl-install.yml
+  when: not rootless_containerd
+- include_tasks: buildkit-install.yml
+  when: not rootless_containerd
+
+- include_tasks: ipv4_forward.yml
+- include_tasks: reboot.yml

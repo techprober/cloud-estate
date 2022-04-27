@@ -1,2 +1,0 @@
-- include_tasks: pacman-update.yml
-- include_tasks: yay-update.yml

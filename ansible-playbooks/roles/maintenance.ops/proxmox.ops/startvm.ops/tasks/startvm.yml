@@ -1,0 +1,11 @@
+---
+- name: Start target VM(s)
+  community.general.proxmox_kvm:
+    vmid: "{{ item }}"
+    api_user: "{{ pm_user }}"
+    api_password: "{{ lookup('env','PM_PASS') }}"
+    api_host: "{{ pm_host }}"
+    node: "{{ pm_node }}"
+    state: started
+    force: yes
+  loop: "{{ target_vms }}"

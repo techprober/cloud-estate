@@ -1,0 +1,11 @@
+---
+- name: Install packages with pacman
+  hosts: all
+  become: yes
+
+  vars:
+    # Packages to be installed
+    - packages:
+      - lnav
+  roles:
+    - role: ../../roles/pacman.ops/install-packages.ops/

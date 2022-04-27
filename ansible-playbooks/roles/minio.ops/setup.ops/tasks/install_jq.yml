@@ -1,0 +1,10 @@
+---
+- name: Gather package facts
+  package_facts:
+    manager: apt
+
+- name: Install jq if jq is absent
+  apt:
+    name: jq
+    state: present
+  when: '"jq" not in ansible_facts.packages'

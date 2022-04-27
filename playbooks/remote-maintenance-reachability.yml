@@ -1,6 +1,0 @@
----
-- name: Test remote server reachability
-  hosts: remote
-
-  roles:
-    - role: maintenance.reachability

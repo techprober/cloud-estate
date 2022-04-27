@@ -1,0 +1,33 @@
+---
+- name: Install minio client cli, if not present
+  block:
+    - name: Check if minio client cli is installed
+      command: "mc --version"
+      register: result
+      changed_when: false
+      failed_when: result.rc != 0
+      check_mode: false
+
+  rescue:
+    - name: Get the latest release
+      get_url:
+        url: https://dl.min.io/client/mc/release/linux-amd64/mc
+        dest: /usr/bin/mc
+      when: result.rc != 0
+      check_mode: false
+
+    - name: Grant executable permission to mc
+      ansible.builtin.file:
+        path: /usr/bin/mc
+        state: file
+        mode: a+x
+      check_mode: false
+
+    - name: Connect to remote minio server with credentials
+      command: "mc config host add minio {{ remote_server }} {{ lookup('env','MINIO_ACCESS_KEY') }} {{ lookup('env','MINIO_SECRET_KEY') }}"
+      register: authentication_result
+
+    - name: Report result
+      ansible.builtin.debug:
+        msg: "Installation finished!"
+      check_mode: false

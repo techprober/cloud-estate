@@ -1,0 +1,7 @@
+---
+- name: Test server reachability
+  hosts: local
+  connection: local
+
+  roles:
+    - role: ../../roles/maintenance.ops/reachability.ops/

@@ -1,8 +1,0 @@
----
-- name: Archlinux package update
-  hosts: local
-  become: yes
-  connection: local
-
-  roles:
-    - role: arch.update

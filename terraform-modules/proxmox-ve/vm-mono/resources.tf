@@ -43,6 +43,7 @@ resource "proxmox_vm_qemu" "vm" {
   network {
     model  = var.vm_network_model
     bridge = var.vm_network_bridge
+    tag    = var.vm_network_tag
   }
 
   # ignore network changes during the life of the VM
@@ -52,7 +53,7 @@ resource "proxmox_vm_qemu" "vm" {
     ]
   }
 
-  ipconfig0  = "ip=${var.vm_network_ip}/24,gw=${var.vm_network_gateway}"
+  ipconfig0  = "ip=${var.vm_network_ip}/${var.vm_network_netmask},gw=${var.vm_network_gateway}"
   nameserver = var.vm_network_dns
 
   sshkeys = <<EOF

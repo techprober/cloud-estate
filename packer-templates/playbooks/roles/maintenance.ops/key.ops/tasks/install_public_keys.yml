@@ -1,0 +1,7 @@
+---
+- name: Install public keys
+  ansible.posix.authorized_key:
+    user: "{{ ansible_user }}"
+    state: present
+    key: "{{ lookup('file', '{{ item }}') }}"
+  loop: "{{ key.public_keys }}"

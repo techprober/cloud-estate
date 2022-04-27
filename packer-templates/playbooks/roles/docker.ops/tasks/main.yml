@@ -1,0 +1,3 @@
+---
+- import_tasks: ./docker-install.yml
+- import_tasks: ./docker-compose-install.yml

@@ -1,0 +1,42 @@
+---
+- name: Check if remote minio server is reachable
+  command: "/usr/bin/curl --connect-timeout 10 --silent --show-error {{ remote_server }}"
+  register: result
+  changed_when: false
+  failed_when: result.rc != 0
+
+- name: Configure Minio Client
+  block:
+    - name: Check if mc is connected properly with the remote server
+      command: "mc ls minio"
+      register: is_config_ok
+      changed_when: false
+      failed_when: result.rc != 0
+
+    - name: Report result
+      ansible.builtin.debug:
+        msg: "Config already exists, authenticated successfully!"
+      when:
+        - is_config_ok.stdout | length == 0
+
+  rescue:
+    - name: Fetch current minio server ip address
+      shell: |
+        cat ~/.mc/config.json | jq '.aliases.minio.url' | tr -d '""'
+      register: server
+
+    - name: Set current server ip address as fact
+      ansible.builtin.set_fact:
+        current_server={{ server.stdout }}
+
+    - name: Update minio server ip
+      shell: |
+        mv ~/.mc/config.json ~/.mc/config.json.backup
+        jq '.aliases.minio.url |= "{{ remote_server }}"' ~/.mc/config.json.backup | tee -a ~/.mc/config.json > /dev/null
+      register: is_server_changed
+      when: remote_server != current_server
+
+    - name: Report result
+      ansible.builtin.debug:
+        msg: "Successfully updated minio server connection! Current minio server: {{ remote_server }}"
+      when: is_server_changed is changed
