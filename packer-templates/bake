@@ -29,7 +29,6 @@ Available VM:
 - ubuntu-2204-server
 - docker-ubuntu-2204-server
 - containerd-ubuntu-2204-server
-- minio-ubuntu-2204-server
 - cn-ubuntu-2204-server
 - custom
 
