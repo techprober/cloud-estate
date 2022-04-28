@@ -1,14 +1,18 @@
 ---
-home:
+servers:
+  vars:
+    ansible_user: root
+    ansible_ssh_private_key_file: ~/.ssh/id_rsa
+
   hosts:
-    portainer:
-      ansible_host: portainer
-      ansible_user: root
-      ansible_ssh_private_key_file: ~/.ssh/id_rsa
+    ubuntu-server:
+      ansible_host: "xxx.xxx.xxx.xxx"
 
 remote:
+  vars:
+    ansible_user: root
+    ansible_ssh_private_key_file: ~/.ssh/id_rsa
+
   hosts:
-    seedbox:
-      ansible_host: seedbox
-      ansible_user: root
-      ansible_ssh_private_key_file: ~/.ssh/vps
+    vps:
+      ansible_host: "xxx.xxx.xxx.xxx"
