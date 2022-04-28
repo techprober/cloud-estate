@@ -57,7 +57,7 @@ Available Options:
 
 -n, --name           [optional|string]  VM name
 -b, --build          [optional|string]  Use custom type of build defined in packer template
--d, --var-file       [optional|string]  Custom packer var-file path (default: ./vars/ubuntu-2204.json)
+-f, --var-file       [optional|string]  Custom packer var-file path (default: ./vars/ubuntu-2204.json)
 -d, --isodata        [optional|string]  ISO data path (e.g "local:iso/ubuntu-22.04-live-server-amd64.iso")
 
 Basic Usage:   ./bake -t ubuntu-2204-server
