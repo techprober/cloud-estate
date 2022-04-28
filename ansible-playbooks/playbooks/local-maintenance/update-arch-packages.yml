@@ -5,4 +5,4 @@
   connection: local
 
   roles:
-    - role: ../../roles/arch.update/
+    - role: pacman.ops/update.ops/

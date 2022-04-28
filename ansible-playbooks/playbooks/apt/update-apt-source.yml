@@ -8,4 +8,4 @@
     - security_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
     - release: "jammy" # change the release to fit your need
   roles:
-    - role: ../../roles/apt.ops/set-sources.ops/
+    - role: apt.ops/set-sources.ops/

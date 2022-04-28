@@ -6,4 +6,4 @@
   vars:
     - remote_server: "http://10.178.0.9:9000"
   roles:
-    - role: ../../roles/minio.ops/setup.ops/
+    - role: minio.ops/setup.ops/

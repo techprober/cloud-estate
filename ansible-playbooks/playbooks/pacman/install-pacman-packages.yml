@@ -8,4 +8,4 @@
     - packages:
       - lnav
   roles:
-    - role: ../../roles/pacman.ops/install-packages.ops/
+    - role: pacman.ops/install-packages.ops/

@@ -7,4 +7,4 @@
       - ~/.ssh/id_rsa_yubikey.pub
     - operation: add
   roles:
-  - role: ../../roles/maintenance.ops/key.ops/
+  - role: maintenance.ops/key.ops/

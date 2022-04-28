@@ -3,4 +3,4 @@
   hosts: remote
 
   roles:
-    - role: ../../roles/maintenance.ops/reachability.ops/
+    - role: maintenance.ops/reachability.ops/

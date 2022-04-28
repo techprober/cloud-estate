@@ -7,5 +7,5 @@
     - proxy_server: http://10.189.17.7:8118
     - no_proxy: "localhost,127.0.0.1,k8s-loadbalancer.homelab.sh"
   roles:
-    - role: ../../roles/server.ops/proxy.ops
-    - role: ../../roles/server.ops/reboot.ops
+    - role: server.ops/proxy.ops
+    - role: server.ops/reboot.ops

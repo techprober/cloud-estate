@@ -4,4 +4,4 @@
   connection: local
 
   roles:
-    - role: ../../roles/homebrew.ops/
+    - role: roles/homebrew.ops/

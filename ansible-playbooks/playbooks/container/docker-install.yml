@@ -6,4 +6,4 @@
   vars:
     - compose_version: "1.29.2"
   roles:
-    - role: ../../roles/container.ops/docker.ops/
+    - role: container.ops/docker.ops/

@@ -8,4 +8,4 @@
       - ~/.ssh/ansible_id_rsa.pub
     - operation: remove
   roles:
-    - role: ../../roles/maintenance.ops/key.ops/
+    - role: maintenance.ops/key.ops/

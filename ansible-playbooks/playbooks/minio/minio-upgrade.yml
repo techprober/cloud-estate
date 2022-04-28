@@ -4,4 +4,4 @@
   become: yes
 
   roles:
-    - role: ../../roles/minio.ops/upgrade.ops/
+    - role: minio.ops/upgrade.ops/

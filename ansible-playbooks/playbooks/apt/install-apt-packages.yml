@@ -15,4 +15,4 @@
       - tree
       - iputils-ping
   roles:
-    - role: ../../roles/apt.ops/install-packages.ops/
+    - role: apt.ops/install-packages.ops/
