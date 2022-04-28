@@ -1,0 +1,11 @@
+---
+- name: Add user to remote server
+  hosts: all
+
+  vars:
+    - public_keys:
+      - ~/.ssh/id_rsa.pub
+  roles:
+  - role: maintenance.ops/user.ops/add.ops/
+    become: yes
+    username: packer
