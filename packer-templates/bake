@@ -21,7 +21,7 @@ available_vm() {
 
 Desciption: A powerful script that bakes custom vm template with packer
 
-Usage: bake-vm [options] [arguments]
+Usage: bake [options] [arguments]
 
 Available VM:
 
