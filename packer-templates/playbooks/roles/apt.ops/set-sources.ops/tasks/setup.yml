@@ -51,4 +51,4 @@
 - name: Keep apt up-to-date with custom source
   ansible.builtin.apt:
     update_cache: yes
-    upgrade: yes
+    upgrade: full
