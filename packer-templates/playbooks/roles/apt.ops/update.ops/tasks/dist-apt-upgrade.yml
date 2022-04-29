@@ -1,4 +1,38 @@
 ---
+- name: Remove apt lock files
+  block:
+    - name: Get apt process id
+      shell: "ps -ef | grep -v grep | grep -w apt | awk '{print $2}'"
+      register: processes
+
+    - name: Kill apt process
+      shell: "kill -9 {{ item }}"
+      with_items: "{{ processes.stdout_lines }}"
+
+    - wait_for:
+        path: "/proc/{{ item }}/status"
+        state: absent
+      with_items: "{{ processes.stdout_lines }}"
+      ignore_errors: yes
+
+    - name: Remove /var/lib/apt/lists/lock
+      ansible.builtin.file:
+        path: /var/lib/apt/lists/lock
+        state: absent
+
+    - name: Remove /var/cache/apt/archives/lock
+      ansible.builtin.file:
+        path: /var/cache/apt/archives/lock
+        state: absent
+
+    - name: Remove /var/lib/dpkg/lock
+      ansible.builtin.file:
+        path: /var/lib/dpkg/lock
+        state: absent
+
+    - name: Reconfigure the packages
+      shell: "dpkg --configure -a"
+
 - name: Upgrade the OS (apt-get dist-upgrade)
   ansible.builtin.apt:
     update_cache: yes
