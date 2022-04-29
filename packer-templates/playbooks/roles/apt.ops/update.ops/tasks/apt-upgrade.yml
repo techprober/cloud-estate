@@ -9,7 +9,8 @@
       shell: "kill -9 {{ item }}"
       with_items: "{{ processes.stdout_lines }}"
 
-    - wait_for:
+    - name: Wait for kill process to be killed
+      wait_for:
         path: "/proc/{{ item }}/status"
         state: absent
       with_items: "{{ processes.stdout_lines }}"
