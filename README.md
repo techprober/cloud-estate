@@ -12,10 +12,10 @@
       <img src="https://img.shields.io/tokei/lines/github/TechProber/cloud-estate?color=orange" alt="lines">
     </a>
     <a href="https://hub.docker.com/repository/docker/hikariai/">
-        <img src="https://img.shields.io/badge/docker-v20.10.7-blue" alt="Version">
+        <img src="https://img.shields.io/badge/docker-v20.10-blue" alt="Version">
     </a>
     <a href="https://kubernetes.io/">
-        <img src="https://img.shields.io/badge/kubernetes-v1.22-navy.svg" alt="Kubernetes"/>
+        <img src="https://img.shields.io/badge/kubernetes-v1.23.5-navy.svg" alt="Kubernetes"/>
     </a>
     <a href="https://github.com/TechProber/cloud-estate">
         <img src="https://img.shields.io/github/last-commit/TechProber/cloud-estate" alt="lastcommit"/>
