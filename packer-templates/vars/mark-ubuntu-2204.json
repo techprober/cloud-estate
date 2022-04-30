@@ -1,0 +1,44 @@
+{
+  "os": "l26",
+  "cores": "2",
+  "sockets": "1",
+  "memory": "2048",
+  "bridge": "vmbr1",
+  "disk_type": "scsi",
+  "disk_size": "10G",
+  "disk_format": "raw",
+  "disk_cache_mode": "writeback",
+  "datastore": "ssd-pool",
+  "datastore_type": "directory",
+  "cloud_init_storage_pool": "ssd-pool",
+
+  "iso": "ssd-pool:iso/ubuntu-22.04-live-server-amd64.iso",
+
+  "ssh_password": "packer",
+  "ssh_username": "packer",
+  "ssh_timeout": "60m",
+
+  "http_directory": "http",
+
+  "boot_command": [
+    "<esc><esc><esc><esc>e<wait>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "linux /casper/vmlinuz --- autoinstall ds=\"nocloud-net;seedfrom=http://{{.HTTPIP}}:{{.HTTPPort}}/\"<enter><wait>",
+    "initrd /casper/initrd<enter><wait>",
+    "boot<enter>",
+    "<enter><f10><wait>"
+  ]
+}
