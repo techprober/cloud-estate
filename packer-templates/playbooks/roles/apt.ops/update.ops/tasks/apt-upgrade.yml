@@ -8,6 +8,7 @@
     - name: Kill apt process
       shell: "kill -9 {{ item }}"
       with_items: "{{ processes.stdout_lines }}"
+      ignore_errors: yes
 
     - name: Wait for kill process to be killed
       wait_for:
