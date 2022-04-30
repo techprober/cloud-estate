@@ -31,20 +31,14 @@
       with_items: "{{ processes.stdout_lines }}"
       ignore_errors: yes
 
-    - name: Remove /var/lib/apt/lists/lock
+    - name: Remove apt lock files
       ansible.builtin.file:
-        path: /var/lib/apt/lists/lock
+        path: "{{ item }}"
         state: absent
-
-    - name: Remove /var/cache/apt/archives/lock
-      ansible.builtin.file:
-        path: /var/cache/apt/archives/lock
-        state: absent
-
-    - name: Remove /var/lib/dpkg/lock
-      ansible.builtin.file:
-        path: /var/lib/dpkg/lock
-        state: absent
+      loop:
+        - /var/lib/apt/lists/lock
+        - /var/cache/apt/archives/lock
+        - /var/lib/apt/lists/lock
 
     - name: Reconfigure the packages
       shell: "dpkg --configure -a"
