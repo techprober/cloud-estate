@@ -33,7 +33,7 @@ autoinstall:
     users:
       - name: packer
         passwd: $6$xyz$JJbmTJ7EzYLxcBOnv3bwWLhpQZ.WuX8yJkNaLKgtS747n2zUNPh8LZKhQPBnLAptBG429x5r0RJ.ZFIXiIMPw/ #packer
-        groups: [adm, cdrom, dip, plugdev, lxd, sudo]
+        groups: [adm, cdrom, dip, plugdev, lxd]
         lock-passwd: false
         sudo: ALL=(ALL) NOPASSWD:ALL
         shell: /bin/bash
