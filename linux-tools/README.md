@@ -107,6 +107,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/lukas-reineke/indent-blankline.nvim) [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) - Indent-blankline plugin adds indentation guides to all lines (including empty lines)
 - [![Neovim][nvim icon]](https://github.com/phaazon/hop.nvim#word-mode-hopword) [hop](https://github.com/phaazon/hop.nvim#word-mode-hopword) - Hop is an EasyMotion-like plugin allowing you to jump anywhere in a document with as few keystrokes as possible
 - [![Neovim][nvim icon]](https://github.com/instant-markdown/vim-instant-markdown) [instant-markdown-preview](https://github.com/instant-markdown/vim-instant-markdown) - Instant Markdown previews from Vim
+- [![Neovim][nvim icon]](https://github.com/Roy-Orbison/nord-vim-256) [nord-vim-256](https://github.com/Roy-Orbison/nord-vim-256) - An arctic, north-bluish clean and elegant Vim theme
 
 ## Contribution
 
