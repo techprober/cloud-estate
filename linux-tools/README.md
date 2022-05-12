@@ -107,7 +107,10 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/lukas-reineke/indent-blankline.nvim) [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) - Indent-blankline plugin adds indentation guides to all lines (including empty lines)
 - [![Neovim][nvim icon]](https://github.com/phaazon/hop.nvim#word-mode-hopword) [hop](https://github.com/phaazon/hop.nvim#word-mode-hopword) - Hop is an EasyMotion-like plugin allowing you to jump anywhere in a document with as few keystrokes as possible
 - [![Neovim][nvim icon]](https://github.com/instant-markdown/vim-instant-markdown) [instant-markdown-preview](https://github.com/instant-markdown/vim-instant-markdown) - Instant Markdown previews from Vim
-- [![Neovim][nvim icon]](https://github.com/Roy-Orbison/nord-vim-256) [nord-vim-256](https://github.com/Roy-Orbison/nord-vim-256) - An arctic, north-bluish clean and elegant Vim theme
+- [![Neovim][nvim icon]](https://github.com/folke/zen-mode.nvim) [zen-mode](https://github.com/folke/zen-mode.nvim) - 🧘 Distraction-free coding for Neovim
+- [![Neovim][nvim icon]](https://github.com/folke/twilight.nvim) [twilight](https://github.com/folke/twilight.nvim) - 🌅 Twilight is a Lua plugin for Neovim 0.5 that dims inactive portions of the code you're editing using TreeSitter
+- [![Neovim][nvim icon]](https://github.com/sindrets/diffview.nvim) [diffview.nvim](https://github.com/sindrets/diffview.nvim) - Single tabpage interface for easily cycling through diffs for all modified files for any git rev
+- [![Neovim][nvim icon]](https://github.com/lewis6991/spellsitter.nvim) [spellsitter.nvim](https://github.com/lewis6991/spellsitter.nvim) - Treesitter powered spellchecker
 
 ## Contribution
 
