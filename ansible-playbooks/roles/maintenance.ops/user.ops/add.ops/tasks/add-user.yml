@@ -15,7 +15,9 @@
 - name: Add sudoers users to wheel group
   user:
     name: "{{ username }}"
-    groups: wheel
+    groups:
+    - wheel
+    - sudo
     append: yes
     shell: /bin/bash
     state: present
