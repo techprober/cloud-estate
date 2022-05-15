@@ -1,6 +1,6 @@
 ---
 - name: Purge Proxmox LXC Container
-  hosts: all
+  hosts: pve
   become: yes
 
   vars_files:
