@@ -17,7 +17,7 @@
       pubkey:         | {{ lxc.pubkey}}
       ------------------------------------------------------
 
-- name: Create a new LXC container with a set of custom params
+- name: Create a new LXC container with a set of custom parameters
   community.general.proxmox:
     node: " {{ proxmox.node }} "
     api_host: "{{ proxmox.api_host }}"
