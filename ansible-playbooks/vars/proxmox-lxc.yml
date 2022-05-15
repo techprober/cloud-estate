@@ -21,6 +21,7 @@ lxc:
   nameserver: "8.8.8.8"
   storage: "local"
   disk_size: "10"
+  unprivileged: no
   features:
   - fuse=1
   - nesting=1
