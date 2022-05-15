@@ -106,7 +106,7 @@ variable "container_network_gateway" {
 }
 
 variable "container_network_tag" {
-  default     = ""
+  default     = -1
   description = "a number that specifies the VLAN tag of the network interface. Automatically determined if not set"
   type        = number
 }
