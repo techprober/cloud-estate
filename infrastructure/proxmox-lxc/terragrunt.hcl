@@ -25,6 +25,7 @@ inputs = {
   container_network_interface = "eth0"
   container_network_bridge    = "vmbr0"
   container_network_ip        = "192.168.1.1/24"
+  container_network_tag       = -1 # novlan tag by default
   container_network_gateway   = "192.168.1.1"
   container_network_dns       = "8.8.8.8"
 
