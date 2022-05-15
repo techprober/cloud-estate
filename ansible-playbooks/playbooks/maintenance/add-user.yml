@@ -5,7 +5,7 @@
   vars:
     - public_keys:
       - ~/.ssh/id_rsa.pub
+    - username: packer
   roles:
   - role: maintenance.ops/user.ops/add.ops/
     become: yes
-    username: packer
