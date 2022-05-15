@@ -1,2 +1,2 @@
 ---
-- include_task: wait_for.yml
+- include_tasks: wait_for.yml
