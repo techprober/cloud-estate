@@ -1,0 +1,4 @@
+- name: Wait {{ timeout }} seconds, but only start checking after {{ delay }} seconds
+  wait_for_connection:
+    delay: "{{ delay }}"
+    timeout: "{{ timeout }}"

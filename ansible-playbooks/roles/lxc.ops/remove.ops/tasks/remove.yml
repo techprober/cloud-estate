@@ -1,0 +1,17 @@
+---
+- name: 'Stop target LXC container'
+  community.general.proxmox:
+    vmid: "{{ lxc.vmid }}"
+    api_user: "{{ proxmox.api_user }}"
+    api_password: "{{ proxmox.api_password }}"
+    api_host: "{{ proxmox.api_host }}"
+    state: stopped
+
+- name: 'Remove and purge target LXC container'
+  community.general.proxmox:
+    vmid: "{{ lxc.vmid }}"
+    api_user: "{{ proxmox.api_user }}"
+    api_password: "{{ proxmox.api_password }}"
+    api_host: "{{ proxmox.api_host }}"
+    purge: yes
+    state: absent

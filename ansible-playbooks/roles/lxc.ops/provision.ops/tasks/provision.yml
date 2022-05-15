@@ -1,0 +1,51 @@
+---
+- name: Verify configuration parameters
+  ansible.builtin.debug:
+    msg: |
+      ------------------------------------------------------
+      vmid            | {{ lxc.vmid }}
+      description     | {{ lxc.description }}
+      hostname        | {{ lxc.hostname }}
+      cores           | {{ lxc.cores }}
+      memory          | {{ lxc.memory }}
+      swap            | {{ lxc.swap }}
+      ostemplate      | {{ lxc.ostemplate }}
+      netif           | {{ lxc.netif }}
+      nameserver      | {{ lxc.nameserver }}
+      storage         | {{ lxc.storage }}
+      disk            | {{ lxc.disk_size }}
+      unprivileged    | {{ lxc.unprivileged }}
+      features        | {{ lxc.features }}
+      pubkey          | {{ lxc.pubkey }}
+      ------------------------------------------------------
+
+- name: Provision a new LXC container with a set of custom parameters
+  community.general.proxmox:
+    node: "{{ proxmox.api_node }}"
+    api_host: "{{ proxmox.api_host }}"
+    api_user: "{{ proxmox.api_user }}"
+    api_password: "{{ proxmox.api_password }}"
+    vmid: "{{ lxc.vmid }}"
+    description: "{{ lxc.description }}"
+    hostname: "{{ lxc.hostname }}"
+    password: "{{ lxc.password }}"
+    cores: "{{ lxc.cores }}"
+    memory: "{{ lxc.memory }}"
+    swap: "{{ lxc.swap }}"
+    ostemplate: "{{ lxc.ostemplate }}"
+    netif: "{{ lxc.netif }}"
+    nameserver: "{{ lxc.nameserver }}"
+    storage: "{{ lxc.storage }}"
+    disk: "{{ lxc.disk_size }}"
+    unprivileged: "{{ lxc.unprivileged }}"
+    features: "{{ lxc.features }}"
+    pubkey: "{{ lookup('file', '{{ lxc.pubkey }}') }}"
+    timeout: "{{ proxmox.timeout }}"
+
+- name: Start LXC container
+  community.general.proxmox:
+    api_user: "{{ proxmox.api_user }}"
+    api_password: "{{ proxmox.api_password }}"
+    api_host: "{{ proxmox.api_host }}"
+    vmid: "{{ lxc.vmid }}"
+    state: started

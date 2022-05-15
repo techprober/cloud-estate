@@ -1,0 +1,7 @@
+- name: (Pre-ops) Print Proxmox node information
+  ansible.builtin.debug:
+    msg: |
+     ------------------------------------------------------
+     Host            | {{ proxmox.api_host }}
+     Node            | {{ proxmox.api_node}}
+     ------------------------------------------------------

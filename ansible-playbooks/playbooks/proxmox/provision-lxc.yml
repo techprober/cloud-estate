@@ -1,0 +1,30 @@
+---
+- name: Provision Proxmox LXC Container
+  hosts: pve
+  become: yes
+
+  vars_files:
+    - ../../vars/proxmox-lxc.yml
+  roles:
+    - role: lxc.ops/provision.ops/
+
+- name: Configure LXC container
+  hosts: lxc
+  become: yes
+
+  vars_files:
+  - ../../vars/apt.yml
+  - ../../vars/maintenance.yml
+
+  roles:
+  - role: maintenance.ops/delay.ops/
+    vars:
+    - delay: 30
+  - role: maintenance.ops/user.ops/add.ops/
+  - role: apt.ops/set-sources.ops/
+    vars:
+      release: "jammy"
+  - role: apt.ops/install-packages.ops/
+    vars:
+      extra_packages:
+      - neofetch
