@@ -19,7 +19,7 @@
 
 - name: Create a new LXC container with a set of custom parameters
   community.general.proxmox:
-    node: " {{ proxmox.api_node }} "
+    node: "{{ proxmox.api_node }}"
     api_host: "{{ proxmox.api_host }}"
     api_user: "{{ proxmox.api_user }}"
     api_password: "{{ proxmox.api_password }}"
