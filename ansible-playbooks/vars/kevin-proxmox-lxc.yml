@@ -10,6 +10,7 @@ proxmox:
 # lxc configurations
 lxc:
   vmid: 999
+  description: created with ansible
   hostname: "test"
   password: "{{ lookup('env','LXC_PASS') }}"
   cores: 4
@@ -18,9 +19,11 @@ lxc:
   ostemplate: "sata-pool:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
   netif: '{"net0":"name=eth0,gw=10.178.0.5,ip=10.178.0.99/24,bridge=vmbr2"}'
   nameserver: "10.178.0.5"
-  disk: "sata-pool:vm-999-disk-0,size=10G"
+  storage: "sata-pool"
+  disk_size: "10"
   unprivileged: no
   features:
+  - fuse=1
   - nesting=1
-  - mount=cifs,nfs
+  - mount=cifs;nfs
   pubkey: "~/.ssh/id_rsa_yubikey.pub"
