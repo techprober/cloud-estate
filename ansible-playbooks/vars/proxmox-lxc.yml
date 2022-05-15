@@ -1,0 +1,9 @@
+---
+# proxmox host configurations
+pm_user: "root@pam"
+pm_host: "10.178.0.10"
+pm_node: "pve-01"
+
+# lxc configurations
+lxc_name: "test"
+lxc_vm_id: 999
