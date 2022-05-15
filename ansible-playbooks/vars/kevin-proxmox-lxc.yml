@@ -1,8 +1,8 @@
 ---
 # proxmox host configurations
 proxmox:
-  node: "10.178.0.10"
-  api_host: "pve-01"
+  api_host: "10.178.0.10"
+  api_node: "pve-01"
   api_user: "root@pam"
   api_password: "{{ lookup('env','PM_PASS') }}"
   timeout: 90
@@ -16,10 +16,10 @@ lxc:
   cores: 4
   memory: 1024
   swap: 512
-  ostemplate: "local:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
+  ostemplate: "sata-pool:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
   netif: '{"net0":"name=eth0,gw=10.178.0.5,ip=10.178.0.99/24,bridge=vmbr2"}'
   nameserver: "10.178.0.5"
-  disk: "sata-pool:vm-{{ vmid }}-disk-0,size=10G"
+  disk: "sata-pool:vm-999-disk-0,size=10G"
   unprivileged: no
   features:
   - nesting=1
