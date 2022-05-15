@@ -1,9 +1,9 @@
 ---
-- name: Provision Proxmox LXC Container
+- name: Purge Proxmox LXC Container
   hosts: all
   become: yes
 
   vars_files:
     - ../../vars/proxmox-lxc.yml
   roles:
-    - role: lxc.ops/provision.ops/
+    - role: roles/lxc.ops/remove.ops/
