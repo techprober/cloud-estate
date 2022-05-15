@@ -4,26 +4,26 @@
     msg: |
       ------------------------------------------------------
       vmid            | {{ lxc.vmid }}
-      hostname        | {{ lxc.hostname}}
+      hostname        | {{ lxc.hostname }}
       pool            | {{ lxc.pool }}
-      cores           | {{ lxc.cores}}
+      cores           | {{ lxc.cores }}
       memory          | {{ lxc.memory }}
       swap            | {{ lxc.swap }}
-      ostemplate      | {{ lxc.ostemplate}}
-      netif           | {{ lxc.netif}}
+      ostemplate      | {{ lxc.ostemplate }}
+      netif           | {{ lxc.netif }}
       nameserver      | {{ lxc.nameserver }}
-      disk            | {{ lxc.disk}}
-      features        | {{ lxc.features}}
-      pubkey:         | {{ lxc.pubkey}}
+      disk            | {{ lxc.disk }}
+      features        | {{ lxc.features }}
+      pubkey:         | {{ lxc.pubkey }}
       ------------------------------------------------------
 
 - name: Create a new LXC container with a set of custom parameters
   community.general.proxmox:
-    node: " {{ proxmox.node }} "
+    node: " {{ proxmox.api_node }} "
     api_host: "{{ proxmox.api_host }}"
     api_user: "{{ proxmox.api_user }}"
     api_password: "{{ proxmox.api_password }}"
-    vmid: "{{ lxc.vmid}}"
+    vmid: "{{ lxc.vmid }}"
     hostname: "{{ lxc.hostname }}"
     password: "{{ lxc.password }}"
     pool: "{{ lxc.pool }}"
