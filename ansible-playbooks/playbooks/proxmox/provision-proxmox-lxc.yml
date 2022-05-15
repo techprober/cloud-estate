@@ -1,0 +1,13 @@
+---
+- name: Provision Proxmox LXC Containers
+  hosts: all
+  become: yes
+
+  roles:
+    - role: lxc.ops/provision.ops/
+      vars:
+        - pm_user: "root@pam"
+        - pm_host: "10.178.0.10"
+        - pm_node: "pve-01"
+        - lxc_name: "test"
+        - lxc_vm_id: 999
