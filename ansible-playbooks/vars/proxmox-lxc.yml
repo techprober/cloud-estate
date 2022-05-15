@@ -12,7 +12,6 @@ lxc:
   vmid: 999
   hostname: "test"
   password: "{{ lookup('env','LXC_PASS') }}"
-  pool: ""
   cores: 4
   memory: 1024
   swap: 512
