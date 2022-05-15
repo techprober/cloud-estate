@@ -6,4 +6,4 @@
   vars_files:
     - ../../vars/proxmox-lxc.yml
   roles:
-    - role: roles/lxc.ops/remove.ops/
+    - role: lxc.ops/remove.ops/
