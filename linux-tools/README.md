@@ -39,6 +39,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/dandavison/delta) [git-delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output
 - [![Open-Source Software][oss icon]](https://github.com/abhisheknaiidu/awesome-github-profile-readme) [awesome-github-profile-readme](https://github.com/abhisheknaiidu/awesome-github-profile-readme) - 😎 A curated list of awesome GitHub Profile READMEs 📝
 - [![Open-Source Software][oss icon]](https://github.com/simple-icons/simple-icons) [simple-icons](https://github.com/simple-icons/simple-icons) - SVG icons for popular brands
+- [![Open-Source Software][oss icon]](https://github.com/restic/restic) [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
 
 ## HomeLab Related
 
