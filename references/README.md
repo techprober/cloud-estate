@@ -68,7 +68,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Docs][docs icon]](https://12factor.net/) [The Twelve-Factor App](https://12factor.net/) - A methodology for building software-as-a-service apps
 
-### Vim
+#### Vim
 
 - [![Docs][vim icon]](https://github.com/nanotee/nvim-lua-guide) [Nvim Lua Guide](https://github.com/nanotee/nvim-lua-guide) - Getting started using Lua in Neovim
 - [![Docs][vim icon]](https://github.com/rockerBOO/awesome-neovim) [awesome-neovim](https://github.com/rockerBOO/awesome-neovim) - Collections of awesome Neovim plugins. Mostly targeting Neovim specific features
