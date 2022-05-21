@@ -94,7 +94,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 [vim icon]: ./assets/vim.svg
 [cloudnative icon]: ./assets/cloudnative.png
 [container icon]: ./assets/container.svg
-[kubernetes icon]: ./assets/kuberentes.png
+[kubernetes icon]: ./assets/kubernetes.png
 [devops icon]: ./assets/devops.png
 [ansible icon]: ./assets/ansible.png
 [proxmox icon]: ./assets/proxmox.png
