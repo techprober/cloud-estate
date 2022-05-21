@@ -86,6 +86,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/terrytangyuan/awesome-argo) [awesome-argo](https://github.com/terrytangyuan/awesome-argo) - A curated list of awesome projects and resources related to Argo, a Cloud Native Computing Foundation (CNCF) hosted project
 - [![CloudNative][cncf icon]](https://github.com/pivotal/kpack) [kpack](https://github.com/pivotal/kpack) - Kubernetes Native Container Build Service
 - [![CloudNative][cncf icon]](https://github.com/OpenFunction/OpenFunction) [OpenFunction](https://github.com/OpenFunction/OpenFunction) - Cloud Native Function-as-a-Service Platform
+- [![CloudNative][cncf icon]](https://github.com/armosec/kubescape) [kubescape](https://github.com/armosec/kubescape) - Kubescape is a K8s open-source tool providing a multi-cloud K8s single pane of glass, including risk analysis, security compliance, RBAC visualizer and image vulnerabilities scanning.
 
 ## Applications
 
