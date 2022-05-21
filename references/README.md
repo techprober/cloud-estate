@@ -4,7 +4,7 @@ This repo is a collection of useful reference links for any of our community mem
 
 Feel free to contribute. Any recommendations and suggestions are welcome.
 
-## Catagories
+## Categories
 
 - [Productive Tools](#productive-tools)
 - [Cloud Computing](#cloud-computing)
@@ -17,7 +17,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 ### Productive Tools
 
-- [![Docs][docs icon]](https://wakatime.com/) [Wakatime](https://wakatime.com/) - Dashboards for developers, powered by open source IDE plugins
+- [![Docs][docs icon]](https://wakatime.com/) [Wakatime](https://wakatime.com/) - Dashboards for developers, powered by open-source IDE plugins
 
 ### Cloud Computing
 
@@ -30,7 +30,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ### Container
 
 - [![Docs][docs icon]](https://mkdev.me/en/posts/dockerless-part-1-which-tools-to-replace-docker-with-and-why) [Dockerless, part 1: Which tools to replace Docker with and why](https://mkdev.me/en/posts/dockerless-part-1-which-tools-to-replace-docker-with-and-why) - Why Dockerless?
-- [![Docs][docs icon]](https://mkdev.me/en/posts/dockerless-part-2-how-to-build-container-image-for-rails-application-without-docker-and-dockerfile) [Dockerless, part 2: How to build container image for Rails application without Docker and Dockerfile](https://mkdev.me/en/posts/dockerless-part-2-how-to-build-container-image-for-rails-application-without-docker-and-dockerfile) - The beaty of Buildah, an alterternative tool to build container image at speed
+- [![Docs][docs icon]](https://mkdev.me/en/posts/dockerless-part-2-how-to-build-container-image-for-rails-application-without-docker-and-dockerfile) [Dockerless, part 2: How to build container image for Rails application without Docker and Dockerfile](https://mkdev.me/en/posts/dockerless-part-2-how-to-build-container-image-for-rails-application-without-docker-and-dockerfile) - The beaty of Buildah, an alternative tool to build container image at speed
 - [![Docs][docs icon]](https://mkdev.me/en/posts/dockerless-part-3-moving-development-environment-to-containers-with-podman) [Dockerless, part 3: Moving development environment to containers with Podman](https://mkdev.me/en/posts/dockerless-part-3-moving-development-environment-to-containers-with-podman) - What is Podman and does it work?
 - [![Docs][docs icon]](https://mkdev.me/en/posts/the-tool-that-really-runs-your-containers-deep-dive-into-runc-and-oci-specifications) [The tool that really runs your containers: deep dive into runc and OCI specifications](https://mkdev.me/en/posts/the-tool-that-really-runs-your-containers-deep-dive-into-runc-and-oci-specifications) - Demystify the original container runtime
 
@@ -52,4 +52,15 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Docs][docs icon]](https://12factor.net/) [The Twelve-Factor App](https://12factor.net/) - A methodology for building software-as-a-service apps
 
+#### Golang
+
+- [![Golang][golang icon]](https://github.com/golang-standards/project-layout) [golang-standards/project-layout](https://github.com/golang-standards/project-layout) - Standard Go Project Layout
+- [![Golang][golang icon]](https://www.gobeyond.dev/standard-package-layout/) [Ben Johnson - Standard Package Layout](https://www.gobeyond.dev/standard-package-layout/) - Ben Johnson - Standard Package Layout
+- [![Golang][golang icon]](https://www.gobeyond.dev/the-go-object-lifecycle/) [The Go Object Lifecycle](https://www.gobeyond.dev/the-go-object-lifecycle/) - The Go Object Lifecycle
+- [![Golang][golang icon]](https://medium.com/sellerapp/golang-project-structuring-ben-johnson-way-2a11035f94bc) [Golang Project Structuring - Ben Johnson Way](https://medium.com/sellerapp/golang-project-structuring-ben-johnson-way-2a11035f94bc) - Golang Project Structuring - Ben Johnson Way
+- [![Docs][golang icon]](https://www.sohamkamani.com/golang/channels/) [An Introduction to Channels in Go (Golang)](https://www.sohamkamani.com/golang/channels/) - An Introduction to Channels in Go (Golang)
+- [![Docs][golang icon]](https://www.educative.io/edpresso/what-are-channels-in-golang) [What are channels in Golang?](https://www.educative.io/edpresso/what-are-channels-in-golang) - What are channels in Golang?
+- [![Docs][golang icon]](https://qiita.com/frozenbonito/items/cf21d0be8f06ddcaf54a) [Go で GitHub App (Bot) を作る](https://qiita.com/frozenbonito/items/cf21d0be8f06ddcaf54a) - シンプルな GitHub App (Bot) を Go 言語で作ってみます。
+
 [docs icon]: ./assets/docs.svg
+[golang icon]: ./assets/golang.svg
