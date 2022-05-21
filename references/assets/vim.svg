@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="15px" viewBox="0 0 15 15" version="1.1">
+<defs>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="22.625" y1="-0.173" x2="22.625" y2="211.998" gradientTransform="matrix(0.0706788,0,0,0.0706788,1.315593,0.0122257)">
+<stop offset="0" style="stop-color:rgb(8.627451%,69.019608%,92.941176%);stop-opacity:0.8;"/>
+<stop offset="1" style="stop-color:rgb(5.882353%,34.901961%,69.803922%);stop-opacity:0.835294;"/>
+</linearGradient>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="152.09" y1="-0.148" x2="152.09" y2="211.998" gradientTransform="matrix(-0.0706788,0,0,0.0706788,22.801957,0.0122257)">
+<stop offset="0" style="stop-color:rgb(49.019608%,71.372549%,26.27451%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(21.176471%,45.882353%,20%);stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="87.475" y1="-0.137" x2="87.475" y2="212.054" gradientTransform="matrix(0.0706788,0,0,0.0706788,1.315593,0.0122257)">
+<stop offset="0" style="stop-color:rgb(53.333333%,77.647059%,28.627451%);stop-opacity:0.8;"/>
+<stop offset="1" style="stop-color:rgb(26.27451%,57.254902%,25.098039%);stop-opacity:0.839216;"/>
+</linearGradient>
+</defs>
+<g id="surface1">
+<path style=" stroke:none;fill-rule:evenodd;fill:url(#linear0);" d="M 1.316406 3.226562 L 4.511719 0 L 4.511719 14.996094 L 1.316406 11.808594 Z M 1.316406 3.226562 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:url(#linear1);" d="M 13.660156 3.253906 L 10.421875 0 L 10.488281 14.996094 L 13.683594 11.808594 Z M 13.660156 3.253906 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:url(#linear2);" d="M 4.511719 0.00390625 L 12.816406 12.675781 L 10.492188 15 L 2.179688 2.355469 Z M 4.511719 0.00390625 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:0.129412;" d="M 4.511719 5.878906 L 4.507812 6.378906 L 1.945312 2.59375 L 2.179688 2.351562 Z M 4.511719 5.878906 "/>
+</g>
+</svg>
