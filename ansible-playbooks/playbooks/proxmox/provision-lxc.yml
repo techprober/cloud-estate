@@ -28,3 +28,6 @@
     vars:
       extra_packages:
       - neofetch
+
+  # optional
+  # - role: container.ops/docker.ops/
