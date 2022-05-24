@@ -43,7 +43,7 @@ pre-commit install
 
 ## Community
 
-- [Hikariai_AI Telegram Group](https://t.me/hikariai_channel)
+- [HikariaiAI Telegram Group](https://t.me/hikariai_channel)
 - [unRAID Telegram Group](https://t.me/unraid_zh)
 - [TechProber Telegram Group](https://t.me/joinchat/7AG3aEQ5I00wY2Q5)
 - [TechProber Discord Channel](https://discord.gg/se4RtrB473)
