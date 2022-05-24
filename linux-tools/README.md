@@ -18,8 +18,9 @@
 
 Feel free to contribute. Any recommendations and suggestions are welcome.
 
-- [HomeLab Related](#homelab-related)
+- [GitHub Related](#github-related)
 - [Productive Tools](#productive-tools)
+- [HomeLab Related](#homelab-related)
 - [Command Line Utilities](#command-line-utilities)
 - [Docker Images](#docker-image)
 - [Kubernetes Tools](#kubernetes-tools)
@@ -30,6 +31,14 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [Contributors](https://github.com/TechProber/cloud-estate/graphs/contributors)
 - [How to Contribute](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md)
 
+## GitHub Related
+
+- [![Open-Source Software][github icon]](https://github.com/abhisheknaiidu/awesome-github-profile-readme) [awesome-github-profile-readme](https://github.com/abhisheknaiidu/awesome-github-profile-readme) - 😎 A curated list of awesome GitHub Profile READMEs 📝
+- [![Open-Source Software][github icon]](https://github.com/rzashakeri/beautify-github-profile) [beautify-github-profile](https://github.com/rzashakeri/beautify-github-profile) - This repository helps you to have a more beautiful and attractive github profile, and you can access a complete set of tools and guides for beautifying your github profile. 🪄 ⭐
+- [![Open-Source Software][github icon]](https://github.com/tandpfun/skill-icons) [skill-icons](https://github.com/tandpfun/skill-icons) - Showcase your skills on your Github readme or resumé with ease ✨
+- [![Open-Source Software][github icon]](https://github.com/simple-icons/simple-icons) [simple-icons](https://github.com/simple-icons/simple-icons) - SVG icons for popular brands
+- [![Open-Source Software][github icon]](https://github.com/lowlighter/metrics) [metrics](https://github.com/lowlighter/metrics) - 📊 An infographics generator with 30+ plugins and 200+ options to display stats about your GitHub account and render them as SVG, Markdown, PDF or JSON!
+
 ## Productive Tools
 
 - [![Open-Source Software][oss icon]](https://github.com/marktext/marktext) [marktext](https://github.com/marktext/marktext) - simple and elegant open-source markdown editor that focused on speed and usability
@@ -37,10 +46,6 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/peaceiris/actions-gh-pages) [actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) - GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site easily. Static-Site-Generators-friendly
 - [![Open-Source Software][oss icon]](https://github.com/jesseduffield/lazygit) [lazygit](https://github.com/jesseduffield/lazygit) - simple terminal UI for git commands
 - [![Open-Source Software][oss icon]](https://github.com/dandavison/delta) [git-delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output
-- [![Open-Source Software][oss icon]](https://github.com/abhisheknaiidu/awesome-github-profile-readme) [awesome-github-profile-readme](https://github.com/abhisheknaiidu/awesome-github-profile-readme) - 😎 A curated list of awesome GitHub Profile READMEs 📝
-- [![Open-Source Software][oss icon]](https://github.com/rzashakeri/beautify-github-profile) [beautify-github-profile](https://github.com/rzashakeri/beautify-github-profile) - This repository helps you to have a more beautiful and attractive github profile, and you can access a complete set of tools and guides for beautifying your github profile. 🪄 ⭐
-- [![Open-Source Software][oss icon]](https://github.com/tandpfun/skill-icons) [skill-icons](https://github.com/tandpfun/skill-icons) - Showcase your skills on your Github readme or resumé with ease ✨
-- [![Open-Source Software][oss icon]](https://github.com/simple-icons/simple-icons) [simple-icons](https://github.com/simple-icons/simple-icons) - SVG icons for popular brands
 - [![Open-Source Software][oss icon]](https://github.com/restic/restic) [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
 
 ## HomeLab Related
@@ -134,3 +139,4 @@ Special thanks go to all [contributors](https://github.com/TechProber/cloud-esta
 [k8s icon]: ./assets/kubernetes.svg
 [cncf icon]: ./assets/cncf.svg
 [docker icon]: ./assets/docker.svg
+[github icon]: ./assets/github.svg
