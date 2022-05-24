@@ -39,6 +39,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/dandavison/delta) [git-delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output
 - [![Open-Source Software][oss icon]](https://github.com/abhisheknaiidu/awesome-github-profile-readme) [awesome-github-profile-readme](https://github.com/abhisheknaiidu/awesome-github-profile-readme) - 😎 A curated list of awesome GitHub Profile READMEs 📝
 - [![Open-Source Software][oss icon]](https://github.com/rzashakeri/beautify-github-profile) [beautify-github-profile](https://github.com/rzashakeri/beautify-github-profile) - This repository helps you to have a more beautiful and attractive github profile, and you can access a complete set of tools and guides for beautifying your github profile. 🪄 ⭐
+- [![Open-Source Software][oss icon]](https://github.com/tandpfun/skill-icons) [skill-icons](https://github.com/tandpfun/skill-icons) - Showcase your skills on your Github readme or resumé with ease ✨
 - [![Open-Source Software][oss icon]](https://github.com/simple-icons/simple-icons) [simple-icons](https://github.com/simple-icons/simple-icons) - SVG icons for popular brands
 - [![Open-Source Software][oss icon]](https://github.com/restic/restic) [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
 
