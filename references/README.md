@@ -59,6 +59,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ### DevOps
 
 - [![Docs][devops icon]](https://makefiletutorial.com/#top) [Learn Makefiles](https://makefiletutorial.com/#top) - Learn makefiles with the tastiest examples
+- [![Docs][devops icon]](https://makefiletutorial.com/#top) [How to install GitLab using Docker Compose?](https://www.czerniga.it/2021/11/14/how-to-install-gitlab-using-docker-compose/) - How to install GitLab using Docker Compose?
 
 ### Ansible
 
