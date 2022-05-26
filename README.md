@@ -4,20 +4,12 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/github/license/TechProber/cloud-estate?color=critical" alt="License"/>
-    <a href="https://hits.seeyoufarm.com">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTechProber%2Fcloud-estate&count_bg=%235322B2&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/>
-    </a>
+    <img src="https://custom-icon-badges.herokuapp.com/github/license/TechProber/cloud-estate?logo=law&color=orange" alt="License"/>
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTechProber%2Fcloud-estate&count_bg=%235322B2&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/>
+    <img src="https://img.shields.io/badge/kubernetes-v1.23.6-navy.svg" alt="Kubernetes"/>
+    <img src="https://img.shields.io/badge/docker-v20.10-blue" alt="Version">
     <img src="https://custom-icon-badges.herokuapp.com/github/issues-pr-closed/TechProber/cloud-estate?color=purple&logo=git-pull-request&logoColor=white"/>
-    <a href="https://hub.docker.com/repository/docker/hikariai/">
-        <img src="https://img.shields.io/badge/docker-v20.10-blue" alt="Version">
-    </a>
-    <a href="https://kubernetes.io/">
-        <img src="https://img.shields.io/badge/kubernetes-v1.23.5-navy.svg" alt="Kubernetes"/>
-    </a>
-    <a href="https://github.com/TechProber/cloud-estate">
-        <img src="https://img.shields.io/github/last-commit/TechProber/cloud-estate" alt="lastcommit"/>
-    </a>
+    <img src="https://custom-icon-badges.herokuapp.com/github/last-commit/TechProber/cloud-estate?logo=history&logoColor=white" alt="lastcommit"/>
 </p>
 
 ## Introduction
