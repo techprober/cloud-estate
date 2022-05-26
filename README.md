@@ -8,9 +8,7 @@
     <a href="https://hits.seeyoufarm.com">
       <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTechProber%2Fcloud-estate&count_bg=%235322B2&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/>
     </a>
-    <a href="https://img.shields.io/tokei/lines/github/TechProber/cloud-estate?color=orange">
-      <img src="https://img.shields.io/tokei/lines/github/TechProber/cloud-estate?color=orange" alt="lines">
-    </a>
+    <img src="https://custom-icon-badges.herokuapp.com/github/issues-pr-closed/TechProber/cloud-estate?color=purple&logo=git-pull-request&logoColor=white"/>
     <a href="https://hub.docker.com/repository/docker/hikariai/">
         <img src="https://img.shields.io/badge/docker-v20.10-blue" alt="Version">
     </a>
