@@ -38,6 +38,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][github icon]](https://github.com/tandpfun/skill-icons) [skill-icons](https://github.com/tandpfun/skill-icons) - Showcase your skills on your Github readme or resumé with ease ✨
 - [![Open-Source Software][github icon]](https://github.com/simple-icons/simple-icons) [simple-icons](https://github.com/simple-icons/simple-icons) - SVG icons for popular brands
 - [![Open-Source Software][github icon]](https://github.com/lowlighter/metrics) [metrics](https://github.com/lowlighter/metrics) - 📊 An infographics generator with 30+ plugins and 200+ options to display stats about your GitHub account and render them as SVG, Markdown, PDF or JSON!
+- [![Open-Source Software][github icon]](https://github.com/DenverCoder1/custom-icon-badges) [custom-icon-badges](https://github.com/DenverCoder1/custom-icon-badges) - 🛡 Allows users to more easily use Octicons and their own icons and logos on shields.io badges
 
 ## Productive Tools
 
