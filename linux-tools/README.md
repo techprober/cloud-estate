@@ -68,6 +68,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://v2raya.org/en/docs/prologue/introduction/) [v2rayA](https://v2raya.org/en/docs/prologue/introduction/) - v2rayA is an easy-to-use and powerful V2Ray client focused on Linux
 - [![Open-Source Software][oss icon]](https://github.com/mr-karan/doggo) [doggo](https://github.com/mr-karan/doggo) - 🐶 Command-line DNS Client for Humans. Written in Golang
 - [![Open-Source Software][oss icon]](https://github.com/cjbassi/gotop) [gotop](https://github.com/cjbassi/gotop) - A terminal based graphical activity monitor inspired by gtop and vtop
+- [![Open-Source Software][oss icon]](https://github.com/clementtsang/bottom) [bottom](https://github.com/clementtsang/bottom) - Yet another cross-platform graphical process/system monitor.
 
 ## Docker Images
 
