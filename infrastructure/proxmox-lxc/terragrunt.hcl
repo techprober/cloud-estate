@@ -1,5 +1,5 @@
 terraform {
-  source = "git::https://github.com/TechProber/cloud-estate.git//terraform-modules/proxmox-ve/lxc-mono?ref=HEAD"
+  source = "git::https://github.com/TechProber/cloud-estate.git//terraform-modules/proxmox-ve/lxc-basic?ref=HEAD"
 }
 
 inputs = {
