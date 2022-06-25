@@ -7,9 +7,9 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ## Categories
 
 - [Cloud Computing](#cloud-computing)
-  - [CloudNative](#cloudnative)
-  - [Kubernetes Related](#kubernetes-related)
-  - [Container Related](#container-related)
+- [CloudNative](#cloudnative)
+- [Kubernetes Related](#kubernetes-related)
+- [Container General](#container-general)
 - [Proxmox VE](#proxmox-ve)
 - [DevOps](#devops)
   - [Ansible](#ansible)
@@ -25,7 +25,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Docs][docs icon]](https://cloud-images.ubuntu.com/) [Ubuntu Cloud Images](https://cloud-images.ubuntu.com/) - Ubuntu Cloud Images are the official Ubuntu images that have been customised by Canonical to run on public clouds that provide Ubuntu Certified Images, Openstack, LXD and more
 - [![Docs][docs icon]](https://www.poftut.com/linux-kvm-qemu-virt-customize-tutorial/) [Linux KVM/Qemu Virt-Customize Tutorial](https://www.poftut.com/linux-kvm-qemu-virt-customize-tutorial/)
 
-### CloudNative
+## CloudNative
 
 - [![Docs][cloudnative icon]](https://www.cncf.io/blog/2022/02/17/principles-for-designing-and-deploying-scalable-applications-on-ubernetes/) [principles-for-designing-and-deploying-scalable-applications-on-kubernetes](https://www.cncf.io/blog/2022/02/17/principles-for-designing-and-deploying-scalable-applications-on-kubernetes/)
 - [![Docs][cloudnative icon]](https://www.cncf.io/blog/2021/11/30/microservices-and-cloud-native-applications-vs-monolithic-applications/) [microservices-and-cloud-native-applications-vs-monolithic-applications](https://www.cncf.io/blog/2021/11/30/microservices-and-cloud-native-applications-vs-monolithic-applications/)
@@ -39,7 +39,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Docs][kubernetes icon]](https://betterprogramming.pub/about-kubernetes-cni-plugins-f0bcd60b5629) [About Kubernetes’ CNI Plugins](https://betterprogramming.pub/about-kubernetes-cni-plugins-f0bcd60b5629) - Demystifying the usage of CNI plugins
 - [![Docs][kubernetes icon]](https://atbug.com/notes-for-cka-preparation/) [Kubernetes CKA 证书备考笔记](https://atbug.com/notes-for-cka-preparation/)
 
-### Container General
+## Container General
 
 - [![Docs][container icon]](https://mkdev.me/en/posts/dockerless-part-1-which-tools-to-replace-docker-with-and-why) [Dockerless, part 1: Which tools to replace Docker with and why](https://mkdev.me/en/posts/dockerless-part-1-which-tools-to-replace-docker-with-and-why) - Why Dockerless?
 - [![Docs][container icon]](https://mkdev.me/en/posts/dockerless-part-2-how-to-build-container-image-for-rails-application-without-docker-and-dockerfile) [Dockerless, part 2: How to build container image for Rails application without Docker and Dockerfile](https://mkdev.me/en/posts/dockerless-part-2-how-to-build-container-image-for-rails-application-without-docker-and-dockerfile) - The beaty of Buildah, an alternative tool to build container image at speed
