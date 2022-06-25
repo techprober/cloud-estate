@@ -50,6 +50,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/dandavison/delta) [git-delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output
 - [![Open-Source Software][oss icon]](https://github.com/restic/restic) [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
 - [![Open-Source Software][oss icon]](https://github.com/coder/code-server) [code-server](https://github.com/coder/code-server) - VS Code in the browser
+- [![Open-Source Software][oss icon]](https://github.com/pingostack/pingos) [pingos](https://github.com/pingostack/pingos) - Based on the NGINX/RTMP/HTTP-FLV/HTTP-TS/HLS/HLS+/DASH/H.264/H.265/AAC/MP3/Live/Record/VOD/Push/Pull/Multiple Processes/Dynamic Configuration/Configuration Variables/Console Interface/Notify
 
 ## HomeLab Related
 
