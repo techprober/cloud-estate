@@ -58,6 +58,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/ivanhao/pvetools) [pvetools](https://github.com/ivanhao/pvetools) - proxmox ve tools script(debian9+ can use it).Including email, samba, NFS set zfs max ram, nested virtualization ,docker , pci passthrough etc.
 - [![Open-Source Software][oss icon]](https://github.com/drduh/YubiKey-Guide) [YubiKey-Guide](https://github.com/drduh/YubiKey-Guide) - Guide to using YubiKey for GPG and SSH
 - [![Open-Source Software][oss icon]](https://github.com/jamesog/yubikey-ssh) [yubikey-ssh](https://github.com/jamesog/yubikey-ssh) - How to use a Yubikey with OpenSSH without GPG
+- [![Open-Source Software][oss icon]](https://github.com/tiny-pilot/tinypilot) [tinypilot](https://github.com/tiny-pilot/tinypilot) - Use your Raspberry Pi as a browser-based KVM.
 
 ## Command Line Utilities
 
