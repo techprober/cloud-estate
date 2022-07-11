@@ -105,6 +105,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/cilium/cilium) [cilium](https://github.com/cilium/cilium) - eBPF-based Networking, Security, and Observability
 - [![CloudNative][cncf icon]](https://github.com/iovisor/kubectl-trace) [kubectl-trace](https://github.com/iovisor/kubectl-trace) - Schedule bpftrace programs on your kubernetes cluster using the kubectl
 - [![CloudNative][cncf icon]](https://github.com/rexray/rexray) [rex-ray](https://github.com/rexray/rexray) - REX-Ray is a container storage orchestration engine enabling persistence for cloud native workloads
+- [![CloudNative][cncf icon]](https://github.com/kong/kong) [kong](https://github.com/kong/kong) - 🦍 The Cloud-Native API Gateway
 
 ## Applications
 
