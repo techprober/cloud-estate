@@ -21,6 +21,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [GitHub Related](#github-related)
 - [Productive Tools](#productive-tools)
 - [HomeLab Related](#homelab-related)
+- [VPS Related](#vps-related)
 - [Command Line Utilities](#command-line-utilities)
 - [Docker Images](#docker-image)
 - [Kubernetes Tools](#kubernetes-tools)
@@ -60,6 +61,10 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/drduh/YubiKey-Guide) [YubiKey-Guide](https://github.com/drduh/YubiKey-Guide) - Guide to using YubiKey for GPG and SSH
 - [![Open-Source Software][oss icon]](https://github.com/jamesog/yubikey-ssh) [yubikey-ssh](https://github.com/jamesog/yubikey-ssh) - How to use a Yubikey with OpenSSH without GPG
 - [![Open-Source Software][oss icon]](https://github.com/tiny-pilot/tinypilot) [tinypilot](https://github.com/tiny-pilot/tinypilot) - Use your Raspberry Pi as a browser-based KVM.
+
+## VPS Related
+
+- [![Open-Source Software][oss icon]](https://github.com/jerry048/Dedicated-Seedbox) [Dedicated-Seedbox](https://github.com/jerry048/Dedicated-Seedbox) - Seedbox Installation Script
 
 ## Command Line Utilities
 
