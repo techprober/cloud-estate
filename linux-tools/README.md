@@ -29,6 +29,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [CloudNative Solutions](#cloudnative-solutions)
 - [Applications](#applications)
 - [Programming Addons](#programming-addons)
+- [Programming Specific](#programming-specific)
 - [Vim/Neovim Addons](#vim/neovim-addons)
 - [Contributors](https://github.com/TechProber/cloud-estate/graphs/contributors)
 - [How to Contribute](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md)
@@ -130,6 +131,13 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://smee.io/) [smee.io](https://smee.io/) - Webhook payload delivery service - Receives payloads then sends them to your locally running application
 - [![Open-Source Software][oss icon]](https://github.com/wakatime/wakatime-cli) [wakatime-cli](https://github.com/wakatime/wakatime-cli) - Command line interface to WakaTime used by all WakaTime text editor plugins
 
+## Programming Specific
+
+### Golang
+
+- [![Open-Source Software][golang icon]](https://github.com/golang-standards/project-layout) [project-layout](https://github.com/golang-standards/project-layout) - Standard Go Project Layout
+- [![Open-Source Software][golang icon]](https://github.com/unknwon/the-way-to-go_ZH_CN) [the-way-to-go_ZH_CN](https://github.com/unknwon/the-way-to-go_ZH_CN) - 《The Way to Go》中文译本，中文正式名《Go 入门指南》
+
 ## Vim/Neovim Addons
 
 - [![Neovim][nvim icon]](https://github.com/rockerBOO/awesome-neovim) [awesome-neovim](https://github.com/rockerBOO/awesome-neovim) - Collections of awesome Neovim plugins. Mostly targeting Neovim specific features
@@ -165,3 +173,4 @@ Special thanks go to all [contributors](https://github.com/TechProber/cloud-esta
 [docker icon]: ./assets/docker.svg
 [github icon]: ./assets/github.svg
 [awesome icon]: ./assets/awesome.svg
+[golang icon]: ./assets/golang.svg
