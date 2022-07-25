@@ -148,6 +148,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/folke/twilight.nvim) [twilight](https://github.com/folke/twilight.nvim) - 🌅 Twilight is a Lua plugin for Neovim 0.5 that dims inactive portions of the code you're editing using TreeSitter
 - [![Neovim][nvim icon]](https://github.com/sindrets/diffview.nvim) [diffview.nvim](https://github.com/sindrets/diffview.nvim) - Single tabpage interface for easily cycling through diffs for all modified files for any git rev
 - [![Neovim][nvim icon]](https://github.com/lewis6991/spellsitter.nvim) [spellsitter.nvim](https://github.com/lewis6991/spellsitter.nvim) - Treesitter powered spellchecker
+- [![Neovim][nvim icon]](https://github.com/iamcco/markdown-preview.nvim) [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) - markdown preview plugin for (neo)vim
 
 ## Contribution
 
