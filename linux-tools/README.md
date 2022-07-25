@@ -137,6 +137,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Open-Source Software][golang icon]](https://github.com/golang-standards/project-layout) [project-layout](https://github.com/golang-standards/project-layout) - Standard Go Project Layout
 - [![Open-Source Software][golang icon]](https://github.com/unknwon/the-way-to-go_ZH_CN) [the-way-to-go_ZH_CN](https://github.com/unknwon/the-way-to-go_ZH_CN) - 《The Way to Go》中文译本，中文正式名《Go 入门指南》
+- [![Open-Source Software][golang icon]](https://github.com/mantil-io/mantil) [mantil](https://github.com/mantil-io/mantil) - Build your AWS Lambda-based Go backends quicker than ever
 
 ## Vim/Neovim Addons
 
