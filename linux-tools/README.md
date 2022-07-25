@@ -18,6 +18,7 @@
 
 Feel free to contribute. Any recommendations and suggestions are welcome.
 
+- [Awesome](#awesome)
 - [GitHub Related](#github-related)
 - [Productive Tools](#productive-tools)
 - [HomeLab Related](#homelab-related)
@@ -31,6 +32,10 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [Vim/Neovim Addons](#vim/neovim-addons)
 - [Contributors](https://github.com/TechProber/cloud-estate/graphs/contributors)
 - [How to Contribute](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md)
+
+## Awesome
+
+- [![Open-Source Software][awesome icon]](https://github.com/avelino/awesome-go) [awesome-go](https://github.com/avelino/awesome-go) - A curated list of awesome Go frameworks, libraries and software
 
 ## GitHub Related
 
@@ -158,3 +163,4 @@ Special thanks go to all [contributors](https://github.com/TechProber/cloud-esta
 [cncf icon]: ./assets/cncf.svg
 [docker icon]: ./assets/docker.svg
 [github icon]: ./assets/github.svg
+[awesome icon]: ./assets/awesome.svg
