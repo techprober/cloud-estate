@@ -53,6 +53,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Docs][proxmox icon]](https://dev.to/aaronktberry/creating-proxmox-templates-with-packer-1b35) [Creating Proxmox VM templates with Packer](https://dev.to/aaronktberry/creating-proxmox-templates-with-packer-1b35)
 - [![Docs][proxmox icon]](https://www.virtualizationhowto.com/2021/05/packer-build-ubuntu-21-04-for-vmware-vsphere/) [Packer build Ubuntu 21.04 for Vmware Vsphere](https://www.virtualizationhowto.com/2021/05/packer-build-ubuntu-21-04-for-vmware-vsphere/)
 - [![Docs][proxmox icon]](https://datastrophic.io/kubernetes-homelab-with-proxmox-kubeadm-calico-openebs-and-metallb/) [kubernetes-homelab-with-proxmox-kubeadm-calico-openebs-and-metallb](https://datastrophic.io/kubernetes-homelab-with-proxmox-kubeadm-calico-openebs-and-metallb/) - The Ultimate Kubernetes Homelab Guide: From Zero to Production Cluster On-Premises
+- [![Docs][proxmox icon]](https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/) [proxmox-gpu-passthrough-guide](https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/) - The Ultimate Beginner's Guide to GPU Passthrough (Proxmox, Windows 10)
 
 ## DevOps
 
