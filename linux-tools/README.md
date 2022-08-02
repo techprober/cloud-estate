@@ -127,6 +127,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/the1812/Bilibili-Evolved) [Bilibili-Evolved](https://github.com/the1812/Bilibili-Evolved) - 强大的哔哩哔哩增强脚本
 - [![Open-Source Software][oss icon]](https://github.com/FreshRSS/FreshRSS) [FreshRSS](https://github.com/FreshRSS/FreshRSS) - FreshRSS is a self-hosted RSS feed aggregator like Leed or Kriss Feed.
 - [![Open-Source Software][oss icon]](https://github.com/gee1k/uPic) [uPic](https://github.com/gee1k/uPic) - 📤uPic is a native, powerful, beautiful and simple picture and file upload tool for macOS.
+- [![Open-Source Software][oss icon]](https://github.com/Molunerfinn/PicGo) [PicGo](https://github.com/Molunerfinn/PicGo) - 🚀A simple & beautiful tool for pictures uploading built by vue-cli-electron-builder
 
 ## Programming Addons
 
