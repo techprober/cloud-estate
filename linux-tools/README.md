@@ -37,6 +37,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ## Awesome
 
 - [![Open-Source Software][awesome icon]](https://github.com/avelino/awesome-go) [awesome-go](https://github.com/avelino/awesome-go) - A curated list of awesome Go frameworks, libraries and software
+- [![Open-Source Software][oss icon]](https://github.com/PicGo/Awesome-PicGo) [Awesome-PicGo](https://github.com/PicGo/Awesome-PicGo) - A collection of awesome projects using PicGo.
 
 ## GitHub Related
 
@@ -128,7 +129,6 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/FreshRSS/FreshRSS) [FreshRSS](https://github.com/FreshRSS/FreshRSS) - FreshRSS is a self-hosted RSS feed aggregator like Leed or Kriss Feed.
 - [![Open-Source Software][oss icon]](https://github.com/gee1k/uPic) [uPic](https://github.com/gee1k/uPic) - 📤uPic is a native, powerful, beautiful and simple picture and file upload tool for macOS.
 - [![Open-Source Software][oss icon]](https://github.com/Molunerfinn/PicGo) [PicGo](https://github.com/Molunerfinn/PicGo) - 🚀A simple & beautiful tool for pictures uploading built by vue-cli-electron-builder
-- [![Open-Source Software][oss icon]](https://github.com/PicGo/Awesome-PicGo) [Awesome-PicGo](https://github.com/PicGo/Awesome-PicGo) - A collection of awesome projects using PicGo.
 - [![Open-Source Software][oss icon]](https://github.com/wayjam/picgo-plugin-s3) [picgo-plugin-s3](https://github.com/wayjam/picgo-plugin-s3) - PicGo S3 Plugin
 
 ## Programming Addons
