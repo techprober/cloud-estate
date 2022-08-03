@@ -37,7 +37,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ## Awesome
 
 - [![Open-Source Software][awesome icon]](https://github.com/avelino/awesome-go) [awesome-go](https://github.com/avelino/awesome-go) - A curated list of awesome Go frameworks, libraries and software
-- [![Open-Source Software][oss icon]](https://github.com/PicGo/Awesome-PicGo) [Awesome-PicGo](https://github.com/PicGo/Awesome-PicGo) - A collection of awesome projects using PicGo.
+- [![Open-Source Software][awesome icon]](https://github.com/PicGo/Awesome-PicGo) [Awesome-PicGo](https://github.com/PicGo/Awesome-PicGo) - A collection of awesome projects using PicGo.
 
 ## GitHub Related
 
