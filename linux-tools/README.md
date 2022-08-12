@@ -120,6 +120,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/kong/kong) [kong](https://github.com/kong/kong) - 🦍 The Cloud-Native API Gateway
 - [![CloudNative][cncf icon]](https://github.com/LiqoTech/liqo) [liqo](https://github.com/LiqoTech/liqo) - Enable dynamic and seamless Kubernetes multi-cluster topologies
 - [![CloudNative][cncf icon]](https://github.com/juicedata/juicefs) [juicefs](https://github.com/juicedata/juicefs) - JuiceFS is a distributed POSIX file system built on top of Redis and S3.
+- [![CloudNative][cncf icon]](https://github.com/OpenFunction/OpenFunction) [OpenFunction](https://github.com/OpenFunction/OpenFunction) - Cloud Native Function-as-a-Service Platform (CNCF Sandbox Project)
 
 ## Applications
 
