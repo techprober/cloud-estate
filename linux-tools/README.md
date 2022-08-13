@@ -133,6 +133,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/Molunerfinn/PicGo) [PicGo](https://github.com/Molunerfinn/PicGo) - 🚀A simple & beautiful tool for pictures uploading built by vue-cli-electron-builder
 - [![Open-Source Software][oss icon]](https://github.com/wayjam/picgo-plugin-s3) [picgo-plugin-s3](https://github.com/wayjam/picgo-plugin-s3) - PicGo S3 Plugin
 - [![Open-Source Software][oss icon]](https://github.com/aler9/rtsp-simple-server) [rtsp-simple-server](https://github.com/aler9/rtsp-simple-server) - ready-to-use RTSP / RTMP / LL-HLS server and proxy that allows to read, publish and proxy video and audio streams
+- [![Open-Source Software][oss icon]](https://github.com/ory/kratos) [kratos](https://github.com/ory/kratos) - Next-gen identity server (think Auth0, Okta, Firebase) with Ory-hardened authentication, MFA, FIDO2, TOTP, WebAuthn, profile management, identity schemas, social sign in, registration, account recovery, passwordless. Golang, headless, API-only - without templating or theming headaches. Available as a cloud service.
 
 ## Programming Addons
 
