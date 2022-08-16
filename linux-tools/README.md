@@ -151,6 +151,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/0voice/Introduction-to-Golang) [Introduction-to-Golang-CN](https://github.com/0voice/Introduction-to-Golang) - 【未来服务器端编程语言】最全空降 golang 资料补给包（满血战斗），包含文章，书籍，作者论文，理论分析，开源框架，云原生，大佬视频，大厂实战分享 ppt
 - [![Open-Source Software][golang icon]](https://github.com/mantil-io/mantil) [mantil](https://github.com/mantil-io/mantil) - Build your AWS Lambda-based Go backends quicker than ever
 - [![Open-Source Software][golang icon]](https://github.com/goreleaser/goreleaser) [goreleaser](https://github.com/goreleaser/goreleaser) - Deliver Go binaries as fast and easily as possible
+- [![Open-Source Software][golang icon]](https://github.com/cilium/ebpf) [ebpf](https://github.com/cilium/ebpf) - Pure-Go library to read, modify and load eBPF programs and attach them to various hooks in the Linux kernel.
 
 ## Vim/Neovim Addons
 
