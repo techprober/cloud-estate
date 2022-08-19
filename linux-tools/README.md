@@ -137,6 +137,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/IrineSistiana/mosdns) [mosdns](https://github.com/IrineSistiana/mosdns) - 一个 DNS 转发器
 - [![Open-Source Software][oss icon]](https://github.com/toeverything/AFFiNE) [AFFiNE](https://github.com/toeverything/AFFiNE) - There can be more than Notion and Miro. Affine is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.
 - [![Open-Source Software][oss icon]](https://github.com/projectdiscovery/nuclei) [nuclei](https://github.com/projectdiscovery/nuclei) - Fast and customizable vulnerability scanner based on simple YAML based DSL.
+- [![Open-Source Software][oss icon]](https://github.com/MatrixTM/MHDDoS) [MHDDoS](https://github.com/MatrixTM/MHDDoS) - Best DDoS Attack Script Python3, (Cyber / DDos) Attack With 56 Methods
 
 ## Programming Addons
 
