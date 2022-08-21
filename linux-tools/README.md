@@ -154,6 +154,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/mantil-io/mantil) [mantil](https://github.com/mantil-io/mantil) - Build your AWS Lambda-based Go backends quicker than ever
 - [![Open-Source Software][golang icon]](https://github.com/goreleaser/goreleaser) [goreleaser](https://github.com/goreleaser/goreleaser) - Deliver Go binaries as fast and easily as possible
 - [![Open-Source Software][golang icon]](https://github.com/cilium/ebpf) [ebpf](https://github.com/cilium/ebpf) - Pure-Go library to read, modify and load eBPF programs and attach them to various hooks in the Linux kernel.
+- [![Open-Source Software][golang icon]](https://github.com/zeromicro/go-zero) [go-zero](https://github.com/zeromicro/go-zero) - A cloud-native Go microservices framework with cli tool for productivity.
 
 ## Vim/Neovim Addons
 
