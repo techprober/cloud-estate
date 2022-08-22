@@ -69,10 +69,13 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/drduh/YubiKey-Guide) [YubiKey-Guide](https://github.com/drduh/YubiKey-Guide) - Guide to using YubiKey for GPG and SSH
 - [![Open-Source Software][oss icon]](https://github.com/jamesog/yubikey-ssh) [yubikey-ssh](https://github.com/jamesog/yubikey-ssh) - How to use a Yubikey with OpenSSH without GPG
 - [![Open-Source Software][oss icon]](https://github.com/tiny-pilot/tinypilot) [tinypilot](https://github.com/tiny-pilot/tinypilot) - Use your Raspberry Pi as a browser-based KVM.
+- [![Open-Source Software][oss icon]](https://github.com/Loyalsoldier/v2ray-rules-dat) [v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) - 🦄 🎃 👻 V2Ray 路由规则文件加强版，可代替 V2Ray 官方 geoip.dat 和 geosite.dat，兼容 Shadowsocks-windows、Xray-core、Trojan-Go 和 leaf。Enhanced edition of V2Ray rules dat files, compatible with Xray-core, Shadowsocks-windows, Trojan-Go and leaf.
+- [![Open-Source Software][oss icon]](https://github.com/IrineSistiana/mosdns) [mosdns](https://github.com/IrineSistiana/mosdns) - 一个 DNS 转发器
 
 ## VPS Related
 
 - [![Open-Source Software][oss icon]](https://github.com/jerry048/Dedicated-Seedbox) [Dedicated-Seedbox](https://github.com/jerry048/Dedicated-Seedbox) - Seedbox Installation Script
+- [![Open-Source Software][oss icon]](https://github.com/jinwyp/one_click_script) [one_click_script](https://github.com/jinwyp/one_click_script) - 一键安装 trojan v2ray xray. Install v2ray / xray (VLESS) and trojan (trojan-go) script
 
 ## Command Line Utilities
 
@@ -135,7 +138,6 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/wayjam/picgo-plugin-s3) [picgo-plugin-s3](https://github.com/wayjam/picgo-plugin-s3) - PicGo S3 Plugin
 - [![Open-Source Software][oss icon]](https://github.com/aler9/rtsp-simple-server) [rtsp-simple-server](https://github.com/aler9/rtsp-simple-server) - ready-to-use RTSP / RTMP / LL-HLS server and proxy that allows to read, publish and proxy video and audio streams
 - [![Open-Source Software][oss icon]](https://github.com/ory/kratos) [kratos](https://github.com/ory/kratos) - Next-gen identity server (think Auth0, Okta, Firebase) with Ory-hardened authentication, MFA, FIDO2, TOTP, WebAuthn, profile management, identity schemas, social sign in, registration, account recovery, passwordless. Golang, headless, API-only - without templating or theming headaches. Available as a cloud service.
-- [![Open-Source Software][oss icon]](https://github.com/IrineSistiana/mosdns) [mosdns](https://github.com/IrineSistiana/mosdns) - 一个 DNS 转发器
 - [![Open-Source Software][oss icon]](https://github.com/toeverything/AFFiNE) [AFFiNE](https://github.com/toeverything/AFFiNE) - There can be more than Notion and Miro. Affine is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.
 - [![Open-Source Software][oss icon]](https://github.com/projectdiscovery/nuclei) [nuclei](https://github.com/projectdiscovery/nuclei) - Fast and customizable vulnerability scanner based on simple YAML based DSL.
 - [![Open-Source Software][oss icon]](https://github.com/MatrixTM/MHDDoS) [MHDDoS](https://github.com/MatrixTM/MHDDoS) - Best DDoS Attack Script Python3, (Cyber / DDos) Attack With 56 Methods
