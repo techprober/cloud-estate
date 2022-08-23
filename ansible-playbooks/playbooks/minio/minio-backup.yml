@@ -4,7 +4,7 @@
   become: yes
 
   vars:
-    - remote_server: "http://10.178.0.9:9000"
+    - minio_remote_url: "http://10.178.0.9:9000"
   roles:
     - role: minio.ops/setup.ops/
     - role: minio.ops/backup.ops/
