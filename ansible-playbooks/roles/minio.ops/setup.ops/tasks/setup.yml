@@ -39,10 +39,28 @@
       group: users
       mode: 0755
 
+  - name: Create minio default directory (root)
+    become_user: root
+    file:
+      path: /root/.mc
+      state: directory
+      owner: root
+      group: root
+      mode: 0755
+
   - name: Copy minio config file to remote server
     ansible.builtin.template:
       src: config.json.j2
       dest: /home/{{ home_user }}/.mc/config.json
       owner: "{{ home_user }}"
       group: users
+      mode: 0644
+
+  - name: Copy minio config file to remote server
+    become_user: root
+    ansible.builtin.template:
+      src: config.json.j2
+      dest: /root/.mc/config.json
+      owner: root
+      group: root
       mode: 0644
