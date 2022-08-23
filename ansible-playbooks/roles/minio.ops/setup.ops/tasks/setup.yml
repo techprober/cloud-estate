@@ -23,11 +23,26 @@
         mode: a+x
       check_mode: false
 
-    - name: Connect to remote minio server with credentials
-      command: "mc config host add minio {{ remote_server }} {{ lookup('env','MINIO_ACCESS_KEY') }} {{ lookup('env','MINIO_SECRET_KEY') }}"
-      register: authentication_result
-
     - name: Report result
       ansible.builtin.debug:
         msg: "Installation finished!"
       check_mode: false
+
+- name: Configure minio
+  become_user: "{{ home_user }}"
+  block:
+  - name: Create minio default directory
+    file:
+      path: /home/{{ home_user }}/.mc
+      state: directory
+      owner: "{{ home_user }}"
+      group: users
+      mode: 0755
+
+  - name: Copy minio config file to remote server
+    ansible.builtin.template:
+      src: config.json.j2
+      dest: /home/{{ home_user }}/.mc/config.json
+      owner: "{{ home_user }}"
+      group: users
+      mode: 0644
