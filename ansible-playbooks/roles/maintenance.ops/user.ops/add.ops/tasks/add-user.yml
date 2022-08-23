@@ -12,10 +12,11 @@
     line: '%wheel ALL=(ALL) NOPASSWD: ALL'
     validate: 'visudo -cf %s'
 
-- name: Add sudoers users to wheel group
+- name: Add sudoers users to target groups
   user:
     name: "{{ username }}"
     groups:
+    - users
     - wheel
     - sudo
     append: yes
