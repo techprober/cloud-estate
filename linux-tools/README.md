@@ -27,7 +27,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [Docker Images](#docker-image)
 - [Kubernetes Tools](#kubernetes-tools)
 - [CloudNative Solutions](#cloudnative-solutions)
-- [Applications](#applications)
+- [Open-Source Software](#open-source-software)
 - [Programming Addons](#programming-addons)
 - [Programming Specific](#programming-specific)
 - [Vim/Neovim Addons](#vim/neovim-addons)
@@ -126,7 +126,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/juicedata/juicefs) [juicefs](https://github.com/juicedata/juicefs) - JuiceFS is a distributed POSIX file system built on top of Redis and S3.
 - [![CloudNative][cncf icon]](https://github.com/OpenFunction/OpenFunction) [OpenFunction](https://github.com/OpenFunction/OpenFunction) - Cloud Native Function-as-a-Service Platform (CNCF Sandbox Project)
 
-## Applications
+## Open-Source Software
 
 - [![Open-Source Software][oss icon]](https://github.com/mikecao/umami) [umami](https://github.com/mikecao/umami) - Umami is a simple, fast, website analytics alternative to Google Analytics
 - [![Open-Source Software][oss icon]](https://github.com/iawia002/lux) [lux](https://github.com/iawia002/lux) - Lux is a fast and simple video downloader built with Go
@@ -141,6 +141,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/toeverything/AFFiNE) [AFFiNE](https://github.com/toeverything/AFFiNE) - There can be more than Notion and Miro. Affine is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.
 - [![Open-Source Software][oss icon]](https://github.com/projectdiscovery/nuclei) [nuclei](https://github.com/projectdiscovery/nuclei) - Fast and customizable vulnerability scanner based on simple YAML based DSL.
 - [![Open-Source Software][oss icon]](https://github.com/MatrixTM/MHDDoS) [MHDDoS](https://github.com/MatrixTM/MHDDoS) - Best DDoS Attack Script Python3, (Cyber / DDos) Attack With 56 Methods
+- [![Open-Source Software][oss icon]](https://github.com/rutikwankhade/CoverView) [CoreView](https://github.com/rutikwankhade/CoverView) - 🛠 Create awesome cover images for your blog posts quickly.
 
 ## Programming Addons
 
