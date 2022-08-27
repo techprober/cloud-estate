@@ -1,7 +1,7 @@
 ---
 # Bake ubuntu-2204-server
 
-- name: "Bake proxmox ubuntu 2204 server"
+- name: "Bake proxmox ubuntu 22.04 server"
   hosts: localhost
   become: yes
 
