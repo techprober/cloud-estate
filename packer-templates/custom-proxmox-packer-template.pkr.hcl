@@ -115,7 +115,7 @@ build {
     playbook_file           = "./playbooks/minio.yml"
     clean_staging_directory = true
     extra_arguments = [
-      "--vault-password-file=/tmp/.vault_pass",
+      # "--vault-password-file=/tmp/.vault_pass",
       "--extra-vars \"ansible_user=packer\""
     ]
   }
