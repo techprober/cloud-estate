@@ -1,0 +1,39 @@
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: hello-app
+  labels:
+    app: hello-app
+spec:
+  containers:
+  - name: hello-app
+    image: hashicorp/http-echo:0.2.3
+    args:
+    - "-text=Hello World! This is a hello-world app"
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: hello-service
+spec:
+  selector:
+    app: hello-app
+  ports:
+  - port: 5678
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: "/hello"
+        backend:
+          service:
+            name: hello-service
+            port:
+              number: 5678
