@@ -61,6 +61,8 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/coder/code-server) [code-server](https://github.com/coder/code-server) - VS Code in the browser
 - [![Open-Source Software][oss icon]](https://github.com/pingostack/pingos) [pingos](https://github.com/pingostack/pingos) - Based on the NGINX/RTMP/HTTP-FLV/HTTP-TS/HLS/HLS+/DASH/H.264/H.265/AAC/MP3/Live/Record/VOD/Push/Pull/Multiple Processes/Dynamic Configuration/Configuration Variables/Console Interface/Notify
 - [![Open-Source Software][oss icon]](https://github.com/q191201771/lal) [lal](https://github.com/q191201771/lal) - 🔥 Golang audio/video live streaming library/client/server. support RTMP, RTSP(RTP/RTCP), HLS, HTTP[S]/WebSocket[S]-FLV/TS, H264/H265/AAC, relay, cluster, record, HTTP API/Notify.
+- [![Open-Source Software][oss icon]](https://github.com/cheat/cheat) [cheat](https://github.com/cheat/cheat) - cheat allows you to create and view interactive cheatsheets on the command-line. It was designed to help remind \*nix system administrators of options for commands that they use frequently, but not frequently enough to remember.
+- [![Open-Source Software][oss icon]](https://github.com/cheat/cheatsheets) [cheatsheet](https://github.com/cheat/cheatsheets) - Community-sourced cheatsheets
 
 ## HomeLab Related
 
