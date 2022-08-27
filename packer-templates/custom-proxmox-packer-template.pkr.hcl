@@ -105,11 +105,13 @@ build {
   }
 
   # Minio plabyook
-  provisioner "file" {
-    pause_before = "5s"
-    source       = "./playbooks/.vault_pass"
-    destination  = "/tmp/.vault_pass"
-  }
+
+  # provisioner "file" { # key-encryption is an optional feature
+  #   pause_before = "5s"
+  #   source       = "./playbooks/.vault_pass"
+  #   destination  = "/tmp/.vault_pass"
+  # }
+
   provisioner "ansible-local" {
     playbook_dir            = "./playbooks"
     playbook_file           = "./playbooks/minio.yml"
