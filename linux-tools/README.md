@@ -144,6 +144,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/projectdiscovery/nuclei) [nuclei](https://github.com/projectdiscovery/nuclei) - Fast and customizable vulnerability scanner based on simple YAML based DSL.
 - [![Open-Source Software][oss icon]](https://github.com/MatrixTM/MHDDoS) [MHDDoS](https://github.com/MatrixTM/MHDDoS) - Best DDoS Attack Script Python3, (Cyber / DDos) Attack With 56 Methods
 - [![Open-Source Software][oss icon]](https://github.com/rutikwankhade/CoverView) [CoreView](https://github.com/rutikwankhade/CoverView) - 🛠 Create awesome cover images for your blog posts quickly.
+- [![Open-Source Software][oss icon]](https://github.com/simeji/jid) [jid](https://github.com/simeji/jid) - json incremental digger
 
 ## Programming Addons
 
