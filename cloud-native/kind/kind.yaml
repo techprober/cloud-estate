@@ -1,0 +1,26 @@
+---
+apiVersion: kind.x-k8s.io/v1alpha4
+kind: Cluster
+nodes:
+- role: control-plane
+  # ingres-controller
+  kubeadmConfigPatches:
+  - |
+    kind: InitConfiguration
+    nodeRegistration:
+      kubeletExtraArgs:
+        node-labels: "ingress-ready=true"
+  extraPortMappings:
+  - containerPort: 36443
+    hostPort: 6443
+    listenAddress: "0.0.0.0" # Optional, defaults to "0.0.0.0"
+    protocol: tcp # Optional, defaults to tcp
+  - containerPort: 80
+    hostPort: 80
+    protocol: TCP
+  - containerPort: 443
+    hostPort: 443
+    protocol: TCP
+- role: worker
+- role: worker
+- role: worker
