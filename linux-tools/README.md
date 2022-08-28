@@ -20,6 +20,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [Awesome](#awesome)
 - [GitHub Related](#github-related)
+- [Shell Related](#shell-related)
 - [Productive Tools](#productive-tools)
 - [HomeLab Related](#homelab-related)
 - [VPS Related](#vps-related)
@@ -49,6 +50,15 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][github icon]](https://github.com/DenverCoder1/custom-icon-badges) [custom-icon-badges](https://github.com/DenverCoder1/custom-icon-badges) - 🛡 Allows users to more easily use Octicons and their own icons and logos on shields.io badges
 - [![Open-Source Software][github icon]](https://github.com/github/opensource.guide) [opensource.guide](https://github.com/github/opensource.guide) - 📚 Community guides for open source creators
 - [![Open-Source Software][github icon]](https://github.com/wei/pull) [pull](https://github.com/wei/pull) - 🤖 Keep your forks up-to-date via automated PRs
+
+## Shell Related
+
+- [![Open-Source Software][terminal icon]](https://github.com/jorgebucaran/fisher) [fisher](https://github.com/jorgebucaran/fisher) - A plugin manager for Fish.
+- [![Open-Source Software][terminal icon]](https://github.com/oh-my-fish/oh-my-fish) [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) - The Fish Shell Framework
+- [![Open-Source Software][terminal icon]](https://github.com/junegunn/fzf) [fzf](https://github.com/junegunn/fzf) - 🌸 A command-line fuzzy finder
+- [![Open-Source Software][terminal icon]](https://github.com/PatrickF1/fzf.fish) [fzf.fish](https://github.com/PatrickF1/fzf.fish) - Augment your fish command line with fzf key bindings.
+- [![Open-Source Software][terminal icon]](https://github.com/matusf/goto) [goto-fish](https://github.com/matusf/goto) - A fish shell utility to quickly navigate to aliased directories supporting tab-completion.
+- [![Open-Source Software][terminal icon]](https://github.com/jorgebucaran/nvm.fish) [nvm.fish](https://github.com/jorgebucaran/nvm.fish) - Node.js version manager lovingly made for Fish.
 
 ## Productive Tools
 
@@ -83,7 +93,6 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ## Command Line Utilities
 
 - [![Open-Source Software][oss icon]](https://github.com/iridakos/goto) [goto](https://github.com/iridakos/goto) - A shell utility allowing users to navigate to aliased directories supporting auto-completion.
-- [![Open-Source Software][oss icon]](https://github.com/matusf/goto) [goto-fish](https://github.com/matusf/goto) - A fish shell utility to quickly navigate to aliased directories supporting tab-completion.
 - [![Open-Source Software][oss icon]](https://github.com/sekey/sekey) [sekey](https://github.com/sekey/sekey) - A SSH Agent that allow users to authenticate to UNIX/Linux SSH servers using the Secure Enclave
 - [![Open-Source Software][oss icon]](github-status-updater) [github-status-updater](https://github.com/cloudposse/github-status-updater) - Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 - [![Open-Source Software][oss icon]](https://github.com/sharkdp/bat) [bat](https://github.com/sharkdp/bat) - A cat(1) clone with syntax highlighting and Git integration
@@ -201,3 +210,4 @@ Special thanks go to all [contributors](https://github.com/TechProber/cloud-esta
 [github icon]: ./assets/github.svg
 [awesome icon]: ./assets/awesome.svg
 [golang icon]: ./assets/golang.svg
+[terminal icon]: ./assets/terminal.svg
