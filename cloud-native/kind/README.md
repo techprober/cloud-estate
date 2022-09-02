@@ -45,9 +45,7 @@ brew install kind
 ## Create a kubernetes cluster
 
 ```bash
-# create cluster
 kind create cluster --name <cluster-name> --image kindest/node:v1.23.6
-
 ```
 
 Alternatively, you may also provision a multi-node cluster using kind.yml
