@@ -50,6 +50,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][github icon]](https://github.com/DenverCoder1/custom-icon-badges) [custom-icon-badges](https://github.com/DenverCoder1/custom-icon-badges) - 🛡 Allows users to more easily use Octicons and their own icons and logos on shields.io badges
 - [![Open-Source Software][github icon]](https://github.com/github/opensource.guide) [opensource.guide](https://github.com/github/opensource.guide) - 📚 Community guides for open source creators
 - [![Open-Source Software][github icon]](https://github.com/wei/pull) [pull](https://github.com/wei/pull) - 🤖 Keep your forks up-to-date via automated PRs
+- [![Open-Source Software][github icon]](https://github.com/appleboy/telegram-action) [telegram-action](https://github.com/appleboy/telegram-action) - GitHub Action that sends a Telegram message.
 
 ## Shell Related
 
