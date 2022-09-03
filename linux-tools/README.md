@@ -51,6 +51,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][github icon]](https://github.com/github/opensource.guide) [opensource.guide](https://github.com/github/opensource.guide) - 📚 Community guides for open source creators
 - [![Open-Source Software][github icon]](https://github.com/wei/pull) [pull](https://github.com/wei/pull) - 🤖 Keep your forks up-to-date via automated PRs
 - [![Open-Source Software][github icon]](https://github.com/appleboy/telegram-action) [telegram-action](https://github.com/appleboy/telegram-action) - GitHub Action that sends a Telegram message.
+- [![Open-Source Software][github icon]](https://github.com/octokit/request-action) [request-action](https://github.com/octokit/request-action) - A GitHub Action to send arbitrary requests to GitHub's REST API
 
 ## Shell Related
 
