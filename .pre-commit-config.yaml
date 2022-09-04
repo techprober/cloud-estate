@@ -10,7 +10,6 @@ repos:
           - --unsafe
       - id: double-quote-string-fixer
       - id: end-of-file-fixer
-      - id: check-added-large-files
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.56.0
     hooks:
