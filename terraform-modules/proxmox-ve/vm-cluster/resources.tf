@@ -35,9 +35,10 @@ resource "proxmox_vm_qemu" "master_node" {
 
   # if you want two NICs, just copy this whole network section and duplicate it
   network {
-    model  = var.master_vm_network_model
-    bridge = var.master_vm_network_bridge
-    tag    = var.master_vm_network_tag
+    model    = var.master_vm_network_model
+    bridge   = var.master_vm_network_bridge
+    tag      = var.master_vm_network_tag
+    firewall = var.master_vm_network_firewall
   }
 
   # ignore network changes during the life of the VM
@@ -90,9 +91,10 @@ resource "proxmox_vm_qemu" "worker_node" {
 
   # if you want two NICs, just copy this whole network section and duplicate it
   network {
-    model  = var.worker_vm_network_model
-    bridge = var.worker_vm_network_bridge
-    tag    = var.worker_vm_network_tag
+    model    = var.worker_vm_network_model
+    bridge   = var.worker_vm_network_bridge
+    tag      = var.worker_vm_network_tag
+    firewall = var.worker_vm_network_firewall
   }
 
   # ignore network changes during the life of the VM

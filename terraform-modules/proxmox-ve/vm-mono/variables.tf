@@ -110,6 +110,12 @@ variable "vm_network_model" {
   type        = string
 }
 
+variable "vm_network_firewall" {
+  default     = true
+  description = "whether to enable the Proxmox firewall on this network device"
+  type        = string
+}
+
 variable "vm_network_bridge" {
   default     = "vmbr0"
   description = "default vm network nic bridge"

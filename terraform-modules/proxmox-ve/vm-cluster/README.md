@@ -25,6 +25,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_master_network_firewall"></a> [master\_network\_firewall](#input\_master\_network\_firewall) | whether to enable the Proxmox firewall on this network device | `string` | `true` | no |
 | <a name="input_master_vm_boot_disk"></a> [master\_vm\_boot\_disk](#input\_master\_vm\_boot\_disk) | default vm boot disk | `string` | `"scsi0"` | no |
 | <a name="input_master_vm_boot_disk_format"></a> [master\_vm\_boot\_disk\_format](#input\_master\_vm\_boot\_disk\_format) | default vm boot disk format | `string` | `"raw"` | no |
 | <a name="input_master_vm_boot_disk_size"></a> [master\_vm\_boot\_disk\_size](#input\_master\_vm\_boot\_disk\_size) | default vm boot disk capacity | `string` | `"10G"` | no |
@@ -51,6 +52,7 @@ No modules.
 | <a name="input_pm_user"></a> [pm\_user](#input\_pm\_user) | pm user that proxmox uses to interact with the remote server | `string` | `"terraform-prov"` | no |
 | <a name="input_proxmox_host"></a> [proxmox\_host](#input\_proxmox\_host) | host ip of the proxmox server | `string` | `"10.10.10.10"` | no |
 | <a name="input_template_name"></a> [template\_name](#input\_template\_name) | template name used to deploy the vm | `string` | `"ubuntu-2204-cloudinit-template"` | no |
+| <a name="input_worker_network_firewall"></a> [worker\_network\_firewall](#input\_worker\_network\_firewall) | whether to enable the Proxmox firewall on this network device | `string` | `true` | no |
 | <a name="input_worker_vm_boot_disk"></a> [worker\_vm\_boot\_disk](#input\_worker\_vm\_boot\_disk) | default vm boot disk | `string` | `"scsi0"` | no |
 | <a name="input_worker_vm_boot_disk_format"></a> [worker\_vm\_boot\_disk\_format](#input\_worker\_vm\_boot\_disk\_format) | default vm boot disk format | `string` | `"raw"` | no |
 | <a name="input_worker_vm_boot_disk_size"></a> [worker\_vm\_boot\_disk\_size](#input\_worker\_vm\_boot\_disk\_size) | default vm boot disk capacity | `string` | `"10G"` | no |
