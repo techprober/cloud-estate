@@ -158,6 +158,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/MatrixTM/MHDDoS) [MHDDoS](https://github.com/MatrixTM/MHDDoS) - Best DDoS Attack Script Python3, (Cyber / DDos) Attack With 56 Methods
 - [![Open-Source Software][oss icon]](https://github.com/rutikwankhade/CoverView) [CoreView](https://github.com/rutikwankhade/CoverView) - 🛠 Create awesome cover images for your blog posts quickly.
 - [![Open-Source Software][oss icon]](https://github.com/simeji/jid) [jid](https://github.com/simeji/jid) - json incremental digger
+- [![Open-Source Software][oss icon]](https://github.com/excalidraw/excalidraw) [excalidraw](https://github.com/excalidraw/excalidraw) - Virtual whiteboard for sketching hand-drawn like diagrams
 
 ## Programming Addons
 
