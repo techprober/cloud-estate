@@ -26,9 +26,10 @@ resource "proxmox_vm_qemu" "vm" {
 
   # if you want two NICs, just copy this whole network section and duplicate it
   network {
-    model  = var.vm_network_model
-    bridge = var.vm_network_bridge
-    tag    = var.vm_network_tag
+    model    = var.vm_network_model
+    bridge   = var.vm_network_bridge
+    tag      = var.vm_network_tag
+    firewall = var.firewall
   }
 
   # ignore network changes during the life of the VM

@@ -42,6 +42,7 @@ No modules.
 | <a name="input_vm_name"></a> [vm\_name](#input\_vm\_name) | vm name | `string` | `"ubuntu-server"` | no |
 | <a name="input_vm_network_bridge"></a> [vm\_network\_bridge](#input\_vm\_network\_bridge) | default vm network nic bridge | `string` | `"vmbr0"` | no |
 | <a name="input_vm_network_dns"></a> [vm\_network\_dns](#input\_vm\_network\_dns) | default vm domain name server (DNS) ip e.g 8.8.8.8 | `string` | `"8.8.8.8"` | no |
+| <a name="input_vm_network_firewall"></a> [vm\_network\_firewall](#input\_vm\_network\_firewall) | whether to enable the Proxmox firewall on this network device | `string` | `true` | no |
 | <a name="input_vm_network_gateway"></a> [vm\_network\_gateway](#input\_vm\_network\_gateway) | default vm network gateway | `string` | `"192.168.1.1"` | no |
 | <a name="input_vm_network_ip"></a> [vm\_network\_ip](#input\_vm\_network\_ip) | default vm network ip e.g 192.168.100 | `string` | n/a | yes |
 | <a name="input_vm_network_model"></a> [vm\_network\_model](#input\_vm\_network\_model) | default vm network nic model | `string` | `"virtio"` | no |
