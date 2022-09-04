@@ -2,13 +2,13 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_proxmox"></a> [proxmox](#requirement\_proxmox) | 2.9.5 |
+| <a name="requirement_proxmox"></a> [proxmox](#requirement\_proxmox) | 2.9.11 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_proxmox"></a> [proxmox](#provider\_proxmox) | 2.9.5 |
+| <a name="provider_proxmox"></a> [proxmox](#provider\_proxmox) | 2.9.11 |
 
 ## Modules
 
@@ -18,7 +18,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [proxmox_vm_qemu.vm](https://registry.terraform.io/providers/telmate/proxmox/2.9.5/docs/resources/vm_qemu) | resource |
+| [proxmox_vm_qemu.vm](https://registry.terraform.io/providers/telmate/proxmox/2.9.11/docs/resources/vm_qemu) | resource |
 
 ## Inputs
 
