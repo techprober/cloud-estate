@@ -160,7 +160,8 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/rutikwankhade/CoverView) [CoreView](https://github.com/rutikwankhade/CoverView) - 🛠 Create awesome cover images for your blog posts quickly.
 - [![Open-Source Software][oss icon]](https://github.com/simeji/jid) [jid](https://github.com/simeji/jid) - json incremental digger
 - [![Open-Source Software][oss icon]](https://github.com/excalidraw/excalidraw) [excalidraw](https://github.com/excalidraw/excalidraw) - Virtual whiteboard for sketching hand-drawn like diagrams
-- [![Open-Source Software][oss icon]](https://github.com/luoye663/e5) [ms-e5](https://github.com/luoye663/e5) - MS e5续订
+- [![Open-Source Software][oss icon]](https://github.com/luoye663/e5) [ms-e5](https://github.com/luoye663/e5) - MS e5 续订
+- [![Open-Source Software][oss icon]](https://github.com/coollabsio/coolify) [coolify](https://github.com/coollabsio/coolify) - An open-source & self-hostable Heroku / Netlify alternative.
 
 ## Programming Addons
 
