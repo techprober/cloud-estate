@@ -94,21 +94,21 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 ## Command Line Utilities
 
-- [![Open-Source Software][oss icon]](https://github.com/iridakos/goto) [goto](https://github.com/iridakos/goto) - A shell utility allowing users to navigate to aliased directories supporting auto-completion.
-- [![Open-Source Software][oss icon]](https://github.com/sekey/sekey) [sekey](https://github.com/sekey/sekey) - A SSH Agent that allow users to authenticate to UNIX/Linux SSH servers using the Secure Enclave
-- [![Open-Source Software][oss icon]](github-status-updater) [github-status-updater](https://github.com/cloudposse/github-status-updater) - Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
-- [![Open-Source Software][oss icon]](https://github.com/sharkdp/bat) [bat](https://github.com/sharkdp/bat) - A cat(1) clone with syntax highlighting and Git integration
-- [![Open-Source Software][oss icon]](https://github.com/sharkdp/vivid) [vivid](https://github.com/sharkdp/vivid) - vivid is a generator for the LS_COLORS environment variable that controls the colorized output of ls, tree, fd, bfs, dust and many other tools
-- [![Open-Source Software][oss icon]](https://github.com/oleiade/trousseau) [trousseau](https://github.com/oleiade/trousseau) - File based encrypted key-value store
-- [![Open-Source Software][oss icon]](https://github.com/minio/mc) [mc](https://github.com/minio/mc) - MinIO Client is a replacement for ls, cp, mkdir, diff and rsync commands for filesystems and object storage
-- [![Open-Source Software][oss icon]](https://v2raya.org/en/docs/prologue/introduction/) [v2rayA](https://v2raya.org/en/docs/prologue/introduction/) - v2rayA is an easy-to-use and powerful V2Ray client focused on Linux
-- [![Open-Source Software][oss icon]](https://github.com/mr-karan/doggo) [doggo](https://github.com/mr-karan/doggo) - 🐶 Command-line DNS Client for Humans. Written in Golang
-- [![Open-Source Software][oss icon]](https://github.com/cjbassi/gotop) [gotop](https://github.com/cjbassi/gotop) - A terminal based graphical activity monitor inspired by gtop and vtop
-- [![Open-Source Software][oss icon]](https://github.com/clementtsang/bottom) [bottom](https://github.com/clementtsang/bottom) - Yet another cross-platform graphical process/system monitor.
-- [![Open-Source Software][oss icon]](https://github.com/sharkdp/fd) [fd](https://github.com/sharkdp/fd) - YA simple, fast and user-friendly alternative to 'find'
-- [![Open-Source Software][oss icon]](https://github.com/BurntSushi/ripgrep) [ripgrep](https://github.com/BurntSushi/ripgrep) - ripgrep recursively searches directories for a regex pattern while respecting your gitignore
-- [![Open-Source Software][oss icon]](https://github.com/dandavison/delta) [git-delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output
-- [![Open-Source Software][oss icon]](https://github.com/tldr-pages/tldr) [tldr](https://github.com/tldr-pages/tldr) - 📚 Collaborative cheatsheets for console commands
+- [![Open-Source Software][terminal icon]](https://github.com/iridakos/goto) [goto](https://github.com/iridakos/goto) - A shell utility allowing users to navigate to aliased directories supporting auto-completion.
+- [![Open-Source Software][terminal icon]](https://github.com/sekey/sekey) [sekey](https://github.com/sekey/sekey) - A SSH Agent that allow users to authenticate to UNIX/Linux SSH servers using the Secure Enclave
+- [![Open-Source Software][terminal icon]](github-status-updater) [github-status-updater](https://github.com/cloudposse/github-status-updater) - Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
+- [![Open-Source Software][terminal icon]](https://github.com/sharkdp/bat) [bat](https://github.com/sharkdp/bat) - A cat(1) clone with syntax highlighting and Git integration
+- [![Open-Source Software][terminal icon]](https://github.com/sharkdp/vivid) [vivid](https://github.com/sharkdp/vivid) - vivid is a generator for the LS_COLORS environment variable that controls the colorized output of ls, tree, fd, bfs, dust and many other tools
+- [![Open-Source Software][terminal icon]](https://github.com/oleiade/trousseau) [trousseau](https://github.com/oleiade/trousseau) - File based encrypted key-value store
+- [![Open-Source Software][terminal icon]](https://github.com/minio/mc) [mc](https://github.com/minio/mc) - MinIO Client is a replacement for ls, cp, mkdir, diff and rsync commands for filesystems and object storage
+- [![Open-Source Software][terminal icon]](https://v2raya.org/en/docs/prologue/introduction/) [v2rayA](https://v2raya.org/en/docs/prologue/introduction/) - v2rayA is an easy-to-use and powerful V2Ray client focused on Linux
+- [![Open-Source Software][terminal icon]](https://github.com/mr-karan/doggo) [doggo](https://github.com/mr-karan/doggo) - 🐶 Command-line DNS Client for Humans. Written in Golang
+- [![Open-Source Software][terminal icon]](https://github.com/cjbassi/gotop) [gotop](https://github.com/cjbassi/gotop) - A terminal based graphical activity monitor inspired by gtop and vtop
+- [![Open-Source Software][terminal icon]](https://github.com/clementtsang/bottom) [bottom](https://github.com/clementtsang/bottom) - Yet another cross-platform graphical process/system monitor.
+- [![Open-Source Software][terminal icon]](https://github.com/sharkdp/fd) [fd](https://github.com/sharkdp/fd) - YA simple, fast and user-friendly alternative to 'find'
+- [![Open-Source Software][terminal icon]](https://github.com/BurntSushi/ripgrep) [ripgrep](https://github.com/BurntSushi/ripgrep) - ripgrep recursively searches directories for a regex pattern while respecting your gitignore
+- [![Open-Source Software][terminal icon]](https://github.com/dandavison/delta) [git-delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output
+- [![Open-Source Software][terminal icon]](https://github.com/tldr-pages/tldr) [tldr](https://github.com/tldr-pages/tldr) - 📚 Collaborative cheatsheets for console commands
 
 ## Docker Images
 
