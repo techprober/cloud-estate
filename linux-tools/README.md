@@ -111,6 +111,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ## Docker Images
 
 - [![Docker][docker icon]](https://github.com/pi-hole/docker-pi-hole) [docker-pi-hole](https://github.com/pi-hole/docker-pi-hole) - Pi-hole in a docker container
+- [![Docker][docker icon]](https://github.com/traefik/whoami) [whoami](https://github.com/traefik/whoami) - Tiny Go webserver that prints os information and HTTP request to output
 
 ## Kubernetes Tools
 
