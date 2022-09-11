@@ -68,7 +68,6 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/benweet/stackedit) [stackedit](https://github.com/benweet/stackedit) - In-browser Markdown editor
 - [![Open-Source Software][oss icon]](https://github.com/peaceiris/actions-gh-pages) [actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) - GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site easily. Static-Site-Generators-friendly
 - [![Open-Source Software][oss icon]](https://github.com/jesseduffield/lazygit) [lazygit](https://github.com/jesseduffield/lazygit) - simple terminal UI for git commands
-- [![Open-Source Software][oss icon]](https://github.com/dandavison/delta) [git-delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output
 - [![Open-Source Software][oss icon]](https://github.com/restic/restic) [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
 - [![Open-Source Software][oss icon]](https://github.com/coder/code-server) [code-server](https://github.com/coder/code-server) - VS Code in the browser
 - [![Open-Source Software][oss icon]](https://github.com/pingostack/pingos) [pingos](https://github.com/pingostack/pingos) - Based on the NGINX/RTMP/HTTP-FLV/HTTP-TS/HLS/HLS+/DASH/H.264/H.265/AAC/MP3/Live/Record/VOD/Push/Pull/Multiple Processes/Dynamic Configuration/Configuration Variables/Console Interface/Notify
@@ -107,11 +106,14 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/cjbassi/gotop) [gotop](https://github.com/cjbassi/gotop) - A terminal based graphical activity monitor inspired by gtop and vtop
 - [![Open-Source Software][oss icon]](https://github.com/clementtsang/bottom) [bottom](https://github.com/clementtsang/bottom) - Yet another cross-platform graphical process/system monitor.
 - [![Open-Source Software][oss icon]](https://github.com/sharkdp/fd) [fd](https://github.com/sharkdp/fd) - YA simple, fast and user-friendly alternative to 'find'
+- [![Open-Source Software][oss icon]](https://github.com/BurntSushi/ripgrep) [ripgrep](https://github.com/BurntSushi/ripgrep) - ripgrep recursively searches directories for a regex pattern while respecting your gitignore
+- [![Open-Source Software][oss icon]](https://github.com/dandavison/delta) [git-delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output
 - [![Open-Source Software][oss icon]](https://github.com/tldr-pages/tldr) [tldr](https://github.com/tldr-pages/tldr) - 📚 Collaborative cheatsheets for console commands
 
 ## Docker Images
 
 - [![Docker][docker icon]](https://github.com/pi-hole/docker-pi-hole) [docker-pi-hole](https://github.com/pi-hole/docker-pi-hole) - Pi-hole in a docker container
+- [![Docker][docker icon]](https://github.com/traefik/whoami) [whoami](https://github.com/traefik/whoami) - Tiny Go webserver that prints os information and HTTP request to output
 
 ## Kubernetes Tools
 
@@ -120,6 +122,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Kuberentes][k8s icon]](https://github.com/k0sproject/k0sctl) [k0sctl](https://github.com/k0sproject/k0sctl) - A bootstrapping and management tool for k0s clusters
 - [![Kuberentes][k8s icon]](https://github.com/datreeio/datree) [datree](https://github.com/datreeio/datree) - Prevent Kubernetes Misconfigurations
 - [![Kuberentes][k8s icon]](https://github.com/ahmetb/kubectx) [kubectx+kubens](https://github.com/ahmetb/kubectx) - Faster way to switch between clusters and namespaces in kubectl
+- [![Kuberentes][k8s icon]](https://github.com/databus23/helm-diff) [helm-diff](https://github.com/databus23/helm-diff) - A helm plugin that shows a diff explaining what a helm upgrade would change
 
 ## CloudNative Solutions
 
