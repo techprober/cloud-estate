@@ -119,6 +119,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Kuberentes][k8s icon]](https://github.com/k0sproject/k0sctl) [k0sctl](https://github.com/k0sproject/k0sctl) - A bootstrapping and management tool for k0s clusters
 - [![Kuberentes][k8s icon]](https://github.com/datreeio/datree) [datree](https://github.com/datreeio/datree) - Prevent Kubernetes Misconfigurations
 - [![Kuberentes][k8s icon]](https://github.com/ahmetb/kubectx) [kubectx+kubens](https://github.com/ahmetb/kubectx) - Faster way to switch between clusters and namespaces in kubectl
+- [![Kuberentes][k8s icon]](https://github.com/databus23/helm-diff) [helm-diff](https://github.com/databus23/helm-diff) - A helm plugin that shows a diff explaining what a helm upgrade would change
 
 ## CloudNative Solutions
 
