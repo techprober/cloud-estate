@@ -45,13 +45,13 @@ brew install kind
 ## Create a kubernetes cluster
 
 ```bash
-kind create cluster --name <cluster-name> --image kindest/node:v1.23.6
+kind create cluster --name <cluster-name> --image kindest/node:v1.25.0
 ```
 
 Alternatively, you may also provision a multi-node cluster using kind.yml
 
 ```bash
-kind create cluster --name <cluster-name> --image kindest/node:v1.23.6 --config kind.yaml
+kind create cluster --name <cluster-name> --image kindest/node:v1.25.0 --config kind.yaml
 ```
 
 ## Check cluster info
@@ -95,8 +95,31 @@ Deploy the Kubernetes supported [ Ingress NGINX Controller ](https://git.k8s.io/
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 ```
 
+## Deploy MetalLB
+
+https://metallb.universe.tf/installation/
+
+Installation by Manifest
+
+```bash
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.5/config/manifests/metallb-native.yaml
+```
+
+Deploy IPAddressPool
+
+```bash
+kubectl apply -f metallb.yaml
+```
+
 ## Deploy Sample App
 
 ```bash
 kubectl apply -f app.yaml
+```
+
+Test Result
+
+```bash
+$ curl http://172.18.199.50/hello
+Hello World! This is a hello-world app
 ```
