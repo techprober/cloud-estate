@@ -1,6 +1,7 @@
 # Kind
 
-[ kind ](https://kind.sigs.k8s.io/) is a tool for running local Kubernetes clusters using `Docker` container “nodes”.
+- [ kind ](https://kind.sigs.k8s.io/) - A tool for running local Kubernetes clusters using `Docker` container “nodes”.
+- [ kind configuration (networking) ](https://kind.sigs.k8s.io/docs/user/configuration/#networking) Multiple details of the cluster's networking can be customized under the networking field.
 
 kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
 
