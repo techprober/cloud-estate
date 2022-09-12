@@ -84,7 +84,7 @@ kind delete cluster
 ```bash
 sudo mkdir -p /etc/kubernetes
 kind export kubeconfig --name <cluster-name>
-cat ~/.k8s/config
+cat ~/.kube/config
 ```
 
 ## Deploy Ingress Controller
