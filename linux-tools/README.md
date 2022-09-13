@@ -20,6 +20,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [Awesome](#awesome)
 - [GitHub Related](#github-related)
+- [Telegram Related](#telegram-related)
 - [Shell Related](#shell-related)
 - [Productive Tools](#productive-tools)
 - [HomeLab Related](#homelab-related)
@@ -52,6 +53,10 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][github icon]](https://github.com/wei/pull) [pull](https://github.com/wei/pull) - 🤖 Keep your forks up-to-date via automated PRs
 - [![Open-Source Software][github icon]](https://github.com/appleboy/telegram-action) [telegram-action](https://github.com/appleboy/telegram-action) - GitHub Action that sends a Telegram message.
 - [![Open-Source Software][github icon]](https://github.com/octokit/request-action) [request-action](https://github.com/octokit/request-action) - A GitHub Action to send arbitrary requests to GitHub's REST API
+
+## Telegram Related
+
+- [![Open-Source Software][telegram icon]](https://github.com/itgoyo/TelegramGroup) [TelegramGroup](https://github.com/itgoyo/TelegramGroup) - 悄咪咪收集的 1000+个 Telegram 群合集，如果有更多好玩的 telegram 群，欢迎在 issue 提出或者 pull requests
 
 ## Shell Related
 
@@ -223,6 +228,7 @@ Special thanks go to all [contributors](https://github.com/TechProber/cloud-esta
 [cncf icon]: ./assets/cncf.svg
 [docker icon]: ./assets/docker.svg
 [github icon]: ./assets/github.svg
+[telegram icon]: ./assets/telegram.svg
 [awesome icon]: ./assets/awesome.svg
 [golang icon]: ./assets/golang.svg
 [terminal icon]: ./assets/terminal.svg
