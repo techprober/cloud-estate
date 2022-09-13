@@ -88,14 +88,6 @@ kind export kubeconfig --name <cluster-name>
 cat ~/.kube/config
 ```
 
-## Deploy Ingress Controller
-
-Deploy the Kubernetes supported [ Ingress NGINX Controller ](https://git.k8s.io/ingress-nginx/README.md#readme) to work as a reverse proxy and load balancer
-
-```bash
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
-```
-
 ## Deploy MetalLB
 
 https://metallb.universe.tf/installation/
@@ -110,6 +102,14 @@ Deploy IPAddressPool
 
 ```bash
 kubectl apply -f metallb.yaml
+```
+
+## Deploy Ingress Controller
+
+Deploy the Kubernetes supported [ Ingress NGINX Controller ](https://git.k8s.io/ingress-nginx/README.md#readme) to work as a reverse proxy and load balancer
+
+```bash
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 ```
 
 ## Deploy Sample App
