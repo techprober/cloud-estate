@@ -32,7 +32,7 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 5678
-  type: LoadBalancer
+  type: ClusterIP
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -40,7 +40,13 @@ kind: Ingress
 metadata:
   name: hello-ingress
   namespace: prod
+  labels:
+    app: hello-app
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/add-base-url: "true"
 spec:
+  ingressClassName: nginx # <- specify ingressClassName here
   rules:
   - http:
       paths:

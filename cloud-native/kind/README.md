@@ -118,6 +118,23 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main
 kubectl apply -f app.yaml
 ```
 
+Check Resources
+
+```bash
+# check deployment and service
+kubectl get all -n prod
+NAME            READY   STATUS    RESTARTS   AGE
+pod/hello-app   1/1     Running   0          5m48s
+
+NAME                    TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+service/hello-service   ClusterIP   10.96.66.126   <none>        80/TCP    5m48s
+
+# check ingress
+kubectl get ingress -n prod
+NAME            CLASS    HOSTS   ADDRESS         PORTS   AGE
+hello-ingress   nginx    *       172.18.199.50   80      9m58s
+```
+
 Test Result
 
 ```bash
