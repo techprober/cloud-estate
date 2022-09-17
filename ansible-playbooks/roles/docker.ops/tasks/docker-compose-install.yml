@@ -3,12 +3,14 @@
   stat:
     path: "/usr/local/bin/docker-compose"
   register: is_compose_installed
+  become: yes
 
--  name: Install docker-compose
-   when: "not is_compose_installed.stat.exists"
-   get_url:
-     url: "https://github.com/docker/compose/releases/download/{{ compose_version }}/docker-compose-Linux-x86_64"
-     dest: /usr/local/bin/docker-compose
-     owner: root
-     group: root
-     mode: +x
+- name: Install docker-compose
+  when: "not is_compose_installed.stat.exists"
+  get_url:
+    url: "https://github.com/docker/compose/releases/download/{{ compose_version }}/docker-compose-Linux-x86_64"
+    dest: /usr/local/bin/docker-compose
+    owner: root
+    group: root
+    mode: +x
+  become: yes
