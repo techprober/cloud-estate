@@ -1,4 +1,0 @@
----
-# rootless containerd
-- include_tasks: rootless-install.yml
-- include_tasks: ipv4_forward.yml
