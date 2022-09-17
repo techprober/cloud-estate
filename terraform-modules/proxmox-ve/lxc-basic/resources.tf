@@ -31,7 +31,7 @@ resource "proxmox_lxc" "container" {
     ip       = var.container_network_ip
     gw       = var.container_network_gateway
     tag      = var.container_network_tag
-    firewall = bar.container_network_firewall
+    firewall = var.container_network_firewall
   }
 
   nameserver = var.container_network_dns
