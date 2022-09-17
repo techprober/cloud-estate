@@ -9,4 +9,4 @@
     - ./vars/minio.yml
 
   roles:
-  - role: ./roles/minio.ops/
+  - role: proxmox.packer.vm.ops/minio.ops/

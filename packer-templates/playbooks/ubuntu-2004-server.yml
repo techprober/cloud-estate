@@ -15,7 +15,5 @@
     vars:
       extra_packages:
       - neofetch
-
   - role: ./roles/maintenance.ops/key.ops/
-
   - role: ./roles/proxmox.bootstrap/
