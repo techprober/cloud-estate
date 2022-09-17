@@ -10,10 +10,10 @@
     - ./vars/maintenance.yml
 
   roles:
-  - role: apt.ops/update.ops/
-  - role: apt.ops/install-packages.ops/
+  - role: roles/apt.ops/update.ops/
+  - role: roles/apt.ops/install-packages.ops/
     vars:
       extra_packages:
       - neofetch
-  - role: maintenance.ops/key.ops/
-  - role: proxmox.packer.vm.ops/bootstrap.ops/
+  - role: roles/maintenance.ops/key.ops/
+  - role: roles/proxmox.packer.vm.ops/bootstrap.ops/
