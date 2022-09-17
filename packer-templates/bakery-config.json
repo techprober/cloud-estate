@@ -4,11 +4,6 @@
     "iso": "ubuntu-20.04.3-live-server-amd64.iso",
     "playbook": "ubuntu-2004-server.yml"
   },
-  "ubuntu-2204-server": {
-    "image_name": "ubuntu-2204-server",
-    "iso": "ubuntu-22.04-live-server-amd64.iso",
-    "playbook": "ubuntu-2204-server.yml"
-  },
   "ubuntu-2204-1-server": {
     "image_name": "ubuntu-2204-1-server",
     "iso": "ubuntu-22.04.1-live-server-amd64.iso",
@@ -23,11 +18,6 @@
     "image_name": "containerd-ubuntu-2204-server",
     "iso": "ubuntu-22.04-live-server-amd64.iso",
     "playbook": "containerd-ubuntu-2204-server.yml"
-  },
-  "cn-ubuntu-2204-server": {
-    "image_name": "cn-ubuntu-2204-server",
-    "iso": "ubuntu-22.04-live-server-amd64.iso",
-    "playbook": "cn-ubuntu-2204-server.yml"
   },
   "cn-ubuntu-2204-1-server": {
     "image_name": "cn-ubuntu-2204-1-server",
