@@ -1,16 +1,12 @@
 ---
-# ../roles/apt.ops/set-sources.ops/
-set_sources:
-  primary_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
-  security_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
+primary_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
+security_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
 
-# ../roles/apt.ops/install-packages.ops/
-install_packages:
-  packages:
-  - tmux
-  - screen
-  - tree
-  - vim
-  - iputils-ping
-  - telnet
-  - dnsutils
+packages:
+- tmux
+- screen
+- tree
+- vim
+- iputils-ping
+- telnet
+- dnsutils
