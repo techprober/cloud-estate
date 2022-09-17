@@ -1,5 +1,6 @@
 ---
 - name: Remove apt lock files
+  become: true
   block:
     - name: Get apt process id
       shell: "ps -ef | grep -v grep | grep -w apt | awk '{print $2}'"

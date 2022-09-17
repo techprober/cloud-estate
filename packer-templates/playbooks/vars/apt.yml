@@ -2,7 +2,7 @@
 primary_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
 security_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
 
-packages:
+base_packages:
 - tmux
 - screen
 - tree
@@ -10,3 +10,6 @@ packages:
 - iputils-ping
 - telnet
 - dnsutils
+
+extra_packeges:
+- neofetch
