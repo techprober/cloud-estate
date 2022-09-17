@@ -111,9 +111,15 @@ variable "container_network_tag" {
   type        = number
 }
 
+variable "container_network_firewall" {
+  default     = true
+  description = "A boolean to enable the firewall on the network interface"
+  type        = bool
+}
+
 variable "container_network_dns" {
   default     = "8.8.8.8"
-  description = "The DNS server IP address used by the container."
+  description = "The DNS server IP address used by the container"
   type        = string
 }
 
