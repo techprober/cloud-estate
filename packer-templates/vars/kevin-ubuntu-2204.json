@@ -12,7 +12,7 @@
   "datastore_type": "directory",
   "cloud_init_storage_pool": "sata-pool",
 
-  "iso": "sata-pool:iso/ubuntu-22.04-live-server-amd64.iso",
+  "iso": "sata-pool:iso/ubuntu-22.04.1-live-server-amd64.iso",
 
   "ssh_password": "packer",
   "ssh_username": "packer",
