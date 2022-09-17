@@ -3,9 +3,9 @@
   apt:
     update_cache: yes
 
-- name: Install packages defined in the list
+- name: Install base packages defined in the list
   ansible.builtin.apt:
-    pkg: "{{ packages }}"
+    pkg: "{{ base_packages }}"
 
 - name: Install user-defined extra packages
   ansible.builtin.apt:

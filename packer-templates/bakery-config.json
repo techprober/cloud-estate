@@ -6,33 +6,23 @@
   },
   "ubuntu-2204-server": {
     "image_name": "ubuntu-2204-server",
-    "iso": "ubuntu-22.04-live-server-amd64.iso",
-    "playbook": "ubuntu-2204-server.yml"
-  },
-  "ubuntu-2204-1-server": {
-    "image_name": "ubuntu-2204-1-server",
     "iso": "ubuntu-22.04.1-live-server-amd64.iso",
     "playbook": "ubuntu-2204-1-server.yml"
   },
   "docker-ubuntu-2204-server": {
     "image_name": "docker-ubuntu-2204-server",
-    "iso": "ubuntu-22.04-live-server-amd64.iso",
+    "iso": "ubuntu-22.04.1-live-server-amd64.iso",
     "playbook": "docker-2204-ubuntu-server.yml"
   },
   "containerd-ubuntu-2204-server": {
     "image_name": "containerd-ubuntu-2204-server",
-    "iso": "ubuntu-22.04-live-server-amd64.iso",
+    "iso": "ubuntu-22.04.1-live-server-amd64.iso",
     "playbook": "containerd-ubuntu-2204-server.yml"
   },
   "cn-ubuntu-2204-server": {
     "image_name": "cn-ubuntu-2204-server",
-    "iso": "ubuntu-22.04-live-server-amd64.iso",
-    "playbook": "cn-ubuntu-2204-server.yml"
-  },
-  "cn-ubuntu-2204-1-server": {
-    "image_name": "cn-ubuntu-2204-1-server",
     "iso": "ubuntu-22.04.1-live-server-amd64.iso",
-    "playbook": "cn-ubuntu-2204-1-server.yml"
+    "playbook": "cn-ubuntu-2204-server.yml"
   },
   "custom": {
     "image_name": "custom-server",

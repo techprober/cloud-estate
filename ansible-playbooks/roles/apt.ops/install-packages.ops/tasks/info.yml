@@ -5,7 +5,11 @@
      ----------------------------------------------
      The following packages will be installed:
 
-     {% for pkg in packages %}
+     {% for pkg in base_packages %}
+     {{ pkg }}
+     {% endfor %}
+
+     {% for pkg in extra_packages %}
      {{ pkg }}
      {% endfor %}
      ----------------------------------------------

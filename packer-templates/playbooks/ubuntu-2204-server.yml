@@ -1,7 +1,7 @@
 ---
 # Bake ubuntu-2204-server
 
-- name: "Bake proxmox ubuntu 22.04 server"
+- name: "Bake proxmox ubuntu 22.04.1 server"
   hosts: localhost
   become: yes
 
@@ -10,12 +10,10 @@
     - ./vars/maintenance.yml
 
   roles:
-  - role: ./roles/apt.ops/update.ops/
-  - role: ./roles/apt.ops/install-packages.ops/
+  - role: roles/apt.ops/update.ops/
+  - role: roles/apt.ops/install-packages.ops/
     vars:
       extra_packages:
       - neofetch
-
-  - role: ./roles/maintenance.ops/key.ops/
-
-  - role: ./roles/proxmox.bootstrap/
+  - role: roles/maintenance.ops/key.ops/
+  - role: roles/proxmox.packer.vm.ops/bootstrap.ops/

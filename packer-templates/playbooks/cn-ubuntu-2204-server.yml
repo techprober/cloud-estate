@@ -1,23 +1,21 @@
 ---
 # Bake cn-ubuntu-2204-server
 
-- name: "Bake proxmox cn ubuntu 22.04 server"
+- name: "Bake proxmox cn ubuntu 22.04.1 server"
   hosts: localhost
   become: yes
 
   vars_files:
     - ./vars/apt.yml
-    - ./vars/maintenance.yml
+    - ./vars/keys.yml
 
   roles:
-  - role: ./roles/apt.ops/set-sources.ops/
+  - role: roles/apt.ops/set-sources.ops/
     vars:
       release: "jammy"
-  - role: ./roles/apt.ops/install-packages.ops/
+  - role: roles/apt.ops/install-packages.ops/
     vars:
       extra_packages:
       - neofetch
-
-  - role: ./roles/maintenance.ops/key.ops/
-
-  - role: ./roles/proxmox.bootstrap/
+  - role: roles/maintenance.ops/key.ops/
+  - role: roles/proxmox.packer.vm.ops/bootstrap.ops/

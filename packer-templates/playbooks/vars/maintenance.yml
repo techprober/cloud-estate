@@ -1,5 +1,0 @@
----
-# ../roles/maintenance.ops/key.ops/
-key:
-  public_keys:
-  - /tmp/id_rsa.pub

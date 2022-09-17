@@ -1,15 +1,17 @@
 ---
 - name: Install Docker with script
-  shell: "sudo wget -qO- https://get.docker.com/ | sh"
+  shell: "wget -qO- https://get.docker.com/ | sh"
   register: installation_result
   args:
     warn: false
+  become: yes
 
 - name: Enable docker to start at boot
   ansible.builtin.service:
     name: docker
     enabled: yes
   when: installation_result.rc == 0
+  become: yes
 
 - name: Add user to docker group
   ansible.builtin.user:
@@ -17,10 +19,7 @@
     groups: docker
     append: yes
   when: installation_result.rc == 0
-
-- name: Reset ssh connection to allow user changes to affect ansible user
-  ansible.builtin.meta:
-    reset_connection
+  become: yes
 
 - name: "Post installation message"
   debug:

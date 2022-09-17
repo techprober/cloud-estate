@@ -7,24 +7,20 @@
 
   vars_files:
     - ./vars/apt.yml
-    - ./vars/maintenance.yml
+    - ./vars/keys.yml
 
   vars:
     - vault_enable: true
 
   roles:
-  - role: ./roles/apt.ops/set-sources.ops/
+  - role: roles/apt.ops/set-sources.ops/
     vars:
       release: "jammy"
-  - role: ./roles/apt.ops/install-packages.ops/
+  - role: roles/apt.ops/install-packages.ops/
     vars:
       extra_packages:
       - neofetch
-
-  - role: ./roles/maintenance.ops/key.ops/
-
+  - role: roles/maintenance.ops/key.ops/
   # - role: ./roles/containerd.ops/
-
-  - role: ./roles/docker.ops/
-
-  - role: ./roles/proxmox.bootstrap/
+  - role: roles/docker.ops/
+  - role: roles/proxmox.packer.vm.ops/bootstrap.ops/

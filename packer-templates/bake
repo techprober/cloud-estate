@@ -123,7 +123,7 @@ done
 [[ ! $(jq -c 'keys' bakery-config.json | cat) =~ .*\"${vm_type}\".* ]] && { echo "[Error]: VM template: '${vm_type}' not found in bakery-config.json"; exit 1; }
 [[ ! -z "$vm_id" ]] && vm_id=$vm_id || vm_id=9000
 [[ ! -z "$vm_name" ]] && vm_name=$vm_name || vm_name=$vm_type
-[[ ! -z "$build_type" ]] && template="custom-${template}" || template=$template
+[[ ! -z "$build_type" ]] && template="${build_type}-custom-${template}" || template=$template
 [[ ! -z "$build_type" ]] && build_type=$build_type || build_type="base"
 [[ ! -z "$var_file" ]] && var_file=$var_file || var_file="./vars/ubuntu-2204.json"
 
