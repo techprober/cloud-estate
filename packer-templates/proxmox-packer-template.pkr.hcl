@@ -109,6 +109,7 @@ build {
     pause_before            = "5s"
     playbook_dir            = "./playbooks"
     playbook_file           = var.playbook_file
+    role_paths              = ["../ansible-playbooks/roles/"]
     clean_staging_directory = true
     extra_arguments = [
       "--extra-vars \"ansible_user=packer\""
