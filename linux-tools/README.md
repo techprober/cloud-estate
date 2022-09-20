@@ -194,6 +194,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/zeromicro/go-zero) [go-zero](https://github.com/zeromicro/go-zero) - A cloud-native Go microservices framework with cli tool for productivity.
 - [![Open-Source Software][golang icon]](https://github.com/evrone/go-clean-template) [go-clean-template](https://github.com/evrone/go-clean-template) - Clean Architecture template for Golang services
 - [![Open-Source Software][golang icon]](https://github.com/golangci/golangci-lint) [golangci-lint](https://github.com/golangci/golangci-lint) - Fast linters Runner for Go
+- [![Open-Source Software][golang icon]](https://github.com/go-kit/kit) [kit](https://github.com/go-kit/kit) - A standard library for microservices.
 
 ## Vim/Neovim Addons
 
