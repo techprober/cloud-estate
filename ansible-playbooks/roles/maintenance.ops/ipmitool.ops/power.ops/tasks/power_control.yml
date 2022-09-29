@@ -18,7 +18,7 @@
     when: "('on' in pre_check_result.stdout) and (power == 'off')"
     register: power_off_result
 
-  - name: Check previous operation is functional
+  - name: Check if previous operation is functional
     debug:
       msg: "Updating power state... It may take a few minutes, please wait."
     when: (power_on_result.stdout is defined) or (power_off_result.stdout is defined)
