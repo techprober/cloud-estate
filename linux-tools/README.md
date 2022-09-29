@@ -92,6 +92,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/Loyalsoldier/v2ray-rules-dat) [v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) - 🦄 🎃 👻 V2Ray 路由规则文件加强版，可代替 V2Ray 官方 geoip.dat 和 geosite.dat，兼容 Shadowsocks-windows、Xray-core、Trojan-Go 和 leaf。Enhanced edition of V2Ray rules dat files, compatible with Xray-core, Shadowsocks-windows, Trojan-Go and leaf.
 - [![Open-Source Software][oss icon]](https://github.com/IrineSistiana/mosdns) [mosdns](https://github.com/IrineSistiana/mosdns) - 一个 DNS 转发器
 - [![Open-Source Software][oss icon]](https://github.com/P3TERX/script) [script](https://github.com/P3TERX/script) - Some shell script
+- [![Open-Source Software][oss icon]](https://github.com/ipmitool/ipmitool) [ipmitool](https://github.com/ipmitool/ipmitool) - An open-source tool for controlling IPMI-enabled systems
 
 ## VPS Related
 
