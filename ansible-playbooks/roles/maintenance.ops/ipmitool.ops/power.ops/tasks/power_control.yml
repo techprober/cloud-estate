@@ -26,7 +26,7 @@
   - name: Verify power state
     when:
       - check_status
-      - (power_on_result.stdout is not defined) and (not power_off_result.stdout is not defined)
+      - (power_on_result.stdout is not defined) and (power_off_result.stdout is not defined)
     block:
     - name: Check current power state
       command: "ipmitool -H {{ remote_server_ip }} -U ADMIN -P {{ admin_password }} -I lanplus power status"
