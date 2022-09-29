@@ -11,13 +11,22 @@
   - name: Power on the remote server
     command: "ipmitool -H {{ remote_server_ip }} -U ADMIN -P {{ admin_password }} -I lanplus power on"
     when: "('off' in pre_check_result.stdout) and (power == 'on')"
+    register: power_on_result
 
   - name: Power off the remote server
     command: "ipmitool -H {{ remote_server_ip }} -U ADMIN -P {{ admin_password }} -I lanplus power off"
     when: "('on' in pre_check_result.stdout) and (power == 'off')"
+    register: power_off_result
+
+  - name: Check previous operation is functional
+    debug:
+      msg: "Updating power state... It may take a few minutes, please wait."
+    when: (power_on_result.stdout is defined) or (power_off_result.stdout is defined)
 
   - name: Verify power state
-    when: check_status
+    when:
+      - check_status
+      - (power_on_result.stdout is not defined) or (not power_off_result.stdout is not defined)
     block:
     - name: Check current power state
       command: "ipmitool -H {{ remote_server_ip }} -U ADMIN -P {{ admin_password }} -I lanplus power status"
