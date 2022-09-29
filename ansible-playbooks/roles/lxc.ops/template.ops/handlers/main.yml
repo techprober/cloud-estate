@@ -1,0 +1,30 @@
+---
+- name: Print configuration parameters
+  ansible.builtin.debug:
+    msg: |
+      ------------------------------------------------------
+      vmid            | {{ lxc.vmid }}
+      description     | {{ lxc.description }}
+      hostname        | {{ lxc.hostname }}
+      cores           | {{ lxc.cores }}
+      memory          | {{ lxc.memory }}
+      swap            | {{ lxc.swap }}
+      ostemplate      | {{ lxc.ostemplate }}
+      netif           | {{ lxc.netif }}
+      nameserver      | {{ lxc.nameserver }}
+      storage         | {{ lxc.storage }}
+      disk            | {{ lxc.disk_size }}
+      unprivileged    | {{ lxc.unprivileged }}
+      features        | {{ lxc.features }}
+      pubkey          | {{ lxc.pubkey }}
+      ------------------------------------------------------
+
+- name: Print artifact information
+  ansible.builtin.debug:
+    msg: |
+      ------------------------------------------------------
+      artifact_name   | {{ lxc.artifact_name }}
+      artifact_size   | {{ artifact_size }}
+      timestamp       | {{ timestamp }}
+      template_path   | /mnt/pve/{{ lxc.storage }}/template/cache/{{ lxc.artifact_name }}.tar.gz
+      ------------------------------------------------------

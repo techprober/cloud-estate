@@ -1,0 +1,4 @@
+---
+- include_tasks: convert_to_template.yml
+  when: lxc.convert_to_template
+- include_tasks: ../handlers/main.yml
