@@ -1,0 +1,28 @@
+---
+- name: Power cycle remote control
+  block:
+  - name: Verify power state
+    when: check_status
+    block:
+    - name: Check current power state
+      command: "ipmitool -H {{ remote_server_ip }} -U ADMIN -P {{ admin_password }} -I lanplus power status"
+      register: pre_check_result
+
+  - name: Power on the remote server
+    command: "ipmitool -H {{ remote_server_ip }} -U ADMIN -P {{ admin_password }} -I lanplus power on"
+    when: "('off' in pre_check_result.stdout) and (power == 'on')"
+
+  - name: Power off the remote server
+    command: "ipmitool -H {{ remote_server_ip }} -U ADMIN -P {{ admin_password }} -I lanplus power off"
+    when: "('on' in pre_check_result.stdout) and (power == 'off')"
+
+  - name: Verify power state
+    when: check_status
+    block:
+    - name: Check current power state
+      command: "ipmitool -H {{ remote_server_ip }} -U ADMIN -P {{ admin_password }} -I lanplus power status"
+      register: result
+
+    - name: Print result
+      debug:
+        msg: "{{ result.stdout }}"

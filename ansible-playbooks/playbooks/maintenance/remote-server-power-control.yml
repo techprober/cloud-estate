@@ -1,0 +1,12 @@
+---
+- name: Update power state on remote server
+  hosts: localhost
+
+  vars:
+    - remote_server_ip: "192.168.1.10"
+    - power: "on"
+    - admin_password: "{{ lookup('env','IPMI_PASS') }}"
+    - check_status: true
+
+  roles:
+    - role: maintenance.ops/ipmitool.ops/power.ops/

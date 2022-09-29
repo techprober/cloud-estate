@@ -1,0 +1,2 @@
+---
+- include_tasks: power_control.yml
