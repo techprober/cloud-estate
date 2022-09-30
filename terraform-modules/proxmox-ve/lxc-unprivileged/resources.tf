@@ -7,6 +7,7 @@ resource "proxmox_lxc" "container" {
   ostemplate   = var.container_os_template
   password     = var.container_password
   unprivileged = true
+  ostype       = "ubuntu"
   start        = var.container_start_after_creation
 
   cores  = var.container_cpu_cores
