@@ -5,6 +5,7 @@ resource "proxmox_lxc" "container" {
   vmid     = var.container_id
 
   ostemplate   = var.container_os_template
+  password     = var.container_password
   unprivileged = var.container_unprivileged
   start        = var.container_start_after_creation
 
