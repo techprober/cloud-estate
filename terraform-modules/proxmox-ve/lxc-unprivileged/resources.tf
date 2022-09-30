@@ -6,18 +6,13 @@ resource "proxmox_lxc" "container" {
 
   ostemplate   = var.container_os_template
   password     = var.container_password
-  unprivileged = var.container_unprivileged
+  unprivileged = true
+  ostype       = "ubuntu"
   start        = var.container_start_after_creation
 
   cores  = var.container_cpu_cores
   memory = var.container_memory
   swap   = var.container_swap
-
-  features {
-    fuse    = true
-    nesting = true
-    mount   = "cifs;nfs"
-  }
 
   rootfs {
     size    = var.container_boot_disk_size

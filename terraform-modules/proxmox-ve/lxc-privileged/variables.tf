@@ -40,12 +40,6 @@ variable "container_password" {
   type        = string
 }
 
-variable "container_unprivileged" {
-  default     = false
-  description = "a boolean that makes the container run as an unprivileged user. Default is false"
-  type        = bool
-}
-
 variable "container_start_after_creation" {
   default     = true
   description = "a boolean that determines if the container is started after creation. Default is true"

@@ -1,16 +1,15 @@
 terraform {
-  source = "git::https://github.com/TechProber/cloud-estate.git//terraform-modules/proxmox-ve/lxc-basic?ref=HEAD"
+  source = "git::https://github.com/TechProber/cloud-estate.git//terraform-modules/proxmox-ve/lxc-privileged?ref=HEAD"
 }
 
 inputs = {
   proxmox_host = "192.168.1.10"
-  pm_user      = "root@pam"
+  pm_user      = "terraform-prov@pve"
   node_name    = "pve-01"
 
   container_hostname             = ""
   container_password             = ""
   container_id                   = 9999
-  container_unprivileged         = true
   container_start_after_creation = true
 
   container_os_template = "local-lvm:vztmpl/ubuntu-20.04-standard_20.04-1_amd64.tar.gz"
