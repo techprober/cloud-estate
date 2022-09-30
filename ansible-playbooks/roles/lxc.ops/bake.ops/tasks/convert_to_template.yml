@@ -15,40 +15,41 @@
   register: result
 
 - name: Verify result
-  debug:
+  ansible.builtin.debug:
     msg: |
       "{{ result.stdout }}"
+  changed_when: true
 
 - name: Set regex
-  set_fact:
+  ansible.builtin.set_fact:
     artifact_name_pattern: "(?<=/cache\/)(.*?)(?=\\')"
     artifact_size_pattern: "(?<=:\\s)(.*?)(?=\\')"
     timestamp_pattern: "(?<=at\\s)(.*?)(?=\\')"
 
 - name: Save artifact name
-  set_fact:
+  ansible.builtin.set_fact:
     artifact: '{{ result.stdout_lines | select("search", "creating vzdump archive") | regex_search(artifact_name_pattern) }}'
 
 - name: Save artifact size
-  set_fact:
+  ansible.builtin.set_fact:
     artifact_size: '{{ result.stdout_lines | select("search", "archive file size") | regex_search(artifact_size_pattern) }}'
 
 - name: Save timestamp
-  set_fact:
+  ansible.builtin.set_fact:
     timestamp: '{{ result.stdout_lines | select("search", "Backup finished at") | regex_search(timestamp_pattern) }}'
 
 - name: Print artifact full path
-  debug:
+  ansible.builtin.debug:
     msg: |
       /mnt/pve/{{ lxc.storage }}/template/cache/{{ artifact }}
 
 - name: Print artifact size
-  debug:
+  ansible.builtin.debug:
     msg: |
       {{ artifact_size }}
 
 - name: Print timestamp
-  debug:
+  ansible.builtin.debug:
     msg: |
       {{ timestamp }}
 
@@ -59,4 +60,10 @@
   ansible.builtin.debug:
     msg: |
       "Successfully converted lxc {{ lxc.vmid }} to lxc template."
-  notify: Print configuration parameters
+  notify:
+    - Print configuration parameters
+    - Print artifact information
+  changed_when: true
+
+- name: Flush handlers
+  ansible.builtin.meta: flush_handlers
