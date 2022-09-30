@@ -63,7 +63,7 @@ More installation options can be found in https://terragrunt.gruntwork.io/docs/g
 Log into the Proxmox cluster or host using ssh (or mimic these in the GUI) then:
 
 - Create the user `terraform-prov@pve`
-- Add the `Administrator` role to the `terraform-prov` user
+- Add the `TerraformProv` role to the `terraform-prov` user
 
 ```bash
 # Create associated role
@@ -73,7 +73,7 @@ pveum role add TerraformProv -privs "VM.Allocate VM.Clone VM.Config.CDROM VM.Con
 pveum user add terraform-prov@pve --password $PASSWORD
 
 # Assign the user the correct role
-pveum aclmod / -user terraform-prov@pve -role Administrator
+pveum aclmod / -user terraform-prov@pve -role TerraformProv
 ```
 
 #### Create the connection via Username and API token | PASSWORD
