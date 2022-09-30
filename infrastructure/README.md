@@ -66,6 +66,9 @@ Log into the Proxmox cluster or host using ssh (or mimic these in the GUI) then:
 - Add the `Administrator` role to the `terraform-prov` user
 
 ```bash
+# Create associated role
+pveum role add TerraformProv -privs "VM.Allocate VM.Clone VM.Config.CDROM VM.Config.CPU VM.Config.Cloudinit VM.Config.Disk VM.Config.HWType VM.Config.Memory VM.Config.Network VM.Config.Options VM.Monitor VM.Audit VM.PowerMgmt Datastore.AllocateSpace Datastore.Audit"
+
 # Create the user
 pveum user add terraform-prov@pve --password $PASSWORD
 
@@ -74,6 +77,18 @@ pveum aclmod / -user terraform-prov@pve -role Administrator
 ```
 
 #### Create the connection via Username and API token | PASSWORD
+
+Create a dedicated API Token from web console (Datacenter >> Permissions >> API Tokens >> Add)
+
+```yaml
+user_name: terraform-prov
+token_name: mytoken
+privilege_separation: No
+```
+
+![](https://nrmjjlvckvsb.compat.objectstorage.ap-tokyo-1.oraclecloud.com/picgo/2022/09-30-9913007804a3fea25f2fb87c5b211511.png)
+
+Export secrets as environment variables
 
 ```bash
 export PM_API_TOKEN_ID="[user]@pve![token_id]"
