@@ -1,0 +1,5 @@
+---
+- name: Clear local SSH connection
+  local_action: shell ssh-keygen -R {{ host_ip }}
+  run_once: true
+  become: no

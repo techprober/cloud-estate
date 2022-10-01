@@ -1,0 +1,2 @@
+---
+- include_tasks: clear_local_connection.yml

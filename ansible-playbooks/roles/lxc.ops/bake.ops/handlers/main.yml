@@ -6,6 +6,7 @@
       vmid            | {{ lxc.vmid }}
       description     | {{ lxc.description }}
       hostname        | {{ lxc.hostname }}
+      host_ip         | {{ lxc.host_ip }}
       cores           | {{ lxc.cores }}
       memory          | {{ lxc.memory }}
       swap            | {{ lxc.swap }}
