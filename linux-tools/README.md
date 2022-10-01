@@ -116,6 +116,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][terminal icon]](https://github.com/BurntSushi/ripgrep) [ripgrep](https://github.com/BurntSushi/ripgrep) - ripgrep recursively searches directories for a regex pattern while respecting your gitignore
 - [![Open-Source Software][terminal icon]](https://github.com/dandavison/delta) [git-delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output
 - [![Open-Source Software][terminal icon]](https://github.com/tldr-pages/tldr) [tldr](https://github.com/tldr-pages/tldr) - 📚 Collaborative cheatsheets for console commands
+- [![Open-Source Software][terminal icon]](https://github.com/gopasspw/gopass) [gopass](https://github.com/gopasspw/gopass) - The slightly more awesome standard unix password manager for teams
 
 ## Docker Images
 
