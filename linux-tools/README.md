@@ -177,6 +177,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/coollabsio/coolify) [coolify](https://github.com/coollabsio/coolify) - An open-source & self-hostable Heroku / Netlify alternative.
 - [![Open-Source Software][oss icon]](https://github.com/apihero-run/jsonhero-web) [jsonhero-web](https://github.com/apihero-run/jsonhero-web) - JSON Hero is an open-source, beautiful JSON explorer for the web that lets you browse, search and navigate your JSON files at speed. 🚀
 - [![Open-Source Software][oss icon]](https://github.com/hoppscotch/hoppscotch) [hoppscotech](https://github.com/hoppscotch/hoppscotch) - 👽 Open source API development ecosystem - https://hoppscotch.io
+- [![Open-Source Software][oss icon]](https://github.com/mozilla/sops) [sops](https://github.com/mozilla/sops) - Simple and flexible tool for managing secrets
 
 ## Programming Addons
 
