@@ -178,6 +178,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/apihero-run/jsonhero-web) [jsonhero-web](https://github.com/apihero-run/jsonhero-web) - JSON Hero is an open-source, beautiful JSON explorer for the web that lets you browse, search and navigate your JSON files at speed. 🚀
 - [![Open-Source Software][oss icon]](https://github.com/hoppscotch/hoppscotch) [hoppscotech](https://github.com/hoppscotch/hoppscotch) - 👽 Open source API development ecosystem - https://hoppscotch.io
 - [![Open-Source Software][oss icon]](https://github.com/mozilla/sops) [sops](https://github.com/mozilla/sops) - Simple and flexible tool for managing secrets
+- [![Open-Source Software][oss icon]](https://github.com/FiloSottile/age) [age](https://github.com/FiloSottile/age) - A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability.
 
 ## Programming Addons
 
