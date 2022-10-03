@@ -1,0 +1,69 @@
+---
+- name: Stop LXC container
+  community.general.proxmox:
+    api_user: "{{ proxmox.api_user }}"
+    api_password: "{{ proxmox.api_password }}"
+    api_host: "{{ proxmox.api_host }}"
+    vmid: "{{ lxc.vmid }}"
+    state: stopped
+
+- name: Remove the network interface
+  command: "pct set {{ lxc.vmid }} --delete net0"
+
+- name: Create a template
+  command: "vzdump {{ lxc.vmid }} --compress gzip --dumpdir /mnt/pve/{{ lxc.storage }}/template/cache/"
+  register: result
+
+- name: Verify result
+  ansible.builtin.debug:
+    msg: |
+      "{{ result.stdout }}"
+  changed_when: true
+
+- name: Set regex
+  ansible.builtin.set_fact:
+    artifact_name_pattern: "(?<=/cache\/)(.*?)(?=\\')"
+    artifact_size_pattern: "(?<=:\\s)(.*?)(?=\\')"
+    timestamp_pattern: "(?<=at\\s)(.*?)(?=\\')"
+
+- name: Save artifact name
+  ansible.builtin.set_fact:
+    artifact: '{{ result.stdout_lines | select("search", "creating vzdump archive") | regex_search(artifact_name_pattern) }}'
+
+- name: Save artifact size
+  ansible.builtin.set_fact:
+    artifact_size: '{{ result.stdout_lines | select("search", "archive file size") | regex_search(artifact_size_pattern) }}'
+
+- name: Save timestamp
+  ansible.builtin.set_fact:
+    timestamp: '{{ result.stdout_lines | select("search", "Backup finished at") | regex_search(timestamp_pattern) }}'
+
+- name: Print artifact full path
+  ansible.builtin.debug:
+    msg: |
+      /mnt/pve/{{ lxc.storage }}/template/cache/{{ artifact }}
+
+- name: Print artifact size
+  ansible.builtin.debug:
+    msg: |
+      {{ artifact_size }}
+
+- name: Print timestamp
+  ansible.builtin.debug:
+    msg: |
+      {{ timestamp }}
+
+- name: Rename template
+  command: "mv /mnt/pve/{{ lxc.storage }}/template/cache/{{ artifact }} /mnt/pve/{{ lxc.storage }}/template/cache/{{ lxc.artifact_name }}.tar.gz"
+
+- name: Notify Result
+  ansible.builtin.debug:
+    msg: |
+      "Successfully converted lxc {{ lxc.vmid }} to lxc template."
+  notify:
+    - Print configuration parameters
+    - Print artifact information
+  changed_when: true
+
+- name: Flush handlers
+  ansible.builtin.meta: flush_handlers

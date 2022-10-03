@@ -35,5 +35,4 @@ autoinstall:
         passwd: $6$xyz$JJbmTJ7EzYLxcBOnv3bwWLhpQZ.WuX8yJkNaLKgtS747n2zUNPh8LZKhQPBnLAptBG429x5r0RJ.ZFIXiIMPw/ #packer
         groups: [sudo, wheel, adm, cdrom, dip, plugdev, lxd, users]
         lock-passwd: false
-        sudo: ALL=(ALL) NOPASSWD:ALL
         shell: /bin/bash

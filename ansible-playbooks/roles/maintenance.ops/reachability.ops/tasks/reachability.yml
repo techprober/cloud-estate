@@ -1,3 +1,3 @@
 ---
 - name: Perform ping action
-  ping:
+  ansible.builtin.ping:

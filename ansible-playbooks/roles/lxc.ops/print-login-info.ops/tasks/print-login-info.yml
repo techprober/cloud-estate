@@ -1,0 +1,21 @@
+---
+- name: Get default login password
+  shell: |
+    cat {{ artifact_dir }}/{{ artifact_name }}-user-default-password.txt
+  register: password
+  delegate_to: localhost
+  run_once: true
+
+- name: Print login notes
+  debug:
+    msg: |
+      You will be asked to change the default password at your first login to the lxc container.
+
+      ------------------------------
+      Default login credentials are:
+
+      username: {{ user.name }}
+      password: {{ password.stdout }}
+
+      Please keep them safely!
+      ------------------------------

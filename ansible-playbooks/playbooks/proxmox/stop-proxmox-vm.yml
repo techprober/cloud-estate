@@ -4,7 +4,7 @@
   become: yes
 
   roles:
-    - role: maintenance.ops/proxmox.ops/stopvm.ops/
+    - role: proxmox.ops/stopvm.ops/
       vars:
         - pm_user: "root@pam"
         - pm_host: "10.10.10.10"
