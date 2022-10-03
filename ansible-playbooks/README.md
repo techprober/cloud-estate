@@ -47,29 +47,50 @@
 ## Project File Structure
 
 ```
-# tree -d -L 2 ./
-.
-├── bin
+./
+├── ansible.cfg
 ├── docs
+│   └── ssh-configuration.md
+├── examples
+│   └── encrypted_example.txt
 ├── inventory
+│   ├── local.yml
+│   ├── main.yml
+│   ├── proxmox-lxc
+│   └── proxmox.yml
 ├── playbooks
 │   ├── apt
 │   ├── container
 │   ├── local-maintenance
 │   ├── maintenance
 │   ├── minio
+│   ├── pacman
 │   └── proxmox
-└── roles
-    ├── apt.ops
-    ├── arch.update
-    ├── container.ops
-    ├── homebrew.ops
-    ├── maintenance.ops
-    ├── minio.ops
-    └── server.ops
+├── README.md
+├── requirements.yml
+├── roles
+│   ├── apt.ops
+│   ├── containerd.ops
+│   ├── containerd-rootless.ops
+│   ├── docker.ops
+│   ├── homebrew.ops
+│   ├── lxc.ops
+│   ├── maintenance.ops
+│   ├── minio.ops
+│   ├── pacman.ops
+│   ├── proxmox.ops
+│   └── proxmox.packer.vm.ops
+├── scripts
+│   ├── arch-update
+│   ├── brew-bootstrap
+│   ├── brew-update
+│   └── gpg_vault_pass.sh
+└── vars
+    ├── kevin-proxmox-lxc.yml
+    └── proxmox-lxc.yml
 ```
 
-##### Notes:
+Notes:
 
 - All the playbooks are stored under `./playbooks/`
 - All the playable roles are stored under `./roles/`
