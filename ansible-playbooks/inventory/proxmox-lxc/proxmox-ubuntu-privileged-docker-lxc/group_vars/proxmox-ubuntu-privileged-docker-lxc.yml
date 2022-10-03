@@ -1,0 +1,66 @@
+---
+# apt.ops/
+primary_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
+security_source_uri: "https://mirrors.ustc.edu.cn/ubuntu/"
+release: "jammy"
+
+base_packages:
+- linux-headers-generic
+- linux-generic
+- vim
+- tree
+
+extra_packages:
+- tmux
+- net-tools
+- iputils-ping
+- telnet
+- dnsutils
+- screen
+- neofetch
+
+# maintenance.ops/key.ops/
+artifact_dir: "$HOME/.ansible/artifacts/"
+public_keys:
+- ~/.ssh/id_rsa.pub
+
+# maintenance.ops/user.ops/add.ops/
+user:
+  name: lxc
+  groups:
+   - users
+   - wheel
+   - sudo
+
+# lxc.ops/
+# proxmox host configurations
+proxmox:
+  api_host: "192.168.1.10"
+  api_node: "pve"
+  api_user: "root@pam"
+  api_password: "{{ lookup('env','PM_PASS') }}"
+  timeout: 90
+
+# lxc configurations
+lxc:
+  vmid: 999
+  description: created with ansible
+  hostname: ubuntu-2204-1-docker-privileged-lxc-template
+  host_ip: 192.168.1.100
+  password: "passwd"
+  cores: 4
+  memory: 1024
+  swap: 512
+  ostemplate: "local:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
+  netif: '{"net0":"name=eth0,gw=192.168.1.1,ip=192.168.1.100/24,bridge=vmbr0"}'
+  nameserver: "192.168.1.1"
+  storage: "local-lvm"
+  disk_size: "10"
+  unprivileged: no
+  features:
+  - fuse=1
+  - nesting=1
+  - mount=cifs;nfs
+  pubkey: "~/.ssh/id_rsa.pub"
+  convert_to_template: true
+  artifact_name: ubuntu-2204-1-docker-privileged-lxc-template

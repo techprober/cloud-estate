@@ -1,13 +1,14 @@
 ---
 - name: Start Proxmox VMs
-  hosts: all
+  hosts: proxmox-server
   become: yes
 
   roles:
-    - role: proxmox.ops/startvm.ops/
+    - role: maintenance.ops/proxmox.ops/startvm.ops/
       vars:
         - pm_user: "root@pam"
-        - pm_host: "10.10.10.10"
-        - pm_node: "pve-01"
-        - target_vm_group: "Test"
-        - target_vms: [303, 800] # vm operations will be executed in the index order
+        - pm_host: "192.168.1.100"
+        - pm_node: "pve"
+        - target_vm_group: "kubernetes-cluster"
+        # vm operations will be executed in the index order
+        - target_vms: [202, 641, 642, 643, 651, 652, 653]
