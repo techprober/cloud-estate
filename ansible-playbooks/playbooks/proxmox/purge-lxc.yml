@@ -1,9 +1,0 @@
----
-- name: Purge Proxmox LXC Container
-  hosts: pve
-  become: yes
-
-  vars_files:
-    - ../../vars/proxmox-lxc.yml
-  roles:
-    - role: lxc.ops/remove.ops/
