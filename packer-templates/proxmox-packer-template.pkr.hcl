@@ -112,7 +112,7 @@ build {
     role_paths              = ["../ansible-playbooks/roles/"]
     clean_staging_directory = true
     extra_arguments = [
-      "--extra-vars \"ansible_user=packer\""
+      "--extra-vars", "\"ansible_user=packer ansible_become_password=packer\""
     ]
   }
 
