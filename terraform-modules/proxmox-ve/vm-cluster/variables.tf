@@ -207,13 +207,13 @@ variable "worker_vm_network_model" {
   type        = string
 }
 
-variable "master_network_firewall" {
+variable "master_vm_network_firewall" {
   default     = true
   description = "whether to enable the Proxmox firewall on this network device"
   type        = string
 }
 
-variable "worker_network_firewall" {
+variable "worker_vm_network_firewall" {
   default     = true
   description = "whether to enable the Proxmox firewall on this network device"
   type        = string
