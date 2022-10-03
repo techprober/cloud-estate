@@ -1,0 +1,63 @@
+---
+# Stage 1
+- name: Provision Proxmox Privileged LXC Docker Container
+  hosts: proxmox-node
+  become: yes
+
+  roles:
+    - role: lxc.ops/provision.ops/
+    - role: maintenance.ops/ssh.ops/clear-ssh-connection.ops/
+      vars:
+      - host_ip: "{{ lxc.host_ip }}"
+      delegate_to: localhost
+    - role: maintenance.ops/delay.ops/
+      vars:
+      - delay: 30
+      delegate_to: lxc-node
+    - role: maintenance.ops/reachability.ops/
+      delegate_to: lxc-node
+
+# Stage 2
+- name: Configure LXC container
+  hosts: lxc-node
+  become: yes
+
+  tasks:
+    - block:
+      - include_role: name=apt.ops/set-sources.ops/
+      - include_role: name=apt.ops/install-packages.ops/
+      - include_role: name=maintenance.ops/user.ops/add.ops/
+        vars:
+          artifact_name: "{{ lxc.artifact_name }}"
+      - include_role: name=docker.ops/
+      rescue:
+      - include_role: name=lxc.ops/remove.ops/
+
+# Stage 3
+- name: Convert to LXC template
+  hosts: proxmox-node
+  become: yes
+
+  roles:
+    - role: maintenance.ops/delay.ops/
+      vars:
+      - delay: 30
+      delegate_to: proxmox-node
+    - role: maintenance.ops/reachability.ops/
+      delegate_to: proxmox-node
+
+  tasks:
+    - block:
+      - include_role: name=lxc.ops/bake.ops/
+      - include_role: name=lxc.ops/remove.ops/
+      rescue:
+      - include_role: name=lxc.ops/remove.ops/
+
+- name: Print default login information
+  hosts: localhost
+  become: no
+
+  roles:
+    - role: lxc.ops/print-login-info.ops/
+      vars:
+        artifact_name: "{{ lxc.artifact_name }}"

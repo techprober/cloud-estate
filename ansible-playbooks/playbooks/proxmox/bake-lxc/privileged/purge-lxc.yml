@@ -1,0 +1,9 @@
+---
+- name: Purge Proxmox LXC Container
+  hosts: proxmox-02
+  become: yes
+
+  vars_files:
+    - ../../../../vars/lxc/privileged/bake-proxmox-ubuntu-standard-lxc.yml
+  roles:
+    - role: lxc.ops/remove.ops/
