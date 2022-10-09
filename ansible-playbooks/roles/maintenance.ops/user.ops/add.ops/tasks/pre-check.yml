@@ -1,7 +1,0 @@
----
-- name: Create artifact_dir, if not present
-  ansible.builtin.file:
-    path: /src/www
-    state: directory
-  delegate_to: localhost
-  run_once: true

@@ -1,0 +1,59 @@
+---
+- name: Make sure the wheel group exists
+  ansible.builtin.group:
+    name: wheel
+    state: present
+
+- name: Generate password for new user
+  local_action: shell pwgen -s -N 1 20
+  register: user_password
+  run_once: true
+
+- name: Generate encrypted password
+  local_action: shell python -c 'import crypt; print(crypt.crypt( "{{ user_password.stdout }}", crypt.mksalt(crypt.METHOD_SHA512)))'
+  register: encrypted_user_password
+  run_once: true
+
+- name: Create and add user to target groups
+  ansible.builtin.user:
+    name: "{{ user.name }}"
+    groups: "{{ user.groups }}"
+    shell: /bin/bash
+    append: yes
+    state: present
+    createhome: yes
+    comment: 'Created with ansible'
+  register: user_created
+
+- name: Update user Passwords
+  user:
+    name: '{{ user.name }}'
+    password: '{{ encrypted_user_password.stdout }}'
+  when: user_created.changed
+
+- name: Force user to change the password at first login
+  shell: chage -d 0 "{{ user.name }}"
+  when: user_created.changed
+
+- name: Save Passwords Locally
+  local_action: copy content={{ user_password.stdout }} dest="{{ artifact_dir }}/{{ artifact_name }}-user-default-password.txt"
+  when: user_created.changed
+  become: no
+
+- name: Set up authorized keys for the new user
+  ansible.posix.authorized_key:
+    user: "{{ user.name }}"
+    state: present
+    key: "{{ lookup('file', '{{ item }}') }}"
+  loop: "{{ public_keys }}"
+
+- name: Print password notes
+  debug:
+    msg: |
+      ------------------------------
+      Your default root password is:
+
+      {{ user_password.stdout }}
+
+      Please keep it safely!
+      ------------------------------
