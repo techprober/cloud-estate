@@ -14,6 +14,11 @@ resource "proxmox_lxc" "container" {
   memory = var.container_memory
   swap   = var.container_swap
 
+  features {
+    keyctl  = true
+    nesting = true
+  }
+
   rootfs {
     size    = var.container_boot_disk_size
     storage = var.container_boot_disk_storage_pool

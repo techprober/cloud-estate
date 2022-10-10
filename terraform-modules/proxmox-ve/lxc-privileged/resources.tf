@@ -14,6 +14,7 @@ resource "proxmox_lxc" "container" {
   swap   = var.container_swap
 
   features {
+    keyctl  = true
     fuse    = true
     nesting = true
     mount   = "cifs;nfs"
