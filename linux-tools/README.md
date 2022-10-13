@@ -187,6 +187,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://smee.io/) [smee.io](https://smee.io/) - Webhook payload delivery service - Receives payloads then sends them to your locally running application
 - [![Open-Source Software][oss icon]](https://github.com/wakatime/wakatime-cli) [wakatime-cli](https://github.com/wakatime/wakatime-cli) - Command line interface to WakaTime used by all WakaTime text editor plugins
 - [![Open-Source Software][oss icon]](https://github.com/pyinstaller/pyinstaller) [pyinstaller](https://github.com/pyinstaller/pyinstaller) - Freeze (package) Python programs into stand-alone executables
+- [![Open-Source Software][oss icon]](https://github.com/tremorlabs/tremor) [tremor](https://github.com/tremorlabs/tremor) - The react library to build dashboards fast.
 
 ## Programming Specific
 
