@@ -12,7 +12,7 @@ inputs = {
   container_id                   = 9999
   container_start_after_creation = true
 
-  container_os_template = "local-lvm:vztmpl/ubuntu-20.04-standard_20.04-1_amd64.tar.gz"
+  container_os_template = "local-lvm:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.gz"
 
   container_cpu_cores = 4
   container_memory    = 1024
