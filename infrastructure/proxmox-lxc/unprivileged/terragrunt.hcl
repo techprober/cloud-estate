@@ -4,7 +4,7 @@ terraform {
 
 inputs = {
   proxmox_host = "192.168.1.10"
-  pm_user      = "terraform-prov@pve"
+  pm_user      = "root@pam"
   node_name    = "pve-01"
 
   container_hostname             = ""
