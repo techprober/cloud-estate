@@ -140,6 +140,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Kuberentes][k8s icon]](https://github.com/ahmetb/kubectx) [kubectx+kubens](https://github.com/ahmetb/kubectx) - Faster way to switch between clusters and namespaces in kubectl
 - [![Kuberentes][k8s icon]](https://github.com/databus23/helm-diff) [helm-diff](https://github.com/databus23/helm-diff) - A helm plugin that shows a diff explaining what a helm upgrade would change
 - [![Kuberentes][k8s icon]](https://github.com/cloudnativelabs/kube-shell) [kube-shell](https://github.com/cloudnativelabs/kube-shell) - Kubernetes shell: An integrated shell for working with the Kubernetes
+- [![Kuberentes][k8s icon]](https://github.com/komodorio/helm-dashboard) [helm-dashboard](https://github.com/komodorio/helm-dashboard) - The missing UI for Helm - visualize your releases
 
 ## CloudNative Solutions
 
