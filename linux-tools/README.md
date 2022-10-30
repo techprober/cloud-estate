@@ -133,6 +133,9 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 ## Kubernetes Tools
 
+- [![Kubernetes][k8s icon]](https://github.com/walidshaari/Kubernetes-Certified-Administrator) [Kubernetes-Certified-Administrator](https://github.com/walidshaari/Kubernetes-Certified-Administrator) - Online resources that will help you prepare for taking the CNCF CKA 2020 "Kubernetes Certified Administrator" Certification exam.
+- [![Kubernetes][k8s icon]](https://github.com/walidshaari/Certified-Kubernetes-Security-Specialist) [Certified-Kubernetes-Security-Specialist](https://github.com/walidshaari/Certified-Kubernetes-Security-Specialist) - Curated resources help you prepare for the CNCF/Linux Foundation CKS 2021 "Kubernetes Certified Security Specialist" Certification exam.
+- [![Kubernetes][k8s icon]](https://github.com/survivant/ckad-prep-notes) [ckad-prep-notes](https://github.com/survivant/ckad-prep-notes) - List of resources and notes for passing the Certified Kubernetes Application Developer (CKAD) exam.
 - [![Kubernetes][k8s icon]](https://github.com/sunny0826/kubecm) [kubecm](https://github.com/sunny0826/kubecm) - Manage your kubeconfig more easily
 - [![Kuberentes][k8s icon]](https://github.com/derailed/k9s) [k9s](https://github.com/derailed/k9s) - Kubernetes CLI To Manage Your Clusters In Style
 - [![Kuberentes][k8s icon]](https://github.com/k0sproject/k0sctl) [k0sctl](https://github.com/k0sproject/k0sctl) - A bootstrapping and management tool for k0s clusters
