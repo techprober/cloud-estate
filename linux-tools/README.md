@@ -262,5 +262,5 @@ Special thanks go to all [contributors](https://github.com/TechProber/cloud-esta
 [telegram icon]: ./assets/telegram.svg
 [awesome icon]: ./assets/awesome.svg
 [golang icon]: ./assets/golang.svg
-[golang icon]: ./assets/python.svg
+[python icon]: ./assets/python.svg
 [terminal icon]: ./assets/terminal.svg
