@@ -45,6 +45,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/terrytangyuan/awesome-argo) [awesome-argo](https://github.com/terrytangyuan/awesome-argo) - A curated list of awesome projects and resources related to Argo, a Cloud Native Computing Foundation (CNCF) hosted project
 - [![Open-Source Software][oss icon]](https://github.com/skywind3000/awesome-cheatsheets) [awesome-cheatsheets](https://github.com/skywind3000/awesome-cheatsheets) - 超级速查表 - 编程语言、框架和开发工具的速查表，单个文件包含一切你需要知道的东西 ⚡
 - [![Neovim][nvim icon]](https://github.com/rockerBOO/awesome-neovim) [awesome-neovim](https://github.com/rockerBOO/awesome-neovim) - Collections of awesome Neovim plugins. Mostly targeting Neovim specific features
+- [![Neovim][nvim icon]](https://github.com/lidangzzz/How-to-run) [How-to-run](https://github.com/lidangzzz/How-to-run) - 立党老师的润学（零基础转码/移民/留学/海外创业/永居）笔记
 
 ## GitHub Related
 
@@ -130,6 +131,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Docker][docker icon]](https://github.com/pi-hole/docker-pi-hole) [docker-pi-hole](https://github.com/pi-hole/docker-pi-hole) - Pi-hole in a docker container
 - [![Docker][docker icon]](https://github.com/traefik/whoami) [whoami](https://github.com/traefik/whoami) - Tiny Go webserver that prints os information and HTTP request to output
+- [![Docker][docker icon]](https://github.com/wurstmeister/kafka-docker) [kafka-docker](https://github.com/wurstmeister/kafka-docker) - Dockerfile for Apache Kafka
 
 ## Kubernetes Tools
 
@@ -218,6 +220,10 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/go-kit/kit) [kit](https://github.com/go-kit/kit) - A standard library for microservices.
 - [![Open-Source Software][golang icon]](https://github.com/tmrts/go-patterns) [go-patterns](https://github.com/tmrts/go-patterns) - Curated list of Go design patterns, recipes and idioms
 
+### Python
+
+- [![Open-Source Software][python icon]](https://github.com/shengqiangzhang/examples-of-web-crawlers) [examples-of-web-crawlers](https://github.com/shengqiangzhang/examples-of-web-crawlers) - Some interesting examples of python crawlers that are friendly to beginners.
+
 ## Vim/Neovim Addons
 
 - [![Neovim][nvim icon]](https://github.com/neovim/nvim-lspconfig) [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - Quickstart configurations for the Neovim LSP client
@@ -256,4 +262,5 @@ Special thanks go to all [contributors](https://github.com/TechProber/cloud-esta
 [telegram icon]: ./assets/telegram.svg
 [awesome icon]: ./assets/awesome.svg
 [golang icon]: ./assets/golang.svg
+[golang icon]: ./assets/python.svg
 [terminal icon]: ./assets/terminal.svg
