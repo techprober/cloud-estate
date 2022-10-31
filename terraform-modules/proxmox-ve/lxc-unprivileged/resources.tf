@@ -17,7 +17,6 @@ resource "proxmox_lxc" "container" {
   features {
     keyctl  = true
     nesting = true
-    fuse    = true
   }
 
   rootfs {
