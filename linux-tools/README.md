@@ -46,6 +46,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/skywind3000/awesome-cheatsheets) [awesome-cheatsheets](https://github.com/skywind3000/awesome-cheatsheets) - 超级速查表 - 编程语言、框架和开发工具的速查表，单个文件包含一切你需要知道的东西 ⚡
 - [![Neovim][nvim icon]](https://github.com/rockerBOO/awesome-neovim) [awesome-neovim](https://github.com/rockerBOO/awesome-neovim) - Collections of awesome Neovim plugins. Mostly targeting Neovim specific features
 - [![Neovim][nvim icon]](https://github.com/lidangzzz/How-to-run) [How-to-run](https://github.com/lidangzzz/How-to-run) - 立党老师的润学（零基础转码/移民/留学/海外创业/永居）笔记
+- [![Neovim][nvim icon]](https://github.com/milanm/DevOps-Roadmap) [DevOps-RoadMap](https://github.com/milanm/DevOps-Roadmap) - DevOps Roadmap for 2022. with learning resources
 
 ## GitHub Related
 
