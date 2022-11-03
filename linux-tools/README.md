@@ -41,12 +41,13 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][awesome icon]](https://github.com/avelino/awesome-go) [awesome-go](https://github.com/avelino/awesome-go) - A curated list of awesome Go frameworks, libraries and software
 - [![Open-Source Software][awesome icon]](https://github.com/PicGo/Awesome-PicGo) [Awesome-PicGo](https://github.com/PicGo/Awesome-PicGo) - A collection of awesome projects using PicGo.
 - [![Open-Source Software][github icon]](https://github.com/abhisheknaiidu/awesome-github-profile-readme) [awesome-github-profile-readme](https://github.com/abhisheknaiidu/awesome-github-profile-readme) - 😎 A curated list of awesome GitHub Profile READMEs 📝
-- [![Kuberentes][k8s icon]](https://github.com/vilaca/awesome-k8s-tools) [awesome-k8s-tools](https://github.com/vilaca/awesome-k8s-tools) - List of k8s/container/devops tools
-- [![CloudNative][cncf icon]](https://github.com/terrytangyuan/awesome-argo) [awesome-argo](https://github.com/terrytangyuan/awesome-argo) - A curated list of awesome projects and resources related to Argo, a Cloud Native Computing Foundation (CNCF) hosted project
-- [![Open-Source Software][oss icon]](https://github.com/skywind3000/awesome-cheatsheets) [awesome-cheatsheets](https://github.com/skywind3000/awesome-cheatsheets) - 超级速查表 - 编程语言、框架和开发工具的速查表，单个文件包含一切你需要知道的东西 ⚡
-- [![Neovim][nvim icon]](https://github.com/rockerBOO/awesome-neovim) [awesome-neovim](https://github.com/rockerBOO/awesome-neovim) - Collections of awesome Neovim plugins. Mostly targeting Neovim specific features
-- [![Neovim][nvim icon]](https://github.com/lidangzzz/How-to-run) [How-to-run](https://github.com/lidangzzz/How-to-run) - 立党老师的润学（零基础转码/移民/留学/海外创业/永居）笔记
-- [![Neovim][nvim icon]](https://github.com/milanm/DevOps-Roadmap) [DevOps-RoadMap](https://github.com/milanm/DevOps-Roadmap) - DevOps Roadmap for 2022. with learning resources
+- [![Open-Source Software][awesome icon]](https://github.com/vilaca/awesome-k8s-tools) [awesome-k8s-tools](https://github.com/vilaca/awesome-k8s-tools) - List of k8s/container/devops tools
+- [![Open-Source Software][awesome icon]](https://github.com/terrytangyuan/awesome-argo) [awesome-argo](https://github.com/terrytangyuan/awesome-argo) - A curated list of awesome projects and resources related to Argo, a Cloud Native Computing Foundation (CNCF) hosted project
+- [![Open-Source Software][awesome icon]](https://github.com/skywind3000/awesome-cheatsheets) [awesome-cheatsheets](https://github.com/skywind3000/awesome-cheatsheets) - 超级速查表 - 编程语言、框架和开发工具的速查表，单个文件包含一切你需要知道的东西 ⚡
+- [![Open-Source Software][awesome icon]](https://github.com/rockerBOO/awesome-neovim) [awesome-neovim](https://github.com/rockerBOO/awesome-neovim) - Collections of awesome Neovim plugins. Mostly targeting Neovim specific features
+- [![Open-Source Software][awesome icon]](https://github.com/lidangzzz/How-to-run) [How-to-run](https://github.com/lidangzzz/How-to-run) - 立党老师的润学（零基础转码/移民/留学/海外创业/永居）笔记
+- [![Open-Source Software][awesome icon]](https://github.com/milanm/DevOps-Roadmap) [DevOps-RoadMap](https://github.com/milanm/DevOps-Roadmap) - DevOps Roadmap for 2022. with learning resources
+- [![Open-Source Software][awesome icon]](https://github.com/jindongwang/transferlearning) [transferlearning](https://github.com/jindongwang/transferlearning) - Transfer learning / domain adaptation / domain generalization / multi-task learning etc. Papers, codes, datasets, applications, tutorials.-迁移学习
 
 ## GitHub Related
 
