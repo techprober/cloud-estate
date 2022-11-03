@@ -59,6 +59,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][github icon]](https://github.com/wei/pull) [pull](https://github.com/wei/pull) - 🤖 Keep your forks up-to-date via automated PRs
 - [![Open-Source Software][github icon]](https://github.com/appleboy/telegram-action) [telegram-action](https://github.com/appleboy/telegram-action) - GitHub Action that sends a Telegram message.
 - [![Open-Source Software][github icon]](https://github.com/octokit/request-action) [request-action](https://github.com/octokit/request-action) - A GitHub Action to send arbitrary requests to GitHub's REST API
+- [![Open-Source Software][github icon]](https://github.com/actions/starter-workflows) [starter-workflows](https://github.com/actions/starter-workflows) - Accelerating new GitHub Actions workflows
 
 ## Telegram Related
 
