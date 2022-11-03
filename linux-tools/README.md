@@ -135,6 +135,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Docker][docker icon]](https://github.com/pi-hole/docker-pi-hole) [docker-pi-hole](https://github.com/pi-hole/docker-pi-hole) - Pi-hole in a docker container
 - [![Docker][docker icon]](https://github.com/traefik/whoami) [whoami](https://github.com/traefik/whoami) - Tiny Go webserver that prints os information and HTTP request to output
 - [![Docker][docker icon]](https://github.com/wurstmeister/kafka-docker) [kafka-docker](https://github.com/wurstmeister/kafka-docker) - Dockerfile for Apache Kafka
+- [![Docker][docker icon]](https://github.com/conduktor/kafka-stack-docker-compose) [kafka-stack-docker-compose](https://github.com/conduktor/kafka-stack-docker-compose) - docker compose files to create a fully working kafka stack 
 
 ## Kubernetes Tools
 
