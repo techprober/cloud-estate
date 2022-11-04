@@ -129,13 +129,14 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][terminal icon]](https://github.com/dandavison/delta) [git-delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output
 - [![Open-Source Software][terminal icon]](https://github.com/tldr-pages/tldr) [tldr](https://github.com/tldr-pages/tldr) - 📚 Collaborative cheatsheets for console commands
 - [![Open-Source Software][terminal icon]](https://github.com/gopasspw/gopass) [gopass](https://github.com/gopasspw/gopass) - The slightly more awesome standard unix password manager for teams
+- [![Open-Source Software][terminal icon]](https://github.com/natesales/q) [q](https://github.com/natesales/q) - A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH.
 
 ## Docker Images
 
 - [![Docker][docker icon]](https://github.com/pi-hole/docker-pi-hole) [docker-pi-hole](https://github.com/pi-hole/docker-pi-hole) - Pi-hole in a docker container
 - [![Docker][docker icon]](https://github.com/traefik/whoami) [whoami](https://github.com/traefik/whoami) - Tiny Go webserver that prints os information and HTTP request to output
 - [![Docker][docker icon]](https://github.com/wurstmeister/kafka-docker) [kafka-docker](https://github.com/wurstmeister/kafka-docker) - Dockerfile for Apache Kafka
-- [![Docker][docker icon]](https://github.com/conduktor/kafka-stack-docker-compose) [kafka-stack-docker-compose](https://github.com/conduktor/kafka-stack-docker-compose) - docker compose files to create a fully working kafka stack 
+- [![Docker][docker icon]](https://github.com/conduktor/kafka-stack-docker-compose) [kafka-stack-docker-compose](https://github.com/conduktor/kafka-stack-docker-compose) - docker compose files to create a fully working kafka stack
 
 ## Kubernetes Tools
 
