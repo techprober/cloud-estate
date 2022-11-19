@@ -111,6 +111,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/ipmitool/ipmitool) [ipmitool](https://github.com/ipmitool/ipmitool) - An open-source tool for controlling IPMI-enabled systems
 - [![Open-Source Software][oss icon]](https://github.com/ansible/awx) [awx](https://github.com/ansible/awx) - AWX provides a web-based user interface, REST API, and task engine built on top of Ansible.
 - [![Open-Source Software][oss icon]](https://github.com/ansible/awx-operator) [awx-operator](https://github.com/ansible/awx-operator) - An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. 🤖
+- [![Open-Source Software][oss icon]](https://github.com/gilbertchen/duplicacy) [duplicacy](https://github.com/gilbertchen/duplicacy) - A new generation cloud backup tool
 
 ## VPS Related
 
