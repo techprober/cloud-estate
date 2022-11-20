@@ -85,7 +85,6 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/benweet/stackedit) [stackedit](https://github.com/benweet/stackedit) - In-browser Markdown editor
 - [![Open-Source Software][oss icon]](https://github.com/peaceiris/actions-gh-pages) [actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) - GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site easily. Static-Site-Generators-friendly
 - [![Open-Source Software][oss icon]](https://github.com/jesseduffield/lazygit) [lazygit](https://github.com/jesseduffield/lazygit) - simple terminal UI for git commands
-- [![Open-Source Software][oss icon]](https://github.com/restic/restic) [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
 - [![Open-Source Software][oss icon]](https://github.com/coder/code-server) [code-server](https://github.com/coder/code-server) - VS Code in the browser
 - [![Open-Source Software][oss icon]](https://github.com/pingostack/pingos) [pingos](https://github.com/pingostack/pingos) - Based on the NGINX/RTMP/HTTP-FLV/HTTP-TS/HLS/HLS+/DASH/H.264/H.265/AAC/MP3/Live/Record/VOD/Push/Pull/Multiple Processes/Dynamic Configuration/Configuration Variables/Console Interface/Notify
 - [![Open-Source Software][oss icon]](https://github.com/q191201771/lal) [lal](https://github.com/q191201771/lal) - 🔥 Golang audio/video live streaming library/client/server. support RTMP, RTSP(RTP/RTCP), HLS, HTTP[S]/WebSocket[S]-FLV/TS, H264/H265/AAC, relay, cluster, record, HTTP API/Notify.
@@ -113,13 +112,14 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/ansible/awx) [awx](https://github.com/ansible/awx) - AWX provides a web-based user interface, REST API, and task engine built on top of Ansible.
 - [![Open-Source Software][oss icon]](https://github.com/ansible/awx-operator) [awx-operator](https://github.com/ansible/awx-operator) - An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. 🤖
 - [![Open-Source Software][oss icon]](https://github.com/gilbertchen/duplicacy) [duplicacy](https://github.com/gilbertchen/duplicacy) - A new generation cloud backup tool
+- [![Open-Source Software][oss icon]](https://github.com/restic/restic) [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
+- [![Open-Source Software][oss icon]](https://github.com/cupcakearmy/autorestic) [autorestic](https://github.com/cupcakearmy/autorestic) - Config driven, easy backup cli for restic.
 
 ## VPS Related
 
 - [![Open-Source Software][oss icon]](https://github.com/jerry048/Dedicated-Seedbox) [Dedicated-Seedbox](https://github.com/jerry048/Dedicated-Seedbox) - Seedbox Installation Script
 - [![Open-Source Software][oss icon]](https://github.com/jinwyp/one_click_script) [one_click_script](https://github.com/jinwyp/one_click_script) - 一键安装 trojan v2ray xray. Install v2ray / xray (VLESS) and trojan (trojan-go) script
 - [![Open-Source Software][oss icon]](https://github.com/iwestlin/gd-utils) [gd-utils](https://github.com/iwestlin/gd-utils) - Google Drive 百宝箱
-- [![Open-Source Software][oss icon]](https://github.com/restic/restic) [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
 
 ## Command Line Utilities
 
