@@ -49,6 +49,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][awesome icon]](https://github.com/lidangzzz/How-to-run) [How-to-run](https://github.com/lidangzzz/How-to-run) - 立党老师的润学（零基础转码/移民/留学/海外创业/永居）笔记
 - [![Open-Source Software][awesome icon]](https://github.com/milanm/DevOps-Roadmap) [DevOps-RoadMap](https://github.com/milanm/DevOps-Roadmap) - DevOps Roadmap for 2022. with learning resources
 - [![Open-Source Software][awesome icon]](https://github.com/jindongwang/transferlearning) [transferlearning](https://github.com/jindongwang/transferlearning) - Transfer learning / domain adaptation / domain generalization / multi-task learning etc. Papers, codes, datasets, applications, tutorials.-迁移学习
+- [![Open-Source Software][awesome icon]](https://github.com/rubiojr/awesome-restic) [awesome-restic](https://github.com/rubiojr/awesome-restic) - Awesome Restic related projects
 
 ## GitHub Related
 
