@@ -99,6 +99,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Open-Source Software][oss icon]](https://github.com/Weilbyte/PVEDiscordDark) [PVEDiscordDak Theme](https://github.com/Weilbyte/PVEDiscordDark) - A Discord-like dark theme for the Proxmox Web UI
 - [![Open-Source Software][oss icon]](https://github.com/ivanhao/pvetools) [pvetools](https://github.com/ivanhao/pvetools) - proxmox ve tools script(debian9+ can use it).Including email, samba, NFS set zfs max ram, nested virtualization ,docker , pci passthrough etc.
+- [![Open-Source Software][oss icon]](https://github.com/xiangfeidexiaohuo/ProxmoxVE-7.0-DIY) [ProxmoxVE-7.0-DIY](https://github.com/xiangfeidexiaohuo/ProxmoxVE-7.0-DIY) - Proxmox VE 7.x 换源、关掉订阅提示、直通、配置 CPU 模式、升降内核等相关教程。
 - [![Open-Source Software][oss icon]](https://github.com/tteck/Proxmox) [Proxmox Helper](https://github.com/tteck/Proxmox) - Proxmox Helper Scripts
 - [![Open-Source Software][oss icon]](https://github.com/drduh/YubiKey-Guide) [YubiKey-Guide](https://github.com/drduh/YubiKey-Guide) - Guide to using YubiKey for GPG and SSH
 - [![Open-Source Software][oss icon]](https://github.com/jamesog/yubikey-ssh) [yubikey-ssh](https://github.com/jamesog/yubikey-ssh) - How to use a Yubikey with OpenSSH without GPG
