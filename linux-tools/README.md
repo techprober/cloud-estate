@@ -141,6 +141,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][terminal icon]](https://github.com/gopasspw/gopass) [gopass](https://github.com/gopasspw/gopass) - The slightly more awesome standard unix password manager for teams
 - [![Open-Source Software][terminal icon]](https://github.com/natesales/q) [q](https://github.com/natesales/q) - A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH.
 - [![Open-Source Software][terminal icon]](https://github.com/Tantalor93/dnspyre) [dnspyre](https://github.com/Tantalor93/dnspyre) - CLI tool for a high QPS DNS benchmark
+- [![Open-Source Software][terminal icon]](https://github.com/ajeetdsouza/zoxide) [zoxide](https://github.com/ajeetdsouza/zoxide) - A smarter cd command. Supports all major shells.
 
 ## Docker Images
 
