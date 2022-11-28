@@ -217,6 +217,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/soimort/you-get) [you-get](https://github.com/soimort/you-get) - ⏬ Dumb downloader that scrapes the web
 - [![Open-Source Software][oss icon]](https://github.com/ArtalkJS/Artalk) [Artalk](https://github.com/ArtalkJS/Artalk) - 🌌 Golang 自托管评论系统 | A Selfhosted Comment System
 - [![Open-Source Software][oss icon]](https://github.com/ptpb/pb) [pb](https://github.com/ptpb/pb) - pb is a formerly-lightweight pastebin and url shortener
+- [![Open-Source Software][oss icon]](https://github.com/alibaba/RedisShake) [RedisShake](https://github.com/alibaba/RedisShake) - redis-shake is a tool for Redis data migration and data filtering. redis-shake 是一个用于 Redis 数据迁移与过滤的工具。
 
 ## Programming Addons
 
