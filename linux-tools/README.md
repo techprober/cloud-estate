@@ -242,6 +242,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/golangci/golangci-lint) [golangci-lint](https://github.com/golangci/golangci-lint) - Fast linters Runner for Go
 - [![Open-Source Software][golang icon]](https://github.com/go-kit/kit) [kit](https://github.com/go-kit/kit) - A standard library for microservices.
 - [![Open-Source Software][golang icon]](https://github.com/tmrts/go-patterns) [go-patterns](https://github.com/tmrts/go-patterns) - Curated list of Go design patterns, recipes and idioms
+- [![Open-Source Software][golang icon]](https://github.com/dgraph-io/badger) [badger](https://github.com/dgraph-io/badger) - Fast key-value DB in Go.
 
 ### Python
 
