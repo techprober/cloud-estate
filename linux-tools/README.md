@@ -189,6 +189,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/OpenFunction/OpenFunction) [OpenFunction](https://github.com/OpenFunction/OpenFunction) - Cloud Native Function-as-a-Service Platform (CNCF Sandbox Project)
 - [![CloudNative][cncf icon]](https://github.com/external-secrets/external-secrets) [external-secrets](https://github.com/external-secrets/external-secrets) - External Secrets Operator reads information from a third-party service like AWS Secrets Manager and automatically injects the values as Kubernetes Secrets.
 - [![CloudNative][cncf icon]](https://github.com/knative/func) [func](https://github.com/knative/func) - Knative Functions client API and CLI
+- [![CloudNative][cncf icon]](https://github.com/Kong/kubernetes-ingress-controller) [kong-ingress-controller](https://github.com/Kong/kubernetes-ingress-controller) - 🦍 Kong for Kubernetes: The official Ingress Controller for Kubernetes.
 
 ## Open-Source Software
 
