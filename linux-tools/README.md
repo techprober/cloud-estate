@@ -41,7 +41,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Open-Source Software][awesome icon]](https://github.com/avelino/awesome-go) [awesome-go](https://github.com/avelino/awesome-go) - A curated list of awesome Go frameworks, libraries and software
 - [![Open-Source Software][awesome icon]](https://github.com/PicGo/Awesome-PicGo) [Awesome-PicGo](https://github.com/PicGo/Awesome-PicGo) - A collection of awesome projects using PicGo.
-- [![Open-Source Software][github icon]](https://github.com/abhisheknaiidu/awesome-github-profile-readme) [awesome-github-profile-readme](https://github.com/abhisheknaiidu/awesome-github-profile-readme) - 😎 A curated list of awesome GitHub Profile READMEs 📝
+- [![Open-Source Software][awesome icon]](https://github.com/abhisheknaiidu/awesome-github-profile-readme) [awesome-github-profile-readme](https://github.com/abhisheknaiidu/awesome-github-profile-readme) - 😎 A curated list of awesome GitHub Profile READMEs 📝
 - [![Open-Source Software][awesome icon]](https://github.com/vilaca/awesome-k8s-tools) [awesome-k8s-tools](https://github.com/vilaca/awesome-k8s-tools) - List of k8s/container/devops tools
 - [![Open-Source Software][awesome icon]](https://github.com/terrytangyuan/awesome-argo) [awesome-argo](https://github.com/terrytangyuan/awesome-argo) - A curated list of awesome projects and resources related to Argo, a Cloud Native Computing Foundation (CNCF) hosted project
 - [![Open-Source Software][awesome icon]](https://github.com/skywind3000/awesome-cheatsheets) [awesome-cheatsheets](https://github.com/skywind3000/awesome-cheatsheets) - 超级速查表 - 编程语言、框架和开发工具的速查表，单个文件包含一切你需要知道的东西 ⚡
