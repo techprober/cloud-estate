@@ -117,6 +117,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/gilbertchen/duplicacy) [duplicacy](https://github.com/gilbertchen/duplicacy) - A new generation cloud backup tool
 - [![Open-Source Software][oss icon]](https://github.com/restic/restic) [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
 - [![Open-Source Software][oss icon]](https://github.com/cupcakearmy/autorestic) [autorestic](https://github.com/cupcakearmy/autorestic) - Config driven, easy backup cli for restic.
+- [![Open-Source Software][oss icon]](https://github.com/apprell/proxmox-autosnap) [proxmox-autosnap](https://github.com/apprell/proxmox-autosnap) - ZFS automatic snapshot script for Proxmox VE 5,6,7
 
 ## VPS Related
 
