@@ -70,6 +70,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][telegram icon]](https://github.com/itgoyo/TelegramGroup) [TelegramGroup](https://github.com/itgoyo/TelegramGroup) - 悄咪咪收集的 1000+个 Telegram 群合集，如果有更多好玩的 telegram 群，欢迎在 issue 提出或者 pull requests
 - [![Open-Source Software][telegram icon]](https://github.com/ehForwarderBot/ehForwarderBot) [ehForwarderBot](https://github.com/ehForwarderBot/ehForwarderBot) - An extensible message tunneling chat bot framework. Delivers messages to and from multiple platforms and remotely control your accounts.
 - [![Open-Source Software][telegram icon]](https://github.com/eternnoir/pyTelegramBotAPI) [pyTelegramBotAPI](https://github.com/eternnoir/pyTelegramBotAPI) - Python Telegram bot api.
+- [![Open-Source Software][telegram icon]](https://github.com/Rongronggg9/RSS-to-Telegram-Bot) [RSS-to-Telegram-Bot](https://github.com/Rongronggg9/RSS-to-Telegram-Bot) - A Telegram RSS bot that cares about your reading experience
 
 ## Shell Related
 
