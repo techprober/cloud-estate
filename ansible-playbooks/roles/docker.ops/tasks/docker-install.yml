@@ -1,6 +1,7 @@
 ---
 - name: Install Docker with script
-  shell: "wget -qO- https://get.docker.com/ | sh"
+  ansible.builtin.script:
+    cmd:  "/usr/bin/wget -qO- https://get.docker.com/ | bash"
   register: installation_result
   args:
     warn: false
