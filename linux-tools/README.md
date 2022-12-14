@@ -226,6 +226,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/alibaba/RedisShake) [RedisShake](https://github.com/alibaba/RedisShake) - redis-shake is a tool for Redis data migration and data filtering. redis-shake 是一个用于 Redis 数据迁移与过滤的工具。
 - [![Open-Source Software][oss icon]](https://github.com/steven-tey/dub) [dub](https://github.com/steven-tey/dub) - An open-source link shortener with built-in analytics + free custom domains.
 - [![Open-Source Software][oss icon]](https://github.com/ariga/atlas) [atlas](https://github.com/ariga/atlas) - A database toolkit
+- [![Open-Source Software][oss icon]](https://github.com/nrlquaker/winbox-mac) [winbox-mac](https://github.com/nrlquaker/winbox-mac) - MikroTik Winbox bundled into macOS app with Wine
 
 ## Programming Addons
 
