@@ -195,6 +195,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/knative/func) [func](https://github.com/knative/func) - Knative Functions client API and CLI
 - [![CloudNative][cncf icon]](https://github.com/Kong/kubernetes-ingress-controller) [kong-ingress-controller](https://github.com/Kong/kubernetes-ingress-controller) - 🦍 Kong for Kubernetes: The official Ingress Controller for Kubernetes.
 - [![CloudNative][cncf icon]](https://github.com/kumahq/kuma) [kuma](https://github.com/kumahq/kuma) - 🐻 The multi-zone service mesh for containers, Kubernetes and VMs. Built with Envoy. CNCF Sandbox Project.
+- [![CloudNative][cncf icon]](https://github.com/projectcontour/contour) [contour](https://github.com/projectcontour/contour) - Contour is a Kubernetes ingress controller using Envoy proxy.
 
 ## Open-Source Software
 
