@@ -281,6 +281,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/iamcco/markdown-preview.nvim) [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) - markdown preview plugin for (neo)vim
 - [![Neovim][nvim icon]](https://github.com/projekt0n/github-nvim-theme) [github-nvim-theme](https://github.com/projekt0n/github-nvim-theme) - Github's Neovim themes
 - [![Neovim][nvim icon]](https://github.com/folke/noice.nvim) [noice.nvim](https://github.com/folke/noice.nvim) - 💥 Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
+- [![Neovim][nvim icon]](https://github.com/catppuccin/nvim) [catppuccin-nvim](https://github.com/catppuccin/nvim) - 🍨 Soothing pastel theme for (Neo)vim
 
 ## Contribution
 
