@@ -283,6 +283,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/folke/noice.nvim) [noice.nvim](https://github.com/folke/noice.nvim) - 💥 Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
 - [![Neovim][nvim icon]](https://github.com/catppuccin/nvim) [catppuccin-nvim](https://github.com/catppuccin/nvim) - 🍨 Soothing pastel theme for (Neo)vim
 - [![Neovim][nvim icon]](https://github.com/lourenci/github-colors) [github-colors](https://github.com/lourenci/github-colors) - Yet another GitHub colorscheme
+- [![Neovim][nvim icon]](https://github.com/lewis6991/gitsigns.nvim) [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git integration for buffers
 
 ## Contribution
 
