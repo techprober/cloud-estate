@@ -231,6 +231,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/ariga/atlas) [atlas](https://github.com/ariga/atlas) - A database toolkit
 - [![Open-Source Software][oss icon]](https://github.com/nrlquaker/winbox-mac) [winbox-mac](https://github.com/nrlquaker/winbox-mac) - MikroTik Winbox bundled into macOS app with Wine
 - [![Open-Source Software][oss icon]](https://github.com/imaegoo/twikoo) [twikoo](https://github.com/imaegoo/twikoo) - 💬 一个简洁、安全、免费的静态网站评论系统 | A simple, safe, free comment system.
+- [![Open-Source Software][oss icon]](https://github.com/Slackadays/Clipboard) [Clipboard](https://github.com/Slackadays/Clipboard) - 📋 Cut, copy, and paste anything, anywhere, all from the terminal.
 
 ## Programming Addons
 
