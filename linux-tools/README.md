@@ -197,6 +197,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/kumahq/kuma) [kuma](https://github.com/kumahq/kuma) - 🐻 The multi-zone service mesh for containers, Kubernetes and VMs. Built with Envoy. CNCF Sandbox Project.
 - [![CloudNative][cncf icon]](https://github.com/projectcontour/contour) [contour](https://github.com/projectcontour/contour) - Contour is a Kubernetes ingress controller using Envoy proxy.
 - [![CloudNative][cncf icon]](https://github.com/kubesphere/kubekey/) [kubekey](https://github.com/kubesphere/kubekey/) - Install Kubernetes/K3s only, both Kubernetes/K3s and KubeSphere, and related cloud-native add-ons, it supports all-in-one, multi-node, and HA 🔥 ⎈ 🐳
+- [![CloudNative][cncf icon]](https://github.com/aquasecurity/kube-bench) [kube-bench](https://github.com/aquasecurity/kube-bench) - Checks whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark
 
 ## Open-Source Software
 
