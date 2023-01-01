@@ -127,6 +127,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/jinwyp/one_click_script) [one_click_script](https://github.com/jinwyp/one_click_script) - 一键安装 trojan v2ray xray. Install v2ray / xray (VLESS) and trojan (trojan-go) script
 - [![Open-Source Software][oss icon]](https://github.com/iwestlin/gd-utils) [gd-utils](https://github.com/iwestlin/gd-utils) - Google Drive 百宝箱
 - [![Open-Source Software][oss icon]](https://github.com/zdz/ServerStatus-Rust) [ServerStatus-Rust](https://github.com/zdz/ServerStatus-Rust) - ✨ Rust 版 ServerStatus 探针、威力加强版
+- [![Open-Source Software][oss icon]](https://github.com/lmc999/RegionRestrictionCheck) [RegionRestrictionCheck](https://github.com/lmc999/RegionRestrictionCheck) - A bash script to check if your VPS's IP is available for various OTT platforms
 
 ## Command Line Utilities
 
