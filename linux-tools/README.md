@@ -264,10 +264,12 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/dgraph-io/badger) [badger](https://github.com/dgraph-io/badger) - Fast key-value DB in Go.
 - [![Open-Source Software][golang icon]](https://github.com/gookit/cache) [cache](https://github.com/gookit/cache) - 🗃 Generic cache use and cache manage. Provide a unified usage API by packaging various commonly used drivers. Support File, Memory, Redis, Memcached and more. Go 通用的缓存使用库，通过包装各种常用的驱动，来提供统一的使用 API，便于使用。
 - [![Open-Source Software][golang icon]](https://github.com/gookit/goutil) [goutil](https://github.com/gookit/goutil) - 💪 Helper Utils For Go: int, byte, string, array/slice, map, struct, dump, convert/format, error, web/http, cli/flag, OS/ENV, filesystem, system, test/assert, time and more. Go 常用的一些工具函数：数字，字符串，数组，Map，结构体，反射，文本，文件，错误，时间日期，特殊处理，格式化，常用信息获取等等
+- [![Open-Source Software][golang icon]](https://github.com/cloudevents/sdk-go) [cloudevents/go-sdk](https://github.com/cloudevents/sdk-go) - Go SDK for CloudEvents
 
 ### Python
 
 - [![Open-Source Software][python icon]](https://github.com/shengqiangzhang/examples-of-web-crawlers) [examples-of-web-crawlers](https://github.com/shengqiangzhang/examples-of-web-crawlers) - Some interesting examples of python crawlers that are friendly to beginners.
+- [![Open-Source Software][python icon]](https://github.com/cloudevents/sdk-python) [cloudevents/sdk-python](https://github.com/cloudevents/sdk-python) - Python SDK for CloudEvents
 
 ## Vim/Neovim Addons
 
