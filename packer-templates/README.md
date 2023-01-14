@@ -112,6 +112,22 @@ There is a dedicated blog post for the basic/advanced use cases using this Packe
 
 ![](https://github.com/TechProber/cloud-estate/blob/master/packer-templates/assets/screenshot.png?raw=true)
 
+## Quick Use
+
+```bash
+# check usage
+./bake -h
+
+# bake vm template
+export HOST_CONFIG=[HOST_CONFIG]
+export PACKER_VAR_FILE=[PACKER_VAR_FILE]
+# e.g.
+# export HOST_CONFIG=~/workspace/vsphere-hub/packer/config.json
+# export PACKER_VAR_FILE=~/workspace/vsphere-hub/packer/vars/pve-03-ubuntu-2204.json
+
+./bake -i 9000 -t cn-ubuntu-2204-server -n prod-ubuntu-2204-server-template -c $HOST_CONFIG -f $PACKER_VAR_FILE
+```
+
 ## References
 
 - [Creating proxmox templates with packer - Aaron Berry](https://dev.to/aaronktberry/creating-proxmox-templates-with-packer-1b35)
