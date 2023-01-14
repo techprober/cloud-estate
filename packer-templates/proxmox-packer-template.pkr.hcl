@@ -19,6 +19,7 @@ variable "datastore_type" { type = string }
 variable "disk_cache_mode" { type = string }
 variable "cloud_init_storage_pool" { type = string }
 variable "iso" { type = string }
+variable "scsi_controller" { type = string }
 
 variable "ssh_timeout" { type = string }
 variable "ssh_username" { type = string }
@@ -66,6 +67,9 @@ source "proxmox" "bakery-template" {
   # Cloud-init Configurations
   cloud_init              = true
   cloud_init_storage_pool = var.cloud_init_storage_pool
+
+  # Default SCSI Controller Configurations
+  scsi_controller = var.scsi_controller
 
   # SSH Configurations
   ssh_port     = 22

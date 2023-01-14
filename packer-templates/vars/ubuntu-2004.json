@@ -11,6 +11,7 @@
   "datastore": "local-lvm",
   "datastore_type": "directory",
   "cloud_init_storage_pool": "local-lvm",
+  "scsi_controller": "virtio-scsi-pci",
 
   "iso": "local:iso/ubuntu-20.04.3-live-server-amd64.iso",
 
