@@ -10,6 +10,7 @@ build_type=
 only=false
 only_opt=
 var_file=
+host_config=
 
 # Proxmox Builder
 
@@ -109,7 +110,9 @@ while getopts ":hai:t:n:b:f:d:" opt; do
     n|--name) vm_name=$OPTARG;;
     # specify custom-build build type
     b|--build) build_type=$OPTARG;;
-    # specify packer var-file path
+    # specify host config path, e.g: ./config.json
+    c|--config) host_config=$OPTARG;;
+    # specify packer var-file path, e.g: ./vars/ubuntu-2204.json
     f|--var-file) var_file=$OPTARG;;
     # specify custom iso-data path
     d|--iso-data) iso_data=$OPTARG;;
@@ -126,6 +129,7 @@ done
 [[ ! -z "$build_type" ]] && template="${build_type}-custom-${template}" || template=$template
 [[ ! -z "$build_type" ]] && build_type=$build_type || build_type="base"
 [[ ! -z "$var_file" ]] && var_file=$var_file || var_file="./vars/ubuntu-2204.json"
+[[ ! -z "$host_config" ]] && host_config=$host_config || host_config="./config.json"
 
 # --- Main Operation --- #
 
@@ -133,7 +137,7 @@ echoW "Baking ${vm_name} template with packer\n"
 
 packer build -force \
   -var-file ${var_file} \
-  -var-file config.json \
+  -var-file ${host_config} \
   -var playbook_file="playbooks/${vm_type}.yml" \
   -var template_name=$vm_name \
   -var proxmox_api_password=$PM_PASS \
