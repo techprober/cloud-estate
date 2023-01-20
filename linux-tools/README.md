@@ -128,6 +128,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/iwestlin/gd-utils) [gd-utils](https://github.com/iwestlin/gd-utils) - Google Drive 百宝箱
 - [![Open-Source Software][oss icon]](https://github.com/zdz/ServerStatus-Rust) [ServerStatus-Rust](https://github.com/zdz/ServerStatus-Rust) - ✨ Rust 版 ServerStatus 探针、威力加强版
 - [![Open-Source Software][oss icon]](https://github.com/lmc999/RegionRestrictionCheck) [RegionRestrictionCheck](https://github.com/lmc999/RegionRestrictionCheck) - A bash script to check if your VPS's IP is available for various OTT platforms
+- [![Open-Source Software][oss icon]](https://github.com/pimlie/ubuntu-mainline-kernel.sh) [ubuntu-mainline-kernel](https://github.com/pimlie/ubuntu-mainline-kernel.sh) - Bash script for Ubuntu (and derivatives) to easily (un)install kernels from the Ubuntu Kernel PPA
 
 ## Command Line Utilities
 
