@@ -123,11 +123,13 @@ build {
   # Convert to proxmox vm template
   post-processor "shell-local" {
     inline = [
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --boot c --bootdisk scsi0",
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}",
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --serial0 socket --vga serial0",
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --delete ide2"
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --boot c --bootdisk scsi0",                       # set boot order
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ide0 ${var.cloud_init_storage_pool}:cloudinit", # ensure cloud-init drive is present
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --delete ide2",                                   # delete default iso
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --vga std",                                       # set default graphics type
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",                    # set cloud-init default user
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}",                # set cloud-init default password
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ipconfig0 ip=dhcp"                              # set cloud-init net0 config (dhcp by default)
     ]
   }
 }
