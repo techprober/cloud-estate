@@ -119,11 +119,12 @@ There is a dedicated blog post for the basic/advanced use cases using this Packe
 ./bake -h
 
 # bake vm template
+# please do NOT use `~`, use $HOME instead
 export HOST_CONFIG=[HOST_CONFIG]
 export PACKER_VAR_FILE=[PACKER_VAR_FILE]
 # e.g.
-# export HOST_CONFIG=~/workspace/vsphere-hub/packer/config.json
-# export PACKER_VAR_FILE=~/workspace/vsphere-hub/packer/vars/pve-03-ubuntu-2204.json
+# export HOST_CONFIG=$HOME/workspace/vsphere-hub/packer/config.json
+# export PACKER_VAR_FILE=$HOME/workspace/vsphere-hub/packer/vars/pve-03-ubuntu-2204.json
 
 ./bake -i 9000 -t cn-ubuntu-2204-server -n prod-ubuntu-2204-server-template -c $HOST_CONFIG -f $PACKER_VAR_FILE
 ```
