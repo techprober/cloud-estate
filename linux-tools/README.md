@@ -212,6 +212,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/genuinetools/bane) [bane](https://github.com/genuinetools/bane) - Custom & better AppArmor profile generator for Docker containers.
 - [![CloudNative][cncf icon]](https://github.com/controlplaneio/kubesec) [kubsec](https://github.com/controlplaneio/kubesec) - Security risk analysis for Kubernetes resources
 - [![CloudNative][cncf icon]](https://github.com/falcosecurity/falco) [falco](https://github.com/falcosecurity/falco) - Cloud Native Runtime Security
+- [![CloudNative][cncf icon]](https://github.com/cilium/tetragon) [tetragon](https://github.com/cilium/tetragon) - eBPF-based Security Observability and Runtime Enforcement
 
 ## Open-Source Software
 
