@@ -155,6 +155,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][terminal icon]](https://github.com/ajeetdsouza/zoxide) [zoxide](https://github.com/ajeetdsouza/zoxide) - A smarter cd command. Supports all major shells.
 - [![Open-Source Software][terminal icon]](https://github.com/maaslalani/nap) [nap](https://github.com/maaslalani/nap) - Code snippets in your terminal 🛌
 - [![Open-Source Software][terminal icon]](https://github.com/zu1k/nali) [nali](https://github.com/zu1k/nali) - 一个查询 IP 地理信息和 CDN 服务提供商的离线终端工具.An offline tool for querying IP geographic information and CDN provider.
+- [![Open-Source Software][terminal icon]](https://github.com/ogham/dog) [dog](https://github.com/ogham/dog) - A command-line DNS client.
 
 ## Docker Images
 
