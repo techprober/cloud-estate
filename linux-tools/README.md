@@ -54,6 +54,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 ## GitHub Related
 
+- [![Open-Source Software][github icon]](https://ghproxy.com/) [ghproxy](https://ghproxy.com/) - GitHub 文件 , Releases , archive , gist , raw.githubusercontent.com 文件代理加速下载服务.
 - [![Open-Source Software][github icon]](https://github.com/rzashakeri/beautify-github-profile) [beautify-github-profile](https://github.com/rzashakeri/beautify-github-profile) - This repository helps you to have a more beautiful and attractive github profile, and you can access a complete set of tools and guides for beautifying your github profile. 🪄 ⭐
 - [![Open-Source Software][github icon]](https://github.com/tandpfun/skill-icons) [skill-icons](https://github.com/tandpfun/skill-icons) - Showcase your skills on your Github readme or resumé with ease ✨
 - [![Open-Source Software][github icon]](https://github.com/simple-icons/simple-icons) [simple-icons](https://github.com/simple-icons/simple-icons) - SVG icons for popular brands
