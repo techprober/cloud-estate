@@ -30,7 +30,7 @@ resource "proxmox_vm_qemu" "master_node" {
     type     = var.master_vm_boot_disk_type
     format   = var.master_vm_boot_disk_format
     storage  = var.master_vm_boot_disk_storage_pool
-    iothread = 1
+    iothread = 0
   }
 
   # if you want two NICs, just copy this whole network section and duplicate it

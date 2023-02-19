@@ -21,7 +21,7 @@ resource "proxmox_vm_qemu" "vm" {
     type     = var.vm_boot_disk_type
     format   = var.vm_boot_disk_format
     storage  = var.vm_boot_disk_storage_pool
-    iothread = 1
+    iothread = 0
   }
 
   # if you want two NICs, just copy this whole network section and duplicate it
