@@ -1,0 +1,24 @@
+# values.yaml
+---
+kubeletDir: /var/lib/k0s/kubelet
+storageClasses:
+- name: juicefs-sc
+  enabled: true
+  reclaimPolicy: Retain
+  backend:
+    name: "data"
+    metaurl: "redis://:password@10.140.40.4:6379/1"
+    storage: "minio"
+    accessKey: ""
+    secretKey: ""
+    bucket: "http://10.178.0.9:9000/kubernetes-volumes"
+    trashDays: "0"
+    envs: "{TZ: Asia/Shanghai}"
+  mountPod:
+    resources:
+      limits:
+        cpu: "2"
+        memory: "2Gi"
+      requests:
+        cpu: "2"
+        memory: "1Gi"
