@@ -12,29 +12,39 @@ stringData:
   access-key: "minioadmin"
   secret-key: "minioadmin"
 ---
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
+apiVersion: v1
+kind: PersistentVolume
 metadata:
-  name: juicefs-sc
-  namespace: default
-provisioner: csi.juicefs.com
-parameters:
-  csi.storage.k8s.io/provisioner-secret-name: juicefs-secret
-  csi.storage.k8s.io/provisioner-secret-namespace: default
-  csi.storage.k8s.io/node-publish-secret-name: juicefs-secret
-  csi.storage.k8s.io/node-publish-secret-namespace: default
+  name: juicefs-pv
+  labels:
+    juicefs-name: ten-pb-fs
+spec:
+  capacity:
+  storage: 10Pi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  csi:
+    driver: csi.juicefs.com
+    volumeHandle: juicefs-pv
+    fsType: juicefs
+    nodePublishSecretRef:
+      name: juicefs-secret
+      namespace: default
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: web-pvc
+  name: web-pvc-static
 spec:
   accessModes:
     - ReadWriteMany
   resources:
     requests:
       storage: 10Pi
-  storageClassName: juicefs-sc
+  storageClassName: ""
+  volumeName: pvc-874017e1-f993-423b-a923-2bd1334074e2 # existing pv
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -60,4 +70,4 @@ spec:
       volumes:
         - name: web-data
           persistentVolumeClaim:
-            claimName: web-pvc
+            claimName: web-pvc-static
