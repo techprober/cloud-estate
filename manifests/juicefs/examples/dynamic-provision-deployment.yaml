@@ -1,0 +1,63 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: juicefs-secret
+type: Opaque
+stringData:
+  name: "jfs-test"
+  metaurl: "redis://host.minikube.internal:6379/1"
+  storage: "minio"
+  bucket: "http://host.minikube.internal:9000/jfs-test"
+  access-key: "minioadmin"
+  secret-key: "minioadmin"
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: juicefs-sc
+  namespace: default
+provisioner: csi.juicefs.com
+parameters:
+  csi.storage.k8s.io/provisioner-secret-name: juicefs-secret
+  csi.storage.k8s.io/provisioner-secret-namespace: default
+  csi.storage.k8s.io/node-publish-secret-name: juicefs-secret
+  csi.storage.k8s.io/node-publish-secret-namespace: default
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: web-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Pi
+  storageClassName: juicefs-sc
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-run
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: linuxserver/nginx
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - mountPath: /config
+              name: web-data
+      volumes:
+        - name: web-data
+          persistentVolumeClaim:
+            claimName: web-pvc

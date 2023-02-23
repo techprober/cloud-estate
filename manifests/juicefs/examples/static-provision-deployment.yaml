@@ -1,0 +1,73 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: juicefs-secret
+type: Opaque
+stringData:
+  name: "jfs-test"
+  metaurl: "redis://host.minikube.internal:6379/1"
+  storage: "minio"
+  bucket: "http://host.minikube.internal:9000/jfs-test"
+  access-key: "minioadmin"
+  secret-key: "minioadmin"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: juicefs-pv
+  labels:
+    juicefs-name: ten-pb-fs
+spec:
+  capacity:
+  storage: 10Pi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  csi:
+    driver: csi.juicefs.com
+    volumeHandle: juicefs-pv
+    fsType: juicefs
+    nodePublishSecretRef:
+      name: juicefs-secret
+      namespace: default
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: web-pvc-static
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Pi
+  storageClassName: ""
+  volumeName: pvc-874017e1-f993-423b-a923-2bd1334074e2 # existing pv
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-run
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: linuxserver/nginx
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - mountPath: /config
+              name: web-data
+      volumes:
+        - name: web-data
+          persistentVolumeClaim:
+            claimName: web-pvc-static
