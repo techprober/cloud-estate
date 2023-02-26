@@ -262,6 +262,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/pyinstaller/pyinstaller) [pyinstaller](https://github.com/pyinstaller/pyinstaller) - Freeze (package) Python programs into stand-alone executables
 - [![Open-Source Software][oss icon]](https://github.com/tremorlabs/tremor) [tremor](https://github.com/tremorlabs/tremor) - The react library to build dashboards fast.
 - [![Open-Source Software][oss icon]](https://github.com/bufbuild/buf) [buf](https://github.com/bufbuild/buf) - A new way of working with Protocol Buffers.
+- [![Open-Source Software][oss icon]](https://github.com/googleapis/release-please) [release-please](https://github.com/googleapis/release-please) - generate release PRs based on the conventionalcommits.org spec
 
 ## Programming Specific
 
