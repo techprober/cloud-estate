@@ -291,6 +291,8 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][python icon]](https://github.com/shengqiangzhang/examples-of-web-crawlers) [examples-of-web-crawlers](https://github.com/shengqiangzhang/examples-of-web-crawlers) - Some interesting examples of python crawlers that are friendly to beginners.
 - [![Open-Source Software][python icon]](https://github.com/cloudevents/sdk-python) [cloudevents/sdk-python](https://github.com/cloudevents/sdk-python) - Python SDK for CloudEvents
 - [![Open-Source Software][python icon]](https://github.com/tiangolo/fastapi) [fastapi](https://github.com/tiangolo/fastapi) - FastAPI framework, high performance, easy to learn, fast to code, ready for production
+- [![Open-Source Software][python icon]](https://github.com/simonw/datasette) [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data
+- [![Open-Source Software][python icon]](https://github.com/simonw/datasette-publish-vercel) [datasette-publish-vercel](https://github.com/simonw/datasette-publish-vercel) - Datasette plugin for publishing data using Vercel
 
 ### Node
 
