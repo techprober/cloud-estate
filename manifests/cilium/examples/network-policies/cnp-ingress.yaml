@@ -1,0 +1,17 @@
+---
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: example-ingress-cnp
+spec:
+  endpointSelector:
+    matchLabels:
+      app.kubernetes.io/name: postgresql
+  ingress:
+  - fromEndpoints:
+    - matchLabels:
+        app.kubernetes.io/name: demo-app
+    toPorts:
+    - ports:
+      - port: "5432"
+        protocol: TCP

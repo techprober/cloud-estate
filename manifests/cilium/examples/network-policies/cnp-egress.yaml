@@ -1,0 +1,27 @@
+---
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: example-egress-cnp
+spec:
+  endpointSelector:
+    matchLabels:
+      app.kubernetes.io/name: demo-app
+  egress:
+    - toFQDNs:
+      - matchName: "google.com"
+      - matchPattern: "*.google.com"
+    - toEndpoints:
+      - matchLabels:
+          "k8s:io.kubernetes.pod.namespace": production
+    - toEndpoints:
+      - matchLabels:
+          "k8s:io.kubernetes.pod.namespace": kube-system
+          "k8s:k8s-app": kube-dns
+      toPorts:
+      - ports:
+        - port: "53"
+          protocol: ANY
+        rules:
+          dns:
+            - matchPattern: "*"
