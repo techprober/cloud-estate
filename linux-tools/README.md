@@ -297,6 +297,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 ### Node
 
 - [![Open-Source Software][node icon]](https://github.com/unjs/unbuild) [unbuild](https://github.com/unjs/unbuild) - An unified javascript build system
+- [![Open-Source Software][node icon]](https://github.com/nanostores/nanostores) [nanostores](https://github.com/nanostores/nanostores) - A tiny (334 bytes) state manager for React/RN/Preact/Vue/Svelte with many atomic tree-shakable stores
 
 ## Vim/Neovim Addons
 
