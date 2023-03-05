@@ -218,6 +218,8 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/controlplaneio/kubesec) [kubsec](https://github.com/controlplaneio/kubesec) - Security risk analysis for Kubernetes resources
 - [![CloudNative][cncf icon]](https://github.com/falcosecurity/falco) [falco](https://github.com/falcosecurity/falco) - Cloud Native Runtime Security
 - [![CloudNative][cncf icon]](https://github.com/cilium/tetragon) [tetragon](https://github.com/cilium/tetragon) - eBPF-based Security Observability and Runtime Enforcement
+- [![CloudNative][cncf icon]](https://github.com/fluxcd/flux2) [flux2](https://github.com/fluxcd/flux2) - Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.
+- [![CloudNative][cncf icon]](https://github.com/fluxcd/flux2-kustomize-helm-example) [flux2-kustomize-helm-example](https://github.com/fluxcd/flux2-kustomize-helm-example) - A GitOps workflow example for multi-env deployments with Flux, Kustomize and Helm.
 
 ## Open-Source Software
 
