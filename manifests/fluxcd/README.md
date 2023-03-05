@@ -1,5 +1,9 @@
 # FluxCD
 
+## High-level Architecture
+
+![](https://fluxcd.io/img/diagrams/gitops-toolkit.png)
+
 ## References
 
 - https://github.com/fluxcd/flux2-kustomize-helm-example
