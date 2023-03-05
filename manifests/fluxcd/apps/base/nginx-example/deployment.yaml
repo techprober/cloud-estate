@@ -1,0 +1,43 @@
+# /deploy/apps/base/nginx-example/deployment.yaml
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-example
+spec:
+  selector:
+    matchLabels:
+      app: nginx-example
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: nginx-example
+    spec:
+      containers:
+        - name: nginx-example
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            tcpSocket:
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: 80
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          resources:
+            limits:
+              cpu: "512m"
+              memory: "512Mi"
+            requests:
+              cpu: "256m"
+              memory: "256Mi"

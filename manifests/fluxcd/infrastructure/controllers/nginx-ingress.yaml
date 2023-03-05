@@ -1,0 +1,34 @@
+# /deploy/infrastructure/controllers/nginx-ingress.yaml
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nginx-ingress
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: nginx-stable
+  namespace: flux-system
+spec:
+  interval: 12h
+  url: https://helm.nginx.com/stable
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: nginx-ingress
+  namespace: nginx-ingress
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: nginx-ingress
+      sourceRef:
+        kind: HelmRepository
+        name: nginx-stable
+        namespace: flux-system
+      interval: 12h
+  values:
+    watch-ingress-without-class: true
+    controller.ingressClassResource.default: true

@@ -1,0 +1,61 @@
+# /deploy/infrastructure/controllers/weave-gitops.yaml
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  annotations:
+    metadata.weave.works/description: This is the source location for the Weave GitOps
+      Dashboard's helm chart.
+  labels:
+    app.kubernetes.io/component: ui
+    app.kubernetes.io/created-by: weave-gitops-cli
+    app.kubernetes.io/name: weave-gitops-dashboard
+    app.kubernetes.io/part-of: weave-gitops
+  name: ww-gitops
+  namespace: flux-system
+spec:
+  interval: 12h
+  type: oci
+  url: oci://ghcr.io/weaveworks/charts
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  annotations:
+    metadata.weave.works/description: |
+      This is the Weave GitOps Dashboard. It provides a simple way to get insights into your GitOps workloads.
+  name: ww-gitops
+  namespace: flux-system
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: weave-gitops
+      sourceRef:
+        kind: HelmRepository
+        name: ww-gitops
+      interval: 12h
+  # https://github.com/weaveworks/weave-gitops/blob/main/charts/gitops-server/values.yaml
+  values:
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        cpu: 1
+        memory: 512Mi
+    securityContext:
+      capabilities:
+        drop:
+          - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1000
+    adminUser:
+      create: true
+      username: admin
+      # Change password by generating a new hash with:
+      # https://docs.gitops.weave.works/docs/configuration/securing-access-to-the-dashboard/#login-via-a-cluster-user-account
+      # bcrypt hash for password "flux"
+      passwordHash: $2a$10$P/tHQ1DNFXdvX0zRGA8LPeSOyb0JXq9rP3fZ4W8HGTpLV7qHDlWhe
+

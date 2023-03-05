@@ -1,0 +1,36 @@
+# /deploy/clusters/prod/apps.yaml
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: apps-prod
+  namespace: flux-system
+spec:
+  interval: 1m
+  dependsOn:
+    - name: infra-configs
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./deploy/apps/prod
+  prune: true
+  wait: true
+  timeout: 1m
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: apps-staging
+  namespace: flux-system
+spec:
+  interval: 1m
+  dependsOn:
+    - name: infra-configs
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./deploy/apps/staging
+  prune: true
+  wait: true
+  timeout: 1m
+
