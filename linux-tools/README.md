@@ -181,6 +181,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Kuberentes][k8s icon]](https://github.com/cloudnativelabs/kube-shell) [kube-shell](https://github.com/cloudnativelabs/kube-shell) - Kubernetes shell: An integrated shell for working with the Kubernetes
 - [![Kuberentes][k8s icon]](https://github.com/komodorio/helm-dashboard) [helm-dashboard](https://github.com/komodorio/helm-dashboard) - The missing UI for Helm - visualize your releases
 - [![Kuberentes][k8s icon]](https://github.com/helmfile/helmfile) [helmfile](https://github.com/helmfile/helmfile) - Declaratively deploy your Kubernetes manifests, Kustomize configs, and Charts as Helm releases in one shot
+- [![Kuberentes][k8s icon]](https://github.com/geek-cookbook/geek-cookbook) [geek-cookbook](https://github.com/geek-cookbook/geek-cookbook) - The "Geek's Cookbook" is a collection of guides for establishing your own highly-available "private cloud" and using it to run self-hosted services such as GitLab, Plex, NextCloud, etc.
 
 ## CloudNative Solutions
 
@@ -218,6 +219,8 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/controlplaneio/kubesec) [kubsec](https://github.com/controlplaneio/kubesec) - Security risk analysis for Kubernetes resources
 - [![CloudNative][cncf icon]](https://github.com/falcosecurity/falco) [falco](https://github.com/falcosecurity/falco) - Cloud Native Runtime Security
 - [![CloudNative][cncf icon]](https://github.com/cilium/tetragon) [tetragon](https://github.com/cilium/tetragon) - eBPF-based Security Observability and Runtime Enforcement
+- [![CloudNative][cncf icon]](https://github.com/fluxcd/flux2) [flux2](https://github.com/fluxcd/flux2) - Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.
+- [![CloudNative][cncf icon]](https://github.com/fluxcd/flux2-kustomize-helm-example) [flux2-kustomize-helm-example](https://github.com/fluxcd/flux2-kustomize-helm-example) - A GitOps workflow example for multi-env deployments with Flux, Kustomize and Helm.
 
 ## Open-Source Software
 
