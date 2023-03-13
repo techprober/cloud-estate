@@ -147,6 +147,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][terminal icon]](https://github.com/minio/mc) [mc](https://github.com/minio/mc) - MinIO Client is a replacement for ls, cp, mkdir, diff and rsync commands for filesystems and object storage
 - [![Open-Source Software][terminal icon]](https://github.com/mr-karan/doggo) [doggo](https://github.com/mr-karan/doggo) - 🐶 Command-line DNS Client for Humans. Written in Golang
 - [![Open-Source Software][terminal icon]](https://github.com/cjbassi/gotop) [gotop](https://github.com/cjbassi/gotop) - A terminal based graphical activity monitor inspired by gtop and vtop
+- [![Open-Source Software][terminal icon]](https://github.com/MrRio/vtop) [vtop](https://github.com/MrRio/vtop) - Wow such top. So stats. More better than regular top.
 - [![Open-Source Software][terminal icon]](https://github.com/clementtsang/bottom) [bottom](https://github.com/clementtsang/bottom) - Yet another cross-platform graphical process/system monitor.
 - [![Open-Source Software][terminal icon]](https://github.com/sharkdp/fd) [fd](https://github.com/sharkdp/fd) - YA simple, fast and user-friendly alternative to 'find'
 - [![Open-Source Software][terminal icon]](https://github.com/BurntSushi/ripgrep) [ripgrep](https://github.com/BurntSushi/ripgrep) - ripgrep recursively searches directories for a regex pattern while respecting your gitignore
