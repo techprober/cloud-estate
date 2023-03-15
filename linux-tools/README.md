@@ -125,6 +125,8 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/cupcakearmy/autorestic) [autorestic](https://github.com/cupcakearmy/autorestic) - Config driven, easy backup cli for restic.
 - [![Open-Source Software][oss icon]](https://github.com/apprell/proxmox-autosnap) [proxmox-autosnap](https://github.com/apprell/proxmox-autosnap) - ZFS automatic snapshot script for Proxmox VE 5,6,7
 - [![Open-Source Software][oss icon]](https://github.com/jordanhillis/pvekclean) [pvekclean](https://github.com/jordanhillis/pvekclean) - Easily remove old/unused PVE kernels on your Proxmox VE system
+- [![Open-Source Software][oss icon]](https://github.com/alacritty/alacritty) [alacritty](https://github.com/alacritty/alacritty) - A cross-platform, OpenGL terminal emulator.
+- [![Open-Source Software][oss icon]](https://github.com/rajasegar/alacritty-themes) [alacritty-themes](https://github.com/rajasegar/alacritty-themes) - rainbow lollipop Themes candy heart_eyes for Alacritty: A cross-platform GPU-accelerated Terminal emulator
 
 ## VPS Related
 
