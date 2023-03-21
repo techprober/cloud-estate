@@ -163,6 +163,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][terminal icon]](https://github.com/zu1k/nali) [nali](https://github.com/zu1k/nali) - 一个查询 IP 地理信息和 CDN 服务提供商的离线终端工具.An offline tool for querying IP geographic information and CDN provider.
 - [![Open-Source Software][terminal icon]](https://github.com/ogham/dog) [dog](https://github.com/ogham/dog) - A command-line DNS client.
 - [![Open-Source Software][terminal icon]](https://github.com/Syllo/nvtop#nvtop-build) [nvtop-build](https://github.com/Syllo/nvtop#nvtop-build) - GPUs process monitoring for AMD, Intel and NVIDIA
+- [![Open-Source Software][terminal icon]](https://github.com/mzz2017/gg) [gg](https://github.com/mzz2017/gg) - A command-line tool for one-click proxy in your research and development without installing v2ray or anything else (only for linux)
 
 ## Docker Images
 
