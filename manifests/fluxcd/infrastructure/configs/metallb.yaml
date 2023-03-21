@@ -1,0 +1,20 @@
+# /kustomization/metallb-system/metallb.yaml
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: vlan40-default-pool
+  namespace: metallb-system
+spec:
+  addresses:
+    - 10.140.40.50-10.140.40.60
+
+---
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: l2
+  namespace: metallb-system
+spec:
+  ipAddressPools:
+    - vlan40-default-pool
