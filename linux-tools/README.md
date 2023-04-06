@@ -235,6 +235,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Open-Source Software][oss icon]](https://github.com/mikecao/umami) [umami](https://github.com/mikecao/umami) - Umami is a simple, fast, website analytics alternative to Google Analytics
 - [![Open-Source Software][oss icon]](https://github.com/iawia002/lux) [lux](https://github.com/iawia002/lux) - Lux is a fast and simple video downloader built with Go
+- [![Open-Source Software][oss icon]](https://github.com/nilaoda/BBDown) [BBDown](https://github.com/nilaoda/BBDown) - Bilibili Downloader. 一款命令行式哔哩哔哩下载器.
 - [![Open-Source Software][oss icon]](https://github.com/crowdsecurity/crowdsec) [CrodSec](https://github.com/crowdsecurity/crowdsec) - CrowdSec - the open-source and participative IPS able to analyze visitor behavior & provide an adapted response to all kinds of attacks. It also leverages the crowd power to generate a global CTI database to protect the user network.
 - [![Open-Source Software][oss icon]](https://github.com/the1812/Bilibili-Evolved) [Bilibili-Evolved](https://github.com/the1812/Bilibili-Evolved) - 强大的哔哩哔哩增强脚本
 - [![Open-Source Software][oss icon]](https://github.com/FreshRSS/FreshRSS) [FreshRSS](https://github.com/FreshRSS/FreshRSS) - FreshRSS is a self-hosted RSS feed aggregator like Leed or Kriss Feed.
