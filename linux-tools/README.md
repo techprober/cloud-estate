@@ -85,6 +85,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][terminal icon]](https://github.com/PatrickF1/fzf.fish) [fzf.fish](https://github.com/PatrickF1/fzf.fish) - Augment your fish command line with fzf key bindings.
 - [![Open-Source Software][terminal icon]](https://github.com/matusf/goto) [goto-fish](https://github.com/matusf/goto) - A fish shell utility to quickly navigate to aliased directories supporting tab-completion.
 - [![Open-Source Software][terminal icon]](https://github.com/jorgebucaran/nvm.fish) [nvm.fish](https://github.com/jorgebucaran/nvm.fish) - Node.js version manager lovingly made for Fish.
+- [![Open-Source Software][terminal icon]](https://github.com/gokcehan/lf) [lf](https://github.com/gokcehan/lf) - Terminal file manager
 
 ## Productive Tools
 
