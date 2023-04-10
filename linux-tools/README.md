@@ -313,6 +313,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Open-Source Software][node icon]](https://github.com/unjs/unbuild) [unbuild](https://github.com/unjs/unbuild) - An unified javascript build system
 - [![Open-Source Software][node icon]](https://github.com/nanostores/nanostores) [nanostores](https://github.com/nanostores/nanostores) - A tiny (334 bytes) state manager for React/RN/Preact/Vue/Svelte with many atomic tree-shakable stores
+- [![Open-Source Software][node icon]](https://github.com/shadcn/ui) [ui](https://github.com/shadcn/ui) - Beautifully designed components built with Radix UI and Tailwind CSS.
 
 ## Vim/Neovim Addons
 
