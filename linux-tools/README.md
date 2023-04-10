@@ -51,6 +51,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][awesome icon]](https://github.com/jindongwang/transferlearning) [transferlearning](https://github.com/jindongwang/transferlearning) - Transfer learning / domain adaptation / domain generalization / multi-task learning etc. Papers, codes, datasets, applications, tutorials.-迁移学习
 - [![Open-Source Software][awesome icon]](https://github.com/rubiojr/awesome-restic) [awesome-restic](https://github.com/rubiojr/awesome-restic) - Awesome Restic related projects
 - [![Open-Source Software][awesome icon]](https://github.com/luong-komorebi/Awesome-Linux-Software) [Awesome-Linux-Software](https://github.com/luong-komorebi/Awesome-Linux-Software) - A list of awesome applications, software, tools and other materials for Linux distros.
+- [![Open-Source Software][awesome icon]](https://github.com/awesome-selfhosted/awesome-selfhosted) [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) - A list of Free Software network services and web applications which can be hosted on your own servers
 
 ## GitHub Related
 
