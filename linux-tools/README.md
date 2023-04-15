@@ -342,6 +342,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/lourenci/github-colors) [github-colors](https://github.com/lourenci/github-colors) - Yet another GitHub colorscheme
 - [![Neovim][nvim icon]](https://github.com/lewis6991/gitsigns.nvim) [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git integration for buffers
 - [![Neovim][nvim icon]](https://github.com/ThePrimeagen/harpoon) [harpoon](https://github.com/ThePrimeagen/harpoon) - Getting you where you want with the fewest keystrokes.
+- [![Neovim][nvim icon]](https://github.com/airblade/vim-rooter) [vim-rooter](https://github.com/airblade/vim-rooter) - Changes Vim working directory to project root.
 
 ## Contribution
 
