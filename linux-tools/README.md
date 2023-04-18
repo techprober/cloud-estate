@@ -343,6 +343,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/lewis6991/gitsigns.nvim) [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git integration for buffers
 - [![Neovim][nvim icon]](https://github.com/ThePrimeagen/harpoon) [harpoon](https://github.com/ThePrimeagen/harpoon) - Getting you where you want with the fewest keystrokes.
 - [![Neovim][nvim icon]](https://github.com/airblade/vim-rooter) [vim-rooter](https://github.com/airblade/vim-rooter) - Changes Vim working directory to project root.
+- [![Neovim][nvim icon]](https://github.com/rose-pine/neovim) [rose-pine-theme](https://github.com/rose-pine/neovim) - Soho vibes for Neovim
 
 ## Contribution
 
