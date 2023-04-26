@@ -272,6 +272,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][oss icon]](https://github.com/snail007/goproxy) [goproxy](https://github.com/snail007/goproxy) - 🔥 Proxy is a high performance HTTP(S) proxies, SOCKS5 proxies,WEBSOCKET, TCP, UDP proxy server implemented by golang. Now, it supports chain-style proxies,nat forwarding in different lan,TCP/UDP port forwarding, SSH forwarding.
 - [![Open-Source Software][oss icon]](https://github.com/snail007/proxy_admin_free) [goproxy_admin](https://github.com/snail007/proxy_admin_free) - Proxy 是高性能全功能的 http 代理、https 代理、socks5 代理、内网穿透、内网穿透 p2p、内网穿透代理、内网穿透反向代理、内网穿透服务器、Websocket 代理、TCP 代理、UDP 代理、DNS 代理、DNS 加密代理，代理 API 认证，全能跨平台代理服务器。
 - [![Open-Source Software][oss icon]](https://github.com/yang991178/fluent-reader) [fluent-reader](https://github.com/yang991178/fluent-reader) - Modern desktop RSS reader built with Electron, React, and Fluent UI
+- [![Open-Source Software][oss icon]](https://github.com/kahing/goofys) [goofys](https://github.com/kahing/goofys) - a high-performance, POSIX-ish Amazon S3 file system written in Go
 
 ## Programming Addons
 
