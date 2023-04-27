@@ -233,6 +233,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/cilium/tetragon) [tetragon](https://github.com/cilium/tetragon) - eBPF-based Security Observability and Runtime Enforcement
 - [![CloudNative][cncf icon]](https://github.com/fluxcd/flux2) [flux2](https://github.com/fluxcd/flux2) - Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.
 - [![CloudNative][cncf icon]](https://github.com/fluxcd/flux2-kustomize-helm-example) [flux2-kustomize-helm-example](https://github.com/fluxcd/flux2-kustomize-helm-example) - A GitOps workflow example for multi-env deployments with Flux, Kustomize and Helm.
+- [![CloudNative][cncf icon]](https://github.com/aws/karpenter) [karpenter](https://github.com/aws/karpenter) - Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.
 
 ## Open-Source Software
 
