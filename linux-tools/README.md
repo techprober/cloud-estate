@@ -350,6 +350,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/rose-pine/neovim) [rose-pine-theme](https://github.com/rose-pine/neovim) - Soho vibes for Neovim
 - [![Neovim][nvim icon]](https://github.com/f-person/git-blame.nvim) [git-blame.nvim](https://github.com/f-person/git-blame.nvim) - https://github.com/f-person/git-blame.nvim
 - [![Neovim][nvim icon]](https://github.com/sindrets/diffview.nvim) [diffview.nvim](https://github.com/sindrets/diffview.nvim) - Single tabpage interface for easily cycling through diffs for all modified files for any git rev.
+- [![Neovim][nvim icon]](https://github.com/preservim/tagbar) [tagbar](https://github.com/preservim/tagbar) - Vim plugin that displays tags in a window, ordered by scope
 
 ## Contribution
 
