@@ -351,6 +351,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/f-person/git-blame.nvim) [git-blame.nvim](https://github.com/f-person/git-blame.nvim) - https://github.com/f-person/git-blame.nvim
 - [![Neovim][nvim icon]](https://github.com/sindrets/diffview.nvim) [diffview.nvim](https://github.com/sindrets/diffview.nvim) - Single tabpage interface for easily cycling through diffs for all modified files for any git rev.
 - [![Neovim][nvim icon]](https://github.com/preservim/tagbar) [tagbar](https://github.com/preservim/tagbar) - Vim plugin that displays tags in a window, ordered by scope
+- [![Neovim][nvim icon]](https://github.com/CRAG666/code_runner.nvim) [code_runner.nvim](https://github.com/CRAG666/code_runner.nvim) - Neovim plugin.The best code runner you could have, it is like the one in vscode but with super powers, it manages projects like in intellij but without being slow
 
 ## Contribution
 
