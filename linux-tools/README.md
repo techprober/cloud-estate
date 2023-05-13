@@ -353,6 +353,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/preservim/tagbar) [tagbar](https://github.com/preservim/tagbar) - Vim plugin that displays tags in a window, ordered by scope
 - [![Neovim][nvim icon]](https://github.com/CRAG666/code_runner.nvim) [code_runner.nvim](https://github.com/CRAG666/code_runner.nvim) - Neovim plugin.The best code runner you could have, it is like the one in vscode but with super powers, it manages projects like in intellij but without being slow
 
+- [![Neovim][nvim icon]](https://github.com/kshenoy/vim-signature) [vim-signature](https://github.com/kshenoy/vim-signature) - Plugin to toggle, display and navigate marks
 ## Contribution
 
 Special thanks go to all [contributors](https://github.com/TechProber/cloud-estate/graphs/contributors). If you would like to contribute, please see the [instructions](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md).
