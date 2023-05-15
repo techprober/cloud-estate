@@ -308,6 +308,8 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/cloudevents/sdk-go) [cloudevents/go-sdk](https://github.com/cloudevents/sdk-go) - Go SDK for CloudEvents
 - [![Open-Source Software][golang icon]](https://github.com/robertkrimen/otto) [otoo](https://github.com/robertkrimen/otto) - A JavaScript interpreter in Go (golang)
 - [![Open-Source Software][golang icon]](https://github.com/c9s/gomon) [gomon](https://github.com/c9s/gomon) - Monitor for any changes in your go package and automatically restart commands (run, build, server or anything)
+- [![Open-Source Software][golang icon]](https://github.com/inconshreveable/log15) [log15](https://github.com/inconshreveable/log15) - Structured, composable logging for Go
+- [![Open-Source Software][golang icon]](https://github.com/quii/learn-go-with-tests) [learn-go-with-tests](https://github.com/quii/learn-go-with-tests) - Learn Go with test-driven development
 
 ### Python
 
@@ -356,6 +358,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/CRAG666/code_runner.nvim) [code_runner.nvim](https://github.com/CRAG666/code_runner.nvim) - Neovim plugin.The best code runner you could have, it is like the one in vscode but with super powers, it manages projects like in intellij but without being slow
 
 - [![Neovim][nvim icon]](https://github.com/kshenoy/vim-signature) [vim-signature](https://github.com/kshenoy/vim-signature) - Plugin to toggle, display and navigate marks
+
 ## Contribution
 
 Special thanks go to all [contributors](https://github.com/TechProber/cloud-estate/graphs/contributors). If you would like to contribute, please see the [instructions](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md).
