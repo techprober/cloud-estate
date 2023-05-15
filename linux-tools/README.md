@@ -307,6 +307,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/gookit/goutil) [goutil](https://github.com/gookit/goutil) - 💪 Helper Utils For Go: int, byte, string, array/slice, map, struct, dump, convert/format, error, web/http, cli/flag, OS/ENV, filesystem, system, test/assert, time and more. Go 常用的一些工具函数：数字，字符串，数组，Map，结构体，反射，文本，文件，错误，时间日期，特殊处理，格式化，常用信息获取等等
 - [![Open-Source Software][golang icon]](https://github.com/cloudevents/sdk-go) [cloudevents/go-sdk](https://github.com/cloudevents/sdk-go) - Go SDK for CloudEvents
 - [![Open-Source Software][golang icon]](https://github.com/robertkrimen/otto) [otoo](https://github.com/robertkrimen/otto) - A JavaScript interpreter in Go (golang)
+- [![Open-Source Software][golang icon]](https://github.com/c9s/gomon) [gomon](https://github.com/c9s/gomon) - Monitor for any changes in your go package and automatically restart commands (run, build, server or anything)
 
 ### Python
 
