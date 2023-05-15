@@ -308,6 +308,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/cloudevents/sdk-go) [cloudevents/go-sdk](https://github.com/cloudevents/sdk-go) - Go SDK for CloudEvents
 - [![Open-Source Software][golang icon]](https://github.com/robertkrimen/otto) [otoo](https://github.com/robertkrimen/otto) - A JavaScript interpreter in Go (golang)
 - [![Open-Source Software][golang icon]](https://github.com/c9s/gomon) [gomon](https://github.com/c9s/gomon) - Monitor for any changes in your go package and automatically restart commands (run, build, server or anything)
+- [![Open-Source Software][golang icon]](https://github.com/inconshreveable/log15) [log15](https://github.com/inconshreveable/log15) - Structured, composable logging for Go
 
 ### Python
 
