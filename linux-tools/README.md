@@ -310,6 +310,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/c9s/gomon) [gomon](https://github.com/c9s/gomon) - Monitor for any changes in your go package and automatically restart commands (run, build, server or anything)
 - [![Open-Source Software][golang icon]](https://github.com/inconshreveable/log15) [log15](https://github.com/inconshreveable/log15) - Structured, composable logging for Go
 - [![Open-Source Software][golang icon]](https://github.com/quii/learn-go-with-tests) [learn-go-with-tests](https://github.com/quii/learn-go-with-tests) - Learn Go with test-driven development
+- [![Open-Source Software][golang icon]](https://github.com/tidwall/gjson) [gjson](https://github.com/tidwall/gjson) - Get JSON values quickly - JSON parser for Go
 
 ### Python
 
