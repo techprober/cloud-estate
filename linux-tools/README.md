@@ -360,6 +360,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 
 - [![Neovim][nvim icon]](https://github.com/kshenoy/vim-signature) [vim-signature](https://github.com/kshenoy/vim-signature) - Plugin to toggle, display and navigate marks
 - [![Neovim][nvim icon]](https://github.com/dinhhuy258/sfm.nvim) [sfm.nvim](https://github.com/dinhhuy258/sfm.nvim) - The simple directory tree viewer for Neovim written in Lua
+- [![Neovim][nvim icon]](https://github.com/kdheepak/lazygit.nvim) [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim) - Plugin for calling lazygit from within neovim.
 
 ## Contribution
 
