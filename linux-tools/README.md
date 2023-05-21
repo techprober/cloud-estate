@@ -364,6 +364,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/dinhhuy258/sfm.nvim) [sfm.nvim](https://github.com/dinhhuy258/sfm.nvim) - The simple directory tree viewer for Neovim written in Lua
 - [![Neovim][nvim icon]](https://github.com/kdheepak/lazygit.nvim) [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim) - Plugin for calling lazygit from within neovim.
 - [![Neovim][nvim icon]](https://github.com/ahmedkhalf/project.nvim) [projects.nvim](https://github.com/ahmedkhalf/project.nvim) - The superior project management solution for neovim.
+- [![Neovim][nvim icon]](https://github.com/xiyaowong/nvim-cursorword) [nvim-cursorword](https://github.com/xiyaowong/nvim-cursorword) - highlight the word under the cursor.
 
 ## Contribution
 
