@@ -365,6 +365,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/kdheepak/lazygit.nvim) [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim) - Plugin for calling lazygit from within neovim.
 - [![Neovim][nvim icon]](https://github.com/ahmedkhalf/project.nvim) [projects.nvim](https://github.com/ahmedkhalf/project.nvim) - The superior project management solution for neovim.
 - [![Neovim][nvim icon]](https://github.com/xiyaowong/nvim-cursorword) [nvim-cursorword](https://github.com/xiyaowong/nvim-cursorword) - highlight the word under the cursor.
+- [![Neovim][nvim icon]](https://github.com/mawkler/modicator.nvim) [modicator.nvim](https://github.com/mawkler/modicator.nvim) - Cursor line number mode indicator
 
 ## Contribution
 
