@@ -366,6 +366,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/ahmedkhalf/project.nvim) [projects.nvim](https://github.com/ahmedkhalf/project.nvim) - The superior project management solution for neovim.
 - [![Neovim][nvim icon]](https://github.com/xiyaowong/nvim-cursorword) [nvim-cursorword](https://github.com/xiyaowong/nvim-cursorword) - highlight the word under the cursor.
 - [![Neovim][nvim icon]](https://github.com/mawkler/modicator.nvim) [modicator.nvim](https://github.com/mawkler/modicator.nvim) - Cursor line number mode indicator
+- [![Neovim][nvim icon]](https://github.com/go-chi/chi) [chi](https://github.com/go-chi/chi) - lightweight, idiomatic and composable router for building Go HTTP services
 
 ## Contribution
 
