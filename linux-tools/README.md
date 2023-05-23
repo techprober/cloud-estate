@@ -171,6 +171,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][terminal icon]](https://github.com/mzz2017/gg) [gg](https://github.com/mzz2017/gg) - A command-line tool for one-click proxy in your research and development without installing v2ray or anything else (only for linux)
 - [![Open-Source Software][terminal icon]](https://github.com/dalance/procs) [procs](https://github.com/dalance/procs) - A modern replacement for ps written in Rust
 - [![Open-Source Software][terminal icon]](https://github.com/aristocratos/bpytop) [bpytop](https://github.com/aristocratos/bpytop) - Linux/OSX/FreeBSD resource monitor
+- [![Open-Source Software][terminal icon]](https://github.com/cespare/reflex) [reflex](https://github.com/cespare/reflex) - Run a command when files change
 
 ## Docker Images
 
