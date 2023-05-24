@@ -316,6 +316,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/percybolmer/ddd-go/tree/clean-architecture) [ddd-go](https://github.com/percybolmer/ddd-go/tree/clean-architecture) - A demo repository that explains an approach to DDD in Go
 - [![Open-Source Software][golang icon]](https://github.com/panjf2000/ants) [ants](https://github.com/panjf2000/ants) - antantant ants is a high-performance and low-cost goroutine pool in Go./ ants 是一个高性能且低损耗的 goroutine 池。
 - [![Open-Source Software][golang icon]](https://github.com/tsenart/vegeta) [vegeta](https://github.com/tsenart/vegeta) - HTTP load testing tool and library. It's over 9000!
+- [![Open-Source Software][golang icon]](https://github.com/go-chi/chi) [chi](https://github.com/go-chi/chi) - lightweight, idiomatic and composable router for building Go HTTP services
 
 ### Python
 
@@ -369,7 +370,6 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/ahmedkhalf/project.nvim) [projects.nvim](https://github.com/ahmedkhalf/project.nvim) - The superior project management solution for neovim.
 - [![Neovim][nvim icon]](https://github.com/xiyaowong/nvim-cursorword) [nvim-cursorword](https://github.com/xiyaowong/nvim-cursorword) - highlight the word under the cursor.
 - [![Neovim][nvim icon]](https://github.com/mawkler/modicator.nvim) [modicator.nvim](https://github.com/mawkler/modicator.nvim) - Cursor line number mode indicator
-- [![Neovim][nvim icon]](https://github.com/go-chi/chi) [chi](https://github.com/go-chi/chi) - lightweight, idiomatic and composable router for building Go HTTP services
 
 ## Contribution
 
