@@ -318,6 +318,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/tsenart/vegeta) [vegeta](https://github.com/tsenart/vegeta) - HTTP load testing tool and library. It's over 9000!
 - [![Open-Source Software][golang icon]](https://github.com/go-chi/chi) [chi](https://github.com/go-chi/chi) - lightweight, idiomatic and composable router for building Go HTTP services
 - [![Open-Source Software][golang icon]](https://github.com/go-resty/resty) [resty](https://github.com/go-resty/resty) - Simple HTTP and REST client library for Go
+- [![Open-Source Software][golang icon]](https://github.com/tidwall/pretty) [pretty](https://github.com/tidwall/pretty) - Efficient JSON beautifier and compactor for Go
 
 ### Python
 
