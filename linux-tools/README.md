@@ -312,8 +312,9 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/inconshreveable/log15) [log15](https://github.com/inconshreveable/log15) - Structured, composable logging for Go
 - [![Open-Source Software][golang icon]](https://github.com/quii/learn-go-with-tests) [learn-go-with-tests](https://github.com/quii/learn-go-with-tests) - Learn Go with test-driven development
 - [![Open-Source Software][golang icon]](https://github.com/tidwall/gjson) [gjson](https://github.com/tidwall/gjson) - Get JSON values quickly - JSON parser for Go
-()- [![Open-Source Software][golang icon]](https://github.com/google/uuid) [uuid](https://github.com/google/uuid) - Go package for UUIDs based on RFC 4122 and DCE 1.1: Authentication and Security Services.
-()- [![Open-Source Software][golang icon]](https://github.com/percybolmer/ddd-go/tree/clean-architecture) [ddd-go](https://github.com/percybolmer/ddd-go/tree/clean-architecture) - A demo repository that explains an approach to DDD in Go
+- [![Open-Source Software][golang icon]](https://github.com/google/uuid) [uuid](https://github.com/google/uuid) - Go package for UUIDs based on RFC 4122 and DCE 1.1: Authentication and Security Services.
+- [![Open-Source Software][golang icon]](https://github.com/percybolmer/ddd-go/tree/clean-architecture) [ddd-go](https://github.com/percybolmer/ddd-go/tree/clean-architecture) - A demo repository that explains an approach to DDD in Go
+- [![Open-Source Software][golang icon]](https://github.com/panjf2000/ants) [ants](https://github.com/panjf2000/ants) - antantant ants is a high-performance and low-cost goroutine pool in Go./ ants 是一个高性能且低损耗的 goroutine 池。
 
 ### Python
 
