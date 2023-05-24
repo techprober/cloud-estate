@@ -317,6 +317,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/panjf2000/ants) [ants](https://github.com/panjf2000/ants) - antantant ants is a high-performance and low-cost goroutine pool in Go./ ants 是一个高性能且低损耗的 goroutine 池。
 - [![Open-Source Software][golang icon]](https://github.com/tsenart/vegeta) [vegeta](https://github.com/tsenart/vegeta) - HTTP load testing tool and library. It's over 9000!
 - [![Open-Source Software][golang icon]](https://github.com/go-chi/chi) [chi](https://github.com/go-chi/chi) - lightweight, idiomatic and composable router for building Go HTTP services
+- [![Open-Source Software][golang icon]](https://github.com/go-resty/resty) [resty](https://github.com/go-resty/resty) - Simple HTTP and REST client library for Go
 
 ### Python
 
