@@ -320,6 +320,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][golang icon]](https://github.com/go-resty/resty) [resty](https://github.com/go-resty/resty) - Simple HTTP and REST client library for Go
 - [![Open-Source Software][golang icon]](https://github.com/tidwall/pretty) [pretty](https://github.com/tidwall/pretty) - Efficient JSON beautifier and compactor for Go
 - [![Open-Source Software][golang icon]](https://github.com/awslabs/aws-lambda-go-api-proxy) [aws-lambda-go-api-proxy](https://github.com/awslabs/aws-lambda-go-api-proxy) - ambda-go-api-proxy makes it easy to port APIs written with Go frameworks such as Gin (https://gin-gonic.github.io/gin/ ) to AWS Lambda and Amazon API Gateway.
+- [![Open-Source Software][golang icon]](https://github.com/caarlos0/env) [env](https://github.com/caarlos0/env) - A simple and zero-dependencies library to parse environment variables into structs.
 
 ### Python
 
