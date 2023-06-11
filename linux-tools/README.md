@@ -196,6 +196,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Kuberentes][k8s icon]](https://github.com/komodorio/helm-dashboard) [helm-dashboard](https://github.com/komodorio/helm-dashboard) - The missing UI for Helm - visualize your releases
 - [![Kuberentes][k8s icon]](https://github.com/helmfile/helmfile) [helmfile](https://github.com/helmfile/helmfile) - Declaratively deploy your Kubernetes manifests, Kustomize configs, and Charts as Helm releases in one shot
 - [![Kuberentes][k8s icon]](https://github.com/geek-cookbook/geek-cookbook) [geek-cookbook](https://github.com/geek-cookbook/geek-cookbook) - The "Geek's Cookbook" is a collection of guides for establishing your own highly-available "private cloud" and using it to run self-hosted services such as GitLab, Plex, NextCloud, etc.
+- [![Kuberentes][k8s icon]](https://github.com/kubernetes-sigs/krew) [krew](https://github.com/kubernetes-sigs/krew) - package Find and install kubectl plugins
 
 ## CloudNative Solutions
 
