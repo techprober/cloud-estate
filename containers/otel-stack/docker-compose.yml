@@ -55,22 +55,6 @@ services:
       - otel-stack
     restart: unless-stopped
 
-  # jaeger:
-  #   depends_on:
-  #     - cassandra-schema
-  #   container_name: jaeger
-  #   image: jaegertracing/all-in-one:latest
-  #   environment:
-  #     - CASSANDRA_SERVERS=cassandra
-  #     - SPAN_STORAGE_TYPE=cassandra
-  #   ports:
-  #     - "16686:16686"
-  #     - "14268:14268"
-  #     - "14250:14250"
-  #   networks:
-  #     - otel-stack
-  #   restart: unless-stopped
-
   otel-collector:
     depends_on:
       - jaeger-query
