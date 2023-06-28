@@ -1,0 +1,98 @@
+version: "3.8"
+
+services:
+  cassandra:
+    container_name: cassandra
+    image: cassandra:latest
+    volumes:
+      - ./data:/var/lib/cassandra/data
+    networks:
+      - otel-stack
+
+  cassandra-schema:
+    depends_on:
+      - cassandra
+    container_name: cassandra-schema
+    image: jaegertracing/jaeger-cassandra-schema:latest
+    networks:
+      - otel-stack
+
+  jaeger-collector:
+    depends_on:
+      - cassandra-schema
+    container_name: jaeger-collector
+    image: jaegertracing/jaeger-collector
+    command:
+      - "--cassandra.keyspace=jaeger_v1_dc1"
+      - "--cassandra.servers=cassandra"
+      - "--sampling.initial-sampling-probability=.5"
+      - "--sampling.target-samples-per-second=.01"
+    environment:
+      - SAMPLING_CONFIG_TYPE=adaptive
+      - SPAN_STORAGE_TYPE=cassandra
+      - CASSANDRA_SERVERS=cassandra
+    ports:
+      - "14269:14269"
+      - "14268:14268"
+      - "14250:14250"
+      - "9411:9411"
+    networks:
+      - otel-stack
+    restart: unless-stopped
+
+  jaeger-query:
+    depends_on:
+      - cassandra-schema
+    container_name: jaeger-query
+    image: jaegertracing/jaeger-query
+    command:
+      - "--cassandra.keyspace=jaeger_v1_dc1"
+      - "--cassandra.servers=cassandra"
+    ports:
+      - "16686:16686"
+      - "16687:16687"
+    networks:
+      - otel-stack
+    restart: unless-stopped
+
+  # jaeger:
+  #   depends_on:
+  #     - cassandra-schema
+  #   container_name: jaeger
+  #   image: jaegertracing/all-in-one:latest
+  #   environment:
+  #     - CASSANDRA_SERVERS=cassandra
+  #     - SPAN_STORAGE_TYPE=cassandra
+  #   ports:
+  #     - "16686:16686"
+  #     - "14268:14268"
+  #     - "14250:14250"
+  #   networks:
+  #     - otel-stack
+  #   restart: unless-stopped
+
+  otel-collector:
+    depends_on:
+      - jaeger-query
+      - jaeger-collector
+    container_name: otel-collector
+    image: otel/opentelemetry-collector-contrib:latest
+    command: [--config=/etc/otel-collector-config.yaml]
+    volumes:
+      - ./config.yaml:/etc/otel-collector-config.yaml
+    ports:
+      - 1888:1888 # pprof extension
+      - 8888:8888 # Prometheus metrics exposed by the collector
+      - 8889:8889 # Prometheus exporter metrics
+      - 13133:13133 # health_check extension
+      - 4317:4317 # OTLP gRPC receiver
+      - 4318:4318 # OTLP http receiver
+      - 55679:55679 # zpages extension
+      - 55555:55555 # otel-collector metrics
+    networks:
+      - otel-stack
+    restart: unless-stopped
+
+networks:
+  otel-stack:
+    name: otel-stack
