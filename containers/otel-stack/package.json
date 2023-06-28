@@ -1,0 +1,24 @@
+{
+  "name": "otel-collector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.3.2",
+    "express": "^4.18.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.5"
+  },
+  "dependencies": {
+    "@opentelemetry/auto-instrumentations-node": "^0.37.1",
+    "@opentelemetry/exporter-metrics-otlp-proto": "^0.40.0",
+    "@opentelemetry/exporter-trace-otlp-proto": "^0.40.0"
+  }
+}
