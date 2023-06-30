@@ -378,6 +378,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Neovim][nvim icon]](https://github.com/ahmedkhalf/project.nvim) [projects.nvim](https://github.com/ahmedkhalf/project.nvim) - The superior project management solution for neovim.
 - [![Neovim][nvim icon]](https://github.com/xiyaowong/nvim-cursorword) [nvim-cursorword](https://github.com/xiyaowong/nvim-cursorword) - highlight the word under the cursor.
 - [![Neovim][nvim icon]](https://github.com/mawkler/modicator.nvim) [modicator.nvim](https://github.com/mawkler/modicator.nvim) - Cursor line number mode indicator
+- [![Neovim][nvim icon]](https://github.com/liuchengxu/vista.vim) [vista.vim](https://github.com/liuchengxu/vista.vim) - 🌵 Viewer & Finder for LSP symbols and tags
 
 ## Contribution
 
