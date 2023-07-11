@@ -73,6 +73,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][github icon]](https://github.com/sator-imaging/Copy-to-Another-Repository) [Copy-to-Another-Repository](https://github.com/sator-imaging/Copy-to-Another-Repository) - GitHub Actions to copy selected file to another repository and create Pull Request (PR).
 - [![Open-Source Software][github icon]](https://github.com/peter-evans/create-pull-request) [create-pull-request](https://github.com/peter-evans/create-pull-request) - A GitHub action to create a pull request for changes to your repository in the actions workspace
 - [![Open-Source Software][github icon]](https://github.com/softprops/action-gh-release) [action-gh-release](https://github.com/softprops/action-gh-release) - 📦 :octocat: GitHub Action for creating GitHub Releases
+- [![Open-Source Software][github icon]](https://github.com/LouisBrunner/checks-action) [checks-action](https://github.com/LouisBrunner/checks-action) - GitHub Action which wraps calls to GitHub Checks API
 
 ## Telegram Related
 
