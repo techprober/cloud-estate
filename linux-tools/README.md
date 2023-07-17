@@ -241,6 +241,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![CloudNative][cncf icon]](https://github.com/fluxcd/flux2-kustomize-helm-example) [flux2-kustomize-helm-example](https://github.com/fluxcd/flux2-kustomize-helm-example) - A GitOps workflow example for multi-env deployments with Flux, Kustomize and Helm.
 - [![CloudNative][cncf icon]](https://github.com/aws/karpenter) [karpenter](https://github.com/aws/karpenter) - Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.
 - [![CloudNative][cncf icon]](https://github.com/anchore/grype) [grype](https://github.com/anchore/grype) - A vulnerability scanner for container images and filesystems
+- [![CloudNative][cncf icon]](https://github.com/fluent/fluent-bit) [fluent-bit](https://github.com/fluent/fluent-bit) - Fast and Lightweight Logs and Metrics processor for Linux, BSD, OSX and Windows
 
 ## Open-Source Software
 
