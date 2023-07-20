@@ -75,6 +75,9 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][github icon]](https://github.com/softprops/action-gh-release) [action-gh-release](https://github.com/softprops/action-gh-release) - 📦 :octocat: GitHub Action for creating GitHub Releases
 - [![Open-Source Software][github icon]](https://github.com/LouisBrunner/checks-action) [checks-action](https://github.com/LouisBrunner/checks-action) - GitHub Action which wraps calls to GitHub Checks API
 - [![Open-Source Software][github icon]](https://github.com/tibdex/github-app-token) [github-app-token](https://github.com/tibdex/github-app-token) - Impersonate a GitHub App in a GitHub Action
+- [![Open-Source Software][github icon]](https://github.com/actions/github-script) [github-script](https://github.com/actions/github-script) - Write workflows scripting the GitHub API in JavaScript
+
+Topics
 
 ## Telegram Related
 
