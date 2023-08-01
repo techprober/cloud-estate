@@ -245,6 +245,7 @@ Topics
 - [![CloudNative][cncf icon]](https://github.com/aws/karpenter) [karpenter](https://github.com/aws/karpenter) - Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.
 - [![CloudNative][cncf icon]](https://github.com/anchore/grype) [grype](https://github.com/anchore/grype) - A vulnerability scanner for container images and filesystems
 - [![CloudNative][cncf icon]](https://github.com/fluent/fluent-bit) [fluent-bit](https://github.com/fluent/fluent-bit) - Fast and Lightweight Logs and Metrics processor for Linux, BSD, OSX and Windows
+- [![Open-Source Software][oss icon]](https://github.com/tellerops/teller) [teller](https://github.com/tellerops/teller) - Cloud native secrets management for developers - never leave your command line for secrets.
 
 ## Open-Source Software
 
