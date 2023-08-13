@@ -245,7 +245,7 @@ Topics
 - [![CloudNative][cncf icon]](https://github.com/aws/karpenter) [karpenter](https://github.com/aws/karpenter) - Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.
 - [![CloudNative][cncf icon]](https://github.com/anchore/grype) [grype](https://github.com/anchore/grype) - A vulnerability scanner for container images and filesystems
 - [![CloudNative][cncf icon]](https://github.com/fluent/fluent-bit) [fluent-bit](https://github.com/fluent/fluent-bit) - Fast and Lightweight Logs and Metrics processor for Linux, BSD, OSX and Windows
-- [![Open-Source Software][oss icon]](https://github.com/tellerops/teller) [teller](https://github.com/tellerops/teller) - Cloud native secrets management for developers - never leave your command line for secrets.
+- [![CloudNative][cncf icon]](https://github.com/VictoriaMetrics/VictoriaMetrics) [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) - VictoriaMetrics
 
 ## Open-Source Software
 
@@ -287,6 +287,7 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/yang991178/fluent-reader) [fluent-reader](https://github.com/yang991178/fluent-reader) - Modern desktop RSS reader built with Electron, React, and Fluent UI
 - [![Open-Source Software][oss icon]](https://github.com/kahing/goofys) [goofys](https://github.com/kahing/goofys) - a high-performance, POSIX-ish Amazon S3 file system written in Go
 - [![Open-Source Software][oss icon]](https://github.com/BYVoid/OpenCC) [OpenCC](https://github.com/BYVoid/OpenCC) - Conversion between Traditional and Simplified Chinese
+- [![Open-Source Software][oss icon]](https://github.com/tellerops/teller) [teller](https://github.com/tellerops/teller) - Cloud native secrets management for developers - never leave your command line for secrets.
 
 ## Programming Addons
 
