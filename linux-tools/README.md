@@ -289,6 +289,7 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/BYVoid/OpenCC) [OpenCC](https://github.com/BYVoid/OpenCC) - Conversion between Traditional and Simplified Chinese
 - [![Open-Source Software][oss icon]](https://github.com/tellerops/teller) [teller](https://github.com/tellerops/teller) - Cloud native secrets management for developers - never leave your command line for secrets.
 - [![Open-Source Software][oss icon]](https://github.com/szabodanika/microbin) [microbin](https://github.com/szabodanika/microbin) - A secure, configurable file-sharing and URL shortening web app written in Rust.
+- [![Open-Source Software][oss icon]](https://github.com/robherley/snips.sh) [snips.sh](https://github.com/robherley/snips.sh) - ✂️ passwordless, anonymous SSH-powered pastebin with a human-friendly TUI and web UI
 
 ## Programming Addons
 
