@@ -95,6 +95,7 @@ Topics
 - [![Open-Source Software][terminal icon]](https://github.com/matusf/goto) [goto-fish](https://github.com/matusf/goto) - A fish shell utility to quickly navigate to aliased directories supporting tab-completion.
 - [![Open-Source Software][terminal icon]](https://github.com/jorgebucaran/nvm.fish) [nvm.fish](https://github.com/jorgebucaran/nvm.fish) - Node.js version manager lovingly made for Fish.
 - [![Open-Source Software][terminal icon]](https://github.com/gokcehan/lf) [lf](https://github.com/gokcehan/lf) - Terminal file manager
+- [![Open-Source Software][terminal icon]](https://github.com/chmln/sd) [sd](https://github.com/chmln/sd) - Intuitive find & replace CLI (sed alternative)
 
 ## Productive Tools
 
