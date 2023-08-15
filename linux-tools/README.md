@@ -97,6 +97,7 @@ Topics
 - [![Open-Source Software][terminal icon]](https://github.com/gokcehan/lf) [lf](https://github.com/gokcehan/lf) - Terminal file manager
 - [![Open-Source Software][terminal icon]](https://github.com/chmln/sd) [sd](https://github.com/chmln/sd) - Intuitive find & replace CLI (sed alternative)
 - [![Open-Source Software][terminal icon]](https://github.com/bootandy/dust) [dust](https://github.com/bootandy/dust) - A more intuitive version of du in rust
+- [![Open-Source Software][terminal icon]](https://github.com/Canop/broot) [broot](https://github.com/Canop/broot) - A new way to see and navigate directory trees
 
 ## Productive Tools
 
