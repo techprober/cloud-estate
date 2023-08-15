@@ -110,6 +110,7 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/q191201771/lal) [lal](https://github.com/q191201771/lal) - 🔥 Golang audio/video live streaming library/client/server. support RTMP, RTSP(RTP/RTCP), HLS, HTTP[S]/WebSocket[S]-FLV/TS, H264/H265/AAC, relay, cluster, record, HTTP API/Notify.
 - [![Open-Source Software][oss icon]](https://github.com/cheat/cheat) [cheat](https://github.com/cheat/cheat) - cheat allows you to create and view interactive cheatsheets on the command-line. It was designed to help remind \*nix system administrators of options for commands that they use frequently, but not frequently enough to remember.
 - [![Open-Source Software][oss icon]](https://github.com/cheat/cheatsheets) [cheatsheet](https://github.com/cheat/cheatsheets) - Community-sourced cheatsheets
+- [![Open-Source Software][oss icon]](https://github.com/ducaale/xh) [xh](https://github.com/ducaale/xh) - Friendly and fast tool for sending HTTP requests
 
 ## DevOps Related
 
