@@ -340,6 +340,7 @@ Topics
 - [![Open-Source Software][golang icon]](https://github.com/awslabs/aws-lambda-go-api-proxy) [aws-lambda-go-api-proxy](https://github.com/awslabs/aws-lambda-go-api-proxy) - ambda-go-api-proxy makes it easy to port APIs written with Go frameworks such as Gin (https://gin-gonic.github.io/gin/ ) to AWS Lambda and Amazon API Gateway.
 - [![Open-Source Software][golang icon]](https://github.com/caarlos0/env) [env](https://github.com/caarlos0/env) - A simple and zero-dependencies library to parse environment variables into structs.
 - [![Open-Source Software][golang icon]](https://github.com/darjun/go-daily-lib) [go-daily-lib](https://github.com/darjun/go-daily-lib) - Go 每日一库
+- [![Open-Source Software][golang icon]](https://github.com/valyala/fasthttp) [fasthttp](https://github.com/valyala/fasthttp) - Fast HTTP package for Go. Tuned for high performance. Zero memory allocations in hot paths. Up to 10x faster than net/http
 
 ### Python
 
