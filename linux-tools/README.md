@@ -399,6 +399,7 @@ Topics
 - [![Neovim][nvim icon]](https://github.com/xiyaowong/nvim-cursorword) [nvim-cursorword](https://github.com/xiyaowong/nvim-cursorword) - highlight the word under the cursor.
 - [![Neovim][nvim icon]](https://github.com/mawkler/modicator.nvim) [modicator.nvim](https://github.com/mawkler/modicator.nvim) - Cursor line number mode indicator
 - [![Neovim][nvim icon]](https://github.com/liuchengxu/vista.vim) [vista.vim](https://github.com/liuchengxu/vista.vim) - 🌵 Viewer & Finder for LSP symbols and tags
+- [![Neovim][nvim icon]](https://github.com/mzlogin/vim-markdown-toc) [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc) - A vim 7.4+ plugin to generate table of contents for Markdown files.
 
 ## Contribution
 
