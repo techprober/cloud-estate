@@ -298,6 +298,7 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/szabodanika/microbin) [microbin](https://github.com/szabodanika/microbin) - A secure, configurable file-sharing and URL shortening web app written in Rust.
 - [![Open-Source Software][oss icon]](https://github.com/robherley/snips.sh) [snips.sh](https://github.com/robherley/snips.sh) - ✂️ passwordless, anonymous SSH-powered pastebin with a human-friendly TUI and web UI
 - [![Open-Source Software][oss icon]](https://github.com/pemistahl/grex) [grex](https://github.com/pemistahl/grex) - A command-line tool and Rust library for generating regular expressions from user-provided test cases
+- [![Open-Source Software][oss icon]](https://github.com/tiny-craft/tiny-rdm) [tiny-rdm](https://github.com/tiny-craft/tiny-rdm) - A Modern Redis Desktop Manager
 
 ## Programming Addons
 
