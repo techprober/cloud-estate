@@ -3,8 +3,8 @@ autoinstall:
   version: 1
   locale: en_US
   keyboard:
-    layout: en
-    variant: us
+    layout: us
+    variant: ""
   write_files:
   - path: /etc/sysctl.d/10-disable-ipv6.conf
     permissions: 0644
