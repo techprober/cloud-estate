@@ -58,6 +58,7 @@ $ brew install hashicorp/tap/packer
 # verify installation
 $ packer
 ```
+Run `packer init` to install necessary plugins
 
 For detailed instructions on how to install Packer on other platforms or Linux distributions, please head to this [ Getting Started ](https://learn.hashicorp.com/tutorials/packer/get-started-install-cli) guide.
 
