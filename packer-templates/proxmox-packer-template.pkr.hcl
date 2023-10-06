@@ -1,3 +1,16 @@
+packer {
+  required_plugins {
+    proxmox = {
+      version = ">= 1.1.5"
+      source  = "github.com/hashicorp/proxmox"
+    }
+    ansible = {
+      source  = "github.com/hashicorp/ansible"
+      version = "~> 1"
+    }
+  }
+}
+
 # Variable Definitions
 variable "proxmox_host" { type = string }
 variable "proxmox_api_user" { type = string }
@@ -124,7 +137,6 @@ build {
   post-processor "shell-local" {
     inline = [
       "ssh root@${var.proxmox_host} qm set ${var.vm_id} --boot c --bootdisk scsi0",                       # set boot order
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ide0 ${var.cloud_init_storage_pool}:cloudinit", # ensure cloud-init drive is present
       "ssh root@${var.proxmox_host} qm set ${var.vm_id} --delete ide2",                                   # delete default iso
       "ssh root@${var.proxmox_host} qm set ${var.vm_id} --vga std",                                       # set default graphics type
       "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",                    # set cloud-init default user

@@ -1,10 +1,10 @@
-#cloud-config
+# cloud-init-modules-config
+# https://cloudinit.readthedocs.io/en/latest/reference/modules.html
 autoinstall:
   version: 1
   locale: en_US
   keyboard:
-    layout: en
-    variant: us
+    layout: us
   write_files:
   - path: /etc/sysctl.d/10-disable-ipv6.conf
     permissions: 0644
