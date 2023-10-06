@@ -1,4 +1,5 @@
-#cloud-config
+# cloud-init-modules-config
+# https://cloudinit.readthedocs.io/en/latest/reference/modules.html
 autoinstall:
   version: 1
   locale: en_US
