@@ -133,11 +133,13 @@ export PACKER_VAR_FILE=[PACKER_VAR_FILE]
 ## References
 
 - [Creating proxmox templates with packer - Aaron Berry](https://dev.to/aaronktberry/creating-proxmox-templates-with-packer-1b35)
+- [Packer - Proxmox ISO Builder](https://developer.hashicorp.com/packer/integrations/hashicorp/proxmox/latest/components/builder/iso)
+- [Packer - Ansible Local Provisioner](https://www.packer.io/plugins/provisioners/ansible/ansible-local)
 - [Getting started with Packer](https://packer.io/intro/getting-started/install.html)
 - [Ubuntu docs for the pre-seed file](https://help.ubuntu.com/16.04/installation-guide/i386/apbs04.html)
 - [Proxmox Forum - Using Packer to deploy Ubuntu 20.04 to Proxmox](https://forum.proxmox.com/threads/using-packer-to-deploy-ubuntu-20-04-to-proxmox.104275/)
-- [Cloud-init - Documentation](https://cloudinit.readthedocs.io/en/0.7.7/index.html)
+- [Cloud-Init Documentation](https://cloudinit.readthedocs.io/en/0.7.7/index.html)
+- [Cloud-Init Module References](https://cloudinit.readthedocs.io/en/latest/reference/modules.html)
 - [Cloud images in Proxmox](https://gist.github.com/chriswayg/b6421dcc69cb3b7e41f2998f1150e1df)
-- [Packer - Ansible Local Provisioner](https://www.packer.io/plugins/provisioners/ansible/ansible-local)
 - [justin-p/packer-proxmox-ubuntu2004](https://github.com/justin-p/packer-proxmox-ubuntu2004/blob/main/playbooks/tasks/enable_cloud-init.yml)
 - [https://www.packer.io/guides/packer-on-cicd/pipelineing-builds](https://www.packer.io/guides/packer-on-cicd/pipelineing-builds)
