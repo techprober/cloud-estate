@@ -1,6 +1,0 @@
-{
-  "proxmox_host": "10.178.0.12",
-  "proxmox_node_name": "pve-03",
-  "proxmox_api_user": "packer@pve",
-  "http_bind_address": "10.178.0.241"
-}
