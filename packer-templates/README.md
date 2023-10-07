@@ -142,4 +142,4 @@ export PACKER_VAR_FILE=[PACKER_VAR_FILE]
 - [Cloud-Init Module References](https://cloudinit.readthedocs.io/en/latest/reference/modules.html)
 - [Cloud images in Proxmox](https://gist.github.com/chriswayg/b6421dcc69cb3b7e41f2998f1150e1df)
 - [justin-p/packer-proxmox-ubuntu2004](https://github.com/justin-p/packer-proxmox-ubuntu2004/blob/main/playbooks/tasks/enable_cloud-init.yml)
-- [https://www.packer.io/guides/packer-on-cicd/pipelineing-builds](https://www.packer.io/guides/packer-on-cicd/pipelineing-builds)
+- [Packer on CICD](https://www.packer.io/guides/packer-on-cicd/pipelineing-builds)
