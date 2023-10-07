@@ -402,6 +402,7 @@ Topics
 - [![Neovim][nvim icon]](https://github.com/mawkler/modicator.nvim) [modicator.nvim](https://github.com/mawkler/modicator.nvim) - Cursor line number mode indicator
 - [![Neovim][nvim icon]](https://github.com/liuchengxu/vista.vim) [vista.vim](https://github.com/liuchengxu/vista.vim) - 🌵 Viewer & Finder for LSP symbols and tags
 - [![Neovim][nvim icon]](https://github.com/mzlogin/vim-markdown-toc) [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc) - A vim 7.4+ plugin to generate table of contents for Markdown files.
+- [![Neovim][nvim icon]](https://github.com/sam4llis/nvim-tundra) [nvim-tundra](https://github.com/sam4llis/nvim-tundra) - A theme for Neovim with support for LSP, Treesitter, Telescope, and more.
 
 ## Contribution
 
