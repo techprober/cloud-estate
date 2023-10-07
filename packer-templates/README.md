@@ -34,7 +34,7 @@ Install `jq` locally on your machine
 
 ```bash
 # archlinux
-$ sudo pacman -S jq
+sudo pacman -S jq
 
 # debian/ubuntu
 sudo apt-get install jq
@@ -44,21 +44,26 @@ Install `packer` locally on your machine
 
 ```bash
 # archlinux
-$ sudo pacman -S packer
+sudo pacman -S packer
 
 # debian/ubuntu
-$ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-$ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-$ sudo apt-get update && sudo apt-get install packer
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+sudo apt-get update && sudo apt-get install packer
 
 # homebrew
-$ brew tap hashicorp/tap
-$ brew install hashicorp/tap/packer
+brew tap hashicorp/tap
+brew install hashicorp/tap/packer
 
 # verify installation
-$ packer
+packer
 ```
-Run `packer init` to install necessary plugins
+
+Install necessary plugins
+
+```bash
+packer init ./proxmox-packer-template.pkr.hcl
+```
 
 For detailed instructions on how to install Packer on other platforms or Linux distributions, please head to this [ Getting Started ](https://learn.hashicorp.com/tutorials/packer/get-started-install-cli) guide.
 
@@ -98,13 +103,12 @@ By using packer we can define our golden VM image as code so that we can easily 
 
 Packer requires a user account to perform actions on the Proxmox API. The following commands will create a new user account `packer@pve` with restricted permissions.
 
-```
-$ pveum useradd packer@pve
-$ pveum passwd packer@pve
-Enter new password: ****************
-Retype new password: ****************
-$ pveum roleadd Packer -privs "VM.Config.Disk VM.Config.CPU VM.Config.Memory Datastore.AllocateSpace Sys.Modify VM.Config.Options VM.Allocate VM.Audit VM.Console VM.Config.CDROM VM.Config.Network VM.PowerMgmt VM.Config.HWType VM.Monitor"
-$ pveum aclmod / -user packer@pve -role Packer
+```bash
+pveum useradd packer@pve
+pveum passwd packer@pve
+# Enter new password: ****************
+# Retype new password: ****************
+pveum aclmod / -user packer@pve -role PVEAdmin
 ```
 
 ## How to Use
@@ -121,6 +125,8 @@ There is a dedicated blog post for the basic/advanced use cases using this Packe
 
 # bake vm template
 # please do NOT use `~`, use $HOME instead
+# start with config.json.example
+cp config.json.example config.json
 export HOST_CONFIG=[HOST_CONFIG]
 export PACKER_VAR_FILE=[PACKER_VAR_FILE]
 # e.g.

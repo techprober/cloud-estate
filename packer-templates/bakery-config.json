@@ -9,6 +9,11 @@
     "iso": "ubuntu-22.04.3-live-server-amd64.iso",
     "playbook": "ubuntu-2204-1-server.yml"
   },
+  "debian-12-server": {
+    "image_name": "debian-12-server",
+    "iso": "debian-12.1.0-amd64-netinst.iso",
+    "playbook": "debian-12-server.yml"
+  },
   "docker-ubuntu-2204-server": {
     "image_name": "docker-ubuntu-2204-server",
     "iso": "ubuntu-22.04.3-live-server-amd64.iso",

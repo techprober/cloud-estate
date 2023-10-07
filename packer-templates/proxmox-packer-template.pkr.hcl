@@ -28,8 +28,8 @@ variable "disk_type" { type = string }
 variable "disk_format" { type = string }
 variable "disk_size" { type = string }
 variable "datastore" { type = string }
-variable "datastore_type" { type = string }
 variable "disk_cache_mode" { type = string }
+variable "io_thread" { type = bool }
 variable "cloud_init_storage_pool" { type = string }
 variable "iso" { type = string }
 variable "scsi_controller" { type = string }
@@ -69,12 +69,12 @@ source "proxmox" "bakery-template" {
   }
 
   disks {
-    type              = var.disk_type
-    format            = var.disk_format
-    disk_size         = var.disk_size
-    storage_pool      = var.datastore
-    storage_pool_type = var.datastore_type
-    cache_mode        = var.disk_cache_mode
+    type         = var.disk_type
+    format       = var.disk_format
+    disk_size    = var.disk_size
+    storage_pool = var.datastore
+    cache_mode   = var.disk_cache_mode
+    io_thread    = var.io_thread
   }
 
   # Cloud-init Configurations
@@ -136,12 +136,12 @@ build {
   # Convert to proxmox vm template
   post-processor "shell-local" {
     inline = [
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --boot c --bootdisk scsi0",                       # set boot order
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --delete ide2",                                   # delete default iso
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --vga std",                                       # set default graphics type
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",                    # set cloud-init default user
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}",                # set cloud-init default password
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ipconfig0 ip=dhcp"                              # set cloud-init net0 config (dhcp by default)
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --boot c --bootdisk scsi0",        # set boot order
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --delete ide2",                    # delete default iso
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --vga std",                        # set default graphics type
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",     # set cloud-init default user
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}", # set cloud-init default password
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ipconfig0 ip=dhcp"               # set cloud-init net0 config (dhcp by default)
     ]
   }
 }
