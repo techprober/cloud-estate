@@ -1,7 +1,7 @@
 ---
 # Bake cn-ubuntu-2204-server
 
-- name: "Bake proxmox cn ubuntu 22.04.1 server"
+- name: "Bake proxmox cn-ubuntu-22.04-server"
   hosts: localhost
   become: yes
 
@@ -12,7 +12,10 @@
   roles:
   - role: roles/apt.ops/set-sources.ops/
     vars:
+      os: "ubuntu"
       release: "jammy"
+      primary_source_uri: "https://mirrors.ustc.edu.cn/ubuntu"
+      security_source_uri: "https://mirrors.ustc.edu.cn/ubuntu"
   - role: roles/apt.ops/install-packages.ops/
     vars:
       extra_packages:

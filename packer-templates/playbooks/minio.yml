@@ -1,7 +1,7 @@
 ---
 # Minio base playbook
 
-- name: "Proxmox Ubuntu 2204 Server"
+- name: "Bake Proxmox ubuntu-2204-server with Minio"
   hosts: localhost
   become: yes
 

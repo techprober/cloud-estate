@@ -1,13 +1,13 @@
 ---
 # Bake ubuntu-2204-server
 
-- name: "Bake proxmox ubuntu 22.04.1 server"
+- name: "Bake proxmox ubuntu-22.04-server"
   hosts: localhost
   become: yes
 
   vars_files:
     - ./vars/apt.yml
-    - ./vars/maintenance.yml
+    - ./vars/keys.yml
 
   roles:
   - role: roles/apt.ops/update.ops/

@@ -1,7 +1,7 @@
 ---
 # Bake docker-ubuntu-2204-server
 
-- name: "proxmox ubuntu 2204 server (with docker)"
+- name: "proxmox ubuntu-2204-server (with docker)"
   hosts: localhost
   become: yes
 

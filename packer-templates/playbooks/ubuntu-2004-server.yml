@@ -1,7 +1,7 @@
 ---
 # Bake ubuntu-2004-server
 
-- name: "Bake proxmox ubuntu 20.04 server"
+- name: "Bake proxmox ubuntu-20.04-server"
   hosts: localhost
   become: yes
 
@@ -16,4 +16,4 @@
       extra_packages:
       - neofetch
   - role: roles/maintenance.ops/key.ops/
-  - role: roles/proxmox.bootstrap/
+  - role: roles/proxmox.packer.vm.ops/bootstrap.ops/
