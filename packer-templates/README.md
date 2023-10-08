@@ -149,3 +149,6 @@ export PACKER_VAR_FILE=[PACKER_VAR_FILE]
 - [Cloud images in Proxmox](https://gist.github.com/chriswayg/b6421dcc69cb3b7e41f2998f1150e1df)
 - [justin-p/packer-proxmox-ubuntu2004](https://github.com/justin-p/packer-proxmox-ubuntu2004/blob/main/playbooks/tasks/enable_cloud-init.yml)
 - [Packer on CICD](https://www.packer.io/guides/packer-on-cicd/pipelineing-builds)
+- [Packer SSH Communicator](https://developer.hashicorp.com/packer/docs/communicators/ssh)
+- [Proxmox Ubuntu CloudInit Example](https://github.com/UntouchedWagons/Ubuntu-CloudInit-Docs)
+- [Linux VM Templates in Proxmox on EASY MODE using Prebuilt Cloud Init Images!](https://www.apalrd.net/posts/2023/pve_cloud/)
