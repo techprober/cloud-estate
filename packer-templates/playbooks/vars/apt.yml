@@ -18,5 +18,6 @@ extra_packeges:
   - tmux
   - dnsutils
   - iputils-ping
+  - dnsutils
   - net-tools
   - telnet
