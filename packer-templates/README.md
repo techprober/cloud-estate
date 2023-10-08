@@ -119,10 +119,10 @@ There is a dedicated blog post for the basic/advanced use cases using this Packe
 
 ## Quick Use
 
-```bash
-# check usage
-./bake -h
+> ![IMPORTANT]
+> Please check available templates in [bakery-config.json](./bakery-config.json)
 
+```bash
 # bake vm template
 # please do NOT use `~`, use $HOME instead
 # start with config.json.example
@@ -133,7 +133,13 @@ export PACKER_VAR_FILE=[PACKER_VAR_FILE]
 # export HOST_CONFIG=$HOME/workspace/vsphere-hub/packer/config.json
 # export PACKER_VAR_FILE=$HOME/workspace/vsphere-hub/packer/vars/pve-03-ubuntu-2204.json
 
-./bake -i 9000 -t cn-ubuntu-2204-server -n prod-ubuntu-2204-server-template -c $HOST_CONFIG -f $PACKER_VAR_FILE
+# check usage
+./bake -h
+
+# bake
+./bake [options]
+# e.g (bake debian-12-server)
+# ./bake -i 9001 -t debian_12_server -n prod-debian-12-server-template -c $HOST_CONFIG -f $PACKER_VAR_FILE
 ```
 
 ## References
@@ -152,3 +158,4 @@ export PACKER_VAR_FILE=[PACKER_VAR_FILE]
 - [Packer SSH Communicator](https://developer.hashicorp.com/packer/docs/communicators/ssh)
 - [Proxmox Ubuntu CloudInit Example](https://github.com/UntouchedWagons/Ubuntu-CloudInit-Docs)
 - [Linux VM Templates in Proxmox on EASY MODE using Prebuilt Cloud Init Images!](https://www.apalrd.net/posts/2023/pve_cloud/)
+- [Packer with proxmox-clone](https://aaronsplace.co.uk/blog/2021-08-07-packer-proxmox-clone.html)
