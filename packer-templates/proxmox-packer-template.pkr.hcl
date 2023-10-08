@@ -121,7 +121,7 @@ build {
     destination = "/tmp/id_rsa.pub"
   }
 
-  # Main playbook depends of vm_type
+  # Main playbook depends on vm_type
   provisioner "ansible-local" {
     pause_before            = "5s"
     playbook_dir            = "./playbooks"
@@ -136,12 +136,13 @@ build {
   # Convert to proxmox vm template
   post-processor "shell-local" {
     inline = [
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --boot c --bootdisk scsi0",        # set boot order
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --delete ide2",                    # delete default iso
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --vga std",                        # set default graphics type
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",     # set cloud-init default user
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}", # set cloud-init default password
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ipconfig0 ip=dhcp"               # set cloud-init net0 config (dhcp by default)
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --boot c --bootdisk scsi0",         # set boot order
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --delete ide2",                     # delete default iso
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --vga std",                         # set default graphics type
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",      # set cloud-init default user
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}",  # set cloud-init default password
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ipconfig0 ip=dhcp",               # set cloud-init net0 config (dhcp by default)
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --tags packer-template,prod,ubuntu" # set default tags
     ]
   }
 }

@@ -100,11 +100,13 @@ source "proxmox-clone" "debian" {
   ssh_clear_authorized_keys = true
 }
 
+# Builder
 build {
   sources = ["source.proxmox-clone.debian"]
 
   # Provisioner Configurations
 
+  # Resize disk
   provisioner "shell-local" {
     inline = [
       "ssh root@${var.proxmox_host} qm disk resize ${var.vm_id} scsi0 20G"
@@ -117,7 +119,7 @@ build {
     destination = "/tmp/id_rsa.pub"
   }
 
-  # Main playbook depends of vm_type
+  # Main playbook depends on vm_type
   provisioner "ansible-local" {
     pause_before            = "5s"
     playbook_dir            = "./playbooks"
@@ -132,9 +134,10 @@ build {
   # Add default cloud-init configuration
   post-processor "shell-local" {
     inline = [
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",     # set cloud-init default user
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}", # set cloud-init default password
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ipconfig0 ip=dhcp"               # set cloud-init net0 config (dhcp by default)
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",      # set cloud-init default user
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}",  # set cloud-init default password
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ipconfig0 ip=dhcp",               # set cloud-init net0 config (dhcp by default)
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --tags packer-template,prod,debian" # set default tags
     ]
   }
 }
