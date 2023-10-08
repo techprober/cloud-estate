@@ -1,10 +1,10 @@
 ---
 - name: Setup custom apt source (Debian)
-  include: ./debian.yml
+  include: debian.yml
   when: ansible_distribution == 'Debian'
 
 - name: Setup custom apt source (Ubuntu)
-  include: ./ubuntu.yml
+  include: ubuntu.yml
   when: ansible_distribution == 'Ubuntu'
 
 - name: Remove apt lock files
