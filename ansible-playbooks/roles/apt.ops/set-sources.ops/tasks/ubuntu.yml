@@ -1,0 +1,13 @@
+---
+- name: Update apt source
+  ansible.builtin.copy:
+    dest: "/etc/apt/sources.list"
+    content: |
+      # Primary
+      deb {{ primary_source_uri }} {{ release }} main restricted universe multiverse
+
+      # Primary Updates
+      deb {{ primary_source_uri }} {{ release }}-updates main restricted universe multiverse
+
+      # Security Patches
+      deb {{ security_source_uri }} {{ release }}-security main restricted universe multiverse
