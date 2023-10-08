@@ -2,15 +2,16 @@
 
 set -euo pipefail
 
-template="proxmox-packer-template.pkr.hcl"
+build_type=
+clone_vm_id=
 vm_id=
 vm_type=
 vm_name=
-build_type=
 only=false
 only_opt=
 var_file=
 host_config=
+template=
 
 # Proxmox Builder
 
@@ -24,8 +25,9 @@ Desciption: A powerful script that bakes custom vm template with packer
 
 Usage: bake [options] [arguments]
 
-Available VM:
+Available VM templates:
 
+- debian-12-server
 - ubuntu-2004-server
 - ubuntu-2204-server
 - docker-ubuntu-2204-server
@@ -57,13 +59,12 @@ Available Options:
 
 -n, --name           [optional|string]  VM name
 -b, --build          [optional|string]  Use custom type of build defined in packer template
--d, --isodata        [optional|string]  ISO data path (e.g "local:iso/ubuntu-22.04-live-server-amd64.iso")
 -f, --var-file       [optional|string]  Custom packer var-file path (default: ./vars/ubuntu-2204.json)
 -c, --config         [optional|string]  Custom host config path
 
 Basic Usage:   ./bake -t ubuntu-2204-server
 
-Advance Usage: ./bake -i 9001 -t custom -n ubuntu-server-template -b minio -f ./vars/kevin-ubuntu-2204.json
+Advance Usage: ./bake -i 9001 -t debian_12_server -n prod-debian-12-server-template -c ./config.json -f ./vars/kevin-ubuntu-2204.json
 
 [Warning]: options must be passed before perfoming the actual action
 
@@ -89,7 +90,6 @@ for arg in "$@"; do
     "--type")     set -- "$@" "-t" ;;
     "--name")     set -- "$@" "-n" ;;
     "--build")    set -- "$@" "-b" ;;
-    "--iso-data") set -- "$@" "-d" ;;
     "--var-file") set -- "$@" "-f" ;;
     "--config")   set -- "$@" "-c" ;;
     "--"*)        print_help "[Error]: Unknown option: "$arg"" >&2; exit;;
@@ -116,8 +116,6 @@ while getopts ":hai:t:n:b:f:c:d:" opt; do
     c|--config) host_config=$OPTARG;;
     # specify packer var-file path, e.g: ./vars/ubuntu-2204.json
     f|--var-file) var_file=$OPTARG;;
-    # specify custom iso-data path
-    d|--iso-data) iso_data=$OPTARG;;
     # unknown option
    \?) print_help "[Error]: Unknown option: -"$OPTARG"" >&2; exit;;
     # invalid option
@@ -126,12 +124,13 @@ while getopts ":hai:t:n:b:f:c:d:" opt; do
 done
 
 [[ ! $(jq -c 'keys' bakery-config.json | cat) =~ .*\"${vm_type}\".* ]] && { echo "[Error]: VM template: '${vm_type}' not found in bakery-config.json"; exit 1; }
+[[ ! -z "$host_config" ]] && host_config=$host_config || host_config="./config.json"
+[[ ! -z "$var_file" ]] && var_file=$var_file || var_file="./vars/ubuntu-2204.json"
 [[ ! -z "$vm_id" ]] && vm_id=$vm_id || vm_id=9000
 [[ ! -z "$vm_name" ]] && vm_name=$vm_name || vm_name=$vm_type
-[[ ! -z "$build_type" ]] && template="${build_type}-custom-${template}" || template=$template
-[[ ! -z "$build_type" ]] && build_type=$build_type || build_type="base"
-[[ ! -z "$var_file" ]] && var_file=$var_file || var_file="./vars/ubuntu-2204.json"
-[[ ! -z "$host_config" ]] && host_config=$host_config || host_config="./config.json"
+build_type=$(cat bakery-config.json | jq ".${vm_type}.os" | tr -d '""')
+clone_vm_id=$(cat $var_file | jq '.clone_vm_id' | tr -d '""')
+[[ ! -z "$build_type" ]] && template="${build_type}-proxmox-packer-template.pkr.hcl"
 
 # --- Main Operation --- #
 
@@ -144,5 +143,4 @@ packer build -force \
   -var template_name=$vm_name \
   -var proxmox_api_password=$PM_PASS \
   -var vm_id=$vm_id \
-  -only="${build_type}.proxmox.bakery-template" \
   $template
