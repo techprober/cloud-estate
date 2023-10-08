@@ -13,7 +13,7 @@ packer {
 
 # Variable Definitions
 variable "proxmox_host" { type = string }
-variable "proxmox_api_user" { type = string }
+variable "proxmox_api_username" { type = string }
 variable "proxmox_api_password" { type = string }
 
 variable "template_name" { type = string }
@@ -44,17 +44,16 @@ variable "boot_command" { type = list(string) }
 variable "playbook_file" { type = string }
 
 source "proxmox" "bakery-template" {
-
   # Proxmox Connection Settings
   proxmox_url              = "https://${var.proxmox_host}:8006/api2/json"
   insecure_skip_tls_verify = true
+  node                     = var.proxmox_node_name
   username                 = var.proxmox_api_user
   password                 = var.proxmox_api_password
 
   # VM Configurations
   vm_name    = var.template_name
   vm_id      = var.vm_id
-  node       = var.proxmox_node_name
   cores      = var.cores
   cpu_type   = "host"
   sockets    = var.sockets

@@ -1,35 +1,41 @@
 {
-  "ubuntu-2004-server": {
+  "debian_12_server": {
+    "os": "debian",
+    "image_name": "debian-12-server",
+    "playbook": "debian-12-server.yml"
+  },
+  "ubuntu_2004_server": {
+    "os": "ubuntu",
     "image_name": "ubuntu-2004-server",
     "iso": "ubuntu-20.04.3-live-server-amd64.iso",
     "playbook": "ubuntu-2004-server.yml"
   },
-  "ubuntu-2204-server": {
+  "ubuntu_2204_server": {
+    "os": "ubuntu",
     "image_name": "ubuntu-2204-server",
     "iso": "ubuntu-22.04.3-live-server-amd64.iso",
-    "playbook": "ubuntu-2204-1-server.yml"
+    "playbook": "ubuntu-2204-server.yml"
   },
-  "debian-12-server": {
-    "image_name": "debian-12-server",
-    "iso": "debian-12.1.0-amd64-netinst.iso",
-    "playbook": "debian-12-server.yml"
-  },
-  "docker-ubuntu-2204-server": {
+  "docker_ubuntu_2204_server": {
+    "os": "ubuntu",
     "image_name": "docker-ubuntu-2204-server",
     "iso": "ubuntu-22.04.3-live-server-amd64.iso",
     "playbook": "docker-2204-ubuntu-server.yml"
   },
-  "containerd-ubuntu-2204-server": {
+  "containerd_ubuntu_2204_server": {
+    "os": "ubuntu",
     "image_name": "containerd-ubuntu-2204-server",
     "iso": "ubuntu-22.04.3-live-server-amd64.iso",
     "playbook": "containerd-ubuntu-2204-server.yml"
   },
-  "cn-ubuntu-2204-server": {
+  "cn_ubuntu_2204_server": {
+    "os": "ubuntu",
     "image_name": "cn-ubuntu-2204-server",
     "iso": "ubuntu-22.04.3-live-server-amd64.iso",
     "playbook": "cn-ubuntu-2204-server.yml"
   },
   "custom": {
+    "os": "custom",
     "image_name": "custom-server",
     "iso": "ubuntu-22.04.3-live-server-amd64.iso",
     "playbook": "custom.yml"
