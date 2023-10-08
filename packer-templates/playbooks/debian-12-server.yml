@@ -10,10 +10,15 @@
     - ./vars/keys.yml
 
   roles:
-  - role: roles/apt.ops/update.ops/
+  - role: roles/apt.ops/set-sources.ops/
+    vars:
+      os: "debian"
+      release: "bookworm"
+      primary_source_uri: "https://mirrors.ustc.edu.cn/debian"
+      security_source_uri: "https://mirrors.ustc.edu.cn/debian"
   - role: roles/apt.ops/install-packages.ops/
     vars:
       extra_packages:
       - neofetch
   - role: roles/maintenance.ops/key.ops/
-  - role: roles/proxmox.bootstrap/
+  - role: roles/proxmox.packer.vm.ops/bootstrap.ops/
