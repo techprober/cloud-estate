@@ -64,7 +64,7 @@ Available Options:
 
 Basic Usage:   ./bake -t ubuntu-2204-server
 
-Advance Usage: ./bake -i 9001 -t debian_12_server -n prod-debian-12-server-template -c ./config.json -f ./vars/kevin-ubuntu-2204.json
+Advance Usage: ./bake -i 9001 -t debian_12_server -n prod-debian-12-server-template -c ./host.json -f ./vars/kevin-ubuntu-2204.json
 
 [Warning]: options must be passed before perfoming the actual action
 
@@ -112,7 +112,7 @@ while getopts ":hai:t:n:b:f:c:d:" opt; do
     n|--name) vm_name=$OPTARG;;
     # specify custom-build build type
     b|--build) build_type=$OPTARG;;
-    # specify host config path, e.g: ./config.json
+    # specify host config path, e.g: ./host.json
     c|--config) host_config=$OPTARG;;
     # specify packer var-file path, e.g: ./vars/ubuntu-2204.json
     f|--var-file) var_file=$OPTARG;;
@@ -124,7 +124,7 @@ while getopts ":hai:t:n:b:f:c:d:" opt; do
 done
 
 [[ ! $(jq -c 'keys' bakery-config.json | cat) =~ .*\"${vm_type}\".* ]] && { echo "[Error]: VM template: '${vm_type}' not found in bakery-config.json"; exit 1; }
-[[ ! -z "$host_config" ]] && host_config=$host_config || host_config="./config.json"
+[[ ! -z "$host_config" ]] && host_config=$host_config || host_config="./host.json"
 [[ ! -z "$var_file" ]] && var_file=$var_file || var_file="./vars/ubuntu-2204.json"
 [[ ! -z "$vm_id" ]] && vm_id=$vm_id || vm_id=9000
 [[ ! -z "$vm_name" ]] && vm_name=$vm_name || vm_name=$vm_type

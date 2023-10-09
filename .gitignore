@@ -1,3 +1,3 @@
 node_modules/
-packer-templates/config.json
+packer-templates/host.json
 packer-templates/vars/*.json

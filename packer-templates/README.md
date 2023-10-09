@@ -119,18 +119,19 @@ There is a dedicated blog post for the basic/advanced use cases using this Packe
 
 ## Quick Use
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > Please check available templates in [bakery-config.json](./bakery-config.json)
 
 ```bash
 # bake vm template
 # please do NOT use `~`, use $HOME instead
 # start with config.json.example
-cp config.json.example config.json
+cp host.json.example host.json
+
 export HOST_CONFIG=[HOST_CONFIG]
 export PACKER_VAR_FILE=[PACKER_VAR_FILE]
 # e.g.
-# export HOST_CONFIG=$HOME/workspace/vsphere-hub/packer/config.json
+# export HOST_CONFIG=$HOME/workspace/vsphere-hub/packer/host.json
 # export PACKER_VAR_FILE=$HOME/workspace/vsphere-hub/packer/vars/pve-03-ubuntu-2204.json
 
 # check usage
