@@ -135,8 +135,9 @@ Bootstrap base template
 > By default the script uses `local-lvm` as the datastore, if you are using a different datastore, please update the script.
 
 ```bash
-chmod +x bootstrap_debian_base_cloudimg_template.sh
-sh bootstrap_debian_base_cloudimg_template.sh
+curl -L -o bootstrap.sh https://raw.githubusercontent.com/techprober/cloud-estate/debian-12-template/packer-templates/scripts/bootstrap_debian_base_cloudimg_template.sh
+chmod +x bootstrap.sh
+./bootstrap.sh 900 "debian-12-cloud-image-template" "debian-12-genericcloud-amd64.qcow2"
 ```
 
 ## Quick Use (Bake CLI)
