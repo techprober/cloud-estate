@@ -120,7 +120,7 @@ There is a dedicated blog post for the basic/advanced use cases using this Packe
 ## Quick Use
 
 > [!IMPORTANT]
-> Please check available templates in [bakery-config.json](./bakery-config.json), also check the default configurations in [vars/][https://github.com/techprober/cloud-estate/tree/master/packer-templates/vars]
+> Please check available templates in [bakery-config.json](./bakery-config.json), also check the default configurations in [vars/](https://github.com/techprober/cloud-estate/tree/master/packer-templates/vars)
 
 ```bash
 # bake vm template
