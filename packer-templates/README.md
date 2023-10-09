@@ -117,7 +117,26 @@ There is a dedicated blog post for the basic/advanced use cases using this Packe
 
 ![](https://github.com/TechProber/cloud-estate/blob/master/packer-templates/assets/screenshot.png?raw=true)
 
-## Quick Use
+## Prerequisites to bake Debian VM
+
+> [!NOTE]
+> Baking Debian VM is NOT a straightforward process, we need to first bake a `base-cloudimg-vm-template` as a foundation image to add customization on top of it. We may make use of a [script](./scripts/bootstrap_debian_base_cloudimg_template.sh) to achieve so.
+
+Download the latest generic Debian cloud image from the [official site](https://cloud.debian.org/images/cloud/)
+
+```bash
+# Debian 12
+wget https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-genericcloud-amd64.qcow2
+```
+
+Bootstrap base template
+
+```bash
+chmod +x bootstrap_debian_base_cloudimg_template.sh
+sh bootstrap_debian_base_cloudimg_template.sh
+```
+
+## Quick Use (Bake CLI)
 
 > [!IMPORTANT]
 > Please check available templates in [bakery-config.json](./bakery-config.json), also check the default configurations in [vars/](https://github.com/techprober/cloud-estate/tree/master/packer-templates/vars)
