@@ -120,19 +120,22 @@ There is a dedicated blog post for the basic/advanced use cases using this Packe
 ## Quick Use
 
 > [!IMPORTANT]
-> Please check available templates in [bakery-config.json](./bakery-config.json)
+> Please check available templates in [bakery-config.json](./bakery-config.json), also check the default configurations in [vars/][https://github.com/techprober/cloud-estate/tree/master/packer-templates/vars]
 
 ```bash
 # bake vm template
 # please do NOT use `~`, use $HOME instead
-# start with config.json.example
+# start with host.json.example
 cp host.json.example host.json
+# start with the default config for a specific template type and tweat the settings to fit your need
+cp vars/debian-12.json var.json
 
+# export env vars
 export HOST_CONFIG=[HOST_CONFIG]
 export PACKER_VAR_FILE=[PACKER_VAR_FILE]
 # e.g.
-# export HOST_CONFIG=$HOME/workspace/vsphere-hub/packer/host.json
-# export PACKER_VAR_FILE=$HOME/workspace/vsphere-hub/packer/vars/pve-03-ubuntu-2204.json
+# export HOST_CONFIG=$HOME/host.json
+# export PACKER_VAR_FILE=$HOME/var.json
 
 # check usage
 ./bake -h

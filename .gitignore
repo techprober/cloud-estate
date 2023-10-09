@@ -1,3 +1,2 @@
 node_modules/
 packer-templates/host.json
-packer-templates/vars/*.json
