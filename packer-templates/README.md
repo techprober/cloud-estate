@@ -131,6 +131,9 @@ wget https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-genericclou
 
 Bootstrap base template
 
+> [!WARNING]
+> By default the script uses `local-lvm` as the datastore, if you are using a different datastore, please update the script.
+
 ```bash
 chmod +x bootstrap_debian_base_cloudimg_template.sh
 sh bootstrap_debian_base_cloudimg_template.sh
