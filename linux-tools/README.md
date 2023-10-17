@@ -253,6 +253,7 @@ Topics
 - [![CloudNative][cncf icon]](https://github.com/anchore/grype) [grype](https://github.com/anchore/grype) - A vulnerability scanner for container images and filesystems
 - [![CloudNative][cncf icon]](https://github.com/fluent/fluent-bit) [fluent-bit](https://github.com/fluent/fluent-bit) - Fast and Lightweight Logs and Metrics processor for Linux, BSD, OSX and Windows
 - [![CloudNative][cncf icon]](https://github.com/VictoriaMetrics/VictoriaMetrics) [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) - VictoriaMetrics
+- [![CloudNative][cncf icon]](https://github.com/kubearmor/KubeArmor) [kubearmor](https://github.com/kubearmor/KubeArmor) - Cloud-native Runtime Security Enforcement System. Workload hardening and implementing least-permissive policies made easy.
 
 ## Open-Source Software
 
