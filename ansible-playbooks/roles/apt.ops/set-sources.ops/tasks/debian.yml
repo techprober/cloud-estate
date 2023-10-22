@@ -12,3 +12,8 @@
 
       # Security Patches
       deb {{ security_source_uri }}-security {{ release }}-security main contrib non-free non-free-firmware
+
+- name: Remove existing debian source
+  ansible.builtin.file:
+    path: /etc/apt/sources.list.d/debian.sources
+    state: absent
