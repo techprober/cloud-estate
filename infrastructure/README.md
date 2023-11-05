@@ -9,9 +9,6 @@
     <a href="https://registry.terraform.io/providers/Telmate/proxmox/latest/docs">
         <img src="https://img.shields.io/badge/provider-telmate/proxmox-gray.svg?longCache=true&logo=terraform&colorB=purple" alt="terraform-proxmox-provider"/>
     </a>
-    <a href="https://t.me/joinchat/7AG3aEQ5I00wY2Q5">
-        <img src="https://img.shields.io/badge/join-us%20on%20telegram-gray.svg?longCache=true&logo=telegram&colorB=blue" alt="join-us-on-telegram"/>
-    </a>
     <a href="https://github.com/TechProber/cloud-estate">
         <img src="https://img.shields.io/github/last-commit/TechProber/cloud-estate" alt="lastcommit"/>
     </a>
