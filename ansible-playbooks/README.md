@@ -9,9 +9,6 @@
     <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html">
         <img src="https://img.shields.io/badge/ansible-playbooks-gray.svg?longCache=true&logo=ansible&colorB=red" alt="ansible-playbooks"/>
     </a>
-    <a href="https://t.me/joinchat/7AG3aEQ5I00wY2Q5">
-        <img src="https://img.shields.io/badge/join-us%20on%20telegram-gray.svg?longCache=true&logo=telegram&colorB=blue" alt="join-us-on-telegram"/>
-    </a>
     <a href="https://github.com/TechProber/cloud-estate">
         <img src="https://img.shields.io/github/last-commit/TechProber/cloud-estate" alt="lastcommit"/>
     </a>
