@@ -31,13 +31,6 @@ pip install pre-commit
 pre-commit install
 ```
 
-## Community
-
-- [HikariaiAI Telegram Group](https://t.me/hikariai_channel)
-- [unRAID Telegram Group](https://t.me/unraid_zh)
-- [TechProber Telegram Group](https://t.me/joinchat/7AG3aEQ5I00wY2Q5)
-- [TechProber Discord Channel](https://discord.gg/se4RtrB473)
-
 ## Contributors
 
 Special thanks goes to all [ contributors ](https://github.com/TechProber/cloud-estate/graphs/contributors). If you would like to contribute, please see the [instructions](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md).
