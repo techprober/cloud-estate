@@ -9,9 +9,6 @@
     <a href="https://www.packer.io/plugins/builders/proxmox/">
         <img src="https://img.shields.io/badge/provider-proxmox%20builder-gray.svg?longCache=true&logo=packer&colorB=blueviolet" alt="proxmox-builder-packer"/>
     </a>
-    <a href="https://t.me/joinchat/7AG3aEQ5I00wY2Q5">
-        <img src="https://img.shields.io/badge/join-us%20on%20telegram-gray.svg?longCache=true&logo=telegram&colorB=blue" alt="join-us-on-telegram"/>
-    </a>
     <a href="https://github.com/TechProber/cloud-estate">
         <img src="https://img.shields.io/github/last-commit/TechProber/cloud-estate" alt="lastcommit"/>
     </a>
