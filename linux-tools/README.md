@@ -184,6 +184,7 @@ Topics
 - [![Open-Source Software][terminal icon]](https://github.com/aristocratos/bpytop) [bpytop](https://github.com/aristocratos/bpytop) - Linux/OSX/FreeBSD resource monitor
 - [![Open-Source Software][terminal icon]](https://github.com/cespare/reflex) [reflex](https://github.com/cespare/reflex) - Run a command when files change
 - [![Open-Source Software][terminal icon]](https://github.com/amanusk/s-tui/) [s-tui](https://github.com/amanusk/s-tui/) - Terminal-based CPU stress and monitoring utility
+- [![Open-Source Software][terminal icon]](https://github.com/bensadeh/tailspin) [tailspin](https://github.com/bensadeh/tailspin) - 🌀 A log file highlighter
 
 ## Docker Images
 
