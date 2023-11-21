@@ -111,6 +111,7 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/cheat/cheatsheets) [cheatsheet](https://github.com/cheat/cheatsheets) - Community-sourced cheatsheets
 - [![Open-Source Software][oss icon]](https://github.com/ducaale/xh) [xh](https://github.com/ducaale/xh) - Friendly and fast tool for sending HTTP requests
 - [![Open-Source Software][oss icon]](https://github.com/atuinsh/atuin) [atuin](https://github.com/atuinsh/atuin) - ✨ Magical shell history
+- [![Open-Source Software][oss icon]](https://github.com/fosskers/aura) [aura](https://github.com/fosskers/aura) - A secure, multilingual package manager for Arch Linux and the AUR.
 
 ## DevOps Related
 
