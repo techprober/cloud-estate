@@ -405,6 +405,7 @@ Topics
 - [![Neovim][nvim icon]](https://github.com/mzlogin/vim-markdown-toc) [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc) - A vim 7.4+ plugin to generate table of contents for Markdown files.
 - [![Neovim][nvim icon]](https://github.com/sam4llis/nvim-tundra) [nvim-tundra](https://github.com/sam4llis/nvim-tundra) - A theme for Neovim with support for LSP, Treesitter, Telescope, and more.
 - [![Neovim][nvim icon]](https://github.com/goolord/alpha-nvim) [alpha-nvim](https://github.com/goolord/alpha-nvim) - a lua powered greeter like vim-startify / dashboard-nvim
+- [![Neovim][nvim icon]](https://github.com/ahmedkhalf/project.nvim) [project.nvim](https://github.com/ahmedkhalf/project.nvim) - The superior project management solution for neovim.
 
 ## Contribution
 
