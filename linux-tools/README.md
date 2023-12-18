@@ -407,6 +407,7 @@ Topics
 - [![Neovim][nvim icon]](https://github.com/goolord/alpha-nvim) [alpha-nvim](https://github.com/goolord/alpha-nvim) - a lua powered greeter like vim-startify / dashboard-nvim
 - [![Neovim][nvim icon]](https://github.com/ahmedkhalf/project.nvim) [project.nvim](https://github.com/ahmedkhalf/project.nvim) - The superior project management solution for neovim.
 - [![Neovim][nvim icon]](https://github.com/cljoly/telescope-repo.nvim) [telescope-repo.nvim](https://github.com/cljoly/telescope-repo.nvim) - 🦘 Jump into the repositories (git, mercurial…) of your filesystem with telescope.nvim, without any setup
+- [![Neovim][nvim icon]](https://github.com/startup-nvim/startup.nvim) [startup.nvim](https://github.com/startup-nvim/startup.nvim) - A highly configurable neovim startup screen 
 
 ## Contribution
 
