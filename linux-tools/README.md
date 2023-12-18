@@ -254,6 +254,9 @@ Topics
 - [![CloudNative][cncf icon]](https://github.com/fluent/fluent-bit) [fluent-bit](https://github.com/fluent/fluent-bit) - Fast and Lightweight Logs and Metrics processor for Linux, BSD, OSX and Windows
 - [![CloudNative][cncf icon]](https://github.com/VictoriaMetrics/VictoriaMetrics) [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) - VictoriaMetrics
 - [![CloudNative][cncf icon]](https://github.com/kubearmor/KubeArmor) [kubearmor](https://github.com/kubearmor/KubeArmor) - Cloud-native Runtime Security Enforcement System. Workload hardening and implementing least-permissive policies made easy.
+- [![CloudNative][cncf icon]](https://github.com/apecloud/kubeblocks) [kubeblocks](https://github.com/apecloud/kubeblocks) - KubeBlocks is an open-source control plane that runs and manages databases, message queues and other data infrastructure on K8s.
+- [![CloudNative][cncf icon]](https://github.com/kubean-io/kubean) [kubean](https://github.com/kubean-io/kubean) - 🌱 Kubernetes lifecycle management operator based on kubespray.
+- [![CloudNative][cncf icon]](https://github.com/fnproject/fn) [fn](https://github.com/fnproject/fn) - The container native, cloud agnostic serverless platform.
 
 ## Open-Source Software
 
@@ -310,6 +313,7 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/bufbuild/buf) [buf](https://github.com/bufbuild/buf) - A new way of working with Protocol Buffers.
 - [![Open-Source Software][oss icon]](https://github.com/googleapis/release-please) [release-please](https://github.com/googleapis/release-please) - generate release PRs based on the conventionalcommits.org spec
 - [![Open-Source Software][oss icon]](https://github.com/dbcli/litecli) [litecli](https://github.com/dbcli/litecli) - CLI for SQLite Databases with auto-completion and syntax highlighting
+- [![Open-Source Software][oss icon]](https://github.com/openfaas/of-watchdog) [of-watchdog](https://github.com/openfaas/of-watchdog) - Reverse proxy for STDIO and HTTP microservices
 
 ## Programming Specific
 
@@ -407,7 +411,7 @@ Topics
 - [![Neovim][nvim icon]](https://github.com/goolord/alpha-nvim) [alpha-nvim](https://github.com/goolord/alpha-nvim) - a lua powered greeter like vim-startify / dashboard-nvim
 - [![Neovim][nvim icon]](https://github.com/ahmedkhalf/project.nvim) [project.nvim](https://github.com/ahmedkhalf/project.nvim) - The superior project management solution for neovim.
 - [![Neovim][nvim icon]](https://github.com/cljoly/telescope-repo.nvim) [telescope-repo.nvim](https://github.com/cljoly/telescope-repo.nvim) - 🦘 Jump into the repositories (git, mercurial…) of your filesystem with telescope.nvim, without any setup
-- [![Neovim][nvim icon]](https://github.com/startup-nvim/startup.nvim) [startup.nvim](https://github.com/startup-nvim/startup.nvim) - A highly configurable neovim startup screen 
+- [![Neovim][nvim icon]](https://github.com/startup-nvim/startup.nvim) [startup.nvim](https://github.com/startup-nvim/startup.nvim) - A highly configurable neovim startup screen
 
 ## Contribution
 
