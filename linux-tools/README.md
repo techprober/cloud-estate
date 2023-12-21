@@ -187,6 +187,7 @@ Topics
 - [![Open-Source Software][terminal icon]](https://github.com/cespare/reflex) [reflex](https://github.com/cespare/reflex) - Run a command when files change
 - [![Open-Source Software][terminal icon]](https://github.com/amanusk/s-tui/) [s-tui](https://github.com/amanusk/s-tui/) - Terminal-based CPU stress and monitoring utility
 - [![Open-Source Software][terminal icon]](https://github.com/bensadeh/tailspin) [tailspin](https://github.com/bensadeh/tailspin) - 🌀 A log file highlighter
+- [![Open-Source Software][terminal icon]](https://github.com/eradman/entr) [entr](https://github.com/eradman/entr) - Run arbitrary commands when files change
 
 ## Docker Images
 
