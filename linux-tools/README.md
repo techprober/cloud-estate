@@ -260,6 +260,7 @@ Topics
 - [![CloudNative][cncf icon]](https://github.com/kubean-io/kubean) [kubean](https://github.com/kubean-io/kubean) - 🌱 Kubernetes lifecycle management operator based on kubespray.
 - [![CloudNative][cncf icon]](https://github.com/fnproject/fn) [fn](https://github.com/fnproject/fn) - The container native, cloud agnostic serverless platform.
 - [![CloudNative][cncf icon]](https://github.com/robusta-dev/robusta) [robusta](https://github.com/robusta-dev/robusta) - Kubernetes observability and automation, with an awesome Prometheus integration
+- [![CloudNative][cncf icon]](https://github.com/spotahome/redis-operator) [redis-operator](https://github.com/spotahome/redis-operator) - Redis Operator creates/configures/manages high availability redis with sentinel automatic failover atop Kubernetes.
 
 ## Open-Source Software
 
