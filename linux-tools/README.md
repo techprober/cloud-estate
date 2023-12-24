@@ -259,6 +259,7 @@ Topics
 - [![CloudNative][cncf icon]](https://github.com/apecloud/kubeblocks) [kubeblocks](https://github.com/apecloud/kubeblocks) - KubeBlocks is an open-source control plane that runs and manages databases, message queues and other data infrastructure on K8s.
 - [![CloudNative][cncf icon]](https://github.com/kubean-io/kubean) [kubean](https://github.com/kubean-io/kubean) - 🌱 Kubernetes lifecycle management operator based on kubespray.
 - [![CloudNative][cncf icon]](https://github.com/fnproject/fn) [fn](https://github.com/fnproject/fn) - The container native, cloud agnostic serverless platform.
+- [![CloudNative][cncf icon]](https://github.com/robusta-dev/robusta) [robusta](https://github.com/robusta-dev/robusta) - Kubernetes observability and automation, with an awesome Prometheus integration
 
 ## Open-Source Software
 
