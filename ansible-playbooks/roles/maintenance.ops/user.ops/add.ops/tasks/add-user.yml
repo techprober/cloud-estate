@@ -1,4 +1,8 @@
 ---
+- name: Ensure sudo is installed
+  apt:
+    pkg: sudo
+
 - name: Make sure the wheel group exists
   group:
     name: wheel
