@@ -2,6 +2,7 @@
 - name: Ensure sudo is installed
   apt:
     pkg: sudo
+    update_cache: yes
 
 - name: Make sure the wheel group exists
   group:
