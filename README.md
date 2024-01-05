@@ -6,7 +6,7 @@
 <p align="center">
     <img src="https://custom-icon-badges.herokuapp.com/github/license/TechProber/cloud-estate?logo=law&color=orange" alt="License"/>
     <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTechProber%2Fcloud-estate&count_bg=%235322B2&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/>
-    <img src="https://custom-icon-badges.herokuapp.com/badge/kubernetes-v1.26.0-navy.svg?logo=kubernetes&logoColor=white" alt="Kubernetes">
+    <img src="https://custom-icon-badges.herokuapp.com/github/v/release/kubernetes/kubernetes?logo=kubernetes&logoColor=white&color=navy" alt="version">
     <img src="https://custom-icon-badges.herokuapp.com/badge/docker-v20.10-blue.svg?logo=docker&logoColor=white" alt="Docker">
     <img src="https://custom-icon-badges.herokuapp.com/github/issues-pr-closed/TechProber/cloud-estate?color=purple&logo=git-pull-request&logoColor=white"/>
     <img src="https://custom-icon-badges.herokuapp.com/github/last-commit/TechProber/cloud-estate?logo=history&logoColor=white" alt="lastcommit"/>
