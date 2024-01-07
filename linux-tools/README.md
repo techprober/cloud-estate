@@ -51,6 +51,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][awesome icon]](https://github.com/awesome-selfhosted/awesome-selfhosted) [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) - A list of Free Software network services and web applications which can be hosted on your own servers
 - [![Open-Source Software][awesome icon]](https://github.com/rust-unofficial/awesome-rust) [awesome-rust](https://github.com/rust-unofficial/awesome-rust) - A curated list of Rust code and resources.
 - [![Open-Source Software][awesome icon]](https://github.com/agarrharr/awesome-cli-apps) [awesome-cli-apps](https://github.com/agarrharr/awesome-cli-apps) - 🖥 📊 🕹 🛠 A curated list of command line apps
+- [![Open-Source Software][awesome icon]](https://github.com/sindresorhus/awesome-chatgpt) [awesome-chatgpt](https://github.com/sindresorhus/awesome-chatgpt) - 🤖 Awesome list for ChatGPT — an artificial intelligence chatbot developed by OpenAI
 
 ## GitHub Related
 
@@ -75,6 +76,10 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][github icon]](https://github.com/LouisBrunner/checks-action) [checks-action](https://github.com/LouisBrunner/checks-action) - GitHub Action which wraps calls to GitHub Checks API
 - [![Open-Source Software][github icon]](https://github.com/tibdex/github-app-token) [github-app-token](https://github.com/tibdex/github-app-token) - Impersonate a GitHub App in a GitHub Action
 - [![Open-Source Software][github icon]](https://github.com/actions/github-script) [github-script](https://github.com/actions/github-script) - Write workflows scripting the GitHub API in JavaScript
+- [![Open-Source Software][github icon]](https://github.com/caarlos0/github_releases_exporter) [github_releases_exporter](https://github.com/caarlos0/github_releases_exporter) - Exports GitHub release metrics to the Prometheus format
+- [![Open-Source Software][github icon]](https://github.com/RomanosTrechlis/actions-copy-files) [actions-copy-files](https://github.com/RomanosTrechlis/actions-copy-files) - Action that copies files or directories from GitHub repository to another.
+- [![Open-Source Software][github icon]](https://github.com/wearerequired/git-mirror-action) [git-mirror-action](https://github.com/wearerequired/git-mirror-action) - ⏭ A GitHub Action for mirroring a git repository to another location via SSH.
+- [![Open-Source Software][github icon]](https://github.com/git-for-windows/rss-to-issues) [rss-to-issues](https://github.com/git-for-windows/rss-to-issues) - create issues from a syndication feed (RSS or Atom).
 
 Topics
 
@@ -307,6 +312,13 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/robherley/snips.sh) [snips.sh](https://github.com/robherley/snips.sh) - ✂️ passwordless, anonymous SSH-powered pastebin with a human-friendly TUI and web UI
 - [![Open-Source Software][oss icon]](https://github.com/pemistahl/grex) [grex](https://github.com/pemistahl/grex) - A command-line tool and Rust library for generating regular expressions from user-provided test cases
 - [![Open-Source Software][oss icon]](https://github.com/tiny-craft/tiny-rdm) [tiny-rdm](https://github.com/tiny-craft/tiny-rdm) - A Modern Redis Desktop Manager
+- [![Open-Source Software][oss icon]](https://github.com/plausible/analytics) [analytics](https://github.com/plausible/analytics) - Simple, open source, lightweight (< 1 KB) and privacy-friendly web analytics alternative to Google Analytics.
+- [![Open-Source Software][oss icon]](https://github.com/sigoden/dufs) [dufs](https://github.com/sigoden/dufs) - A file server that supports static serving, uploading, searching, accessing control, webdav...
+- [![Open-Source Software][oss icon]](https://github.com/digitalocean/nginxconfig.io) [nginxconfig.io](https://github.com/digitalocean/nginxconfig.io) - ⚙️ NGINX config generator on steroids 💉
+- [![Open-Source Software][oss icon]](https://github.com/fairyglade/ly) [ly](https://github.com/fairyglade/ly) - display manager with console UI
+- [![Open-Source Software][oss icon]](https://github.com/makeplane/plane) [plane](https://github.com/makeplane/plane) - 🔥 🔥 🔥 Open Source JIRA, Linear and Height Alternative. Plane helps you track your issues, epics, and product roadmaps in the simplest way possible.
+- [![Open-Source Software][oss icon]](https://github.com/jpanther/lynx) [lynx](https://github.com/jpanther/lynx) - A simple links theme for Hugo built with Tailwind CSS.
+- [![Open-Source Software][oss icon]](https://github.com/debauchee/barrier) [barrier](https://github.com/debauchee/barrier) - Open-source KVM software
 
 ## Programming Addons
 
@@ -318,6 +330,7 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/googleapis/release-please) [release-please](https://github.com/googleapis/release-please) - generate release PRs based on the conventionalcommits.org spec
 - [![Open-Source Software][oss icon]](https://github.com/dbcli/litecli) [litecli](https://github.com/dbcli/litecli) - CLI for SQLite Databases with auto-completion and syntax highlighting
 - [![Open-Source Software][oss icon]](https://github.com/openfaas/of-watchdog) [of-watchdog](https://github.com/openfaas/of-watchdog) - Reverse proxy for STDIO and HTTP microservices
+- [![Open-Source Software][oss icon]](https://github.com/Idered/chalk.ist) [chalk.ist](https://github.com/Idered/chalk.ist) - 📷 Create beautiful images of your source code
 
 ## Programming Specific
 
@@ -416,6 +429,7 @@ Topics
 - [![Neovim][nvim icon]](https://github.com/ahmedkhalf/project.nvim) [project.nvim](https://github.com/ahmedkhalf/project.nvim) - The superior project management solution for neovim.
 - [![Neovim][nvim icon]](https://github.com/cljoly/telescope-repo.nvim) [telescope-repo.nvim](https://github.com/cljoly/telescope-repo.nvim) - 🦘 Jump into the repositories (git, mercurial…) of your filesystem with telescope.nvim, without any setup
 - [![Neovim][nvim icon]](https://github.com/startup-nvim/startup.nvim) [startup.nvim](https://github.com/startup-nvim/startup.nvim) - A highly configurable neovim startup screen
+- [![Neovim][nvim icon]](https://github.com/Exafunction/codeium.vim) [codeium.vim](https://github.com/Exafunction/codeium.vim) - Free, ultrafast Copilot alternative for Vim and Neovim
 
 ## Contribution
 
