@@ -430,6 +430,7 @@ Topics
 - [![Neovim][nvim icon]](https://github.com/cljoly/telescope-repo.nvim) [telescope-repo.nvim](https://github.com/cljoly/telescope-repo.nvim) - 🦘 Jump into the repositories (git, mercurial…) of your filesystem with telescope.nvim, without any setup
 - [![Neovim][nvim icon]](https://github.com/startup-nvim/startup.nvim) [startup.nvim](https://github.com/startup-nvim/startup.nvim) - A highly configurable neovim startup screen
 - [![Neovim][nvim icon]](https://github.com/Exafunction/codeium.vim) [codeium.vim](https://github.com/Exafunction/codeium.vim) - Free, ultrafast Copilot alternative for Vim and Neovim
+- [![Neovim][nvim icon]](https://github.com/m4xshen/hardtime.nvim) [hardtime.nvim](https://github.com/m4xshen/hardtime.nvim) - A Neovim plugin helping you establish good command workflow and habit
 
 ## Contribution
 
