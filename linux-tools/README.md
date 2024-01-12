@@ -30,7 +30,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [Open-Source Software](#open-source-software)
 - [Programming Addons](#programming-addons)
 - [Programming Specific](#programming-specific)
-- [Vim/Neovim Addons](#vim/neovim-addons)
+- [Vim/Neovim Addons](#vimneovim-addons)
 - [Contributors](https://github.com/TechProber/cloud-estate/graphs/contributors)
 - [How to Contribute](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md)
 
@@ -431,6 +431,7 @@ Topics
 - [![Neovim][nvim icon]](https://github.com/startup-nvim/startup.nvim) [startup.nvim](https://github.com/startup-nvim/startup.nvim) - A highly configurable neovim startup screen
 - [![Neovim][nvim icon]](https://github.com/Exafunction/codeium.vim) [codeium.vim](https://github.com/Exafunction/codeium.vim) - Free, ultrafast Copilot alternative for Vim and Neovim
 - [![Neovim][nvim icon]](https://github.com/m4xshen/hardtime.nvim) [hardtime.nvim](https://github.com/m4xshen/hardtime.nvim) - A Neovim plugin helping you establish good command workflow and habit
+- [![Neovim][nvim icon]](https://github.com/xiyaowong/transparent.nvim) [transparent.nvim](https://github.com/xiyaowong/transparent.nvim) - Remove all background colors to make nvim transparent
 
 ## Contribution
 
