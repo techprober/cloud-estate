@@ -48,7 +48,7 @@ source "proxmox" "bakery-template" {
   proxmox_url              = "https://${var.proxmox_host}:8006/api2/json"
   insecure_skip_tls_verify = true
   node                     = var.proxmox_node_name
-  username                 = var.proxmox_api_user
+  username                 = var.proxmox_api_username
   password                 = var.proxmox_api_password
 
   # VM Configurations
