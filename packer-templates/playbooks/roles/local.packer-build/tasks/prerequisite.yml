@@ -1,0 +1,11 @@
+---
+- name: Download packer binary from release
+  get_url:
+    url: "{{ packer_release_url }}"
+    dest: "{{ packer_install_path }}"
+    force: yes # overwrite existing files
+
+- name: Make packer executable
+  file:
+    path: "{{ packer_install_path }}"
+    mode: a+x
