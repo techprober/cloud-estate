@@ -1,4 +1,22 @@
 ---
+- name: Install unzip
+  block:
+    - name: Check operating system release
+      setup:
+        gather_subset: min
+
+    - name: Install unzip on Alpine
+      apk:
+        name: unzip
+        state: present
+      when: ansible_facts['distribution'] == 'Alpine'
+
+    - name: Install unzip on Debian or Ubuntu
+      apt:
+        name: unzip
+        state: present
+      when: ansible_facts['distribution'] in ['Debian', 'Ubuntu']
+
 - name: Download packer release
   get_url:
     url: "{{ packer_release_url }}"
@@ -10,9 +28,12 @@
     src: "/tmp/{{ packer_release_filename }}"
     dest: "/tmp"
 
+- name: Move packer binary to install path
+  command: "mv /tmp/packer {{ packer_install_path }}"
+  args:
+    removes: "/tmp/packer"
+
 - name: Make packer executable
   file:
-    src: "/tmp/packer"
-    dest: "{{ packer_install_path }}/packer"
+    path: "{{ packer_install_path }}/packer"
     mode: a+x
-    state: move
