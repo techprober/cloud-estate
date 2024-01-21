@@ -13,8 +13,8 @@ packer {
 
 # Variable Definitions
 variable "proxmox_host" { type = string }
-variable "proxmox_node_name" { type = string }
-variable "proxmox_api_username" { type = string }
+variable "proxmox_node" { type = string }
+variable "proxmox_api_user" { type = string }
 variable "proxmox_api_password" { type = string }
 
 variable "clone_vm_id" { type = number }
@@ -55,8 +55,8 @@ source "proxmox-clone" "bakery-template" {
   # Proxmox Connection Settings
   proxmox_url              = "https://${var.proxmox_host}:8006/api2/json"
   insecure_skip_tls_verify = true
-  node                     = var.proxmox_node_name
-  username                 = var.proxmox_api_username
+  node                     = var.proxmox_node
+  username                 = var.proxmox_api_user
   password                 = var.proxmox_api_password
 
   # VM Configurations
