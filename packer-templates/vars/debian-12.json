@@ -3,7 +3,7 @@
   "vm_id": 9001,
   "vm_name": "prod-debian-12-server-packer-template",
   "template_name": "prod-debian-12-server-packer-template",
-  "template_description": "image made from debian cloud-init image",
+  "template_description": "image made from debian cloud image",
 
   "os": "l26",
   "cores": "4",
