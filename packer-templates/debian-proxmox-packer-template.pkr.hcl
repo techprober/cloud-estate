@@ -129,7 +129,7 @@ build {
 
   # Main playbook depends on vm_type
   provisioner "ansible-local" {
-    pause_before            = "5s"
+    pause_before            = "10s"
     playbook_dir            = "./playbooks"
     playbook_file           = var.playbook_file
     role_paths              = ["../ansible-playbooks/roles/"]
@@ -142,11 +142,11 @@ build {
   # Add default cloud-init configuration
   post-processor "shell-local" {
     inline = [
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",       # set cloud-init default user
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}",   # set cloud-init default password
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ipconfig0 ip=dhcp,ip6=dhcp",       # set cloud-init net0 config (dhcp by default)
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciupgrade 1",                      # enable upgrade
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --tags packer-template,prod,debian", # set default tags
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",     # set cloud-init default user
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}", # set cloud-init default password
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ipconfig0 ip=dhcp,ip6=dhcp",     # set cloud-init net0 config (dhcp by default)
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciupgrade 1",                    # enable upgrade
+      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --tags prod,debian",               # set default tags
     ]
   }
 }
