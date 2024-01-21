@@ -13,7 +13,7 @@ base_packages:
   - wget
   - curl
 
-extra_packeges:
+extra_packages:
   - neofetch
   - dnsutils 
   - iputils-ping
