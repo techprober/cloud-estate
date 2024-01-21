@@ -1,0 +1,12 @@
+# distro specific vars
+---
+release: "bookworm"
+arch: "amd64"
+alias_name: "Debian 12"
+image_format: "qcow2"
+image_base_url: "https://cdimage.debian.org/cdimage/cloud/{{ release }}/latest/"
+image_name: "debian-12-genericcloud-{{ arch }}.{{ image_format }}"
+image_source_url: "{{ image_base_url }}/{{ image_name }}"
+
+template_name: "debian-12-cloudimg-template"
+vm_name: "debian-12-cloudimg"

@@ -1,0 +1,19 @@
+#cloud-config
+manage_etc_hosts: true
+# ssh_authorized_keys:
+#   - ssh-rsa AAAAKEYHEEEEREEEE= user@client
+locale: {{ cloudinit_locale }}
+keyboard:
+  layout: us
+timezone: {{ cloudinit_timezone }}
+ssh_pwauth: true # enable SSH password login
+runcmd:
+  # - sed -i 's/[#]*Port 22/Port 9726/g' /etc/ssh/sshd_config
+  # - sed -i 's/[#]*PermitRootLogin yes/PermitRootLogin prohibit-password/g' /etc/ssh/sshd_config
+  # - sed -i 's/[#]*PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
+  # - systemctl reload ssh
+  - systemctl enable qemu-guest-agent --now
+packages:
+  - qemu-guest-agent
+  - ansible
+  - git
