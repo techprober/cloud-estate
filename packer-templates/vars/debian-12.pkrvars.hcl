@@ -16,7 +16,7 @@ vga_type = "std"
 
 cloud_init_storage_pool = "local-zfs"
 scsi_controller         = "virtio-scsi-single"
-disk_size               = "20G"
+disk_size               = "10G"
 
 network_adapters_model  = "virtio"
 network_adapters_bridge = "vmbr2"
