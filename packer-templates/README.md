@@ -138,6 +138,12 @@ pveum aclmod / -user packer@pve -role PVEAdmin
 ansible-playbook -i inventory/hosts playbooks/bake.yml
 ```
 
+Also, check out the `build.log` while running the bake playbook:
+
+```bash
+tail -f build.log
+```
+
 ## References
 
 - [Creating proxmox templates with packer - Aaron Berry](https://dev.to/aaronktberry/creating-proxmox-templates-with-packer-1b35)
