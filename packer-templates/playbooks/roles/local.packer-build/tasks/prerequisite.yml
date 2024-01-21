@@ -1,21 +1,6 @@
 ---
 - name: Install unzip
-  block:
-    - name: Check operating system release
-      setup:
-        gather_subset: min
-
-    - name: Install unzip on Alpine
-      apk:
-        name: unzip
-        state: present
-      when: ansible_facts['distribution'] == 'Alpine'
-
-    - name: Install unzip on Debian or Ubuntu
-      apt:
-        name: unzip
-        state: present
-      when: ansible_facts['distribution'] in ['Debian', 'Ubuntu']
+  include_tasks: install-unzip.yml
 
 - name: Download packer release
   get_url:
