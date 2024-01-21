@@ -1,23 +1,23 @@
 ---
 base_packages:
-  - apt-transport-https
-  - ca-certificates
-  - gnupg-agent
-  - software-properties-common
   - linux-headers-generic
   - linux-image-generic
+  - software-properties-common
+  - apt-transport-https
+  - ca-certificates
   - htop
-  - curl
   - screen
   - tree
+  - ripgrep
   - vim
   - wget
+  - curl
 
 extra_packeges:
   - neofetch
-  - tmux
-  - dnsutils
+  - dnsutils 
   - iputils-ping
-  - dnsutils
   - net-tools
   - telnet
+  - tmux
+  - gnupg-agent
