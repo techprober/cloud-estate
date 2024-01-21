@@ -123,8 +123,8 @@ build {
 
   # SSH public key
   provisioner "file" {
-    source      = "./id_rsa.pub"
-    destination = "/tmp/id_rsa.pub"
+    source      = "./*.pub"
+    destination = "/tmp/"
   }
 
   # Main playbook depends on vm_type
