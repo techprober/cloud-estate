@@ -110,8 +110,6 @@ pveum aclmod / -user packer@pve -role PVEAdmin
 
 ## How to Use
 
-There is a dedicated blog post for the basic/advanced use cases using this Packer module. Please head over to [Use Packer like a Pro](https://www.hikariai.net/blog/24-use-packer-like-a-pro/) for more information
-
 ![](https://github.com/TechProber/cloud-estate/blob/master/packer-templates/assets/screenshot.png?raw=true)
 
 ### Prerequisites to bake Debian VM
