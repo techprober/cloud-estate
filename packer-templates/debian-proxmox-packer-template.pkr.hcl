@@ -123,7 +123,12 @@ build {
 
   # SSH public key
   provisioner "file" {
-    source      = "./*.pub"
+    source      = "id_rsa.pub"
+    destination = "/tmp/"
+  }
+
+  provisioner "file" {
+    source      = "id_rsa_cloud.pub"
     destination = "/tmp/"
   }
 
