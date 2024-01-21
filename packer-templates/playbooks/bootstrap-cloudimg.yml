@@ -1,0 +1,10 @@
+---
+- name: "Bootstrap cloudimg"
+  hosts: proxmox_servers
+  become: yes
+
+  roles:
+    - role: "remote.cloudimg/"
+      vars: # vars available in ./roles/remote.cloudimg/defaults/main/
+        proxmox_storage: "local-zfs"
+        cloudinit_default_network_interface: "vmbr2"
