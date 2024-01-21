@@ -1,11 +1,17 @@
 ---
-- name: Download packer binary from release
+- name: Download packer release
   get_url:
     url: "{{ packer_release_url }}"
-    dest: "{{ packer_install_path }}"
+    dest: "/tmp/{{ packer_release_filename }}"
     force: yes # overwrite existing files
+
+- name: Unzip packer binary from release
+  unarchive:
+    src: "/tmp/{{ packer_release_filename }}"
+    dest: "/tmp"
 
 - name: Make packer executable
   file:
-    path: "{{ packer_install_path }}"
+    src: "/tmp/packer"
+    dest: "{{ packer_install_path }}/packer"
     mode: a+x
