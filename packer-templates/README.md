@@ -117,56 +117,30 @@ There is a dedicated blog post for the basic/advanced use cases using this Packe
 
 ![](https://github.com/TechProber/cloud-estate/blob/master/packer-templates/assets/screenshot.png?raw=true)
 
-## Prerequisites to bake Debian VM
+### Prerequisites to bake Debian VM
 
 > [!NOTE]
-> Baking Debian VM is NOT a straightforward process, we need to first bake a `base-cloudimg-vm-template` as a foundation image to add customization on top of it. We may make use of a [script](./scripts/bootstrap_debian_base_cloudimg_template.sh) to achieve so.
+> Baking VM tempalte based on cloudimg is NOT a straightforward process, we need to first bake a `base-cloudimg-vm-template` as a foundation image to add customization on top of it. The full automation is achieved with Ansible, see [bake.yml](./playbooks/bake.yml).
 
-Download the latest generic Debian cloud image from the [official site](https://cloud.debian.org/images/cloud/)
-
-```bash
-# Debian 12
-wget https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-genericcloud-amd64.qcow2
-```
-
-Bootstrap base template
-
-> [!WARNING]
-> By default the script uses `local-lvm` as the datastore, if you are using a different datastore, please update the script.
-
-```bash
-curl -L -o bootstrap.sh https://raw.githubusercontent.com/techprober/cloud-estate/debian-12-template/packer-templates/scripts/bootstrap_debian_base_cloudimg_template.sh
-chmod +x bootstrap.sh
-./bootstrap.sh 900 "debian-12-cloud-image-template" "debian-12-genericcloud-amd64.qcow2"
-```
-
-## Quick Use (Bake CLI)
+#### Ansible inventory
 
 > [!IMPORTANT]
-> Please check available templates in [bakery-config.json](./bakery-config.json), also check the default configurations in [vars/](https://github.com/techprober/cloud-estate/tree/master/packer-templates/vars)
+> You must update the inventory to point to your Proxmox host. See [hosts](./inventory/hosts).
+
+#### Vars
+
+> [!IMPORTANT]
+> You must update the [host.pkvars.hcl](./vars/host.pkvars.hcl) and [debian-12.pkvars.hcl](./vars/debian-12.pkvars.hcl) with your desired settings.
+
+#### Playbook
+
+> [!IMPORTANT]
+> You must check out the default settings in the [bake.yml](./playbooks/bake.yml) and update any settings that fit your need.
+
+### Bake Proxmox VM image
 
 ```bash
-# bake vm template
-# please do NOT use `~`, use $HOME instead
-# start with host.json.example
-cp host.json.example host.json
-# start with the default config for a specific template type and tweat the settings to fit your need
-cp vars/debian-12.json var.json
-
-# export env vars
-export HOST_CONFIG=[HOST_CONFIG]
-export PACKER_VAR_FILE=[PACKER_VAR_FILE]
-# e.g.
-# export HOST_CONFIG=$HOME/host.json
-# export PACKER_VAR_FILE=$HOME/var.json
-
-# check usage
-./bake -h
-
-# bake
-./bake [options]
-# e.g (bake debian-12-server)
-# ./bake -i 9001 -t debian_12_server -n prod-debian-12-server-template -c $HOST_CONFIG -f $PACKER_VAR_FILE
+ansible-playbook -i inventory/hosts playbooks/bake.yml
 ```
 
 ## References
