@@ -25,7 +25,7 @@
 
 - name: Set parent directory path
   set_fact:
-    workspace_dir: "{{ ansible_playbook_dir }}/.."
+    workspace_dir: "{{ playbook_dir | dirname }}"
 
 - name: Install required packer plugins
   command: "packer init {{ workspace_dir }}/{{ packer_template }}"
