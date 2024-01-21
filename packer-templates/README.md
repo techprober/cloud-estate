@@ -134,11 +134,19 @@ pveum aclmod / -user packer@pve -role PVEAdmin
 
 ### Bake Proxmox VM image
 
+Export `PM_PASS` (password of the `root` user of your Proxmox server)
+
+```bash
+export PM_PASS=
+```
+
+Run the playbook
+
 ```bash
 ansible-playbook -i inventory/hosts playbooks/bake.yml
 ```
 
-Also, check out the `build.log` while running the bake playbook:
+Also, check out the `build.log` while running the bake playbook
 
 ```bash
 tail -f build.log
