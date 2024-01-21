@@ -115,20 +115,15 @@ build {
   # Provisioner Configurations
 
   # Resize disk
-  provisioner "shell-local" {
-    inline = [
-      "ssh root@${var.proxmox_host} qm disk resize ${var.vm_id} scsi0 ${var.disk_size}"
-    ]
-  }
+  # provisioner "shell-local" {
+  #   inline = [
+  #     "ssh root@${var.proxmox_host} qm disk resize ${var.vm_id} scsi0 ${var.disk_size}"
+  #   ]
+  # }
 
   # SSH public key
   provisioner "file" {
-    source      = "id_rsa.pub"
-    destination = "/tmp/"
-  }
-
-  provisioner "file" {
-    source      = "id_rsa_cloud.pub"
+    sources     = ["id_rsa.pub", "id_rsa_cloud.pub"]
     destination = "/tmp/"
   }
 
@@ -145,13 +140,13 @@ build {
   }
 
   # Add default cloud-init configuration
-  post-processor "shell-local" {
-    inline = [
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",     # set cloud-init default user
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}", # set cloud-init default password
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ipconfig0 ip=dhcp,ip6=dhcp",     # set cloud-init net0 config (dhcp by default)
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciupgrade 1",                    # enable upgrade
-      "ssh root@${var.proxmox_host} qm set ${var.vm_id} --tags prod,debian",               # set default tags
-    ]
-  }
+  # post-processor "shell-local" {
+  #   inline = [
+  #     "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciuser ${var.ssh_username}",     # set cloud-init default user
+  #     "ssh root@${var.proxmox_host} qm set ${var.vm_id} --cipassword ${var.ssh_password}", # set cloud-init default password
+  #     "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ipconfig0 ip=dhcp,ip6=dhcp",     # set cloud-init net0 config (dhcp by default)
+  #     "ssh root@${var.proxmox_host} qm set ${var.vm_id} --ciupgrade 1",                    # enable upgrade
+  #     "ssh root@${var.proxmox_host} qm set ${var.vm_id} --tags prod,debian",               # set default tags
+  #   ]
+  # }
 }
