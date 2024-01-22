@@ -4,8 +4,8 @@
   hosts: proxmox_servers
   become: yes
 
-  vars_files:
-    - ./group_vars/all.yml
+  # vars_files:
+  #   - ./group_vars/all.yml
 
   roles:
     - role: "remote.cloudimg/"
@@ -15,8 +15,8 @@
   hosts: localhost
   connection: local
 
-  vars_files:
-    - ./group_vars/all.yml
+  # vars_files:
+  #   - ./group_vars/all.yml
 
   roles:
     - role: "local.packer-build/"
@@ -26,8 +26,8 @@
   hosts: proxmox_servers
   become: yes
 
-  vars_files:
-    - ./group_vars/all.yml
+  # vars_files:
+  #   - ./group_vars/all.yml
 
   roles:
     - role: "remote.post-install.cloudinit/"
