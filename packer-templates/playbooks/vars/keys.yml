@@ -1,5 +1,4 @@
 ---
 operation: add
-public_keys: "{{ fileglob('/tmp/*.pub') }}"
-  # - /tmp/id_rsa.pub
-  # - /tmp/id_rsa_cloud.pub
+public_keys:
+  - /tmp/id_rsa.pub
