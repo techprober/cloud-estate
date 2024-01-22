@@ -125,7 +125,7 @@ pveum aclmod / -user packer@pve -role PVEAdmin
 #### Vars
 
 > [!IMPORTANT]
-> You must update the `packer-specific` vars in[host.pkvars.hcl](./vars/host.pkvars.hcl) and [debian-12.pkvars.hcl](./vars/debian-12.pkvars.hcl) with your desired settings. For `playbook-related` vars, they are located at [playbooks/group_vars/all.yml](./playbooks/group_vars/all.yml) and [./playbooks/vars/](./playbooks/vars/)
+> You must update the `packer-specific` vars in[host.pkvars.hcl](./vars/host.pkvars.hcl) and [debian-12.pkvars.hcl](./vars/debian-12.pkvars.hcl) with your desired settings. For `playbook-related` vars, they are located at [playbooks/group_vars/all.yml](./playbooks/group_vars/all.yml) and [playbooks/vars/](./playbooks/vars/).
 
 #### Playbook
 
