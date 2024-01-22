@@ -12,7 +12,7 @@ disk_size={{ disk_size }}
 vm_id={{ vm_id }}
 
 # --- Resize disk --- #
-qm disk resize ${var.vm_id} scsi0 $disk_size
+qm disk resize $vm_id scsi0 $disk_size
 
 
 # --- Update default cloud-init configuration --- #
