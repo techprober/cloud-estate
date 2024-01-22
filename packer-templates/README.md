@@ -143,7 +143,7 @@ export PM_PASS=
 Run the playbook
 
 ```bash
-ansible-playbook -i inventory/hosts playbooks/bake.yml
+ansible-playbook -i inventory/hosts playbooks/bake.yml --tags=all
 ```
 
 Also, check out the `build.log` while running the bake playbook
