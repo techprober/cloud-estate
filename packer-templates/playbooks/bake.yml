@@ -25,3 +25,10 @@
 
   roles:
     - role: "local.packer-build/"
+
+# --- STAGE 3: Run post-install tasks ---
+- name: "Run post-install tasks"
+  hosts: proxmox_servers
+  become: yes
+  roles:
+    - role: "remote.post-install.cloudinit/"

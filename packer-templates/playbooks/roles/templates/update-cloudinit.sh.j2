@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# --- Define variables --- #
+# Username and password of the VM
+username={{ cloudinit_username }}
+password={{ cloudinit_password }}
+# Name of the storage
+storage={{ proxmox_storage }}
+# Disk size
+disk_size={{ disk_size }}
+# VM ID
+vm_id={{ vm_id }}
+
+# --- Resize disk --- #
+qm disk resize ${var.vm_id} scsi0 ${var.disk_size}"
+
+
+# --- Update default cloud-init configuration --- #
+# set cloud-init default user
+qm set $vm_id --ciuser $username"
+# set cloud-init default password
+qm set $vm_id --cipassword $password"
+# set cloud-init net0 config (dhcp by default)
+qm set $vm_id --ipconfig0 ip=dhcp,ip6=dhcp"
+# enable upgrade
+qm set $vm_id --ciupgrade 1"
+# set default tags
+qm set $vm_id --tags prod,debian"
