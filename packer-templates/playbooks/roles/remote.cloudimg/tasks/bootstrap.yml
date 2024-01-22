@@ -20,12 +20,12 @@
   block:
     - name: Check if vm already exists
       stat:
-        path: "{{ proxmox_vm_config_dir }}/{{ vm_id }}.conf"
+        path: "{{ proxmox_vm_config_dir }}/{{ cloudimg_vm_id }}.conf"
       register: vm_conf
 
     - name: Purge vm template
       when: vm_conf.stat.exists
-      command: "qm destroy {{ vm_id }} --purge --destroy-unreferenced-disks"
+      command: "qm destroy {{ cloudimg_vm_id }} --purge --destroy-unreferenced-disks"
 
 - name: Run bootstrap script
   command: "sh {{ bootstrap_home_dir }}/bootstrap.sh"
