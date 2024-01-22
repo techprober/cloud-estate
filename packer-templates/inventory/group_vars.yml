@@ -1,0 +1,34 @@
+---
+# common vars
+arch: "amd64"
+
+cloudimg_vm_id: 900
+cloudimg_vm_name: "debian-12-cloudimg"
+cloudimg_template_name: "debian-12-cloudimg-template"
+proxmox_storage: "local-zfs"
+
+proxmox_iso_storage_dir: "/var/lib/vz/template/iso"
+proxmox_cloudinit_dir: "/var/lib/vz/snippets"
+proxmox_vm_config_dir: "/etc/pve/local/qemu-server"
+bootstrap_home_dir: "/root/automation"
+
+cloudinit_username: "packer"
+cloudinit_password: "packer"
+cloudinit_default_network_interface: "vmbr2"
+cloudinit_timezone: "Asia/Shanghai"
+cloudinit_locale: "en_US.UTF-8"
+
+# packer-related vars
+install_packer: no
+packer_version: "1.10.0"
+packer_release_url: "https://releases.hashicorp.com/packer/{{ packer_version }}/packer_{{ packer_version }}_linux_{{ arch }}.zip"
+packer_release_filename: "packer_{{ packer_version }}_linux_{{ arch }}.zip"
+packer_install_path: "/usr/local/bin"
+
+# build vars
+vm_id: 9001
+host_config: "vars/host.pkvars.hcl"
+vm_config: "vars/debian-12.pkrvars.hcl"
+playbook_file: "playbooks/debian_12_server.yml"
+packer_template: "debian-proxmox-packer-template.pkr.hcl"
+template_name: "prod-debian-12-server-template"

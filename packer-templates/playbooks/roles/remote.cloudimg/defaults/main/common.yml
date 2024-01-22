@@ -1,5 +1,6 @@
+# common vars
 ---
-vm_id: 900
+cloudimg_vm_id: 900
 
 proxmox_storage: "local-lvm"
 

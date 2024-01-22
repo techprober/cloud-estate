@@ -44,4 +44,4 @@ create_template() {
   qm template $1
 }
 
-create_template {{ vm_id }} {{ template_name }} {{ proxmox_iso_storage_dir }}/{{ image_name }}
+create_template {{ cloudimg_vm_id }} {{ cloudimg_template_name }} {{ proxmox_iso_storage_dir }}/{{ image_name }}
