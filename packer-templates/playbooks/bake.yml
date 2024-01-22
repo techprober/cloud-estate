@@ -4,6 +4,7 @@
   hosts: proxmox_servers
   gather_facts: yes
   become: yes
+  tags: ["stage1", "bootstrap_cloudimg_template"]
 
   roles:
     - role: "remote.cloudimg.build/"
@@ -13,7 +14,7 @@
   hosts: localhost
   connection: local
   gather_facts: yes
-  when: ansible_playbook_facts['remote.cloudimg.build.exit_status'] == 0
+  tags: ["stage2", "build_vm_template"]
 
   roles:
     - role: "local.packer.build/"
@@ -22,8 +23,8 @@
 - name: "Run post-install tasks"
   hosts: proxmox_servers
   gather_facts: yes
+  tags: ["stage3", "run_post_install_tasks"]
   become: yes
-  when: ansible_playbook_facts['local.packer.build.exit_status'] == 0
 
   roles:
     - role: "remote.post-install.cloudinit/"
