@@ -27,16 +27,6 @@ Maunally creating and managing VM Templates in Proxmox can become a challenge wi
 
 ## Prerequisite
 
-Install `jq` locally on your machine
-
-```bash
-# archlinux
-sudo pacman -S jq
-
-# debian/ubuntu
-sudo apt-get install jq
-```
-
 Install `packer` locally on your machine
 
 ```bash
