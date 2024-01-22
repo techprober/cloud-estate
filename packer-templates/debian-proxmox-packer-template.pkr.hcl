@@ -116,8 +116,8 @@ build {
 
   # SSH public key
   provisioner "file" {
-    # sources     = ["id_rsa.pub", "id_rsa_cloud.pub"]
-    sources     = ["*.pub"]
+    sources = ["id_rsa.pub", "id_rsa_cloud.pub"]
+    # sources     = ["*.pub"]
     destination = "/tmp/"
   }
 
