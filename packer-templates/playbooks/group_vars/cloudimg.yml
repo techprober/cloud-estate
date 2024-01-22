@@ -1,0 +1,5 @@
+---
+cloudimg_vm_id: 900
+cloudimg_vm_name: "debian-12-cloudimg"
+cloudimg_template_name: "debian-12-cloudimg-template"
+

@@ -4,6 +4,10 @@
   hosts: proxmox_servers
   become: yes
 
+  vars_files:
+    - ./group_vars/common.yml
+    - ./group_vars/cloudimg.yml
+
   roles:
     - role: "remote.cloudimg/"
       # vars: # vars available in ./roles/remote.cloudimg/defaults/main/
@@ -14,6 +18,10 @@
 - name: "Build VM template"
   hosts: localhost
   connection: local
+
+  vars_files:
+    - ./group_vars/packer.yml
+    - ./group_vars/build.yml
 
   # vars:
   #   vm_id: 9001
@@ -30,5 +38,10 @@
 - name: "Run post-install tasks"
   hosts: proxmox_servers
   become: yes
+
+  vars_files:
+    - ./group_vars/common.yml
+    - ./group_vars/build.yml
+
   roles:
     - role: "remote.post-install.cloudinit/"
