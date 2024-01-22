@@ -42,4 +42,4 @@
         mode: 0644
 
     - name: Use custom vendor cloudinit userconfig
-      command: "qm set {{ vm_id }} --cicustom 'vendor=local:snippets/vendor.yaml'"
+      command: "qm set {{ cloudimg_vm_id }} --cicustom 'vendor=local:snippets/vendor.yaml'"
