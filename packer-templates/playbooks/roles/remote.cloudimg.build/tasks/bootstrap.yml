@@ -23,7 +23,7 @@
         path: "{{ proxmox_vm_config_dir }}/{{ cloudimg_vm_id }}.conf"
       register: vm_conf
 
-    - name: Purge vm template
+    - name: Purge existing vm template
       when: vm_conf.stat.exists
       command: "qm destroy {{ cloudimg_vm_id }} --purge --destroy-unreferenced-disks"
 
