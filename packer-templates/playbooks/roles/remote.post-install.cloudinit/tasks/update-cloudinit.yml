@@ -2,7 +2,7 @@
 - name: Copy template script to bootstrap home directory
   template:
     # must use absolute path
-    src: "{{ playbook_dir }}/roles/remote.post-install/templates/update-cloudinit.sh.j2"
+    src: "{{ playbook_dir }}/roles/remote.post-install.cloudinit/templates/update-cloudinit.sh.j2"
     dest: "{{ bootstrap_home_dir }}/update-cloudinit.sh"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
