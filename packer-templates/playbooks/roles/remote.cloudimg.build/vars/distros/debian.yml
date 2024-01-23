@@ -1,7 +1,8 @@
 # distro specific vars
 ---
-release: "bookworm"
 arch: "amd64"
+release: "bookworm"
+release_version: "12"
 alias_name: "Debian 12"
 image_format: "qcow2"
 image_base_url: "https://cdimage.debian.org/cdimage/cloud/{{ release }}/latest"
