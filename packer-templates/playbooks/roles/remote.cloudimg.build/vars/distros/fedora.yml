@@ -1,0 +1,13 @@
+# distro specific vars
+---
+arch: "x86_64"
+release: "39"
+release_version: "39"
+alias_name: "Fedora 39"
+image_format: "qcow2"
+image_base_url: "https://download.fedoraproject.org/pub/fedora/linux/releases/{{ release }}/Cloud/{{ arch }}/images"
+image_name: "Fedora-Cloud-Base-{{ release_version }}-1.5.{{ arch }}.{{ image_format }}"
+image_source_url: "{{ image_base_url }}/{{ image_name }}"
+
+cloudimg_vm_name: "fedora-39-cloudimg"
+cloudimg_template_name: "fedora-39-cloudimg-template"
