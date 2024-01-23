@@ -17,8 +17,6 @@ cloudinit_locale: "en_US.UTF-8"
 
 # cloudimg vars
 cloudimg_vm_id: 900
-cloudimg_vm_name: "debian-12-cloudimg"
-cloudimg_template_name: "debian-12-cloudimg-template"
 
 # packer-related vars
 install_packer: no

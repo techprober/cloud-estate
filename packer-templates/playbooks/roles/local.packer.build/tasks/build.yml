@@ -1,7 +1,7 @@
 ---
 - name: Generate Packer build script based on inputs
   template:
-    src: "{{ playbook_dir }}/roles/local.packer.build/templates/build.sh.j2"
+    src: "{{ role_path }}/templates/build.sh.j2"
     dest: "../build.sh"
     mode: 0644
 

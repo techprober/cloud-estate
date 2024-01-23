@@ -6,6 +6,10 @@
   become: yes
   tags: ["stage1", "bootstrap_cloudimg_template"]
 
+  vars:
+    distro: "opensuse" # required; supported distros: ["debian", "opensuse"]
+    cloudimg_vm_id: 901
+
   roles:
     - role: "remote.cloudimg.build/"
 

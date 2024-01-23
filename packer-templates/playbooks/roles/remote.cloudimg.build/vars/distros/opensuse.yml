@@ -1,0 +1,13 @@
+# distro specific vars
+---
+arch: "x86_64"
+release: "Leap_15.6"
+release_version: "15.6"
+alias_name: "openSUSE Leap 15.6"
+image_format: "qcow2"
+image_base_url: "https://download.opensuse.org/repositories/Cloud:/Images:/{{ release }}/images"
+image_name: "openSUSE-Leap-15.6.{{ arch }}-1.0.0-NoCloud-Build3.15.{{ image_format }}"
+image_source_url: "{{ image_base_url }}/{{ image_name }}"
+
+cloudimg_vm_name: "opensuse-leap-15.6-cloudimg"
+cloudimg_template_name: "opensuse-leap-15.6-cloudimg-template"

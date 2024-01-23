@@ -10,7 +10,7 @@
 - name: Copy template script to bootstrap home directory
   template:
     # must use absolute path
-    src: "{{ playbook_dir }}/roles/remote.cloudimg.build/templates/bootstrap.sh.j2"
+    src: "{{ role_path }}/templates/bootstrap.sh.j2"
     dest: "{{ bootstrap_home_dir }}/bootstrap.sh"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
@@ -35,7 +35,7 @@
     - name: Copy vendor cloudinit config to snippets directory
       template:
         # must use absolute path
-        src: "{{ playbook_dir }}/roles/remote.cloudimg.build/files/vendor.yaml.j2"
+        src: "{{ role_path }}/files/vendor.yaml.j2"
         dest: "{{ proxmox_cloudinit_dir }}/vendor.yaml"
         owner: "{{ ansible_user }}"
         group: "{{ ansible_user }}"
