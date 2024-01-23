@@ -1,0 +1,13 @@
+# distro specific vars
+---
+arch: "x86_64"
+release: "Leap-15.5"
+release_version: "15.5"
+alias_name: "openSUSE Leap 15.5"
+image_format: "qcow2"
+image_base_url: "https://download.opensuse.org/distribution/openSUSE-current/appliances"
+image_name: "openSUSE-Leap-15.5-Minimal-VM.{{ arch }}-Cloud.{{ image_format }}"
+image_source_url: "{{ image_base_url }}/{{ image_name }}"
+
+cloudimg_vm_name: "opensuse-leap-15.5-cloudimg"
+cloudimg_template_name: "opensuse-leap-15.5-cloudimg-template"

@@ -39,7 +39,7 @@ create_template() {
   # If the disk is already bigger than 8G, this will fail, and that is okay.
   qm disk resize $1 scsi0 10G
   # Assign tags
-  qm set $1 --tags debian,cloudinit
+  qm set $1 --tags cloudinit,{{ distro }}
   # Make it a template
   qm template $1
 }
