@@ -7,8 +7,8 @@
   tags: ["stage1", "bootstrap_cloudimg_template"]
 
   vars:
-    distro: "opensuse-tumbleweed" # required; supported distros: ["debian", "opensuse-leap", "opensuse-tumbleweed"]
-    cloudimg_vm_id: 902
+    distro: "ubuntu" # required; supported distros: ["debian", "opensuse-leap", "opensuse-tumbleweed", "fedora", "ubuntu"]
+    cloudimg_vm_id: 904
 
   roles:
     - role: "remote.cloudimg.build/"
