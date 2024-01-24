@@ -11,12 +11,9 @@
 - name: Unzip packer binary from release
   unarchive:
     src: "/tmp/{{ packer_release_filename }}"
-    dest: "/tmp"
-
-- name: Move packer binary to install path
-  command: "mv /tmp/packer {{ packer_install_path }}"
-  args:
-    removes: "/tmp/packer"
+    dest: "{{ packer_install_path }}"
+    remote_src: yes
+  become: yes
 
 - name: Make packer executable
   file:
