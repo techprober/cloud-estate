@@ -28,3 +28,5 @@ ssh_port     = 22
 ssh_username = "packer"
 ssh_password = "packer"
 ssh_timeout  = "20m"
+
+playbook_file = "debian_12_server.yml"
