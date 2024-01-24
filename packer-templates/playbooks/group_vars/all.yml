@@ -13,7 +13,7 @@ cloudinit_username: "packer"
 cloudinit_password: "packer"
 cloudinit_default_network_interface: "vmbr2"
 cloudinit_timezone: "Asia/Shanghai"
-cloudinit_locale: "en_US.UTF-8"
+cloudinit_locale: "en"
 
 # cloudimg vars
 cloudimg_vm_id: 900
