@@ -136,6 +136,8 @@ Run the playbook
 ansible-playbook -K -i inventory/hosts playbooks/bake.yml --tags=all
 ```
 
+> It will propmt you to enter the sudo password of the current host user (NOT the `user` in VM or Proxmxo).
+
 Also, check out the `build.log` while running the bake playbook
 
 ```bash
