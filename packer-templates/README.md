@@ -20,10 +20,23 @@ Maunally creating and managing VM Templates in Proxmox can become a challenge wi
 
 ## Table of Contents
 
-- [Prerequisite](#prerequisite)
-- [What is Packer](#what-is-packer)
-- [Create a Proxmox user for Packer](#create-proxmox-user-for-packer)
-- [How to use](#how-to-use)
+<!-- vim-markdown-toc GFM -->
+
+* [Prerequisite](#prerequisite)
+* [What is Packer](#what-is-packer)
+* [Create a Proxmox user for Packer](#create-a-proxmox-user-for-packer)
+* [How to Use](#how-to-use)
+  * [Prerequisites to bake Debian VM](#prerequisites-to-bake-debian-vm)
+    * [Ansible inventory](#ansible-inventory)
+    * [Vars](#vars)
+    * [Playbook](#playbook)
+    * [SSH](#ssh)
+    * [PM_PASS](#pm_pass)
+  * [Run the playbook](#run-the-playbook)
+  * [Inspect build logs](#inspect-build-logs)
+* [References](#references)
+
+<!-- vim-markdown-toc -->
 
 ## Prerequisite
 
@@ -104,25 +117,27 @@ pveum aclmod / -user packer@pve -role PVEAdmin
 
 ### Prerequisites to bake Debian VM
 
-> [!NOTE]
-> Baking VM tempalte based on cloudimg is NOT a straightforward process, we need to first bake a `base-cloudimg-vm-template` as a foundation image to add customization on top of it. The full automation is achieved with Ansible, see [bake.yml](./playbooks/bake.yml).
+Baking VM tempalte based on cloudimg is NOT a straightforward process, we need to first bake a `base-cloudimg-vm-template` as a foundation image to add customization on top of it. The full automation is achieved with Ansible, see [bake.yml](./playbooks/bake.yml).
 
 #### Ansible inventory
 
-> [!IMPORTANT]
-> You must update the inventory to point to your Proxmox host. See [hosts](./inventory/hosts).
+You `MUST` update the inventory to point to your Proxmox host. See [hosts](./inventory/hosts).
 
 #### Vars
 
-> [!IMPORTANT]
-> You must update the `packer-specific` vars in[host.pkvars.hcl](./vars/host.pkvars.hcl) and [debian-12.pkvars.hcl](./vars/debian-12.pkvars.hcl) with your desired settings. For `playbook-related` vars, they are located at [playbooks/group_vars/all.yml](./playbooks/group_vars/all.yml) and [playbooks/vars/](./playbooks/vars/).
+You `MUST` update the `packer-specific` vars in[host.pkvars.hcl](./vars/host.pkvars.hcl) and [debian-12.pkvars.hcl](./vars/debian-12.pkvars.hcl) with your desired settings. For `playbook-related` vars, they are located at [playbooks/group_vars/all.yml](./playbooks/group_vars/all.yml) and [playbooks/vars/](./playbooks/vars/).
 
 #### Playbook
 
-> [!IMPORTANT]
-> You must check out the default settings in the [bake.yml](./playbooks/bake.yml) and update any settings that fit your need.
+You `MUST` check out the default settings in the [bake.yml](./playbooks/bake.yml) and update any settings that fit your need.
 
-### Bake Proxmox VM image
+#### SSH
+
+By default the standard `cloud-init` configuration does NOT support Yubikey, so instead a dedicated ssh Ansible module is used to configure the SSH keys (~/.ssh/authorized_keys) in the remote VM.
+
+To do so, update your SSH public keys in [id_rsa.pub](./vars/id_rsa.pub).
+
+#### PM_PASS
 
 Export `PM_PASS` (password of the `root` user of your Proxmox server)
 
@@ -130,15 +145,18 @@ Export `PM_PASS` (password of the `root` user of your Proxmox server)
 export PM_PASS=
 ```
 
-Run the playbook
+### Run the playbook
 
 ```bash
 ansible-playbook -K -i inventory/hosts playbooks/bake.yml --tags=all
 ```
 
-> It will propmt you to enter the sudo password of the current host user (NOT the `user` in VM or Proxmxo).
+> ![NOTE]
+> It will prompt you to enter the sudo password of the current host user (NOT the `user` in VM or Proxmox).
 
-Also, check out the `build.log` while running the bake playbook
+### Inspect build logs
+
+Live logs are dumped to `build.log` while running the bake playbook
 
 ```bash
 tail -f build.log
