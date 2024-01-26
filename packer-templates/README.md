@@ -135,7 +135,7 @@ You `MUST` check out the default settings in the [bake.yml](./playbooks/bake.yml
 
 By default the standard `cloud-init` configuration does NOT support Yubikey, so instead a dedicated ssh Ansible module is used to configure the SSH keys (~/.ssh/authorized_keys) in the remote VM.
 
-To do so, update your SSH public keys in [id_rsa.pub](./vars/id_rsa.pub).
+To do so, update your SSH public keys in [id_rsa.pub](./id_rsa.pub)
 
 #### PM_PASS
 
