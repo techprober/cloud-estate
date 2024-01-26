@@ -151,7 +151,7 @@ export PM_PASS=
 ansible-playbook -K -i inventory/hosts playbooks/bake.yml --tags=all
 ```
 
-> ![NOTE]
+> [!NOTE]
 > It will prompt you to enter the sudo password of the current host user (NOT the `user` in VM or Proxmox).
 
 ### Inspect build logs
