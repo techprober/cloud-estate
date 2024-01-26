@@ -32,6 +32,7 @@ Maunally creating and managing VM Templates in Proxmox can become a challenge wi
     * [Playbook](#playbook)
     * [SSH](#ssh)
     * [PM_PASS](#pm_pass)
+    * [Install required Packer plugins](#install-required-packer-plugins)
   * [Run the playbook](#run-the-playbook)
   * [Inspect build logs](#inspect-build-logs)
 * [References](#references)
@@ -57,12 +58,6 @@ brew install hashicorp/tap/packer
 
 # verify installation
 packer
-```
-
-Install necessary plugins
-
-```bash
-packer init ./proxmox-packer-template.pkr.hcl
 ```
 
 For detailed instructions on how to install Packer on other platforms or Linux distributions, please head to this [ Getting Started ](https://learn.hashicorp.com/tutorials/packer/get-started-install-cli) guide.
@@ -143,6 +138,12 @@ Export `PM_PASS` (password of the `root` user of your Proxmox server)
 
 ```bash
 export PM_PASS=
+```
+
+#### Install required Packer plugins
+
+```bash
+packer init ./proxmox-packer-template.pkr.hcl
 ```
 
 ### Run the playbook
