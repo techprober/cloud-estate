@@ -11,7 +11,7 @@
     cloudimg_vm_id: 900
 
   roles:
-    - role: "remote.cloudimg.build/"
+    - role: remote.cloudimg.build/
 
 # --- STAGE 2: Build VM template ---
 - name: "Build VM template"
@@ -21,7 +21,7 @@
   tags: ["stage2", "build_vm_template"]
 
   roles:
-    - role: "local.packer.build/"
+    - role: local.packer.build/
 
 # --- STAGE 3: Run post-install tasks ---
 - name: "Run post-install tasks"
@@ -31,6 +31,5 @@
   become: yes
 
   roles:
-    - role: "remote.post-install.cloudinit/"
-    - role: "remote.post-install.locale/"
+    - role: remote.post-install.cloudinit/
 

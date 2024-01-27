@@ -3,5 +3,5 @@
   community.general.locale_gen:
     name: "{{ item }}"
     state: present
-  loop: "{{ post_install_locales }}"
+  loop: "{{ locales }}"
 

@@ -17,3 +17,4 @@
   - role: roles/apt.ops/install-packages.ops/
   - role: roles/maintenance.ops/key.ops/
   - role: roles/proxmox.packer.vm.ops/bootstrap.ops/
+  - role: roles/maintenance.ops/locales.ops/
