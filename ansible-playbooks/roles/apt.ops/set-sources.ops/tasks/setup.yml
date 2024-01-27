@@ -1,16 +1,11 @@
 ---
-- name: Setup custom apt source
-  ansible.builtin.copy:
-    dest: "/etc/apt/sources.list"
-    content: |
-      # Primary
-      deb {{ primary_source_uri }} {{ release }} main restricted universe multiverse
+- name: Setup custom apt source (Debian)
+  include: debian.yml
+  when: ansible_distribution == 'Debian'
 
-      # Primary Updates
-      deb {{ primary_source_uri }} {{ release }}-updates main restricted universe multiverse
-
-      # Security Patches
-      deb {{ security_source_uri }} {{ release }}-security main restricted universe multiverse
+- name: Setup custom apt source (Ubuntu)
+  include: ubuntu.yml
+  when: ansible_distribution == 'Ubuntu'
 
 - name: Remove apt lock files
   block:

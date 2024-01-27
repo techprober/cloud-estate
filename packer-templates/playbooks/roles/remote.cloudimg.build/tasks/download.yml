@@ -1,0 +1,6 @@
+---
+- name: Download cloudimg from source url
+  get_url:
+    url: "{{ image_source_url }}"
+    dest: "{{ proxmox_iso_storage_dir }}"
+    force: yes # overwrite existing files

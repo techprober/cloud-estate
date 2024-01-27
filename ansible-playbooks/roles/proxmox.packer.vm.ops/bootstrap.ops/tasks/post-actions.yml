@@ -11,9 +11,9 @@
     ln -s /etc/machine-id /var/lib/dbus/machine-id
 
 - name: Clean apt cache
-  shell: "apt -y autoremove --purge && apt-get -y clean"
-  args:
-    warn: false
+  ansible.builtin.apt:
+    autoclean: yes
+    clean: yes
 
 - name: Remove cache files under /tmp
   block:

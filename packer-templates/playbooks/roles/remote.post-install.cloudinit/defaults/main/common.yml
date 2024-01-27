@@ -1,0 +1,9 @@
+---
+vm_id: 9001
+vm_disk_size: "10G"
+
+cloudinit_username: "packer"
+cloudinit_password: "packer"
+
+proxmox_storage: "local-lvm"
+bootstrap_home_dir: "/root/automation"

@@ -20,42 +20,45 @@ Maunally creating and managing VM Templates in Proxmox can become a challenge wi
 
 ## Table of Contents
 
-- [Prerequisite](#prerequisite)
-- [What is Packer](#what-is-packer)
-- [Create a Proxmox user for Packer](#create-proxmox-user-for-packer)
-- [How to use](#how-to-use)
+<!-- vim-markdown-toc GFM -->
+
+* [Prerequisite](#prerequisite)
+* [What is Packer](#what-is-packer)
+* [Create a Proxmox user for Packer](#create-a-proxmox-user-for-packer)
+* [How to Use](#how-to-use)
+  * [Prerequisites to bake Debian VM](#prerequisites-to-bake-debian-vm)
+    * [Ansible inventory](#ansible-inventory)
+    * [Vars](#vars)
+    * [Playbook](#playbook)
+    * [SSH](#ssh)
+    * [PM_PASS](#pm_pass)
+    * [Install required Packer plugins](#install-required-packer-plugins)
+  * [Run the playbook](#run-the-playbook)
+  * [Inspect build logs](#inspect-build-logs)
+* [References](#references)
+
+<!-- vim-markdown-toc -->
 
 ## Prerequisite
-
-Install `jq` locally on your machine
-
-```bash
-# archlinux
-$ sudo pacman -S jq
-
-# debian/ubuntu
-sudo apt-get install jq
-```
 
 Install `packer` locally on your machine
 
 ```bash
 # archlinux
-$ sudo pacman -S packer
+sudo pacman -S packer
 
 # debian/ubuntu
-$ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-$ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-$ sudo apt-get update && sudo apt-get install packer
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+sudo apt-get update && sudo apt-get install packer
 
 # homebrew
-$ brew tap hashicorp/tap
-$ brew install hashicorp/tap/packer
+brew tap hashicorp/tap
+brew install hashicorp/tap/packer
 
 # verify installation
-$ packer
+packer
 ```
-Run `packer init` to install necessary plugins
 
 For detailed instructions on how to install Packer on other platforms or Linux distributions, please head to this [ Getting Started ](https://learn.hashicorp.com/tutorials/packer/get-started-install-cli) guide.
 
@@ -95,36 +98,69 @@ By using packer we can define our golden VM image as code so that we can easily 
 
 Packer requires a user account to perform actions on the Proxmox API. The following commands will create a new user account `packer@pve` with restricted permissions.
 
-```
-$ pveum useradd packer@pve
-$ pveum passwd packer@pve
-Enter new password: ****************
-Retype new password: ****************
-$ pveum roleadd Packer -privs "VM.Config.Disk VM.Config.CPU VM.Config.Memory Datastore.AllocateSpace Sys.Modify VM.Config.Options VM.Allocate VM.Audit VM.Console VM.Config.CDROM VM.Config.Network VM.PowerMgmt VM.Config.HWType VM.Monitor"
-$ pveum aclmod / -user packer@pve -role Packer
+```bash
+pveum useradd packer@pve
+pveum passwd packer@pve
+# Enter new password: ****************
+# Retype new password: ****************
+pveum aclmod / -user packer@pve -role PVEAdmin
 ```
 
 ## How to Use
 
-There is a dedicated blog post for the basic/advanced use cases using this Packer module. Please head over to [Use Packer like a Pro](https://www.hikariai.net/blog/24-use-packer-like-a-pro/) for more information
-
 ![](https://github.com/TechProber/cloud-estate/blob/master/packer-templates/assets/screenshot.png?raw=true)
 
-## Quick Use
+### Prerequisites to bake Debian VM
+
+Baking VM tempalte based on cloudimg is NOT a straightforward process, we need to first bake a `base-cloudimg-vm-template` as a foundation image to add customization on top of it. The full automation is achieved with Ansible, see [bake.yml](./playbooks/bake.yml).
+
+#### Ansible inventory
+
+You `MUST` update the inventory to point to your Proxmox host. See [hosts](./inventory/hosts).
+
+#### Vars
+
+You `MUST` update the `packer-specific` vars in[host.pkvars.hcl](./vars/host.pkvars.hcl) and [debian-12.pkvars.hcl](./vars/debian-12.pkvars.hcl) with your desired settings. For `playbook-related` vars, they are located at [playbooks/group_vars/all.yml](./playbooks/group_vars/all.yml) and [playbooks/vars/](./playbooks/vars/).
+
+#### Playbook
+
+You `MUST` check out the default settings in the [bake.yml](./playbooks/bake.yml) and update any settings that fit your need.
+
+#### SSH
+
+By default the standard `cloud-init` configuration does NOT support Yubikey, so instead a dedicated ssh Ansible module is used to configure the SSH keys (~/.ssh/authorized_keys) in the remote VM.
+
+To do so, update your SSH public keys in [id_rsa.pub](./id_rsa.pub).
+
+#### PM_PASS
+
+Export `PM_PASS` (password of the `root` user of your Proxmox server)
 
 ```bash
-# check usage
-./bake -h
+export PM_PASS=
+```
 
-# bake vm template
-# please do NOT use `~`, use $HOME instead
-export HOST_CONFIG=[HOST_CONFIG]
-export PACKER_VAR_FILE=[PACKER_VAR_FILE]
-# e.g.
-# export HOST_CONFIG=$HOME/workspace/vsphere-hub/packer/config.json
-# export PACKER_VAR_FILE=$HOME/workspace/vsphere-hub/packer/vars/pve-03-ubuntu-2204.json
+#### Install required Packer plugins
 
-./bake -i 9000 -t cn-ubuntu-2204-server -n prod-ubuntu-2204-server-template -c $HOST_CONFIG -f $PACKER_VAR_FILE
+```bash
+packer init ./proxmox-packer-template.pkr.hcl
+```
+
+### Run the playbook
+
+```bash
+ansible-playbook -K -i inventory/hosts playbooks/bake.yml --tags=all
+```
+
+> [!NOTE]
+> It will prompt you to enter the sudo password of the current host user (NOT the `user` in VM or Proxmox).
+
+### Inspect build logs
+
+Live logs are dumped to `build.log` while running the bake playbook
+
+```bash
+tail -f build.log
 ```
 
 ## References
@@ -140,3 +176,7 @@ export PACKER_VAR_FILE=[PACKER_VAR_FILE]
 - [Cloud images in Proxmox](https://gist.github.com/chriswayg/b6421dcc69cb3b7e41f2998f1150e1df)
 - [justin-p/packer-proxmox-ubuntu2004](https://github.com/justin-p/packer-proxmox-ubuntu2004/blob/main/playbooks/tasks/enable_cloud-init.yml)
 - [Packer on CICD](https://www.packer.io/guides/packer-on-cicd/pipelineing-builds)
+- [Packer SSH Communicator](https://developer.hashicorp.com/packer/docs/communicators/ssh)
+- [Proxmox Ubuntu CloudInit Example](https://github.com/UntouchedWagons/Ubuntu-CloudInit-Docs)
+- [Linux VM Templates in Proxmox on EASY MODE using Prebuilt Cloud Init Images!](https://www.apalrd.net/posts/2023/pve_cloud/)
+- [Packer with proxmox-clone](https://aaronsplace.co.uk/blog/2021-08-07-packer-proxmox-clone.html)

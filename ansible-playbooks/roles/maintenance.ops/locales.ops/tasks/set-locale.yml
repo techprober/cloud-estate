@@ -1,0 +1,7 @@
+---
+- name: Set default locale
+  community.general.locale_gen:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ locales }}"
+

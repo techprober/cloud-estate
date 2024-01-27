@@ -1,4 +1,4 @@
 ---
 operation: add
 public_keys:
-- /tmp/id_rsa.pub
+  - /tmp/id_rsa.pub

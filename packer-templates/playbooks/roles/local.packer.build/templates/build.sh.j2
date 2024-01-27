@@ -1,0 +1,10 @@
+#!/bin/bash
+
+packer build -force \
+  -var-file {{ host_config }} \
+  -var-file {{ vm_config }} \
+  -var playbook_file={{ playbook_file }} \
+  -var template_name={{ template_name }} \
+  -var proxmox_api_password=$PM_PASS \
+  -var vm_id={{ vm_id }} \
+  {{ packer_template }} | tee build.log

@@ -1,0 +1,45 @@
+---
+- name: Create bootstrap home directory
+  file:
+    path: "{{ bootstrap_home_dir }}"
+    state: directory
+    mode: 0644
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+
+- name: Copy template script to bootstrap home directory
+  template:
+    # must use absolute path
+    src: "{{ role_path }}/templates/bootstrap.sh.j2"
+    dest: "{{ bootstrap_home_dir }}/bootstrap.sh"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: u+x
+
+- name: Purge VM template if exists
+  block:
+    - name: Check if vm already exists
+      stat:
+        path: "{{ proxmox_vm_config_dir }}/{{ cloudimg_vm_id }}.conf"
+      register: vm_conf
+
+    - name: Purge existing vm template
+      when: vm_conf.stat.exists
+      command: "qm destroy {{ cloudimg_vm_id }} --purge --destroy-unreferenced-disks"
+
+- name: Run bootstrap script
+  command: "sh {{ bootstrap_home_dir }}/bootstrap.sh"
+
+- name: Add custom vendor cloudinit config
+  block:
+    - name: Copy vendor cloudinit config to snippets directory
+      template:
+        # must use absolute path
+        src: "{{ role_path }}/files/vendor.yaml.j2"
+        dest: "{{ proxmox_cloudinit_dir }}/vendor.yaml"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: 0644
+
+    - name: Use custom vendor cloudinit userconfig
+      command: "qm set {{ cloudimg_vm_id }} --cicustom 'vendor=local:snippets/vendor.yaml'"

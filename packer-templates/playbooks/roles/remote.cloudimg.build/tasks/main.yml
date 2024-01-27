@@ -1,0 +1,6 @@
+---
+- name: Include distro-specific variables
+  include_vars: "{{ role_path }}/vars/distros/{{ distro }}.yml"
+
+- include_tasks: download.yml
+- include_tasks: bootstrap.yml

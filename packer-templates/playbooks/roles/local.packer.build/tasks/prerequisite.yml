@@ -1,0 +1,30 @@
+---
+- name: Install unzip
+  include_tasks: install-unzip.yml
+
+- name: Download packer release
+  get_url:
+    url: "{{ packer_release_url }}"
+    dest: "/tmp/{{ packer_release_filename }}"
+    force: yes # overwrite existing files
+
+- name: Unzip packer binary from release
+  unarchive:
+    src: "/tmp/{{ packer_release_filename }}"
+    dest: "{{ packer_install_path }}"
+    remote_src: yes
+  become: yes
+
+- name: Make packer executable
+  file:
+    path: "{{ packer_install_path }}/packer"
+    mode: a+x
+
+- name: Set parent directory path
+  set_fact:
+    workspace_dir: "{{ playbook_dir | dirname }}"
+
+- name: Install required packer plugins
+  command: "packer init {{ workspace_dir }}/{{ packer_template }}"
+                               
+                               

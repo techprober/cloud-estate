@@ -1,0 +1,13 @@
+# distro specific vars
+---
+arch: "x86_64"
+release: "tumbleweed"
+release_version: "latest"
+alias_name: "openSUSE Tumbleweed"
+image_format: "qcow2"
+image_base_url: "https://download.opensuse.org/{{ release }}/appliances"
+image_name: "openSUSE-Tumbleweed-Minimal-VM.{{ arch }}-Cloud.{{ image_format }}"
+image_source_url: "{{ image_base_url }}/{{ image_name }}"
+
+cloudimg_vm_name: "opensuse-tumbleweed-cloudimg"
+cloudimg_template_name: "opensuse-tumbleweed-cloudimg-template"

@@ -1,0 +1,8 @@
+# packer-related vars
+---
+install_packer: no
+arch: "amd64"
+packer_version: "1.10.0"
+packer_release_url: "https://releases.hashicorp.com/packer/{{ packer_version }}/packer_{{ packer_version }}_linux_{{ arch }}.zip"
+packer_release_filename: "packer_{{ packer_version }}_linux_{{ arch }}.zip"
+packer_install_path: "/usr/local/bin"
