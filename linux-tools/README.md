@@ -448,7 +448,7 @@ Topics
 - [![Neovim][nvim icon]](https://github.com/startup-nvim/startup.nvim) [startup.nvim](https://github.com/startup-nvim/startup.nvim) - A highly configurable neovim startup screen
 - [![Neovim][nvim icon]](https://github.com/Exafunction/codeium.vim) [codeium.vim](https://github.com/Exafunction/codeium.vim) - Free, ultrafast Copilot alternative for Vim and Neovim
 - [![Neovim][nvim icon]](https://github.com/m4xshen/hardtime.nvim) [hardtime.nvim](https://github.com/m4xshen/hardtime.nvim) - A Neovim plugin helping you establish good command workflow and habit
-- [![Neovim][nvim icon]](https://github.com/xiyaowong/transparent.nvim) [transparent.nvim](https://github.com/xiyaowong/transparent.nvim) - Remove all background colors to make nvim transparent
+- [![Neovim][nvim icon]](https://github.com/christoomey/vim-tmux-navigator) [vim-tmux-navigator.nvim](https://github.com/christoomey/vim-tmux-navigator) - A Neovim plugin will allow you to navigate seamlessly between vim and tmux splits using a consistent set of hotkeys.
 
 ## Contribution
 
