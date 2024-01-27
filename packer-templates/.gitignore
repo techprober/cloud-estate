@@ -1,2 +1,5 @@
 packer_cache
 playbooks/.vault_pass
+build.sh
+build.log
+playbooks/bake.customized.yml

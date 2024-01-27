@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# --- Define variables --- #
+# Username and password of the VM
+username={{ cloudinit_username }}
+password={{ cloudinit_password }}
+# Name of the storage
+storage={{ proxmox_storage }}
+
+# --- Bootstrap --- #
+create_template() {
+  # Create new VM
+  qm create $1 --name $2 --ostype l26
+  # Set networking to default bridge
+  qm set $1 --net0 virtio,bridge={{ cloudinit_default_network_interface }}
+  # Set display to std
+  qm set $1 --vga std
+  # Set memory, cpu, type defaults
+  # If you are in a cluster, you might need to change cpu type
+  qm set $1 --memory 1024 --cores 4 --cpu host
+  # Set boot device to new file
+  qm set $1 --scsi0 ${storage}:0,import-from="$3",discard=on
+  # Set scsi hardware as default boot disk using virtio scsi single
+  qm set $1 --boot order=scsi0 --scsihw virtio-scsi-single
+  # Enable qemu-guest-agent in case the guest has it available
+  qm set $1 --agent enabled=1,fstrim_cloned_disks=1
+  # Add cloud-init device
+  qm set $1 --ide2 ${storage}:cloudinit
+  # Set CI ip config
+  # IP6 = auto means SLAAC (a reliable default with no bad effects on non-IPv6 networks)
+  # IP = DHCP means what it says, so leave that out entirely on non-IPv4 networks to avoid DHCP delays
+  qm set $1 --ipconfig0 "ip6=auto,ip=dhcp"
+  # Add the user
+  qm set $1 --ciuser ${username}
+  qm set $1 --cipassword ${password}
+  # Enable upgrade
+  qm set $1 --ciupgrade 1
+  # Resize the disk to 8G, a reasonable minimum. You can expand it more later.
+  # If the disk is already bigger than 8G, this will fail, and that is okay.
+  qm disk resize $1 scsi0 10G
+  # Assign tags
+  qm set $1 --tags cloudinit,{{ distro }}
+  # Make it a template
+  qm template $1
+}
+
+create_template {{ cloudimg_vm_id }} {{ cloudimg_template_name }} {{ proxmox_iso_storage_dir }}/{{ image_name }}

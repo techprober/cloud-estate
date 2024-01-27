@@ -1,0 +1,12 @@
+---
+- name: Copy template script to bootstrap home directory
+  template:
+    # must use absolute path
+    src: "{{ role_path }}/templates/update-cloudinit.sh.j2"
+    dest: "{{ bootstrap_home_dir }}/update-cloudinit.sh"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: u+x
+
+- name: Run update-cloudinit script
+  command: "sh {{ bootstrap_home_dir }}/update-cloudinit.sh"

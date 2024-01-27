@@ -1,0 +1,9 @@
+[proxmox_servers]
+# proxmox-net ansible_host=10.178.0.1
+proxmox-03 ansible_host=10.178.0.12
+
+[proxmox_servers:vars]
+ansible_become=yes
+ansible_ssh_user=root
+ansible_become_user=root
+

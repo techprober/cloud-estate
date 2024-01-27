@@ -1,0 +1,12 @@
+---
+# Minio base playbook
+
+- name: "Bake Proxmox ubuntu-2204-server with Minio"
+  hosts: localhost
+  become: yes
+
+  vars_files:
+    - ./vars/minio.yml
+
+  roles:
+  - role: roles/proxmox.packer.vm.ops/minio.ops/

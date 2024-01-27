@@ -1,0 +1,28 @@
+---
+- name: Check operating system release
+  setup:
+    gather_subset: min
+
+- name: Install unzip on Alpine
+  apk:
+    name: unzip
+    state: present
+  when: ansible_facts['distribution'] == 'Alpine'
+
+- name: Install unzip on Debian or Ubuntu
+  apt:
+    name: unzip
+    state: present
+  when: ansible_facts['distribution'] in ['Debian', 'Ubuntu']
+
+- name: Install unzip on Fedora
+  dnf:
+    name: unzip
+    state: present
+  when: ansible_facts['distribution'] == 'Fedora'
+
+- name: Install unzip on Arch Linux
+  pacman:
+    name: unzip
+    state: present
+  when: ansible_facts['distribution'] == 'Archlinux'

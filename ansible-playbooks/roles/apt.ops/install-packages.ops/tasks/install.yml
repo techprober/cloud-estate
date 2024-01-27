@@ -6,10 +6,12 @@
 - name: Install base packages defined in the list
   ansible.builtin.apt:
     pkg: "{{ base_packages }}"
+    install_recommends: yes
 
 - name: Install user-defined extra packages
   ansible.builtin.apt:
     pkg: "{{ extra_packages }}"
+    install_recommends: yes
 
 - name: Remove useless packages from the cache
   apt:

@@ -1,0 +1,13 @@
+# distro specific vars
+---
+arch: "amd64"
+release: "mantic"
+release_version: "22.10"
+alias_name: "Ubuntu 22.10"
+image_format: "img"
+image_base_url: "https://cloud-images.ubuntu.com/minimal/releases/{{ release }}/release"
+image_name: "ubuntu-23.10-minimal-cloudimg-{{ arch }}.{{ image_format }}"
+image_source_url: "{{ image_base_url }}/{{ image_name }}"
+
+cloudimg_template_name: "ubuntu-22.10-cloudimg-template"
+cloudimg_vm_name: "ubuntu-22.10-cloudimg"

@@ -1,0 +1,16 @@
+# common vars
+---
+cloudimg_vm_id: 900
+
+proxmox_storage: "local-lvm"
+
+proxmox_iso_storage_dir: "/var/lib/vz/template/iso"
+proxmox_cloudinit_dir: "/var/lib/vz/snippets"
+proxmox_vm_config_dir: "/etc/pve/local/qemu-server"
+bootstrap_home_dir: "/root/automation"
+
+cloudinit_username: "packer"
+cloudinit_password: "packer"
+cloudinit_default_network_interface: "vmbr0"
+cloudinit_timezone: "Asia/Shanghai"
+cloudinit_locale: "en"

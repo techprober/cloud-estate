@@ -1,0 +1,5 @@
+---
+- include_tasks: prerequisite.yml
+  when: install_packer
+- include_tasks: build.yml
+
