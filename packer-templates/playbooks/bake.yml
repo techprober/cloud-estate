@@ -32,4 +32,5 @@
 
   roles:
     - role: "remote.post-install.cloudinit/"
+    - role: "remote.post-install.locale/"
 
