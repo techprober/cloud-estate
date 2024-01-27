@@ -15,24 +15,36 @@
 
 Feel free to contribute. Any recommendations and suggestions are welcome.
 
-- [Awesome](#awesome)
-- [GitHub Related](#github-related)
-- [Telegram Related](#telegram-related)
-- [Shell Related](#shell-related)
-- [Productive Tools](#productive-tools)
-- [DevOps Related](#devops-related)
-- [HomeLab Related](#homelab-related)
-- [VPS Related](#vps-related)
-- [Command Line Utilities](#command-line-utilities)
-- [Docker Images](#docker-image)
-- [Kubernetes Tools](#kubernetes-tools)
-- [CloudNative Solutions](#cloudnative-solutions)
-- [Open-Source Software](#open-source-software)
-- [Programming Addons](#programming-addons)
-- [Programming Specific](#programming-specific)
-- [Vim/Neovim Addons](#vimneovim-addons)
-- [Contributors](https://github.com/TechProber/cloud-estate/graphs/contributors)
-- [How to Contribute](https://github.com/TechProber/cloud-estate/blob/master/docs/contribute.md)
+<!-- vim-markdown-toc GFM -->
+
+* [Wiki](#wiki)
+* [Awesome](#awesome)
+* [GitHub Related](#github-related)
+* [Telegram Related](#telegram-related)
+* [Shell Related](#shell-related)
+* [Productive Tools](#productive-tools)
+* [DevOps Related](#devops-related)
+* [HomeLab Related](#homelab-related)
+* [VPS Related](#vps-related)
+* [Command Line Utilities](#command-line-utilities)
+* [Docker Images](#docker-images)
+* [Kubernetes Tools](#kubernetes-tools)
+* [CloudNative Solutions](#cloudnative-solutions)
+* [Open-Source Software](#open-source-software)
+* [Programming Addons](#programming-addons)
+* [Programming Specific](#programming-specific)
+  * [Golang](#golang)
+  * [Python](#python)
+  * [Node](#node)
+* [Vim/Neovim Addons](#vimneovim-addons)
+* [Contribution](#contribution)
+* [License](#license)
+
+<!-- vim-markdown-toc -->
+
+## Wiki
+
+- [![Open-Source Software][wiki icon]](https://github.com/EbookFoundation/free-programming-books) [free-programming-books](https://github.com/EbookFoundation/free-programming-books) - 📚 Freely available programming books
 
 ## Awesome
 
@@ -52,6 +64,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][awesome icon]](https://github.com/rust-unofficial/awesome-rust) [awesome-rust](https://github.com/rust-unofficial/awesome-rust) - A curated list of Rust code and resources.
 - [![Open-Source Software][awesome icon]](https://github.com/agarrharr/awesome-cli-apps) [awesome-cli-apps](https://github.com/agarrharr/awesome-cli-apps) - 🖥 📊 🕹 🛠 A curated list of command line apps
 - [![Open-Source Software][awesome icon]](https://github.com/sindresorhus/awesome-chatgpt) [awesome-chatgpt](https://github.com/sindresorhus/awesome-chatgpt) - 🤖 Awesome list for ChatGPT — an artificial intelligence chatbot developed by OpenAI
+- [![Open-Source Software][awesome icon]](https://github.com/hyprland-community/awesome-hyprland) [awesome-hyprland](https://github.com/hyprland-community/awesome-hyprland) - Awesome list for Hyprland [maintainer=@yavko]
 
 ## GitHub Related
 
@@ -103,6 +116,8 @@ Topics
 - [![Open-Source Software][terminal icon]](https://github.com/bootandy/dust) [dust](https://github.com/bootandy/dust) - A more intuitive version of du in rust
 - [![Open-Source Software][terminal icon]](https://github.com/Canop/broot) [broot](https://github.com/Canop/broot) - A new way to see and navigate directory trees
 - [![Open-Source Software][terminal icon]](https://github.com/swsnr/mdcat) [mdcat](https://github.com/swsnr/mdcat) - cat for markdown
+- [![Open-Source Software][terminal icon]](https://github.com/remi/teamocil) [teamocil](https://github.com/remi/teamocil) - There's no I in Teamocil. At least not where you think. Teamocil is a simple tool used to automatically create windows and panes in tmux with YAML files.
+- [![Open-Source Software][terminal icon]](https://github.com/joshmedeski/t-smart-tmux-session-manager) [t-smart-tmux-session-manager](https://github.com/joshmedeski/t-smart-tmux-session-manager) - t, the smart tmux session manager
 
 ## Productive Tools
 
@@ -319,6 +334,8 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/makeplane/plane) [plane](https://github.com/makeplane/plane) - 🔥 🔥 🔥 Open Source JIRA, Linear and Height Alternative. Plane helps you track your issues, epics, and product roadmaps in the simplest way possible.
 - [![Open-Source Software][oss icon]](https://github.com/jpanther/lynx) [lynx](https://github.com/jpanther/lynx) - A simple links theme for Hugo built with Tailwind CSS.
 - [![Open-Source Software][oss icon]](https://github.com/debauchee/barrier) [barrier](https://github.com/debauchee/barrier) - Open-source KVM software
+- [![Open-Source Software][oss icon]](https://github.com/jahnf/Projecteur) [Projecteur](https://github.com/jahnf/Projecteur) - Linux Desktop Application for the Logitech Spotlight device (and similar devices) - Digital Laser Pointer
+- [![Open-Source Software][oss icon]](https://github.com/russelltg/wl-screenrec) [wlroots](https://github.com/russelltg/wl-screenrec) - High performance wlroots screen recording, featuring hardware encoding
 
 ## Programming Addons
 
@@ -454,3 +471,4 @@ Special thanks go to all [contributors](https://github.com/TechProber/cloud-esta
 [node icon]: ./assets/nodejs.svg
 [terminal icon]: ./assets/terminal.svg
 [devops icon]: ./assets/devops.png
+[wiki icon]: ./assets/wiki.png
