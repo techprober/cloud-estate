@@ -402,6 +402,7 @@ Topics
 
 ## Vim/Neovim Addons
 
+- [![Neovim][nvim icon]](https://github.com/windwp/nvim-autopairs)[nvim-autopairs](https://github.com/windwp/nvim-autopairs) - Autopairs for neovim written in lua
 - [![Neovim][nvim icon]](https://github.com/neovim/nvim-lspconfig) [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - Quickstart configurations for the Neovim LSP client
 - [![Neovim][nvim icon]](https://github.com/folke/which-key.nvim) [which-key.nvim](https://github.com/folke/which-key.nvim) - WhichKey is a lua plugin for Neovim 0.5 that displays a popup with possible key bindings of the command you started typing
 - [![Neovim][nvim icon]](https://github.com/mhartington/formatter.nvim) [formatter.nvim](https://github.com/mhartington/formatter.nvim) - A format runner for neovim, written in lua
