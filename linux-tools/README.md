@@ -450,6 +450,8 @@ Topics
 - [![Neovim][nvim icon]](https://github.com/Exafunction/codeium.vim) [codeium.vim](https://github.com/Exafunction/codeium.vim) - Free, ultrafast Copilot alternative for Vim and Neovim
 - [![Neovim][nvim icon]](https://github.com/m4xshen/hardtime.nvim) [hardtime.nvim](https://github.com/m4xshen/hardtime.nvim) - A Neovim plugin helping you establish good command workflow and habit
 - [![Neovim][nvim icon]](https://github.com/christoomey/vim-tmux-navigator) [vim-tmux-navigator.nvim](https://github.com/christoomey/vim-tmux-navigator) - A Neovim plugin will allow you to navigate seamlessly between vim and tmux splits using a consistent set of hotkeys.
+- [![Neovim][nvim icon]](https://github.com/folke/lazy.nvim) [lazy.nvim](https://github.com/folke/lazy.nvim) - 💤 A modern plugin manager for Neovim
+
 
 ## Contribution
 
