@@ -65,6 +65,10 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][awesome icon]](https://github.com/agarrharr/awesome-cli-apps) [awesome-cli-apps](https://github.com/agarrharr/awesome-cli-apps) - 🖥 📊 🕹 🛠 A curated list of command line apps
 - [![Open-Source Software][awesome icon]](https://github.com/sindresorhus/awesome-chatgpt) [awesome-chatgpt](https://github.com/sindresorhus/awesome-chatgpt) - 🤖 Awesome list for ChatGPT — an artificial intelligence chatbot developed by OpenAI
 - [![Open-Source Software][awesome icon]](https://github.com/hyprland-community/awesome-hyprland) [awesome-hyprland](https://github.com/hyprland-community/awesome-hyprland) - Awesome list for Hyprland [maintainer=@yavko]
+- [![Open-Source Software][awesome icon]](https://github.com/missing-semester/missing-semester) [missing-semester](https://github.com/missing-semester/missing-semester) - The Missing Semester of Your CS Education 📚
+- [![Open-Source Software][awesome icon]](https://github.com/awesome-selfhosted/awesome-selfhosted) [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) - A list of Free Software network services and web applications which can be hosted on your own servers
+- [![Open-Source Software][awesome icon]](https://github.com/eliaszon/Programmers-Overseas-Job-Interview-Handbook) [Programmers-Overseas-Job-Interview-Handbook](https://github.com/eliaszon/Programmers-Overseas-Job-Interview-Handbook) - 🏂🏻 程序员海外工作/英文面试手册
+- [![Open-Source Software][awesome icon]](https://github.com/rothgar/awesome-tmux) [awesome-tmux](https://github.com/rothgar/awesome-tmux) - A list of awesome resources for tmux
 
 ## GitHub Related
 
@@ -93,6 +97,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][github icon]](https://github.com/RomanosTrechlis/actions-copy-files) [actions-copy-files](https://github.com/RomanosTrechlis/actions-copy-files) - Action that copies files or directories from GitHub repository to another.
 - [![Open-Source Software][github icon]](https://github.com/wearerequired/git-mirror-action) [git-mirror-action](https://github.com/wearerequired/git-mirror-action) - ⏭ A GitHub Action for mirroring a git repository to another location via SSH.
 - [![Open-Source Software][github icon]](https://github.com/git-for-windows/rss-to-issues) [rss-to-issues](https://github.com/git-for-windows/rss-to-issues) - create issues from a syndication feed (RSS or Atom).
+- [![Open-Source Software][github icon]](https://github.com/convictional/trigger-workflow-and-wait) [trigger-workflow-and-wait](https://github.com/convictional/trigger-workflow-and-wait) - Trigger a workflow in another (or same) repository and wait for the job to finish.
 
 Topics
 
@@ -208,6 +213,8 @@ Topics
 - [![Open-Source Software][terminal icon]](https://github.com/amanusk/s-tui/) [s-tui](https://github.com/amanusk/s-tui/) - Terminal-based CPU stress and monitoring utility
 - [![Open-Source Software][terminal icon]](https://github.com/bensadeh/tailspin) [tailspin](https://github.com/bensadeh/tailspin) - 🌀 A log file highlighter
 - [![Open-Source Software][terminal icon]](https://github.com/eradman/entr) [entr](https://github.com/eradman/entr) - Run arbitrary commands when files change
+- [![Open-Source Software][terminal icon]](https://github.com/sachaos/viddy) [viddy](https://github.com/sachaos/viddy) - 👀 A modern watch command. Time machine and pager etc.
+- [![Open-Source Software][terminal icon]](https://github.com/digint/btrbk) [btrbk](https://github.com/digint/btrbk) - Tool for creating snapshots and remote backups of btrfs subvolumes
 
 ## Docker Images
 
@@ -336,6 +343,12 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/debauchee/barrier) [barrier](https://github.com/debauchee/barrier) - Open-source KVM software
 - [![Open-Source Software][oss icon]](https://github.com/jahnf/Projecteur) [Projecteur](https://github.com/jahnf/Projecteur) - Linux Desktop Application for the Logitech Spotlight device (and similar devices) - Digital Laser Pointer
 - [![Open-Source Software][oss icon]](https://github.com/russelltg/wl-screenrec) [wlroots](https://github.com/russelltg/wl-screenrec) - High performance wlroots screen recording, featuring hardware encoding
+- [![Open-Source Software][oss icon]](https://github.com/ente-io/ente) [ente](https://github.com/ente-io/ente) - Fully open source, End to End Encrypted alternative to Google Photos and Apple Photos
+- [![Open-Source Software][oss icon]](https://github.com/rvaiya/keyd) [keyd](https://github.com/rvaiya/keyd) - A key remapping daemon for linux.
+- [![Open-Source Software][oss icon]](https://github.com/dbgate/dbgate) [dbgate](https://github.com/dbgate/dbgate) - Database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others. Runs under Windows, Linux, Mac or as web application
+- [![Open-Source Software][oss icon]](https://github.com/ossrs/srs) [srs](https://github.com/ossrs/srs) - SRS is a simple, high-efficiency, real-time video server supporting RTMP, WebRTC, HLS, HTTP-FLV, SRT, MPEG-DASH, and GB28181.
+- [![Open-Source Software][oss icon]](https://github.com/apognu/tuigreet) [tuigreet](https://github.com/apognu/tuigreet) - Graphical console greeter for greetd
+- [![Open-Source Software][oss icon]](https://github.com/AdnanHodzic/auto-cpufreq) [auto-cpufreq](https://github.com/AdnanHodzic/auto-cpufreq) - Automatic CPU speed & power optimizer for Linux
 
 ## Programming Addons
 
@@ -348,6 +361,7 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/dbcli/litecli) [litecli](https://github.com/dbcli/litecli) - CLI for SQLite Databases with auto-completion and syntax highlighting
 - [![Open-Source Software][oss icon]](https://github.com/openfaas/of-watchdog) [of-watchdog](https://github.com/openfaas/of-watchdog) - Reverse proxy for STDIO and HTTP microservices
 - [![Open-Source Software][oss icon]](https://github.com/Idered/chalk.ist) [chalk.ist](https://github.com/Idered/chalk.ist) - 📷 Create beautiful images of your source code
+- [![Open-Source Software][oss icon]](https://github.com/tconbeer/harlequin) [harlequin](https://github.com/tconbeer/harlequin) - The SQL IDE for Your Terminal.
 
 ## Programming Specific
 
@@ -451,7 +465,8 @@ Topics
 - [![Neovim][nvim icon]](https://github.com/m4xshen/hardtime.nvim) [hardtime.nvim](https://github.com/m4xshen/hardtime.nvim) - A Neovim plugin helping you establish good command workflow and habit
 - [![Neovim][nvim icon]](https://github.com/christoomey/vim-tmux-navigator) [vim-tmux-navigator.nvim](https://github.com/christoomey/vim-tmux-navigator) - A Neovim plugin will allow you to navigate seamlessly between vim and tmux splits using a consistent set of hotkeys.
 - [![Neovim][nvim icon]](https://github.com/folke/lazy.nvim) [lazy.nvim](https://github.com/folke/lazy.nvim) - 💤 A modern plugin manager for Neovim
-
+- [![Neovim][nvim icon]](https://copilotc-nvim.github.io/CopilotChat.nvim/) [CopilotChat.nvim](https://copilotc-nvim.github.io/CopilotChat.nvim/) - Copilot Chat for Neovim
+- [![Neovim][nvim icon]](https://github.com/github/copilot.vim) [copilot.vim](https://github.com/github/copilot.vim) - Neovim plugin for GitHub Copilot
 
 ## Contribution
 
