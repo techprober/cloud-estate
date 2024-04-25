@@ -467,6 +467,7 @@ Topics
 - [![Neovim][nvim icon]](https://github.com/folke/lazy.nvim) [lazy.nvim](https://github.com/folke/lazy.nvim) - 💤 A modern plugin manager for Neovim
 - [![Neovim][nvim icon]](https://copilotc-nvim.github.io/CopilotChat.nvim/) [CopilotChat.nvim](https://copilotc-nvim.github.io/CopilotChat.nvim/) - Copilot Chat for Neovim
 - [![Neovim][nvim icon]](https://github.com/github/copilot.vim) [copilot.vim](https://github.com/github/copilot.vim) - Neovim plugin for GitHub Copilot
+- [![Neovim][nvim icon]](https://github.com/akinsho/bufferline.nvim) [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) - A snazzy bufferline for Neovim
 
 ## Contribution
 
