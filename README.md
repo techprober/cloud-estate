@@ -16,7 +16,7 @@
 
 CopyRight 2021-2022 TechProber. All rights reserved.
 
-Maintainer: [ Kevin Yu (@yqlbu) ](https://github.com/yqlbu), [ Shi Kun (@kunish) ](https://github.com/kunish)
+Maintainer: [ Kev (@piyoki) ](https://github.com/piyoki), [ Shi Kun (@kunish) ](https://github.com/kunish)
 
 This repo serves to provide the end-users a way to better speed up their cloud automation process. Feel free to contribute.
 
