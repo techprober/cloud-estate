@@ -14,9 +14,7 @@
 
 ## Introduction
 
-CopyRight 2021-2022 TechProber. All rights reserved.
-
-Maintainer: [ Kev (@piyoki) ](https://github.com/piyoki), [ Kunish (@kunish) ](https://github.com/kunish)
+CopyRight 2021-2024 TechProber. All rights reserved.
 
 This repo serves to provide the end-users a way to better speed up their cloud automation process. Feel free to contribute.
 
