@@ -14,7 +14,7 @@
 
 ## Introduction
 
-CopyRight 2021-2024 TechProber. All rights reserved.
+CopyRight 2021-2024 @techprober. All rights reserved.
 
 This repo serves to provide the end-users a way to better speed up their cloud automation process. Feel free to contribute.
 
