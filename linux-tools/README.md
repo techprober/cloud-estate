@@ -219,6 +219,7 @@ Topics
 - [![Open-Source Software][terminal icon]](https://github.com/sachaos/viddy) [viddy](https://github.com/sachaos/viddy) - 👀 A modern watch command. Time machine and pager etc.
 - [![Open-Source Software][terminal icon]](https://github.com/digint/btrbk) [btrbk](https://github.com/digint/btrbk) - Tool for creating snapshots and remote backups of btrfs subvolumes
 - [![Open-Source Software][terminal icon]](https://github.com/itsjunetime/tdf) [tdf](https://github.com/itsjunetime/tdf) - A tui-based PDF viewer
+- [![Open-Source Software][terminal icon]](https://github.com/tvrzna/emptty) [emptty](https://github.com/tvrzna/emptty) - Dead simple CLI Display Manager on TTY
 
 ## Docker Images
 
