@@ -141,6 +141,7 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/atuinsh/atuin) [atuin](https://github.com/atuinsh/atuin) - ✨ Magical shell history
 - [![Open-Source Software][oss icon]](https://github.com/fosskers/aura) [aura](https://github.com/fosskers/aura) - A secure, multilingual package manager for Arch Linux and the AUR.
 - [![Open-Source Software][oss icon]](https://github.com/arl/gitmux) [gitmux](https://github.com/arl/gitmux) - 💻 Git in your tmux status bar
+- [![Open-Source Software][oss icon]](https://github.com/yorukot/superfile) [superfile](https://github.com/yorukot/superfile) - Pretty fancy and modern terminal file manager
 
 ## DevOps Related
 
