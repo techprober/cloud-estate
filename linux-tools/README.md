@@ -125,6 +125,7 @@ Topics
 - [![Open-Source Software][terminal icon]](https://github.com/remi/teamocil) [teamocil](https://github.com/remi/teamocil) - There's no I in Teamocil. At least not where you think. Teamocil is a simple tool used to automatically create windows and panes in tmux with YAML files.
 - [![Open-Source Software][terminal icon]](https://github.com/joshmedeski/t-smart-tmux-session-manager) [t-smart-tmux-session-manager](https://github.com/joshmedeski/t-smart-tmux-session-manager) - t, the smart tmux session manager
 - [![Open-Source Software][terminal icon]](https://github.com/Morantron/tmux-fingers) [tmux-fingers](https://github.com/Morantron/tmux-fingers) - copy pasting in terminal with vimium/vimperator like hints.
+- [![Open-Source Software][terminal icon]](https://github.com/chaosprint/asak) [asak](https://github.com/chaosprint/asak) - A cross-platform audio recording/playback CLI tool with TUI, written in Rust.
 
 ## Productive Tools
 
