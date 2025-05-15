@@ -478,6 +478,7 @@ Topics
 - [![Neovim][nvim icon]](https://github.com/notjedi/nvim-rooter.lua) [nvim-rooter.lua](https://github.com/notjedi/nvim-rooter.lua) - minimal implementation of vim-rooter in lua.
 - [![Neovim][nvim icon]](https://github.com/tamago324/lir.nvim) [lir.nvim](https://github.com/tamago324/lir.nvim) - Neovim file explorer
 - [![Neovim][nvim icon]](https://github.com/stevearc/oil.nvim) [oil.nvim](https://github.com/stevearc/oil.nvim) - Neovim file explorer: edit your filesystem like a buffer
+- [![Neovim][nvim icon]](https://github.com/rmagatti/auto-session) [auto-session](https://github.com/rmagatti/auto-session) - A small automated session manager for Neovim
 
 ## Contribution
 
