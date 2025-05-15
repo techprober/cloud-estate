@@ -473,8 +473,9 @@ Topics
 - [![Neovim][nvim icon]](https://copilotc-nvim.github.io/CopilotChat.nvim/) [CopilotChat.nvim](https://copilotc-nvim.github.io/CopilotChat.nvim/) - Copilot Chat for Neovim
 - [![Neovim][nvim icon]](https://github.com/github/copilot.vim) [copilot.vim](https://github.com/github/copilot.vim) - Neovim plugin for GitHub Copilot
 - [![Neovim][nvim icon]](https://github.com/akinsho/bufferline.nvim) [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) - A snazzy bufferline for Neovim
-- [![Neovim][nvim icon]](https://github.com/notjedi/nvim-rooter.lua) [nvim-rooter.lua](https://github.com/notjedi/nvim-rooter.lua) - minimal implementation of vim-rooter in lua. 
-- [![Neovim][nvim icon]](https://github.com/tamago324/lir.nvim) [lir.nvim](https://github.com/tamago324/lir.nvim) - Neovim file explorer 
+- [![Neovim][nvim icon]](https://github.com/notjedi/nvim-rooter.lua) [nvim-rooter.lua](https://github.com/notjedi/nvim-rooter.lua) - minimal implementation of vim-rooter in lua.
+- [![Neovim][nvim icon]](https://github.com/tamago324/lir.nvim) [lir.nvim](https://github.com/tamago324/lir.nvim) - Neovim file explorer
+- [![Neovim][nvim icon]](https://github.com/stevearc/oil.nvim) [oil.nvim](https://github.com/stevearc/oil.nvim) - Neovim file explorer: edit your filesystem like a buffer
 
 ## Contribution
 
