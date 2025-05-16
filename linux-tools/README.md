@@ -480,6 +480,7 @@ Topics
 - [![Neovim][nvim icon]](https://github.com/tamago324/lir.nvim) [lir.nvim](https://github.com/tamago324/lir.nvim) - Neovim file explorer
 - [![Neovim][nvim icon]](https://github.com/stevearc/oil.nvim) [oil.nvim](https://github.com/stevearc/oil.nvim) - Neovim file explorer: edit your filesystem like a buffer
 - [![Neovim][nvim icon]](https://github.com/rmagatti/auto-session) [auto-session](https://github.com/rmagatti/auto-session) - A small automated session manager for Neovim
+- [![Neovim][nvim icon]](https://github.com/bngarren/checkmate.nvim) [checkmate.nvim](https://github.com/bngarren/checkmate.nvim) - A simple yet sophisticated Neovim To-do plugin
 
 ## Contribution
 
