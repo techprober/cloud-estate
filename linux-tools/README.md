@@ -357,6 +357,7 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/ossrs/srs) [srs](https://github.com/ossrs/srs) - SRS is a simple, high-efficiency, real-time video server supporting RTMP, WebRTC, HLS, HTTP-FLV, SRT, MPEG-DASH, and GB28181.
 - [![Open-Source Software][oss icon]](https://github.com/apognu/tuigreet) [tuigreet](https://github.com/apognu/tuigreet) - Graphical console greeter for greetd
 - [![Open-Source Software][oss icon]](https://github.com/AdnanHodzic/auto-cpufreq) [auto-cpufreq](https://github.com/AdnanHodzic/auto-cpufreq) - Automatic CPU speed & power optimizer for Linux
+- [![Open-Source Software][oss icon]](https://github.com/tsl0922/ttyd) [ttyd](https://github.com/tsl0922/ttyd) - Share your terminal over the web
 
 ## Programming Addons
 
