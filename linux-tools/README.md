@@ -361,6 +361,8 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/szabodanika/microbin) [microbin](https://github.com/szabodanika/microbin) - A secure, configurable file-sharing and URL shortening web app written in Rust.
 - [![Open-Source Software][oss icon]](https://github.com/thomiceli/opengist) [opengist](https://github.com/thomiceli/opengist) - Self-hosted pastebin powered by Git, open-source alternative to Github Gist.
 - [![Open-Source Software][oss icon]](https://github.com/stack-auth/stack-auth) [stack-auth](https://github.com/stack-auth/stack-auth) - Open-source Auth0/Clerk alternative
+- [![Open-Source Software][oss icon]](https://github.com/deuxfleurs-org/garage) [garage](https://github.com/deuxfleurs-org/garage) - (Mirror) S3-compatible object store for small self-hosted geo-distributed deployments.
+- [![Open-Source Software][oss icon]](https://github.com/storj/storj) [storj](https://github.com/storj/storj) - Ongoing Storj v3 development. Decentralized cloud object storage that is affordable, easy to use, private, and secure.
 
 ## Programming Addons
 
