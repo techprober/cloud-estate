@@ -358,6 +358,9 @@ Topics
 - [![Open-Source Software][oss icon]](https://github.com/apognu/tuigreet) [tuigreet](https://github.com/apognu/tuigreet) - Graphical console greeter for greetd
 - [![Open-Source Software][oss icon]](https://github.com/AdnanHodzic/auto-cpufreq) [auto-cpufreq](https://github.com/AdnanHodzic/auto-cpufreq) - Automatic CPU speed & power optimizer for Linux
 - [![Open-Source Software][oss icon]](https://github.com/tsl0922/ttyd) [ttyd](https://github.com/tsl0922/ttyd) - Share your terminal over the web
+- [![Open-Source Software][oss icon]](https://github.com/szabodanika/microbin) [microbin](https://github.com/szabodanika/microbin) - A secure, configurable file-sharing and URL shortening web app written in Rust.
+- [![Open-Source Software][oss icon]](https://github.com/thomiceli/opengist) [opengist](https://github.com/thomiceli/opengist) - Self-hosted pastebin powered by Git, open-source alternative to Github Gist.
+- [![Open-Source Software][oss icon]](https://github.com/stack-auth/stack-auth) [stack-auth](https://github.com/stack-auth/stack-auth) - Open-source Auth0/Clerk alternative
 
 ## Programming Addons
 
