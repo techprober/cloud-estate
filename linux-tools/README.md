@@ -70,6 +70,7 @@ Feel free to contribute. Any recommendations and suggestions are welcome.
 - [![Open-Source Software][awesome icon]](https://github.com/eliaszon/Programmers-Overseas-Job-Interview-Handbook) [Programmers-Overseas-Job-Interview-Handbook](https://github.com/eliaszon/Programmers-Overseas-Job-Interview-Handbook) - 🏂🏻 程序员海外工作/英文面试手册
 - [![Open-Source Software][awesome icon]](https://github.com/rothgar/awesome-tmux) [awesome-tmux](https://github.com/rothgar/awesome-tmux) - A list of awesome resources for tmux
 - [![Open-Source Software][awesome icon]](https://github.com/stax76/awesome-mpv) [awesome-mpv](https://github.com/stax76/awesome-mpv) - A curated list of awesome mpv resources.
+- [![Open-Source Software][awesome icon]](https://github.com/rothgar/awesome-tuis) [awesome-tuis](https://github.com/rothgar/awesome-tuis) - List of projects that provide terminal user interfaces 
 
 ## GitHub Related
 
